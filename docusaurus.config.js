@@ -8,6 +8,9 @@ module.exports = {
   organizationName: 'VSpaceCode', // Usually your GitHub org/user name.
   projectName: 'vspacecode.github.io', // Usually your repo name.
   themeConfig: {
+    colorMode: {
+      respectPrefersColorScheme: true,
+    },
     navbar: {
       title: 'VSpaceCode',
       logo: {
@@ -21,7 +24,7 @@ module.exports = {
           label: 'Docs',
           position: 'left',
         },
-        {to: 'blog', label: 'Blog', position: 'left'},
+        { to: 'blog', label: 'Blog', position: 'left' },
         {
           href: 'https://github.com/VSpaceCode/vspacecode.github.io',
           label: 'GitHub',
