@@ -26,7 +26,7 @@ module.exports = {
         },
         { to: 'blog', label: 'Blog', position: 'left' },
         {
-          href: 'https://github.com/VSpaceCode/vspacecode.github.io',
+          href: 'https://github.com/VSpaceCode/VSpaceCode',
           label: 'GitHub',
           position: 'right',
         },
