@@ -33,6 +33,16 @@ jobs:
       - uses: actions/setup-node@v1
         with:
           node-version: '12.x'
+      - name: Build
+        run: |
+          if [ -e yarn.lock ]; then
+          yarn install --frozen-lockfile
+          elif [ -e package-lock.json ]; then
+          npm ci
+          else
+          npm i
+          fi
+          npm run build
       - name: Release to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
