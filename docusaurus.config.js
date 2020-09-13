@@ -14,8 +14,8 @@ module.exports = {
     navbar: {
       title: 'VSpaceCode',
       logo: {
-        alt: 'My Site Logo',
-        src: 'img/logo.svg',
+        alt: 'VSpaceCode Logo',
+        src: 'img/logo.png',
       },
       items: [
         {
