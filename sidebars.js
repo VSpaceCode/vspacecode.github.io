@@ -1,6 +1,6 @@
 module.exports = {
   someSidebar: {
-    Docusaurus: ['menu_customization', 'troubleshooting'],
+    Docusaurus: ['menu-customization', 'troubleshooting'],
     Features: ['mdx'],
   },
 };

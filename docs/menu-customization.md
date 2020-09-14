@@ -1,5 +1,5 @@
 ---
-id: menu_customization
+id: menu-customization
 title: Menu Customization
 sidebar_label: Menu Customization
 slug: '/'
