@@ -73,13 +73,13 @@ module.exports = {
           sidebarPath: require.resolve('./sidebars.js'),
           // Please change this to your repo.
           editUrl:
-            'https://github.com/VSpaceCode/vspacecode.github.io/edit/master/website/',
+            'https://github.com/VSpaceCode/vspacecode.github.io/edit/master/',
         },
         blog: {
           showReadingTime: true,
           // Please change this to your repo.
           editUrl:
-            'https://github.com/VSpaceCode/vspacecode.github.io/edit/master/website/blog/',
+            'https://github.com/VSpaceCode/vspacecode.github.io/edit/master/',
         },
         theme: {
           customCss: require.resolve('./src/css/custom.css'),
