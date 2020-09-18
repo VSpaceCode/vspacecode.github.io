@@ -15,9 +15,14 @@ This extension comes with a default that didn't have any third-party dependencie
 If you want a better default behavior design for VSCode Vim, checkout [VSpaceCode](https://github.com/VSpaceCode/VSpaceCode).
 
 Add the menu key as follows in `settings.json`. This following example is to let VSCode Vim to capture the `space` key and trigger the action menu in normal mode and visual mode.
-> To access `settings.json`, you can search `Setting` in the command list with `Ctl+Shift+P` or `Cmd+Shift+P` and select `Preference: Open Settings (JSON)`.
 
-> If you have existing config for `vim.normalModeKeyBindingsNonRecursive` or `vim.visualModeKeyBindingsNonRecursive`, make sure you add to the array instead of replace them.
+:::tip
+To access `settings.json`, you can search `Setting` in the command list with `Ctl+Shift+P` or `Cmd+Shift+P` and select `Preference: Open Settings (JSON)`.
+:::
+
+:::caution
+If you have existing config for `vim.normalModeKeyBindingsNonRecursive` or `vim.visualModeKeyBindingsNonRecursive`, make sure you add to the array instead of replace them.
+:::
 
 ```json
 "vim.normalModeKeyBindingsNonRecursive": [
@@ -49,7 +54,9 @@ You can also bind a customize menu with Vim directly
 
 Add the command as follows in `keybindings.json`. This following json is an example to bind `alt+space` to the action menu when a text editor is in focus.
 
-> To access `keybindings.json`, you can search `Keyboard` in the command list with `Ctl+Shift+P` or `Cmd+Shift+P` and select `Preference: Open Keyboard Shortcuts (JSON)`.
+:::tip
+To access `keybindings.json`, you can search `Keyboard` in the command list with `Ctl+Shift+P` or `Cmd+Shift+P` and select `Preference: Open Keyboard Shortcuts (JSON)`.
+:::
 
 ```json
 {
@@ -63,7 +70,9 @@ Add the command as follows in `keybindings.json`. This following json is an exam
 
 There are two ways to customize the menu: incrementally, and from scratch. Incrementally is great for when you only need to modify a few bindings from the default. Customizing from scratch is great for total control and the customization.
 
-> The default bindings are subject to change before `1.0.0`. If you find something you that think it should bind to a particular key by default, or you want a particular command, please open an issue as a feature request.
+:::note
+The default bindings are subject to change before `1.0.0`. If you find something you that think it should bind to a particular key by default, or you want a particular command, please open an issue as a feature request.
+:::
 
 ##### Incrementally
 

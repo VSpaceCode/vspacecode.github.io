@@ -19,7 +19,9 @@ If you want to prevent this, you can choose to follow the manual configuration b
 
 The [`settings.jsonc`][settings] and [`keybindings.jsonc`][keybindings] in the repo contains the configurations needed. You can merge them manually to your user's `settings.json` and `keybindings.json`.
 
-> You can access your user's `settings.json` and `keybindings.json` by searching `Preference: Open Settings (JSON)` and `Preference: Open Keyboard Shortcuts (JSON)` in the command palette (Ctl+Shift+P)
+:::tip
+You can access your user's `settings.json` and `keybindings.json` by searching `Preference: Open Settings (JSON)` and `Preference: Open Keyboard Shortcuts (JSON)` in the command palette (Ctl+Shift+P)
+:::
 
 The following commands can be access through command palette to rerun the automatic configuration step.
 

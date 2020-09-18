@@ -45,7 +45,9 @@ Selected text can be hard to see when which-key menu is active. This could be du
 <details>
   <summary>Click to expand!</summary>
 
-> This is marked as experimental and the config is subject to change.
+:::caution
+This feature is marked as experimental and the config is subject to change.
+:::
 
 This allows conditional execution of bindings. Currently, it only supports conditions on the `when` passed from shortcut and `languageId` of the active editor.
 

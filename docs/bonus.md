@@ -9,7 +9,9 @@ This section contains additional config that might be helpful beyond the default
 
 To navigate all the windows including slide and bottom pane with `Ctrl-h/j/k/l`, you can merge the following config system's key bindings to your `keybindings.json` file.
 
-> This config might be in conflict with "Easy List Navigation" below.
+:::caution
+This config might be in conflict with "Easy List Navigation" below.
+:::
 
 `keybindings.json`:
 
@@ -42,7 +44,9 @@ To navigate all the windows including slide and bottom pane with `Ctrl-h/j/k/l`,
 
 Although [VSCode Vim already bound](https://github.com/VSCodeVim/Vim/blob/v1.14.5/package.json#L124-L152) these to `h/j/k/l`, however, they might not work in all lists like in the problem pane. You can merge the following keybindings to `keybindings.json` to bind `ctrl+h/l/j/k` for those situations.
 
-> This config might be in conflict with "Quick Window Navigation" above.
+:::caution
+This config might be in conflict with "Quick Window Navigation" above.
+:::
 
 `keybindings.json`
 
