@@ -34,6 +34,34 @@ module.exports = {
     },
     footer: {
       style: 'dark',
+      links: [
+        {
+          title: 'Marketplace',
+          items: [
+            {
+              label: 'VspaceCode',
+              href: 'https://marketplace.visualstudio.com/items?itemName=VSpaceCode.vspacecode',
+            },
+            {
+              label: 'WhichKey',
+              href: 'https://marketplace.visualstudio.com/items?itemName=VSpaceCode.whichkey',
+            },
+          ],
+        },
+        {
+          title: 'GitHub',
+          items: [
+            {
+              label: 'VspaceCode',
+              href: 'https://github.com/VSpaceCode/VSpaceCode',
+            },
+            {
+              label: 'WhichKey',
+              href: 'https://github.com/VSpaceCode/vscode-which-key',
+            },
+          ],
+        }
+      ],
       copyright: `Copyright © ${new Date().getFullYear()} VSpaceCode. Built with Docusaurus.`,
     },
   },
