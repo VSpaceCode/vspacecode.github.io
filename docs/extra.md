@@ -3,8 +3,6 @@ id: extra
 title: Extra
 ---
 
-## Extra
-
 This section config extra settings that pertain to both Standalone or With extension.
 
 ### Use non-character keys

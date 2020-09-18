@@ -3,8 +3,6 @@ id: usage
 title: Usage
 ---
 
-## Usage
-
 The Which Key extension can be used by itself or be called by other extensions.
 
 ### Standalone
