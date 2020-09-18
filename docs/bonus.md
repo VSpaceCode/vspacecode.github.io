@@ -34,7 +34,7 @@ To navigate all the windows including slide and bottom pane with `Ctrl-h/j/k/l`,
 		"key": "ctrl+l",
 		"command": "workbench.action.navigateRight",
 		"when": "!inQuickOpen && !suggestWidgetVisible && !parameterHintsVisible"
-  }
+	}
 ]
 ```
 
