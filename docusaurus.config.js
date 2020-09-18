@@ -34,21 +34,6 @@ module.exports = {
     },
     footer: {
       style: 'dark',
-      links: [
-        {
-          title: 'More',
-          items: [
-            {
-              label: 'Blog',
-              to: 'blog',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/VSpaceCode/VSpaceCode',
-            },
-          ],
-        },
-      ],
       copyright: `Copyright © ${new Date().getFullYear()} VSpaceCode. Built with Docusaurus.`,
     },
   },
