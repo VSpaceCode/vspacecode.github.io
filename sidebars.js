@@ -1,6 +1,6 @@
 module.exports = {
   someSidebar: {
-    Docusaurus: ['menu-customization', 'bonus', 'troubleshooting'],
-    Features: ['mdx'],
+    VSpaceCode: ['menu-customization', 'bonus', 'troubleshooting'],
+    WhichKey: ['usage'],
   },
 };
