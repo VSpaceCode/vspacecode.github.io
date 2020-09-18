@@ -10,7 +10,7 @@ After the installation of the extension, a notification will help you to configu
 
 ### Configuration
 
-The [`settings.jsonc`](./src/settings.jsonc) and [`keybindings.jsonc`](./src/keybindings.jsonc) in the repo contains the configurations needed. You can merge them manually to your user's `settings.json` and `keybindings.json`.
+The [`settings.jsonc`][settings] and [`keybindings.jsonc`][keybindings] in the repo contains the configurations needed. You can merge them manually to your user's `settings.json` and `keybindings.json`.
 
 > You can access your user's `settings.json` and `keybindings.json` by searching `Preference: Open Settings (JSON)` and `Preference: Open Keyboard Shortcuts (JSON)` in the command palette (Ctl+Shift+P)
 
@@ -22,8 +22,11 @@ The following commands can be access through command palette to rerun the automa
 
 - VSpaceCode: Configure Default Settings
 
-  This command will merge the [necessary settings](./src/settings.jsonc) to your user's `settings.json`
+  This command will merge the [necessary settings][settings] to your user's `settings.json`
 
 - VSpaceCode: Configure Default Keybindings
 
-  This command will merge the [necessary key bindings](./src/keybindings.jsonc) to your user's `keybindings.json`
+  This command will merge the [necessary key bindings][keybindings] to your user's `keybindings.json`
+
+[settings]: https://github.com/VSpaceCode/VSpaceCode/blob/master/src/settings.jsonc
+[keybindings]: https://github.com/VSpaceCode/VSpaceCode/blob/master/src/keybindings.jsonc
