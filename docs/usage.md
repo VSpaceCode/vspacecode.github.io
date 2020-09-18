@@ -1,6 +1,7 @@
 ---
 id: usage
 title: Usage
+slug: 'whichkey'
 ---
 
 The Which Key extension can be used by itself or be called by other extensions.
