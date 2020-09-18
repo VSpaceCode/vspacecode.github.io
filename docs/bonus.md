@@ -1,7 +1,6 @@
 ---
 id: bonus
 title: Bonus
-sidebar_label: Bonus
 ---
 
 This section contains additional config that might be helpful beyond the default bindings.

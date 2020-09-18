@@ -1,7 +1,6 @@
 ---
 id: troubleshooting
 title: Troubleshooting
-sidebar_label: Troubleshooting
 ---
 
 ## Error "␣ is undefined" when pressing SPC SPC
