@@ -1,6 +1,6 @@
 module.exports = {
   someSidebar: {
-    VSpaceCode: ['menu-customization', 'bonus', 'troubleshooting'],
+    VSpaceCode: ['installation', 'menu-customization', 'bonus', 'troubleshooting'],
     WhichKey: ['usage', 'extra'],
   },
 };

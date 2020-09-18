@@ -1,7 +1,6 @@
 ---
 id: menu-customization
 title: Menu Customization
-slug: '/'
 ---
 
 There are two ways to customize the menu: incrementally, and from scratch. Incrementally is great for when you only need to modify a few bindings from the default. Customizing from scratch is great for total control of the customization.
