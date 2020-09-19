@@ -18,10 +18,24 @@
   }
 }
 
+.heroDemo {
+  margin: 10px;
+}
+
 .buttons {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.indexGitHubButtonWrapper {
+  display: flex;
+}
+
+.indexGitHubButton {
+  border: none;
+  margin-left: 24px;
+  overflow: hidden;
 }
 
 .features {

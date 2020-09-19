@@ -57,24 +57,40 @@ function Home() {
   const { siteConfig = {} } = context;
   return (
     <Layout
-      title={`Hello from ${siteConfig.title}`}
+      title={siteConfig.title}
       description="Description will go into a meta tag in <head />">
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
-          <h1 className="hero__title">{siteConfig.title}</h1>
-          <p className="hero__subtitle">{siteConfig.tagline}</p>
-          <div className={styles.buttons}>
-            <Link
-              className={clsx(
-                'button button--outline button--secondary button--lg',
-                styles.getStarted,
-              )}
-              to={useBaseUrl('docs/')}>
-              Get Started
+          <div className="row">
+            <div className="col">
+              <h1 className="hero__title">{siteConfig.title}</h1>
+              <p className="hero__subtitle">{siteConfig.tagline}</p>
+              <div className={styles.buttons}>
+                <Link
+                  className={clsx(
+                    'button button--secondary button--lg',
+                    styles.getStarted,
+                  )}
+                  to={useBaseUrl('docs/')}>
+                  Get Started
             </Link>
+                <span className={styles.indexGitHubButtonWrapper}>
+                  <iframe
+                    className={styles.indexGitHubButton}
+                    src="https://ghbtns.com/github-btn.html?user=VSpaceCode&repo=VSpaceCode&type=star&count=true&size=large"
+                    frameborder="0"
+                    scrolling="0"
+                    width="170"
+                    height="30"
+                    title="GitHub Starts"
+                  />
+                </span>
+              </div>
+            </div>
+            <div className="col">
+              <img src="img/demo.gif" alt="VSpaceCode Demo" className={styles.heroDemo} />
+            </div>
           </div>
-          <br></br>
-          <img src="img/demo.gif" alt="Demo"></img>
         </div>
       </header>
       <main>
