@@ -73,6 +73,8 @@ function Home() {
               Get Started
             </Link>
           </div>
+          <br></br>
+          <img src="img/demo.gif" alt="Demo"></img>
         </div>
       </header>
       <main>
