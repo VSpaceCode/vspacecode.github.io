@@ -87,7 +87,7 @@ function Home() {
                 </span>
               </div>
             </div>
-            <div className="col">
+            <div className="col col--7">
               <img src="img/demo.gif" alt="VSpaceCode Demo" className={styles.heroDemo} />
             </div>
           </div>
