@@ -5,7 +5,7 @@ title: Extra
 
 This section config extra settings that pertain to both Standalone or With extension.
 
-### Use non-character keys
+## Use non-character keys
 
 This section describes a way to use non-character keys in which-key menu like `<tab>` or `Control+D`. `<tab>` is supported out of the box. Follow the following instruction to add support for keys other than `<tab>`.
 
@@ -22,15 +22,15 @@ Merge the following json to your `keybindings.json`.
 
 Once you've done that, you can use `C-x` in the `key` value of the which-key config. Effectively, the above keybinding will enter `C-x` in the QuickPick input box when `ctrl+x` is pressed when the which key is focused.
 
-### Display menu with a delay
+## Display menu with a delay
 
 You can set `whichkey.delay` in `settings.json` to value in millisecond to delay the display of the menu.
 
-### Display menu items alphabetically
+## Display menu items alphabetically
 
 You can set `whichkey.sortOrder` in `settings.json` to `alphabetically` to always display the menu items alphabetically.
 
-### Unclear selection
+## Unclear selection
 
 Selected text can be hard to see when which-key menu is active. This could be due to the `inactiveSelectionBackground` config of your current theme. You can selectively override that color in your `settings.json` like the following example.
 
@@ -40,7 +40,7 @@ Selected text can be hard to see when which-key menu is active. This could be du
 },
 ```
 
-### Conditional bindings (experimental)
+## Conditional bindings (experimental)
 
 <details>
   <summary>Click to expand!</summary>
@@ -99,7 +99,7 @@ Any item that has an invalid key will be used as default item.
 Therefore, in this example, if the language is javascript and the sidebar is visible, `m` will open
 the file browser, otherwise it will show the "buffers" menu.
 
-#### Overrides
+### Overrides
 
 This is again similar with the `bindings` type.
 
@@ -143,7 +143,7 @@ For example, the following will add a key of `languageId:javascript` to the cond
 
 Negative `position` property can also be used to remove conditional bindings.
 
-#### when
+### when
 
 Since VSCode doesn't allow reading of the context of a json field, we cannot read the condition used in the `when` in shortcuts.
 For this reason, you will need to repeat every `when` condition used in conditional bindings, at least until [vscode/#10471](https://github.com/microsoft/vscode/issues/10471) is implemented.
@@ -188,7 +188,7 @@ The `args.key` and `args.when` that were sent to `which-key` are then used to fi
 
 Unfortunately, if you have another condition binding with a different `key` that want to match the same `when` condition as the `t` in the above example, you will need to setup another shortcut with that different `key`.
 
-#### languageId
+### languageId
 
 This is language id of the active editor. The language id can be found in language selection menu inside the parenthesis next to the language name.
 

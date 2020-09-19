@@ -15,7 +15,7 @@ By following this automatic procedure, the formatting of `settings.json` and `ke
 If you want to prevent this, you can choose to follow the manual configuration below.
 :::
 
-### Manual Configuration (optional)
+## Manual Configuration (optional)
 
 The [`settings.jsonc`][settings] and [`keybindings.jsonc`][keybindings] in the repo contains the configurations needed. You can merge them manually to your user's `settings.json` and `keybindings.json`.
 
