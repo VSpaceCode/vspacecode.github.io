@@ -62,32 +62,30 @@ function Home() {
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
           <div className="row">
-            <div className="col">
+            <div className="col col--4">
               <h1 className="hero__title">{siteConfig.title}</h1>
               <p className="hero__subtitle">{siteConfig.tagline}</p>
-              <div className={styles.buttons}>
+              <div className={clsx('row', styles.buttons)}>
                 <Link
                   className={clsx(
                     'button button--secondary button--lg',
                     styles.getStarted,
                   )}
-                  to={useBaseUrl('docs/')}>
+                  to={useBaseUrl('docs/')}
+                >
                   Get Started
-            </Link>
-                <span className={styles.indexGitHubButtonWrapper}>
-                  <iframe
-                    className={styles.indexGitHubButton}
-                    src="https://ghbtns.com/github-btn.html?user=VSpaceCode&repo=VSpaceCode&type=star&count=true&size=large"
-                    frameborder="0"
-                    scrolling="0"
-                    width="170"
-                    height="30"
-                    title="GitHub Starts"
-                  />
-                </span>
+                </Link>
+                <iframe
+                  src="https://ghbtns.com/github-btn.html?user=VSpaceCode&repo=VSpaceCode&type=star&count=true&size=large"
+                  frameBorder="0"
+                  scrolling="0"
+                  width="130"
+                  height="30"
+                  title="GitHub Starts"
+                />
               </div>
             </div>
-            <div className="col col--7">
+            <div className="col col--8">
               <img src="img/demo.gif" alt="VSpaceCode Demo" className={styles.heroDemo} />
             </div>
           </div>
