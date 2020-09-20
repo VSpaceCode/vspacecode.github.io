@@ -98,8 +98,8 @@ File browser, which is bound to `<spc> f f` by default, binds `ctrl+a` to open a
 
 ## Use non-character keys
 
-See in [vscode-which-key](https://github.com/VSpaceCode/vscode-which-key#use-non-character-keys)
+See in [Which Key](./extra#use-non-character-keys)
 
 ## Display menu with a delay
 
-See in [vscode-which-key](https://github.com/VSpaceCode/vscode-which-key#display-menu-with-a-delay)
+See in [Which Key](./extra#display-menu-with-a-delay)
