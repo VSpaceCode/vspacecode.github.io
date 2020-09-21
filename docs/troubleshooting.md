@@ -23,3 +23,7 @@ If you don't use this feature, disabling it should fix this issue. Otherwise, ad
     }
 ],
 ```
+
+## Known Issues:
+- File browser (bound to `<spc> f f`) doesn't have a button to open local file with VSCode Remote
+- The easy motion jump bound to `<spc> j` menu doesn't work if leader key of VSCode Vim is customized and may require overrides.
