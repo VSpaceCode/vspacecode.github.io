@@ -505,7 +505,7 @@ Type: <code>conditional</code>
 
 | Condition                                                  | Name               | Type    |
 | ---------------------------------------------------------- | ------------------ | ------- |
-| <code></code>                                              | Show explorer view | command |
+|                                                            | Show explorer view | command |
 | <code>when:sideBarVisible && explorerViewletVisible</code> | Hide side bar      | command |
 
 # Emacs/VSpaceCode...
