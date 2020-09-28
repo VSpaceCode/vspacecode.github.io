@@ -4,7 +4,7 @@ title: Usage
 slug: 'whichkey'
 ---
 
-The Which Key extension can be used by itself or be called by other extensions.
+The [Which Key extension](https://marketplace.visualstudio.com/items?itemName=VSpaceCode.whichkey) can be used by itself or be called by other extensions.
 
 ## Standalone
 
