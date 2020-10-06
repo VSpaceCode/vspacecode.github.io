@@ -576,9 +576,11 @@ Key Binding: <code>␣ m languageId:markdown</code>
 
 Type: <code>bindings</code>
 
-| Key Binding                            | Name                     | Type    |
-| -------------------------------------- | ------------------------ | ------- |
-| <code>␣ m languageId:markdown p</code> | Open preview to the side | command |
+| Key Binding                            | Name                 | Type                           |
+| -------------------------------------- | -------------------- | ------------------------------ |
+| <code>␣ m languageId:markdown t</code> | Table of Contents... | [bindings](#table-of-contents) |
+| <code>␣ m languageId:markdown x</code> | Text...              | [bindings](#text)              |
+| <code>␣ m languageId:markdown c</code> | Buffer commands...   | [bindings](#buffer-commands)   |
 
 # Highlight symbol
 
@@ -756,3 +758,68 @@ Type: <code>transient</code>
 | -------------- | ------------------- | ------- |
 | <code>n</code> | Next breakpoint     | command |
 | <code>p</code> | Previous breakpoint | command |
+
+# Table of Contents...
+
+Key Binding: <code>␣ m languageId:markdown t</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                              | Name                     | Type    |
+| ---------------------------------------- | ------------------------ | ------- |
+| <code>␣ m languageId:markdown t c</code> | Create Table of Contents | command |
+| <code>␣ m languageId:markdown t u</code> | Update Table of Contents | command |
+| <code>␣ m languageId:markdown t n</code> | Add section numbers      | command |
+| <code>␣ m languageId:markdown t N</code> | Remove section numbers   | command |
+
+# Text...
+
+Key Binding: <code>␣ m languageId:markdown x</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                              | Name                   | Type                                 |
+| ---------------------------------------- | ---------------------- | ------------------------------------ |
+| <code>␣ m languageId:markdown x b</code> | Toggle bold            | command                              |
+| <code>␣ m languageId:markdown x ~</code> | Toggle code block      | command                              |
+| <code>␣ m languageId:markdown x `</code> | Toggle inline code     | command                              |
+| <code>␣ m languageId:markdown x i</code> | Toggle italic          | command                              |
+| <code>␣ m languageId:markdown x l</code> | Toggle list            | command                              |
+| <code>␣ m languageId:markdown x m</code> | Toggle math            | command                              |
+| <code>␣ m languageId:markdown x s</code> | Toggle strikethrough   | command                              |
+| <code>␣ m languageId:markdown x ]</code> | Increase Heading level | [transient](#increase-heading-level) |
+| <code>␣ m languageId:markdown x [</code> | Decrease Heading level | [transient](#decrease-heading-level) |
+
+# Buffer commands...
+
+Key Binding: <code>␣ m languageId:markdown c</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                              | Name                          | Type    |
+| ---------------------------------------- | ----------------------------- | ------- |
+| <code>␣ m languageId:markdown c P</code> | Open preview in current group | command |
+| <code>␣ m languageId:markdown c p</code> | Open preview to the side      | command |
+| <code>␣ m languageId:markdown c e</code> | Export to HTML                | command |
+
+# Increase Heading level
+
+Key Binding: <code>␣ m languageId:markdown x ]</code>
+
+Type: <code>transient</code>
+
+| Key Binding    | Name                   | Type    |
+| -------------- | ---------------------- | ------- |
+| <code>]</code> | Increase Heading level | command |
+| <code>[</code> | Decrease Heading level | command |
+
+# Decrease Heading level
+
+Key Binding: <code>␣ m languageId:markdown x [</code>
+
+Type: <code>transient</code>
+
+| Key Binding    | Name                   | Type    |
+| -------------- | ---------------------- | ------- |
+| <code>]</code> | Increase Heading level | command |
+| <code>[</code> | Decrease Heading level | command |
