@@ -5,7 +5,7 @@ title: Troubleshooting
 
 ## Error "␣ is undefined" when pressing SPC SPC
 
-When pressing `SPC SPC` quickly on macOS, which-key doesn't recognize the second `SPC` somtimes, and the error "␣ is undefined" is displayed on the status bar.
+When pressing `SPC SPC` quickly on macOS, which-key doesn't recognize the second `SPC` sometimes, and the error "␣ is undefined" is displayed on the status bar.
 
 This problem is due to a keyboard settings on macOS that add a period with double-space.
 

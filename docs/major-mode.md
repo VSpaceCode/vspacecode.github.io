@@ -18,9 +18,9 @@ in order to work properly.
 The table below lists all the extensions required by each language in the major mode.
 
 In the following you can see all the currently available major modes.
-If your favourite one is missing, please [contribute](https://github.com/VSpaceCode/VSpaceCode/blob/master/CONTRIBUTING.md)!
+If your favorite one is missing, please [contribute](https://github.com/VSpaceCode/VSpaceCode/blob/master/CONTRIBUTING.md)!
 
 ## Markdown
 
-Required exetensions:
+Required extensions:
 - [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
