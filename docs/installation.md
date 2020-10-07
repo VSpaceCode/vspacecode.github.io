@@ -37,5 +37,5 @@ The following commands can be access through command palette to rerun the automa
 
   This command will merge the [necessary key bindings][keybindings] to your user's `keybindings.json`
 
-[settings]: https://github.com/VSpaceCode/VSpaceCode/blob/master/src/settings.jsonc
-[keybindings]: https://github.com/VSpaceCode/VSpaceCode/blob/master/src/keybindings.jsonc
+[settings]: https://github.com/VSpaceCode/VSpaceCode/blob/master/src/configuration/settings.jsonc
+[keybindings]: https://github.com/VSpaceCode/VSpaceCode/blob/master/src/configuration/keybindings.jsonc
