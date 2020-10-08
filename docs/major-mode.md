@@ -7,7 +7,7 @@ Major mode offers dynamic menu and functions based on the active buffer. You can
 
 For example, you can press `<spc> m x b` to make the text bold in a markdown buffer.
 
-To find the active language mode of your current buffer, you can look the bottom right of the status bar.
+To find the active language mode of your current buffer, you can look at the bottom right of the status bar.
 
 ![major mode position](/img/docs/major_mode.png)
 
