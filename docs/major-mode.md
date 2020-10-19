@@ -11,6 +11,8 @@ To find the active language mode of your current buffer, you can look at the bot
 
 ![major mode position](/img/docs/major_mode.png)
 
+The major mode is using which-key's conditional bindings. If you want to modify the default bindings, check out the conditional bindings [docs](./extra#conditional-bindings-experimental).
+
 The vast majority of major mode specific key bindings will require the installation of additional extensions in order to work properly. The section below lists all the extensions required by each major mode.
 
 In the following you can see all the currently available major modes.
