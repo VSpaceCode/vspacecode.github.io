@@ -98,18 +98,12 @@ File browser, which is bound to `<spc> f f` by default, binds `ctrl+a` to open a
 
 ## Execute key combination or vim command
 
-You can execute vim command (e.g. `:noh`) or key combination (e.g. `y y`) from which-key menu. The command `vim.remap` from VSCodeVim can be used for this purpose; however, it is not well documented in the their repo. The argument of `vim.remap` is used to determine if it is going to execute vim command or key combination.
+You can execute a vim command (e.g. `:noh`) or a key combination (e.g. `y y`) from the which-key menu by using the `vim.remap` command from [VSCodeVim](https://github.com/VSCodeVim/Vim).
+The argument of `vim.remap` is specified by the `"args"` field.
 
 ### Execute vim key combination
 
-If the argument contains `after` key, it will execute vim key combination.
-
-The following json is an argument of `vim.remap` that execute vim key combination of `y y`
-```json
-{
-    "after": ["y", "y"]
-}
-```
+If the `"args"` field contains the `after` key, the vim key combination specified in the value will be executed.
 
 The following example json overrides `<spc> y` to execute vim keys of `y y`.
 ```json
@@ -127,22 +121,9 @@ The following example json overrides `<spc> y` to execute vim keys of `y y`.
 ```
 
 ### Execute vim command
-If the argument contains `commands` key, it will  execute multiple vim commands and vscode commands.
+If the `"args"` field contains the `commands` key, the vim and vscode commands specified in the array will be executed.
 
-The following json is an argument of `vim.remap` that execute vim command `:noh` and a vscode command `editor.action.codeAction` with `{ "kind": "refactor.extract" }` as argument.
-```json
-{
-    "commands":[
-        { "command": ":noh" },
-        {
-            "command": "editor.action.codeAction",
-            "args": { "kind": "refactor.extract" }
-            }
-    ]
-}
-```
-
-The following example json overrides `<spc> c` to execute the custom set of commands.
+The following example json overrides `<spc> c` to execute the vim command `:noh` and the vscode command `editor.action.codeAction` with `{ "kind": "refactor.extract" }` as argument.
 ```json
 "vspacecode.bindingOverrides": [
     {
