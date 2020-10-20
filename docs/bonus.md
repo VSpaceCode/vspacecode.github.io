@@ -96,6 +96,74 @@ File browser, which is bound to `<spc> f f` by default, binds `ctrl+a` to open a
 ]
 ```
 
+## Execute key combination or vim command
+
+You can execute vim command (e.g. `:noh`) or key combination (e.g. `y y`) from which-key menu. The command `vim.remap` from VSCodeVim can be used for this purpose; however, it is not well documented in the their repo. The argument of `vim.remap` is used to determine if it is going to execute vim command or key combination.
+
+### Execute vim key combination
+
+If the argument contains `after` key, it will execute vim key combination.
+
+The following json is an argument of `vim.remap` that execute vim key combination of `y y`
+```json
+{
+    "after": ["y", "y"]
+}
+```
+
+The following example json overrides `<spc> y` to execute vim keys of `y y`.
+```json
+"vspacecode.bindingOverrides": [
+    {
+        "keys": ["y"],
+        "name": "yank",
+        "type": "command",
+        "command": "vim.remap",
+        "args": {
+            "after": ["y", "y"]
+        }
+    }
+]
+```
+
+### Execute vim command
+If the argument contains `commands` key, it will  execute multiple vim commands and vscode commands.
+
+The following json is an argument of `vim.remap` that execute vim command `:noh` and a vscode command `editor.action.codeAction` with `{ "kind": "refactor.extract" }` as argument.
+```json
+{
+    "commands":[
+        { "command": ":noh" },
+        {
+            "command": "editor.action.codeAction",
+            "args": { "kind": "refactor.extract" }
+            }
+    ]
+}
+```
+
+The following example json overrides `<spc> c` to execute the custom set of commands.
+```json
+"vspacecode.bindingOverrides": [
+    {
+        "keys": ["c"],
+        "name": "Custom cmd",
+        "type": "command",
+        "command": "vim.remap",
+        "args": {
+            "commands":[
+                { "command": ":noh" },
+                {
+                    "command": "editor.action.codeAction",
+                    "args": { "kind": "refactor.extract" }
+                }
+            ]
+        }
+    }
+]
+```
+
+
 ## Use non-character keys
 
 See in [Which Key](./extra#use-non-character-keys)
