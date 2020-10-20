@@ -24,6 +24,24 @@ If you don't use this feature, disabling it should fix this issue. Otherwise, ad
 ],
 ```
 
+## Unresponsive menu activation
+The input box of which-key menu for key input is not displayed some delay after the `<spc>` is pressed on a buffer. This is likly due to conflicting vim binding that starts with `<spc>`. For example, the vim binding of `[" ", "d"]` in the following `settings.json` example is causing the delay becuase vim is waiting for the second input  when `<spc>` is pressed.
+
+```json
+"vim.normalModeKeyBindingsNonRecursive": [
+  {
+    "before": [" ", "d"],
+    "after": ["d", "d"]
+  },
+  {
+    "before": ["<space>"],
+    "commands": ["vspacecode.space"]
+  }
+]
+```
+You can remove the conflicting vim bindings from your `settings.json` completely, or use the VSpaceCode's [overrides](./menu-customization#addreplace) instead
+
+
 ## Known Issues
 
 - File browser (bound to `<spc> f f`) doesn't have a button to open local file with VSCode Remote
