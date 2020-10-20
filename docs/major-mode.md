@@ -18,6 +18,11 @@ The vast majority of major mode specific key bindings will require the installat
 In the following you can see all the currently available major modes.
 If your favorite one is missing, please [contribute](https://github.com/VSpaceCode/VSpaceCode/blob/master/CONTRIBUTING.md)!
 
+## Go
+
+Required extensions:
+- [Go](https://marketplace.visualstudio.com/items?itemName=golang.Go)
+
 ## Markdown
 
 Required extensions:
