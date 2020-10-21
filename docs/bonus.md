@@ -96,6 +96,55 @@ File browser, which is bound to `<spc> f f` by default, binds `ctrl+a` to open a
 ]
 ```
 
+## Execute key combination or vim command
+
+You can execute a vim command (e.g. `:noh`) or a key combination (e.g. `y y`) from the which-key menu by using the `vim.remap` command from [VSCodeVim](https://github.com/VSCodeVim/Vim).
+The argument of `vim.remap` is specified by the `"args"` field.
+
+### Execute vim key combination
+
+If the `"args"` field contains the `after` key, the vim key combination specified in the value will be executed.
+
+The following example json overrides `<spc> y` to execute vim keys of `y y`.
+```json
+"vspacecode.bindingOverrides": [
+    {
+        "keys": ["y"],
+        "name": "yank",
+        "type": "command",
+        "command": "vim.remap",
+        "args": {
+            "after": ["y", "y"]
+        }
+    }
+]
+```
+
+### Execute vim command
+If the `"args"` field contains the `commands` key, the vim and vscode commands specified in the array will be executed.
+
+The following example json overrides `<spc> c` to execute the vim command `:noh` and the vscode command `editor.action.codeAction` with `{ "kind": "refactor.extract" }` as argument.
+```json
+"vspacecode.bindingOverrides": [
+    {
+        "keys": ["c"],
+        "name": "Custom cmd",
+        "type": "command",
+        "command": "vim.remap",
+        "args": {
+            "commands":[
+                { "command": ":noh" },
+                {
+                    "command": "editor.action.codeAction",
+                    "args": { "kind": "refactor.extract" }
+                }
+            ]
+        }
+    }
+]
+```
+
+
 ## Use non-character keys
 
 See in [Which Key](./extra#use-non-character-keys)
