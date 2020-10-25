@@ -1,6 +1,6 @@
 module.exports = {
-  someSidebar: {
+  docs: {
     VSpaceCode: ['installation', 'terminology', 'default-keybindings', 'menu-customization', 'major-mode', 'bonus', 'troubleshooting', 'suggested-plugins'],
-    WhichKey: ['usage', 'extra'],
+    WhichKey: ['which-key/usage', 'which-key/extra'],
   },
 };
