@@ -147,8 +147,8 @@ The following example json overrides `<spc> c` to execute the vim command `:noh`
 
 ## Use non-character keys
 
-See in [Which Key](./extra#use-non-character-keys)
+See in [Which Key](./whichkey/extra#use-non-character-keys)
 
 ## Display menu with a delay
 
-See in [Which Key](./extra#display-menu-with-a-delay)
+See in [Which Key](./whichkey/extra#display-menu-with-a-delay)
