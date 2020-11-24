@@ -11,48 +11,48 @@ Key Binding: <code>␣</code>
 
 Type: <code>bindings</code>
 
-| Key Binding      | Name                             | Type                                    | Command(s)                                                                       |
-| ---------------- | -------------------------------- | --------------------------------------- | -------------------------------------------------------------------------------- |
-| <code>␣ ␣</code> | Commands...                      | command                                 | `workbench.action.showCommands`                                                  |
-| <code>␣ ↹</code> | Last buffer                      | commands                                | `workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup`<br />`list.select` |
-| <code>␣ !</code> | Show terminal                    | command                                 | `workbench.action.terminal.focus`                                                |
-| <code>␣ "</code> | Open new external terminal       | command                                 | `workbench.action.terminal.openNativeConsole`                                    |
-| <code>␣ '</code> | Show terminal                    | command                                 | `workbench.action.terminal.focus`                                                |
-| <code>␣ *</code> | Search in project with selection | commands                                | `editor.action.addSelectionToNextFindMatch`<br />`workbench.action.findInFiles`  |
-| <code>␣ /</code> | Search in project                | command                                 | `workbench.action.findInFiles`                                                   |
-| <code>␣ 1</code> | Focus 1st window                 | command                                 | `workbench.action.focusFirstEditorGroup`                                         |
-| <code>␣ 2</code> | Focus 2nd window                 | command                                 | `workbench.action.focusSecondEditorGroup`                                        |
-| <code>␣ 3</code> | Focus 3rd window                 | command                                 | `workbench.action.focusThirdEditorGroup`                                         |
-| <code>␣ 4</code> | Focus 4th window                 | command                                 | `workbench.action.focusFourthEditorGroup`                                        |
-| <code>␣ 5</code> | Focus 5th window                 | command                                 | `workbench.action.focusFifthEditorGroup`                                         |
-| <code>␣ 6</code> | Focus 6th window                 | command                                 | `workbench.action.focusSixthEditorGroup`                                         |
-| <code>␣ 7</code> | Focus 7th window                 | command                                 | `workbench.action.focusSeventhEditorGroup`                                       |
-| <code>␣ 8</code> | Focus 8th window                 | command                                 | `workbench.action.focusEighthEditorGroup`                                        |
-| <code>␣ ;</code> | Toggle comment                   | command                                 | `editor.action.commentLine`                                                      |
-| <code>␣ v</code> | Smart select/expand region       | [transient](#smart-selectexpand-region) | `editor.action.smartSelect.grow`                                                 |
-| <code>␣ b</code> | Buffers...                       | [bindings](#buffers)                    | N/A                                                                              |
-| <code>␣ c</code> | Comments...                      | [bindings](#comments)                   | N/A                                                                              |
-| <code>␣ d</code> | Debug...                         | [bindings](#debug)                      | N/A                                                                              |
-| <code>␣ e</code> | Errors...                        | [bindings](#errors)                     | N/A                                                                              |
-| <code>␣ f</code> | File...                          | [bindings](#file)                       | N/A                                                                              |
-| <code>␣ g</code> | Git...                           | [bindings](#git)                        | N/A                                                                              |
-| <code>␣ h</code> | Help...                          | [bindings](#help)                       | N/A                                                                              |
-| <code>␣ i</code> | Insert...                        | [bindings](#insert)                     | N/A                                                                              |
-| <code>␣ j</code> | Jump/Join/Split...               | [bindings](#jumpjoinsplit)              | N/A                                                                              |
-| <code>␣ l</code> | Layouts...                       | [bindings](#layouts)                    | N/A                                                                              |
-| <code>␣ p</code> | Project...                       | [bindings](#project)                    | N/A                                                                              |
-| <code>␣ q</code> | Quit..                           | [bindings](#quit)                       | N/A                                                                              |
-| <code>␣ r</code> | Resume...                        | [bindings](#resume)                     | N/A                                                                              |
-| <code>␣ s</code> | Search/Symbol...                 | [bindings](#searchsymbol)               | N/A                                                                              |
-| <code>␣ t</code> | Toggles...                       | [bindings](#toggles)                    | N/A                                                                              |
-| <code>␣ w</code> | Window...                        | [bindings](#window)                     | N/A                                                                              |
-| <code>␣ x</code> | Text...                          | [bindings](#text)                       | N/A                                                                              |
-| <code>␣ z</code> | Zoom/Fold...                     | [bindings](#zoomfold)                   | N/A                                                                              |
-| <code>␣ D</code> | Diff/Compare...                  | [bindings](#diffcompare)                | N/A                                                                              |
-| <code>␣ F</code> | Frame...                         | [bindings](#frame)                      | N/A                                                                              |
-| <code>␣ m</code> | Major...                         | [conditional](#major)                   | N/A                                                                              |
-| <code>␣ S</code> | Show...                          | [bindings](#show)                       | N/A                                                                              |
-| <code>␣ T</code> | UI toggles...                    | [bindings](#ui-toggles)                 | N/A                                                                              |
+| Key Binding      | Name                             | Type                                    | Command(s)                                                                                                           |
+| ---------------- | -------------------------------- | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
+| <code>␣ ␣</code> | Commands...                      | command                                 | `workbench.action.showCommands`                                                                                      |
+| <code>␣ ↹</code> | Last buffer                      | commands                                | `workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup`<br />`list.select`                                     |
+| <code>␣ !</code> | Show terminal                    | command                                 | `workbench.action.terminal.focus`                                                                                    |
+| <code>␣ "</code> | Open new external terminal       | command                                 | `workbench.action.terminal.openNativeConsole`                                                                        |
+| <code>␣ '</code> | Show terminal                    | command                                 | `workbench.action.terminal.focus`                                                                                    |
+| <code>␣ *</code> | Search in project with selection | commands                                | `editor.action.addSelectionToNextFindMatch`<br />`workbench.action.findInFiles`<br />`search.action.focusSearchList` |
+| <code>␣ /</code> | Search in project                | command                                 | `workbench.action.findInFiles`                                                                                       |
+| <code>␣ 1</code> | Focus 1st window                 | command                                 | `workbench.action.focusFirstEditorGroup`                                                                             |
+| <code>␣ 2</code> | Focus 2nd window                 | command                                 | `workbench.action.focusSecondEditorGroup`                                                                            |
+| <code>␣ 3</code> | Focus 3rd window                 | command                                 | `workbench.action.focusThirdEditorGroup`                                                                             |
+| <code>␣ 4</code> | Focus 4th window                 | command                                 | `workbench.action.focusFourthEditorGroup`                                                                            |
+| <code>␣ 5</code> | Focus 5th window                 | command                                 | `workbench.action.focusFifthEditorGroup`                                                                             |
+| <code>␣ 6</code> | Focus 6th window                 | command                                 | `workbench.action.focusSixthEditorGroup`                                                                             |
+| <code>␣ 7</code> | Focus 7th window                 | command                                 | `workbench.action.focusSeventhEditorGroup`                                                                           |
+| <code>␣ 8</code> | Focus 8th window                 | command                                 | `workbench.action.focusEighthEditorGroup`                                                                            |
+| <code>␣ ;</code> | Toggle comment                   | command                                 | `editor.action.commentLine`                                                                                          |
+| <code>␣ v</code> | Smart select/expand region       | [transient](#smart-selectexpand-region) | `editor.action.smartSelect.grow`                                                                                     |
+| <code>␣ b</code> | Buffers...                       | [bindings](#buffers)                    | N/A                                                                                                                  |
+| <code>␣ c</code> | Comments...                      | [bindings](#comments)                   | N/A                                                                                                                  |
+| <code>␣ d</code> | Debug...                         | [bindings](#debug)                      | N/A                                                                                                                  |
+| <code>␣ e</code> | Errors...                        | [bindings](#errors)                     | N/A                                                                                                                  |
+| <code>␣ f</code> | File...                          | [bindings](#file)                       | N/A                                                                                                                  |
+| <code>␣ g</code> | Git...                           | [bindings](#git)                        | N/A                                                                                                                  |
+| <code>␣ h</code> | Help...                          | [bindings](#help)                       | N/A                                                                                                                  |
+| <code>␣ i</code> | Insert...                        | [bindings](#insert)                     | N/A                                                                                                                  |
+| <code>␣ j</code> | Jump/Join/Split...               | [bindings](#jumpjoinsplit)              | N/A                                                                                                                  |
+| <code>␣ l</code> | Layouts...                       | [bindings](#layouts)                    | N/A                                                                                                                  |
+| <code>␣ p</code> | Project...                       | [bindings](#project)                    | N/A                                                                                                                  |
+| <code>␣ q</code> | Quit..                           | [bindings](#quit)                       | N/A                                                                                                                  |
+| <code>␣ r</code> | Resume...                        | [bindings](#resume)                     | N/A                                                                                                                  |
+| <code>␣ s</code> | Search/Symbol...                 | [bindings](#searchsymbol)               | N/A                                                                                                                  |
+| <code>␣ t</code> | Toggles...                       | [bindings](#toggles)                    | N/A                                                                                                                  |
+| <code>␣ w</code> | Window...                        | [bindings](#window)                     | N/A                                                                                                                  |
+| <code>␣ x</code> | Text...                          | [bindings](#text)                       | N/A                                                                                                                  |
+| <code>␣ z</code> | Zoom/Fold...                     | [bindings](#zoomfold)                   | N/A                                                                                                                  |
+| <code>␣ D</code> | Diff/Compare...                  | [bindings](#diffcompare)                | N/A                                                                                                                  |
+| <code>␣ F</code> | Frame...                         | [bindings](#frame)                      | N/A                                                                                                                  |
+| <code>␣ m</code> | Major...                         | [conditional](#major)                   | N/A                                                                                                                  |
+| <code>␣ S</code> | Show...                          | [bindings](#show)                       | N/A                                                                                                                  |
+| <code>␣ T</code> | UI toggles...                    | [bindings](#ui-toggles)                 | N/A                                                                                                                  |
 
 # Smart select/expand region
 
@@ -75,7 +75,7 @@ Type: <code>bindings</code>
 | ------------------ | --------------------------------- | ----------------------- | ------------------------------------------------------------------- |
 | <code>␣ b 0</code> | Last buffer in window             | command                 | `workbench.action.lastEditorInGroup`                                |
 | <code>␣ b 1</code> | First buffer in window            | command                 | `workbench.action.firstEditorInGroup`                               |
-| <code>␣ b b</code> | Show all buffers                  | command                 | `workbench.action.showAllEditors`                                   |
+| <code>␣ b b</code> | Show all buffers                  | command                 | `workbench.action.showAllEditorsByMostRecentlyUsed`                 |
 | <code>␣ b d</code> | Close active buffer               | command                 | `workbench.action.closeActiveEditor`                                |
 | <code>␣ b n</code> | Next buffer                       | command                 | `workbench.action.nextEditor`                                       |
 | <code>␣ b p</code> | Previous buffer                   | command                 | `workbench.action.previousEditor`                                   |
@@ -682,6 +682,8 @@ Type: <code>transient</code>
 | <code>-</code> | Zoom out   | command | `workbench.action.zoomOut`   |
 | <code>0</code> | Reset zoom | command | `workbench.action.zoomReset` |
 | <code>=</code> | Zoom in    | command | `workbench.action.zoomIn`    |
+| <code>j</code> | Zoom out   | command | `workbench.action.zoomOut`   |
+| <code>k</code> | Zoom in    | command | `workbench.action.zoomIn`    |
 
 # Image preview...
 
@@ -707,6 +709,8 @@ Type: <code>transient</code>
 | <code>-</code> | Zoom out   | command | `editor.action.fontZoomOut`   |
 | <code>0</code> | Reset zoom | command | `editor.action.fontZoomReset` |
 | <code>=</code> | Zoom in    | command | `editor.action.fontZoomIn`    |
+| <code>j</code> | Zoom out   | command | `editor.action.fontZoomOut`   |
+| <code>k</code> | Zoom in    | command | `editor.action.fontZoomIn`    |
 
 # Fold...
 
