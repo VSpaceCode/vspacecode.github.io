@@ -13,13 +13,14 @@ Type: <code>bindings</code>
 
 | Key Binding      | Name                             | Type                                    | Command(s)                                                                                                           |
 | ---------------- | -------------------------------- | --------------------------------------- | -------------------------------------------------------------------------------------------------------------------- |
-| <code>␣ ␣</code> | Commands...                      | command                                 | `workbench.action.showCommands`                                                                                      |
+| <code>␣ ␣</code> | Commands                         | command                                 | `workbench.action.showCommands`                                                                                      |
 | <code>␣ ↹</code> | Last buffer                      | commands                                | `workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup`<br />`list.select`                                     |
 | <code>␣ !</code> | Show terminal                    | command                                 | `workbench.action.terminal.focus`                                                                                    |
 | <code>␣ "</code> | Open new external terminal       | command                                 | `workbench.action.terminal.openNativeConsole`                                                                        |
 | <code>␣ '</code> | Show terminal                    | command                                 | `workbench.action.terminal.focus`                                                                                    |
 | <code>␣ *</code> | Search in project with selection | commands                                | `editor.action.addSelectionToNextFindMatch`<br />`workbench.action.findInFiles`<br />`search.action.focusSearchList` |
 | <code>␣ /</code> | Search in project                | command                                 | `workbench.action.findInFiles`                                                                                       |
+| <code>␣ 0</code> | Focus on files explorer          | command                                 | `workbench.files.action.showActiveFileInExplorer`                                                                    |
 | <code>␣ 1</code> | Focus 1st window                 | command                                 | `workbench.action.focusFirstEditorGroup`                                                                             |
 | <code>␣ 2</code> | Focus 2nd window                 | command                                 | `workbench.action.focusSecondEditorGroup`                                                                            |
 | <code>␣ 3</code> | Focus 3rd window                 | command                                 | `workbench.action.focusThirdEditorGroup`                                                                             |
@@ -30,29 +31,29 @@ Type: <code>bindings</code>
 | <code>␣ 8</code> | Focus 8th window                 | command                                 | `workbench.action.focusEighthEditorGroup`                                                                            |
 | <code>␣ ;</code> | Toggle comment                   | command                                 | `editor.action.commentLine`                                                                                          |
 | <code>␣ v</code> | Smart select/expand region       | [transient](#smart-selectexpand-region) | `editor.action.smartSelect.grow`                                                                                     |
-| <code>␣ b</code> | Buffers...                       | [bindings](#buffers)                    | N/A                                                                                                                  |
-| <code>␣ c</code> | Comments...                      | [bindings](#comments)                   | N/A                                                                                                                  |
-| <code>␣ d</code> | Debug...                         | [bindings](#debug)                      | N/A                                                                                                                  |
-| <code>␣ e</code> | Errors...                        | [bindings](#errors)                     | N/A                                                                                                                  |
-| <code>␣ f</code> | File...                          | [bindings](#file)                       | N/A                                                                                                                  |
-| <code>␣ g</code> | Git...                           | [bindings](#git)                        | N/A                                                                                                                  |
-| <code>␣ h</code> | Help...                          | [bindings](#help)                       | N/A                                                                                                                  |
-| <code>␣ i</code> | Insert...                        | [bindings](#insert)                     | N/A                                                                                                                  |
-| <code>␣ j</code> | Jump/Join/Split...               | [bindings](#jumpjoinsplit)              | N/A                                                                                                                  |
-| <code>␣ l</code> | Layouts...                       | [bindings](#layouts)                    | N/A                                                                                                                  |
-| <code>␣ p</code> | Project...                       | [bindings](#project)                    | N/A                                                                                                                  |
-| <code>␣ q</code> | Quit..                           | [bindings](#quit)                       | N/A                                                                                                                  |
-| <code>␣ r</code> | Resume...                        | [bindings](#resume)                     | N/A                                                                                                                  |
-| <code>␣ s</code> | Search/Symbol...                 | [bindings](#searchsymbol)               | N/A                                                                                                                  |
-| <code>␣ t</code> | Toggles...                       | [bindings](#toggles)                    | N/A                                                                                                                  |
-| <code>␣ w</code> | Window...                        | [bindings](#window)                     | N/A                                                                                                                  |
-| <code>␣ x</code> | Text...                          | [bindings](#text)                       | N/A                                                                                                                  |
-| <code>␣ z</code> | Zoom/Fold...                     | [bindings](#zoomfold)                   | N/A                                                                                                                  |
-| <code>␣ D</code> | Diff/Compare...                  | [bindings](#diffcompare)                | N/A                                                                                                                  |
-| <code>␣ F</code> | Frame...                         | [bindings](#frame)                      | N/A                                                                                                                  |
-| <code>␣ m</code> | Major...                         | [conditional](#major)                   | N/A                                                                                                                  |
-| <code>␣ S</code> | Show...                          | [bindings](#show)                       | N/A                                                                                                                  |
-| <code>␣ T</code> | UI toggles...                    | [bindings](#ui-toggles)                 | N/A                                                                                                                  |
+| <code>␣ b</code> | +Buffers                         | [bindings](#buffers)                    | N/A                                                                                                                  |
+| <code>␣ c</code> | +Comments                        | [bindings](#comments)                   | N/A                                                                                                                  |
+| <code>␣ d</code> | +Debug                           | [bindings](#debug)                      | N/A                                                                                                                  |
+| <code>␣ e</code> | +Errors                          | [bindings](#errors)                     | N/A                                                                                                                  |
+| <code>␣ f</code> | +File                            | [bindings](#file)                       | N/A                                                                                                                  |
+| <code>␣ g</code> | +Git                             | [bindings](#git)                        | N/A                                                                                                                  |
+| <code>␣ h</code> | +Help                            | [bindings](#help)                       | N/A                                                                                                                  |
+| <code>␣ i</code> | +Insert                          | [bindings](#insert)                     | N/A                                                                                                                  |
+| <code>␣ j</code> | +Jump/Join/Split                 | [bindings](#jumpjoinsplit)              | N/A                                                                                                                  |
+| <code>␣ l</code> | +Layouts                         | [bindings](#layouts)                    | N/A                                                                                                                  |
+| <code>␣ p</code> | +Project                         | [bindings](#project)                    | N/A                                                                                                                  |
+| <code>␣ q</code> | +Quit                            | [bindings](#quit)                       | N/A                                                                                                                  |
+| <code>␣ r</code> | +Resume                          | [bindings](#resume)                     | N/A                                                                                                                  |
+| <code>␣ s</code> | +Search/Symbol                   | [bindings](#searchsymbol)               | N/A                                                                                                                  |
+| <code>␣ t</code> | +Toggles                         | [bindings](#toggles)                    | N/A                                                                                                                  |
+| <code>␣ w</code> | +Window                          | [bindings](#window)                     | N/A                                                                                                                  |
+| <code>␣ x</code> | +Text                            | [bindings](#text)                       | N/A                                                                                                                  |
+| <code>␣ z</code> | +Zoom/Fold                       | [bindings](#zoomfold)                   | N/A                                                                                                                  |
+| <code>␣ D</code> | +Diff/Compare                    | [bindings](#diffcompare)                | N/A                                                                                                                  |
+| <code>␣ F</code> | +Frame                           | [bindings](#frame)                      | N/A                                                                                                                  |
+| <code>␣ m</code> | +Major                           | [conditional](#major)                   | N/A                                                                                                                  |
+| <code>␣ S</code> | +Show                            | [bindings](#show)                       | N/A                                                                                                                  |
+| <code>␣ T</code> | +UI toggles                      | [bindings](#ui-toggles)                 | N/A                                                                                                                  |
 
 # Smart select/expand region
 
@@ -65,7 +66,7 @@ Type: <code>transient</code>
 | <code>v</code> | Grow selection   | command | `editor.action.smartSelect.grow`   |
 | <code>V</code> | Shrink selection | command | `editor.action.smartSelect.shrink` |
 
-# Buffers...
+# +Buffers
 
 Key Binding: <code>␣ b</code>
 
@@ -91,9 +92,9 @@ Type: <code>bindings</code>
 | <code>␣ b P</code> | Paste clipboard to buffer         | commands                | `editor.action.selectAll`<br />`editor.action.clipboardPasteAction` |
 | <code>␣ b T</code> | Unpin buffer                      | command                 | `workbench.action.unpinEditor`                                      |
 | <code>␣ b Y</code> | Copy buffer to clipboard          | command                 | `vspacecode.copyWholeBuffer`                                        |
-| <code>␣ b N</code> | New Buffer...                     | [bindings](#new-buffer) | N/A                                                                 |
+| <code>␣ b N</code> | +New Buffer                       | [bindings](#new-buffer) | N/A                                                                 |
 
-# Comments...
+# +Comments
 
 Key Binding: <code>␣ c</code>
 
@@ -105,7 +106,7 @@ Type: <code>bindings</code>
 | <code>␣ c n</code> | Next error          | command | `editor.action.marker.nextInFiles` |
 | <code>␣ c N</code> | Previous error      | command | `editor.action.marker.prevInFiles` |
 
-# Debug...
+# +Debug
 
 Key Binding: <code>␣ d</code>
 
@@ -126,9 +127,9 @@ Type: <code>bindings</code>
 | <code>␣ d R</code> | Restart debug         | command                 | `workbench.action.debug.restart`        |
 | <code>␣ d S</code> | Stop debug            | command                 | `workbench.action.debug.stop`           |
 | <code>␣ d W</code> | Add to watch          | command                 | `editor.debug.action.selectionToWatch`  |
-| <code>␣ d b</code> | Breakpoint...         | [bindings](#breakpoint) | N/A                                     |
+| <code>␣ d b</code> | +Breakpoint           | [bindings](#breakpoint) | N/A                                     |
 
-# Errors...
+# +Errors
 
 Key Binding: <code>␣ e</code>
 
@@ -142,7 +143,7 @@ Type: <code>bindings</code>
 | <code>␣ e p</code> | Previous error  | command                       | `editor.action.marker.prevInFiles` |
 | <code>␣ e N</code> | Previous error  | command                       | `editor.action.marker.prevInFiles` |
 
-# File...
+# +File
 
 Key Binding: <code>␣ f</code>
 
@@ -154,8 +155,8 @@ Type: <code>bindings</code>
 | <code>␣ f f</code> | Open file/folder                       | command                                  | `file-browser.open`                                                 |
 | <code>␣ f l</code> | Change file language                   | command                                  | `workbench.action.editor.changeLanguageMode`                        |
 | <code>␣ f n</code> | New file                               | command                                  | `explorer.newFile`                                                  |
-| <code>␣ f o</code> | Open with...                           | command                                  | `explorer.openWith`                                                 |
-| <code>␣ f r</code> | Open recent...                         | command                                  | `workbench.action.openRecent`                                       |
+| <code>␣ f o</code> | +Open with                             | command                                  | `explorer.openWith`                                                 |
+| <code>␣ f r</code> | +Open recent                           | command                                  | `workbench.action.openRecent`                                       |
 | <code>␣ f s</code> | Save file                              | command                                  | `workbench.action.files.save`                                       |
 | <code>␣ f t</code> | Toggle tree/explorer view              | [conditional](#toggle-treeexplorer-view) | N/A                                                                 |
 | <code>␣ f w</code> | Open active in new window              | command                                  | `workbench.action.files.showOpenedFileInNewWindow`                  |
@@ -164,11 +165,11 @@ Type: <code>bindings</code>
 | <code>␣ f R</code> | Rename file                            | commands                                 | `workbench.files.action.showActiveFileInExplorer`<br />`renameFile` |
 | <code>␣ f S</code> | Save all files                         | command                                  | `workbench.action.files.saveAll`                                    |
 | <code>␣ f T</code> | Show active file in tree/explorer view | command                                  | `workbench.files.action.showActiveFileInExplorer`                   |
-| <code>␣ f e</code> | Emacs/VSpaceCode...                    | [bindings](#emacsvspacecode)             | N/A                                                                 |
-| <code>␣ f i</code> | Indentation...                         | [bindings](#indentation)                 | N/A                                                                 |
-| <code>␣ f y</code> | Yank...                                | [bindings](#yank)                        | N/A                                                                 |
+| <code>␣ f e</code> | +Emacs/VSpaceCode                      | [bindings](#emacsvspacecode)             | N/A                                                                 |
+| <code>␣ f i</code> | +Indentation                           | [bindings](#indentation)                 | N/A                                                                 |
+| <code>␣ f y</code> | +Yank                                  | [bindings](#yank)                        | N/A                                                                 |
 
-# Git...
+# +Git
 
 Key Binding: <code>␣ g</code>
 
@@ -183,22 +184,23 @@ Type: <code>bindings</code>
 | <code>␣ g s</code> | Status                | command           | `magit.status`       |
 | <code>␣ g S</code> | Stage file            | command           | `magit.stage-file`   |
 | <code>␣ g U</code> | Unstage file          | command           | `magit.unstage-file` |
-| <code>␣ g f</code> | File...               | [bindings](#file) | N/A                  |
+| <code>␣ g f</code> | +File                 | [bindings](#file) | N/A                  |
 
-# Help...
+# +Help
 
 Key Binding: <code>␣ h</code>
 
 Type: <code>bindings</code>
 
-| Key Binding        | Name                      | Type    | Command(s)                                   |
-| ------------------ | ------------------------- | ------- | -------------------------------------------- |
-| <code>␣ h d</code> | Open VSCode Documentation | command | `workbench.action.openDocumentationUrl`      |
-| <code>␣ h k</code> | Open global key bindings  | command | `workbench.action.openGlobalKeybindings`     |
-| <code>␣ h I</code> | Report VSCode Issue       | command | `workbench.action.openIssueReporter`         |
-| <code>␣ h T</code> | Open VSCode Tutorial      | command | `workbench.action.showInteractivePlayground` |
+| Key Binding        | Name                          | Type    | Command(s)                                   |
+| ------------------ | ----------------------------- | ------- | -------------------------------------------- |
+| <code>␣ h d</code> | Open VSCode Documentation     | command | `workbench.action.openDocumentationUrl`      |
+| <code>␣ h k</code> | Open global key bindings      | command | `workbench.action.openGlobalKeybindings`     |
+| <code>␣ h D</code> | Open VSpaceCode Documentation | command | `vspacecode.openDocumentationUrl`            |
+| <code>␣ h I</code> | Report VSCode Issue           | command | `workbench.action.openIssueReporter`         |
+| <code>␣ h T</code> | Open VSCode Tutorial          | command | `workbench.action.showInteractivePlayground` |
 
-# Insert...
+# +Insert
 
 Key Binding: <code>␣ i</code>
 
@@ -210,7 +212,7 @@ Type: <code>bindings</code>
 | <code>␣ i k</code> | Insert line above | command | `editor.action.insertLineBefore` |
 | <code>␣ i s</code> | Insert snippet    | command | `editor.action.insertSnippet`    |
 
-# Jump/Join/Split...
+# +Jump/Join/Split
 
 Key Binding: <code>␣ j</code>
 
@@ -227,7 +229,7 @@ Type: <code>bindings</code>
 | <code>␣ j w</code> | Jump to word                | command | `vim.remap`                       |
 | <code>␣ j I</code> | Jump to symbol in workspace | command | `workbench.action.showAllSymbols` |
 
-# Layouts...
+# +Layouts
 
 Key Binding: <code>␣ l</code>
 
@@ -237,7 +239,7 @@ Type: <code>bindings</code>
 | ------------------ | --------------- | ------- | ------------------------------ |
 | <code>␣ l d</code> | Close workspace | command | `workbench.action.closeFolder` |
 
-# Project...
+# +Project
 
 Key Binding: <code>␣ p</code>
 
@@ -245,13 +247,15 @@ Type: <code>bindings</code>
 
 | Key Binding        | Name                    | Type    | Command(s)                        |
 | ------------------ | ----------------------- | ------- | --------------------------------- |
-| <code>␣ p f</code> | Find file in project... | command | `workbench.action.quickOpen`      |
-| <code>␣ p l</code> | Switch project...       | command | `workbench.action.openRecent`     |
-| <code>␣ p p</code> | Switch project...       | command | `workbench.action.openRecent`     |
+| <code>␣ p c</code> | Compile project         | command | `workbench.action.tasks.build`    |
+| <code>␣ p f</code> | +Find file in project   | command | `workbench.action.quickOpen`      |
+| <code>␣ p l</code> | +Switch project         | command | `workbench.action.openRecent`     |
+| <code>␣ p p</code> | +Switch project         | command | `workbench.action.openRecent`     |
 | <code>␣ p t</code> | Show tree/explorer view | command | `workbench.view.explorer`         |
-| <code>␣ p R</code> | Replace in files...     | command | `workbench.action.replaceInFiles` |
+| <code>␣ p R</code> | +Replace in files       | command | `workbench.action.replaceInFiles` |
+| <code>␣ p T</code> | Test project            | command | `workbench.action.tasks.test`     |
 
-# Quit..
+# +Quit
 
 Key Binding: <code>␣ q</code>
 
@@ -266,7 +270,7 @@ Type: <code>bindings</code>
 | <code>␣ q Q</code> | Quit application                      | command  | `workbench.action.quit`                                              |
 | <code>␣ q R</code> | Reload frame with extensions disabled | command  | `workbench.action.reloadWindowWithExtensionsDisabled`                |
 
-# Resume...
+# +Resume
 
 Key Binding: <code>␣ r</code>
 
@@ -277,7 +281,7 @@ Type: <code>bindings</code>
 | <code>␣ r b</code> | Recent buffers    | command | `workbench.action.showAllEditorsByMostRecentlyUsed` |
 | <code>␣ r s</code> | Search in project | command | `workbench.action.findInFiles`                      |
 
-# Search/Symbol...
+# +Search/Symbol
 
 Key Binding: <code>␣ s</code>
 
@@ -297,7 +301,7 @@ Type: <code>bindings</code>
 | <code>␣ s R</code> | Search all references in side bar             | command                        | `references-view.find`                                                                              |
 | <code>␣ s S</code> | Fuzzy search with selection in current buffer | commands                       | `editor.action.addSelectionToNextFindMatch`<br />`fuzzySearch.activeTextEditorWithCurrentSelection` |
 
-# Toggles...
+# +Toggles
 
 Key Binding: <code>␣ t</code>
 
@@ -309,7 +313,7 @@ Type: <code>bindings</code>
 | <code>␣ t l</code> | Toggle word wrap           | command | `editor.action.toggleWordWrap`         |
 | <code>␣ t w</code> | Toggle render whitespace   | command | `editor.action.toggleRenderWhitespace` |
 
-# Window...
+# +Window
 
 Key Binding: <code>␣ w</code>
 
@@ -343,7 +347,7 @@ Type: <code>bindings</code>
 | <code>␣ w M</code> | Maximize window and hide side bar | command                      | `workbench.action.maximizeEditor`             |
 | <code>␣ w W</code> | Focus previous window             | command                      | `workbench.action.focusPreviousGroup`         |
 
-# Text...
+# +Text
 
 Key Binding: <code>␣ x</code>
 
@@ -360,24 +364,24 @@ Type: <code>bindings</code>
 | <code>␣ x K</code> | Move lines up       | [transient](#move-lines-up)   | `editor.action.moveLinesUpAction`       |
 | <code>␣ x R</code> | Refactor            | command                       | `editor.action.refactor`                |
 | <code>␣ x U</code> | To upper case       | command                       | `editor.action.transformToUppercase`    |
-| <code>␣ x d</code> | Delete...           | [bindings](#delete)           | N/A                                     |
-| <code>␣ x l</code> | Lines...            | [bindings](#lines)            | N/A                                     |
-| <code>␣ x m</code> | Merge conflict...   | [bindings](#merge-conflict)   | N/A                                     |
+| <code>␣ x d</code> | +Delete             | [bindings](#delete)           | N/A                                     |
+| <code>␣ x l</code> | +Lines              | [bindings](#lines)            | N/A                                     |
+| <code>␣ x m</code> | +Merge conflict     | [bindings](#merge-conflict)   | N/A                                     |
 
-# Zoom/Fold...
+# +Zoom/Fold
 
 Key Binding: <code>␣ z</code>
 
 Type: <code>bindings</code>
 
-| Key Binding        | Name             | Type                        | Command(s) |
-| ------------------ | ---------------- | --------------------------- | ---------- |
-| <code>␣ z f</code> | Frame...         | [transient](#frame)         | N/A        |
-| <code>␣ z i</code> | Image preview... | [transient](#image-preview) | N/A        |
-| <code>␣ z x</code> | Font...          | [transient](#font)          | N/A        |
-| <code>␣ z .</code> | Fold...          | [bindings](#fold)           | N/A        |
+| Key Binding        | Name           | Type                        | Command(s) |
+| ------------------ | -------------- | --------------------------- | ---------- |
+| <code>␣ z f</code> | +Frame         | [transient](#frame)         | N/A        |
+| <code>␣ z i</code> | +Image preview | [transient](#image-preview) | N/A        |
+| <code>␣ z x</code> | +Font          | [transient](#font)          | N/A        |
+| <code>␣ z .</code> | +Fold          | [bindings](#fold)           | N/A        |
 
-# Diff/Compare...
+# +Diff/Compare
 
 Key Binding: <code>␣ D</code>
 
@@ -389,9 +393,9 @@ Type: <code>bindings</code>
 | <code>␣ D m</code> | Compare current merge conflict     | command | `merge-conflict.compare`                      |
 | <code>␣ D s</code> | Compare active file with saved     | command | `workbench.files.action.compareWithSaved`     |
 | <code>␣ D w</code> | Toggle ignore trim whitespace      | command | `toggle.diff.ignoreTrimWhitespace`            |
-| <code>␣ D D</code> | Compare active file with...        | command | `workbench.files.action.compareFileWith`      |
+| <code>␣ D D</code> | +Compare active file with          | command | `workbench.files.action.compareFileWith`      |
 
-# Frame...
+# +Frame
 
 Key Binding: <code>␣ F</code>
 
@@ -403,7 +407,7 @@ Type: <code>bindings</code>
 | <code>␣ F o</code> | Switch frame                     | command | `workbench.action.quickSwitchWindow`             |
 | <code>␣ F N</code> | Open new empty frame             | command | `workbench.action.newWindow`                     |
 
-# Major...
+# +Major
 
 Key Binding: <code>␣ m</code>
 
@@ -414,7 +418,7 @@ Type: <code>conditional</code>
 | <code>languageId:go</code>       | Go       | [bindings](#go)       | N/A        |
 | <code>languageId:markdown</code> | Markdown | [bindings](#markdown) | N/A        |
 
-# Show...
+# +Show
 
 Key Binding: <code>␣ S</code>
 
@@ -432,7 +436,7 @@ Type: <code>bindings</code>
 | <code>␣ S t</code> | Show test            | command | `workbench.view.extension.test`        |
 | <code>␣ S x</code> | Show extensions      | command | `workbench.view.extensions`            |
 
-# UI toggles...
+# +UI toggles
 
 Key Binding: <code>␣ T</code>
 
@@ -451,7 +455,7 @@ Type: <code>bindings</code>
 | <code>␣ T F</code> | Toggle full screen                  | command | `workbench.action.toggleFullScreen`            |
 | <code>␣ T T</code> | Toggle tab visibility               | command | `workbench.action.toggleTabsVisibility`        |
 
-# New Buffer...
+# +New Buffer
 
 Key Binding: <code>␣ b N</code>
 
@@ -465,7 +469,7 @@ Type: <code>bindings</code>
 | <code>␣ b N l</code> | New untitled buffer (split right) | commands | `workbench.action.splitEditorRight`<br />`workbench.action.files.newUntitledFile`<br />`workbench.action.closeOtherEditors` |
 | <code>␣ b N n</code> | New untitled buffer               | command  | `workbench.action.files.newUntitledFile`                                                                                    |
 
-# Breakpoint...
+# +Breakpoint
 
 Key Binding: <code>␣ d b</code>
 
@@ -509,7 +513,7 @@ Type: <code>conditional</code>
 |                                                            | Show explorer view | command | `workbench.view.explorer`                  |
 | <code>when:sideBarVisible && explorerViewletVisible</code> | Hide side bar      | command | `workbench.action.toggleSidebarVisibility` |
 
-# Emacs/VSpaceCode...
+# +Emacs/VSpaceCode
 
 Key Binding: <code>␣ f e</code>
 
@@ -526,7 +530,7 @@ Type: <code>bindings</code>
 | <code>␣ f e K</code> | Open global key bindings JSON | command | `workbench.action.openGlobalKeybindingsFile`      |
 | <code>␣ f e W</code> | Open workspace settings JSON  | command | `workbench.action.openWorkspaceSettingsFile`      |
 
-# Indentation...
+# +Indentation
 
 Key Binding: <code>␣ f i</code>
 
@@ -541,7 +545,7 @@ Type: <code>bindings</code>
 | <code>␣ f i t</code> | Convert indentation to tabs   | command | `editor.action.indentationToTabs`     |
 | <code>␣ f i R</code> | Reindent selected             | command | `editor.action.reindentselectedlines` |
 
-# Yank...
+# +Yank
 
 Key Binding: <code>␣ f y</code>
 
@@ -560,7 +564,7 @@ Type: <code>bindings</code>
 | <code>␣ f y N</code> | Copy filename without extension of active file         | command | `vspacecode.copyFilenameBase`               |
 | <code>␣ f y Y</code> | Copy relative path of active file                      | command | `vspacecode.copyRelativePath`               |
 
-# File...
+# +File
 
 Key Binding: <code>␣ g f</code>
 
@@ -628,7 +632,7 @@ Type: <code>transient</code>
 | <code>J</code> | Move lines down | command | `editor.action.moveLinesDownAction` |
 | <code>K</code> | Move lines up   | command | `editor.action.moveLinesUpAction`   |
 
-# Delete...
+# +Delete
 
 Key Binding: <code>␣ x d</code>
 
@@ -638,7 +642,7 @@ Type: <code>bindings</code>
 | -------------------- | -------------------------- | ------- | -------------------------------------- |
 | <code>␣ x d w</code> | Delete trailing whitespace | command | `editor.action.trimTrailingWhitespace` |
 
-# Lines...
+# +Lines
 
 Key Binding: <code>␣ x l</code>
 
@@ -651,7 +655,7 @@ Type: <code>bindings</code>
 | <code>␣ x l D</code> | Duplicate lines up             | command | `editor.action.copyLinesUpAction`   |
 | <code>␣ x l S</code> | Sort lines in descending order | command | `editor.action.sortLinesDescending` |
 
-# Merge conflict...
+# +Merge conflict
 
 Key Binding: <code>␣ x m</code>
 
@@ -670,7 +674,7 @@ Type: <code>bindings</code>
 | <code>␣ x m I</code> | Accept all incoming      | command | `merge-conflict.accept.all-incoming` |
 | <code>␣ x m N</code> | Previous Conflict        | command | `merge-conflict.previous`            |
 
-# Frame...
+# +Frame
 
 Key Binding: <code>␣ z f</code>
 
@@ -685,7 +689,7 @@ Type: <code>transient</code>
 | <code>j</code> | Zoom out   | command | `workbench.action.zoomOut`   |
 | <code>k</code> | Zoom in    | command | `workbench.action.zoomIn`    |
 
-# Image preview...
+# +Image preview
 
 Key Binding: <code>␣ z i</code>
 
@@ -697,7 +701,7 @@ Type: <code>transient</code>
 | <code>-</code> | Zoom out | command | `imagePreview.zoomOut` |
 | <code>=</code> | Zoom in  | command | `imagePreview.zoomIn`  |
 
-# Font...
+# +Font
 
 Key Binding: <code>␣ z x</code>
 
@@ -712,7 +716,7 @@ Type: <code>transient</code>
 | <code>j</code> | Zoom out   | command | `editor.action.fontZoomOut`   |
 | <code>k</code> | Zoom in    | command | `editor.action.fontZoomIn`    |
 
-# Fold...
+# +Fold
 
 Key Binding: <code>␣ z .</code>
 
@@ -736,16 +740,16 @@ Key Binding: <code>␣ m languageId:go</code>
 
 Type: <code>bindings</code>
 
-| Key Binding                      | Name                   | Type                            | Command(s)         |
-| -------------------------------- | ---------------------- | ------------------------------- | ------------------ |
-| <code>␣ m languageId:go ␣</code> | Show all commands      | command                         | `go.show.commands` |
-| <code>␣ m languageId:go =</code> | Format...              | [bindings](#format)             | N/A                |
-| <code>␣ m languageId:go a</code> | Actions...             | [bindings](#actions)            | N/A                |
-| <code>␣ m languageId:go b</code> | Backend/environment... | [bindings](#backendenvironment) | N/A                |
-| <code>␣ m languageId:go g</code> | Go to...               | [bindings](#go-to)              | N/A                |
-| <code>␣ m languageId:go i</code> | Insert/remove...       | [bindings](#insertremove)       | N/A                |
-| <code>␣ m languageId:go r</code> | Refactor...            | [bindings](#refactor)           | N/A                |
-| <code>␣ m languageId:go t</code> | Test...                | [bindings](#test)               | N/A                |
+| Key Binding                      | Name                 | Type                            | Command(s)         |
+| -------------------------------- | -------------------- | ------------------------------- | ------------------ |
+| <code>␣ m languageId:go ␣</code> | Show all commands    | command                         | `go.show.commands` |
+| <code>␣ m languageId:go =</code> | +Format              | [bindings](#format)             | N/A                |
+| <code>␣ m languageId:go a</code> | +Actions             | [bindings](#actions)            | N/A                |
+| <code>␣ m languageId:go b</code> | +Backend/environment | [bindings](#backendenvironment) | N/A                |
+| <code>␣ m languageId:go g</code> | +Go to               | [bindings](#go-to)              | N/A                |
+| <code>␣ m languageId:go i</code> | +Insert/remove       | [bindings](#insertremove)       | N/A                |
+| <code>␣ m languageId:go r</code> | +Refactor            | [bindings](#refactor)           | N/A                |
+| <code>␣ m languageId:go t</code> | +Test                | [bindings](#test)               | N/A                |
 
 # Markdown
 
@@ -753,11 +757,11 @@ Key Binding: <code>␣ m languageId:markdown</code>
 
 Type: <code>bindings</code>
 
-| Key Binding                            | Name                 | Type                           | Command(s) |
-| -------------------------------------- | -------------------- | ------------------------------ | ---------- |
-| <code>␣ m languageId:markdown c</code> | Buffer commands...   | [bindings](#buffer-commands)   | N/A        |
-| <code>␣ m languageId:markdown t</code> | Table of Contents... | [bindings](#table-of-contents) | N/A        |
-| <code>␣ m languageId:markdown x</code> | Text...              | [bindings](#text)              | N/A        |
+| Key Binding                            | Name               | Type                           | Command(s) |
+| -------------------------------------- | ------------------ | ------------------------------ | ---------- |
+| <code>␣ m languageId:markdown c</code> | +Buffer commands   | [bindings](#buffer-commands)   | N/A        |
+| <code>␣ m languageId:markdown t</code> | +Table of Contents | [bindings](#table-of-contents) | N/A        |
+| <code>␣ m languageId:markdown x</code> | +Text              | [bindings](#text)              | N/A        |
 
 # Next breakpoint
 
@@ -781,7 +785,7 @@ Type: <code>transient</code>
 | <code>n</code> | Next breakpoint     | command | `editor.debug.action.goToNextBreakpoint`     |
 | <code>p</code> | Previous breakpoint | command | `editor.debug.action.goToPreviousBreakpoint` |
 
-# Format...
+# +Format
 
 Key Binding: <code>␣ m languageId:go =</code>
 
@@ -790,12 +794,12 @@ Type: <code>bindings</code>
 | Key Binding                        | Name                       | Type    | Command(s)                               |
 | ---------------------------------- | -------------------------- | ------- | ---------------------------------------- |
 | <code>␣ m languageId:go = =</code> | Format document            | command | `editor.action.formatDocument`           |
-| <code>␣ m languageId:go = d</code> | Format document with...    | command | `editor.action.formatDocument`           |
+| <code>␣ m languageId:go = d</code> | +Format document with      | command | `editor.action.formatDocument`           |
 | <code>␣ m languageId:go = m</code> | Format modified lines only | command | `editor.action.formatChanges`            |
 | <code>␣ m languageId:go = s</code> | Format selection           | command | `editor.action.formatSelection`          |
-| <code>␣ m languageId:go = S</code> | Format selection with...   | command | `editor.action.formatSelection.multiple` |
+| <code>␣ m languageId:go = S</code> | +Format selection with     | command | `editor.action.formatSelection.multiple` |
 
-# Actions...
+# +Actions
 
 Key Binding: <code>␣ m languageId:go a</code>
 
@@ -804,10 +808,10 @@ Type: <code>bindings</code>
 | Key Binding                        | Name                      | Type                           | Command(s)      |
 | ---------------------------------- | ------------------------- | ------------------------------ | --------------- |
 | <code>␣ m languageId:go a P</code> | Run code on Go Playground | command                        | `go.playground` |
-| <code>␣ m languageId:go a p</code> | Package actions...        | [bindings](#package-actions)   | N/A             |
-| <code>␣ m languageId:go a w</code> | Workspace actions...      | [bindings](#workspace-actions) | N/A             |
+| <code>␣ m languageId:go a p</code> | +Package actions          | [bindings](#package-actions)   | N/A             |
+| <code>␣ m languageId:go a w</code> | +Workspace actions        | [bindings](#workspace-actions) | N/A             |
 
-# Backend/environment...
+# +Backend/environment
 
 Key Binding: <code>␣ m languageId:go b</code>
 
@@ -821,7 +825,7 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:go b l</code> | Locate configured Go tools | command | `go.locate.tools`           |
 | <code>␣ m languageId:go b R</code> | Restart language server    | command | `go.languageserver.restart` |
 
-# Go to...
+# +Go to
 
 Key Binding: <code>␣ m languageId:go g</code>
 
@@ -841,7 +845,7 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:go g R</code> | Find all references    | command | `references-view.findReferences`        |
 | <code>␣ m languageId:go g T</code> | Peek type definition   | command | `editor.action.peekTypeDefinition`      |
 
-# Insert/remove...
+# +Insert/remove
 
 Key Binding: <code>␣ m languageId:go i</code>
 
@@ -855,7 +859,7 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:go i I</code> | Generate interface stubs       | command | `go.impl.cursor` |
 | <code>␣ m languageId:go i T</code> | Remove tags from struct fields | command | `go.remove.tags` |
 
-# Refactor...
+# +Refactor
 
 Key Binding: <code>␣ m languageId:go r</code>
 
@@ -867,7 +871,7 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:go r e</code> | Extract to function or variable | command | `editor.action.codeAction` |
 | <code>␣ m languageId:go r r</code> | Rename symbol                   | command | `editor.action.rename`     |
 
-# Test...
+# +Test
 
 Key Binding: <code>␣ m languageId:go t</code>
 
@@ -884,11 +888,11 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:go t w</code> | Test packages in workspace | command                 | `go.test.workspace`     |
 | <code>␣ m languageId:go t F</code> | Test file                  | command                 | `go.test.file`          |
 | <code>␣ m languageId:go t P</code> | Apply cover profile        | command                 | `go.apply.coverprofile` |
-| <code>␣ m languageId:go t b</code> | Benchmarks...              | [bindings](#benchmarks) | N/A                     |
-| <code>␣ m languageId:go t g</code> | Generate...                | [bindings](#generate)   | N/A                     |
-| <code>␣ m languageId:go t t</code> | Toggle...                  | [bindings](#toggle)     | N/A                     |
+| <code>␣ m languageId:go t b</code> | +Benchmarks                | [bindings](#benchmarks) | N/A                     |
+| <code>␣ m languageId:go t g</code> | +Generate                  | [bindings](#generate)   | N/A                     |
+| <code>␣ m languageId:go t t</code> | +Toggle                    | [bindings](#toggle)     | N/A                     |
 
-# Buffer commands...
+# +Buffer commands
 
 Key Binding: <code>␣ m languageId:markdown c</code>
 
@@ -900,7 +904,7 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:markdown c p</code> | Open preview to the side      | command | `markdown.showPreviewToSide`     |
 | <code>␣ m languageId:markdown c P</code> | Open preview in current group | command | `markdown.showPreview`           |
 
-# Table of Contents...
+# +Table of Contents
 
 Key Binding: <code>␣ m languageId:markdown t</code>
 
@@ -913,7 +917,7 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:markdown t u</code> | Update Table of Contents | command | `markdown.extension.toc.update`           |
 | <code>␣ m languageId:markdown t N</code> | Remove section numbers   | command | `markdown.extension.toc.removeSecNumbers` |
 
-# Text...
+# +Text
 
 Key Binding: <code>␣ m languageId:markdown x</code>
 
@@ -931,7 +935,7 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:markdown x s</code>  | Toggle strikethrough   | command                              | `markdown.extension.editing.toggleStrikethrough` |
 | <code>␣ m languageId:markdown x ~</code>  | Toggle code block      | command                              | `markdown.extension.editing.toggleCodeBlock`     |
 
-# Package actions...
+# +Package actions
 
 Key Binding: <code>␣ m languageId:go a p</code>
 
@@ -946,7 +950,7 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:go a p s</code> | Browse packages         | command | `go.browse.packages` |
 | <code>␣ m languageId:go a p v</code> | Vet package             | command | `go.vet.package`     |
 
-# Workspace actions...
+# +Workspace actions
 
 Key Binding: <code>␣ m languageId:go a w</code>
 
@@ -959,7 +963,7 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:go a w p</code> | Add package to workspace | command | `go.add.package.workspace` |
 | <code>␣ m languageId:go a w v</code> | Vet workspace            | command | `go.vet.workspace`         |
 
-# Benchmarks...
+# +Benchmarks
 
 Key Binding: <code>␣ m languageId:go t b</code>
 
@@ -971,7 +975,7 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:go t b p</code> | Benchmark package            | command | `go.benchmark.package` |
 | <code>␣ m languageId:go t b F</code> | Benchmark file               | command | `go.benchmark.file`    |
 
-# Generate...
+# +Generate
 
 Key Binding: <code>␣ m languageId:go t g</code>
 
@@ -983,7 +987,7 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:go t g p</code> | Generate unit tests for package  | command | `go.test.generate.package`  |
 | <code>␣ m languageId:go t g F</code> | Generate unit tests for file     | command | `go.test.generate.file`     |
 
-# Toggle...
+# +Toggle
 
 Key Binding: <code>␣ m languageId:go t t</code>
 
