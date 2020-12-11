@@ -20,7 +20,7 @@ This config might be in conflict with "Easy List Navigation" below.
 	{
 		"key": "ctrl+h",
 		"command": "workbench.action.navigateLeft",
-		"when": "!inQuickOpen && !suggestWidgetVisible && !parameterHintsVisible"
+		"when": "!inQuickOpen && !suggestWidgetVisible && !parameterHintsVisible && !isInDiffEditor"
 	},
 	{
 		"key": "ctrl+j",
@@ -35,8 +35,29 @@ This config might be in conflict with "Easy List Navigation" below.
 	{
 		"key": "ctrl+l",
 		"command": "workbench.action.navigateRight",
-		"when": "!inQuickOpen && !suggestWidgetVisible && !parameterHintsVisible"
-	}
+		"when": "!inQuickOpen && !suggestWidgetVisible && !parameterHintsVisible && !isInDiffEditor"
+    },
+    // Quick Navigation for diff view
+    {
+		"key": "ctrl+h",
+		"command": "workbench.action.compareEditor.focusSecondarySide",
+		"when": "isInDiffEditor && !isInDiffLeftEditor"
+	},
+	{
+		"key": "ctrl+h",
+		"command": "workbench.action.navigateLeft",
+		"when": "isInDiffEditor && isInDiffLeftEditor"
+	},
+	{
+		"key": "ctrl+l",
+		"command": "workbench.action.compareEditor.focusPrimarySide",
+		"when": "isInDiffEditor && isInDiffLeftEditor"
+	},
+	{
+		"key": "ctrl+l",
+		"command": "workbench.action.navigateRight",
+		"when": "isInDiffEditor && !isInDiffLeftEditor"
+	},
 ]
 ```
 
