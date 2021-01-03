@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+    <id>https://vspacecode.github.io/blog</id>
+    <title>VSpaceCode Blog</title>
+    <updated>2020-09-18T00:00:00.000Z</updated>
+    <generator>https://github.com/jpmonette/feed</generator>
+    <link rel="alternate" href="https://vspacecode.github.io/blog"/>
+    <subtitle>VSpaceCode Blog</subtitle>
+    <icon>https://vspacecode.github.io/img/favicon.ico</icon>
+    <entry>
+        <title type="html"><![CDATA[We have a website!]]></title>
+        <id>We have a website!</id>
+        <link href="https://vspacecode.github.io/blog/2020/09/18/hello"/>
+        <updated>2020-09-18T00:00:00.000Z</updated>
+        <summary type="html"><![CDATA[Welcome 🥳]]></summary>
+    </entry>
+</feed>
