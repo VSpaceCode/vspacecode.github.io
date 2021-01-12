@@ -31,3 +31,8 @@ Required extensions:
 
 Required extensions:
 - [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
+
+## Python
+
+Required extensions:
+- [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
