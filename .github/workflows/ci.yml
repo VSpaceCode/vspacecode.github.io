@@ -1,0 +1,17 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+
+jobs:
+  markdown-lint:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+      - name: Lint all files recursively
+        uses: avto-dev/markdown-lint@v1
+        with:
+          config: '.markdownlint.yaml' 
+          args: '**/*.md'
