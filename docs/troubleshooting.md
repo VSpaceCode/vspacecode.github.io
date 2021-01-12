@@ -5,7 +5,8 @@ title: Troubleshooting
 
 ## Error "␣ is undefined" when pressing SPC SPC
 
-When pressing `SPC SPC` quickly on macOS, which-key doesn't recognize the second `SPC` sometimes, and the error "␣ is undefined" is displayed on the status bar.
+When pressing `SPC SPC` quickly on macOS, which-key doesn't recognize the second `SPC` sometimes,
+and the error "␣ is undefined" is displayed on the status bar.
 
 This problem is due to a keyboard settings on macOS that add a period with double-space.
 
@@ -47,7 +48,8 @@ Example:
 ]
 ```
 
-In order to solve it, remove the conflicting vim bindings from your `settings.json` completely, or use the VSpaceCode's [overrides](./menu-customization#addreplace) instead.
+In order to solve it, remove the conflicting vim bindings from your `settings.json` completely,
+or use the VSpaceCode's [overrides](./menu-customization#addreplace) instead.
 
 ### Virtual Machine or slow hardware
 
@@ -55,7 +57,8 @@ If you are working on limiting resources consider using [VSCode remote](https://
 
 ### Other conflicts
 
-Try to remove all the extensions except the ones installed by VSpaceCode, and clean your `settings.json` and `keybindings.json` files in order to spot some weird conflicts.
+Try to remove all the extensions except the ones installed by VSpaceCode, and clean your `settings.json`
+and `keybindings.json` files in order to spot some weird conflicts.
 
 ## Known Issues
 

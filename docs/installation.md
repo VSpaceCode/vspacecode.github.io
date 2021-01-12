@@ -8,7 +8,9 @@ This extension is published as an extension pack, i.e. it installs all the neces
 However, if you do not like the bundled extensions or you are not using VSCode Vim, please go to the
 [vscode-which-key](https://github.com/VSpaceCode/vscode-which-key) extension for a standalone which key menu function.
 
-After the installation of the [VSpaceCode extension](https://marketplace.visualstudio.com/items?itemName=VSpaceCode.vspacecode), a notification will help you to configure both the necessary settings and user bindings.
+After the installation of the
+[VSpaceCode extension](https://marketplace.visualstudio.com/items?itemName=VSpaceCode.vspacecode),
+a notification will help you to configure both the necessary settings and user bindings.
 
 :::note
 By following this automatic procedure, the formatting of `settings.json` and `keybindings.json` may be lost.
@@ -17,10 +19,12 @@ If you want to prevent this, you can choose to follow the manual configuration b
 
 ## Manual Configuration (optional)
 
-The [`settings.jsonc`][settings] and [`keybindings.jsonc`][keybindings] in the repo contains the configurations needed. You can merge them manually to your user's `settings.json` and `keybindings.json`.
+The [`settings.jsonc`][settings] and [`keybindings.jsonc`][keybindings] in the repo contains the
+configurations needed. You can merge them manually to your user's `settings.json` and `keybindings.json`.
 
 :::tip
-You can access your user's `settings.json` and `keybindings.json` by searching `Preference: Open Settings (JSON)` and `Preference: Open Keyboard Shortcuts (JSON)` in the command palette (Ctl+Shift+P)
+You can access your user's `settings.json` and `keybindings.json` by searching `Preference: Open Settings (JSON)`
+and `Preference: Open Keyboard Shortcuts (JSON)` in the command palette (Ctl+Shift+P)
 :::
 
 The following commands can be access through command palette to rerun the automatic configuration step.

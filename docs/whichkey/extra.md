@@ -7,7 +7,8 @@ This section config extra settings that pertain to both Standalone or With exten
 
 ## Use non-character keys
 
-This section describes a way to use non-character keys in which-key menu like `<tab>` or `Control+D`. `<tab>` is supported out of the box. Follow the following instruction to add support for keys other than `<tab>`.
+This section describes a way to use non-character keys in which-key menu like `<tab>` or `Control+D`.
+`<tab>` is supported out of the box. Follow the following instruction to add support for keys other than `<tab>`.
 
 Merge the following json to your `keybindings.json`.
 
@@ -20,7 +21,8 @@ Merge the following json to your `keybindings.json`.
 }
 ```
 
-Once you've done that, you can use `C-x` in the `key` value of the which-key config. Effectively, the above keybinding will enter `C-x` in the QuickPick input box when `ctrl+x` is pressed when the which key is focused.
+Once you've done that, you can use `C-x` in the `key` value of the which-key config.
+Effectively, the above keybinding will enter `C-x` in the QuickPick input box when `ctrl+x` is pressed when the which key is focused.
 
 ## Display menu with a delay
 
@@ -32,7 +34,9 @@ You can set `whichkey.sortOrder` in `settings.json` to `alphabetically` to alway
 
 ## Unclear selection
 
-Selected text can be hard to see when which-key menu is active. This could be due to the `inactiveSelectionBackground` config of your current theme. You can selectively override that color in your `settings.json` like the following example.
+Selected text can be hard to see when which-key menu is active.
+This could be due to the `inactiveSelectionBackground` config of your current theme.
+You can selectively override that color in your `settings.json` like the following example.
 
 ```json
 "workbench.colorCustomizations": {
@@ -46,13 +50,16 @@ Selected text can be hard to see when which-key menu is active. This could be du
 This feature is marked as experimental and the config is subject to change.
 :::
 
-This allows conditional execution of bindings. Currently, it only supports conditions on the `when` passed from shortcut and `languageId` of the active editor.
+This allows conditional execution of bindings.
+Currently, it only supports conditions on the `when` passed from shortcut and `languageId` of the active editor.
 
 - It reuses the similar structure to the `bindings` type.
 - The property `key` in a binding item is reused to represent the condition.
 - The condition can be thought of as a key-value pair serialized into a string.
 
-`languageId:javascript;when:sideBarVisible` is an example condition serialized into a string for the `key` that checks if the language id of the currently active editor is javascript and if the side bar is visible (see the [when](#when) section for more details).
+`languageId:javascript;when:sideBarVisible` is an example condition serialized into a string for the `key`
+that checks if the language id of the currently active editor is javascript and if the side bar is visible
+(see the [when](#when) section for more details).
 
 A concrete example of a binding with that condition is as follow:
 
@@ -143,9 +150,14 @@ Negative `position` property can also be used to remove conditional bindings.
 ### when
 
 Since VSCode doesn't allow reading of the context of a json field, we cannot read the condition used in the `when` in shortcuts.
-For this reason, you will need to repeat every `when` condition used in conditional bindings, at least until [vscode/#10471](https://github.com/microsoft/vscode/issues/10471) is implemented.
+For this reason, you will need to repeat every `when` condition used in conditional bindings, at least until
+[vscode/#10471](https://github.com/microsoft/vscode/issues/10471) is implemented.
 
-For example, the following shortcut in `keybindings.json` will pass both `key` and `when` in the `args` to `which-key`. The outer `when` is the [condition clause](https://code.visualstudio.com/docs/getstarted/keybindings#_when-clause-contexts) for vscode to execute this key, and must contain `whichKeyVisible` which limits this shortcut to be only applicable when the which-key menu is visible. In this case, if a user presses key `t` when which-key, sidebar and explorer viewlet are visible, it will execute `whichkey.triggerKey` command and send the `args` (`key` and `when`) to  `which-key`
+For example, the following shortcut in `keybindings.json` will pass both `key` and `when` in the `args` to `which-key`.
+The outer `when` is the [condition clause](https://code.visualstudio.com/docs/getstarted/keybindings#_when-clause-contexts)
+for vscode to execute this key, and must contain `whichKeyVisible` which limits this shortcut to be only applicable when the which-key menu is visible.
+In this case, if a user presses key `t` when which-key, sidebar and explorer viewlet are visible, it will execute `whichkey.triggerKey`
+command and send the `args` (`key` and `when`) to  `which-key`
 
 ```json
 {
@@ -159,7 +171,8 @@ For example, the following shortcut in `keybindings.json` will pass both `key` a
 }
 ```
 
-The `args.key` and `args.when` that were sent to `which-key` are then used to find the a binding that matches the key `t` and any conditional binding that matches that condition. The following binding is an example that contains a conditional binding that matches the `args`.
+The `args.key` and `args.when` that were sent to `which-key` are then used to find the a binding that matches the key `t`
+and any conditional binding that matches that condition. The following binding is an example that contains a conditional binding that matches the `args`.
 
 ```json
 {
@@ -183,7 +196,8 @@ The `args.key` and `args.when` that were sent to `which-key` are then used to fi
 }
 ```
 
-Unfortunately, if you have another condition binding with a different `key` that want to match the same `when` condition as the `t` in the above example, you will need to setup another shortcut with that different `key`.
+Unfortunately, if you have another condition binding with a different `key` that want to match the same
+`when` condition as the `t` in the above example, you will need to setup another shortcut with that different `key`.
 
 ### languageId
 

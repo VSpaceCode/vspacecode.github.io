@@ -1,4 +1,8 @@
 ---
+# allow tabs only in code blocks
+MD010:
+  code_blocks: false
+
 # Use `#` for headers
 MD003:
   style: atx
