@@ -1,0 +1,17 @@
+name: Continuous Integration
+
+on:
+  push:
+    branches: [master, vspacecode-next, which-key-next]
+  pull_request:
+
+jobs:
+  markdown-lint:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Lint all files recursively
+        uses: avto-dev/markdown-lint@v1
+        with:
+          config: '.markdownlint.yaml' 
+          args: "'**/*.md' --ignore node_modules --ignore docs/default-keybindings.md"

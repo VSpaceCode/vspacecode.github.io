@@ -7,7 +7,8 @@ This section contains additional config that might be helpful beyond the default
 
 ## Quick Window Navigation
 
-To navigate all the windows including slide and bottom pane with `Ctrl-h/j/k/l`, you can merge the following config system's key bindings to your `keybindings.json` file.
+To navigate all the windows including slide and bottom pane with `Ctrl-h/j/k/l`,
+you can merge the following config system's key bindings to your `keybindings.json` file.
 
 :::caution
 This config might be in conflict with "Easy List Navigation" below.
@@ -63,7 +64,9 @@ This config might be in conflict with "Easy List Navigation" below.
 
 ## Easy List Navigation
 
-Although [VSCode Vim already bound](https://github.com/VSCodeVim/Vim/blob/v1.14.5/package.json#L124-L152) these to `h/j/k/l`, however, they might not work in all lists like in the problem pane. You can merge the following keybindings to `keybindings.json` to bind `ctrl+h/l/j/k` for those situations.
+Although [VSCode Vim already bound](https://github.com/VSCodeVim/Vim/blob/v1.14.5/package.json#L124-L152)
+these to `h/j/k/l`, however, they might not work in all lists like in the problem pane.
+You can merge the following keybindings to `keybindings.json` to bind `ctrl+h/l/j/k` for those situations.
 
 :::caution
 This config might be in conflict with "Quick Window Navigation" above.
@@ -98,7 +101,10 @@ This config might be in conflict with "Quick Window Navigation" above.
 
 ## Rebind action menu for file-browser
 
-File browser, which is bound to `<spc> f f` by default, binds `ctrl+a` to open an action menu; however, `ctrl+a` can be used move the text cursor to the front. Your can merge the following example keybindings to `keybindings.json` to use `ctrl+o` instead of `ctrl+a` in the file browser to open an action menu.
+File browser, which is bound to `<spc> f f` by default, binds `ctrl+a` to open an action menu;
+however, `ctrl+a` can be used move the text cursor to the front.
+Your can merge the following example keybindings to `keybindings.json` to use `ctrl+o` instead of
+`ctrl+a` in the file browser to open an action menu.
 
 `keybindings.json`:
 
@@ -127,6 +133,7 @@ The argument of `vim.remap` is specified by the `"args"` field.
 If the `"args"` field contains the `after` key, the vim key combination specified in the value will be executed.
 
 The following example json overrides `<spc> y` to execute vim keys of `y y`.
+
 ```json
 "vspacecode.bindingOverrides": [
     {
@@ -142,9 +149,12 @@ The following example json overrides `<spc> y` to execute vim keys of `y y`.
 ```
 
 ### Execute vim command
+
 If the `"args"` field contains the `commands` key, the vim and vscode commands specified in the array will be executed.
 
-The following example json overrides `<spc> c` to execute the vim command `:noh` and the vscode command `editor.action.codeAction` with `{ "kind": "refactor.extract" }` as argument.
+The following example json overrides `<spc> c` to execute the vim command `:noh` and the
+vscode command `editor.action.codeAction` with `{ "kind": "refactor.extract" }` as argument.
+
 ```json
 "vspacecode.bindingOverrides": [
     {
@@ -164,7 +174,6 @@ The following example json overrides `<spc> c` to execute the vim command `:noh`
     }
 ]
 ```
-
 
 ## Use non-character keys
 
