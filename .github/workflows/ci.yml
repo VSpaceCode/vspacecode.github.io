@@ -2,7 +2,7 @@ name: Continuous Integration
 
 on:
   push:
-    branches: [master]
+    branches: [master, vspacecode-next, which-key-next]
   pull_request:
 
 jobs:
