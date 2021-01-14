@@ -35,4 +35,5 @@ Required extensions:
 ## Python
 
 Required extensions:
+
 - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
