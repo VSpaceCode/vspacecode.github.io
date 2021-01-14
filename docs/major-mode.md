@@ -26,6 +26,15 @@ The section below lists all the extensions required by each major mode.
 In the following you can see all the currently available major modes.
 If your favorite one is missing, please [contribute](https://github.com/VSpaceCode/VSpaceCode/blob/master/CONTRIBUTING.md)!
 
+## Clojure
+
+Required extensions:
+- [Calva](https://marketplace.visualstudio.com/items?itemName=betterthantomorrow.calva)
+
+Documentation:
+- [VSpaceCode and Calva install guide](http://practicalli.github.io/clojure/clojure-editors/editor-install-guides/vspacecode-calva.html#install-vs-code-extension)
+- [VSpaceCode and Calva user guide](http://practicalli.github.io/clojure/clojure-editors/editor-user-guides/vspacecode-calva.html)
+
 ## Go
 
 Required extensions:
