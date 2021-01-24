@@ -58,7 +58,7 @@ function Home() {
   return (
     <Layout
       title={siteConfig.title}
-      description="Spacemacs like keybindings for Visual Studio Code">
+      description={siteConfig.tagline}>
       <header className={clsx('hero hero--primary', styles.heroBanner)}>
         <div className="container">
           <div className="row">
