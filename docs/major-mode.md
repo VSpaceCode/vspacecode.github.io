@@ -52,3 +52,10 @@ Required extensions:
 Required extensions:
 
 - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
+
+## Ruby
+
+Required extensions:
+
+- [Ruby](https://marketplace.visualstudio.com/items?itemName=rebornix.Ruby)
+- [Ruby Solargraph](https://marketplace.visualstudio.com/items?itemName=castwide.solargraph)
