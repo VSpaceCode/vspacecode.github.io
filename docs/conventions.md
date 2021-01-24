@@ -21,7 +21,7 @@ The following formatting bindings should be offered in a major mode `<spc> m`:
 | ----------- | ------------------------------- | -------------------------------------- |
 | `m = =`     | Format region or buffer         | `editor.action.format`                   |
 | `m = b`     | Format buffer                   | `editor.action.formatDocument`           |
+| `m = B`     | Format buffer with formatter    | `editor.action.formatDocument.multiple`  |
 | `m = c`     | Format changes                  | `editor.action.formatChanges`            |
 | `m = s`     | Format selection                | `editor.action.formatSelection`          |
-| `m = B`     | Format buffer with formatter    | `editor.action.formatDocument.multiple`  |
 | `m = S`     | Format selection with formatter | `editor.action.formatSelection.multiple` |
