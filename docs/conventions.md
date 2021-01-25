@@ -12,9 +12,8 @@ corresponding terms in VSCode:
 | window | editor group |
 | frame  | window       |
 
-
-
 ### Formatting in Major Mode
+
 The following formatting bindings should be offered in a major mode `<spc> m`:
 
 | Key Binding | Name                            | Command                                |
