@@ -32,7 +32,7 @@ Type: <code>bindings</code>
 | <code>␣ ;</code> | Toggle comment                   | command                                 | `editor.action.commentLine`                                                                                          |
 | <code>␣ v</code> | Smart select/expand region       | [transient](#smart-selectexpand-region) | `editor.action.smartSelect.grow`                                                                                     |
 | <code>␣ b</code> | +Buffers                         | [bindings](#buffers)                    | N/A                                                                                                                  |
-| <code>␣ c</code> | +Comments                        | [bindings](#comments)                   | N/A                                                                                                                  |
+| <code>␣ c</code> | +Compile/Comments                | [bindings](#compilecomments)            | N/A                                                                                                                  |
 | <code>␣ d</code> | +Debug                           | [bindings](#debug)                      | N/A                                                                                                                  |
 | <code>␣ e</code> | +Errors                          | [bindings](#errors)                     | N/A                                                                                                                  |
 | <code>␣ f</code> | +File                            | [bindings](#file)                       | N/A                                                                                                                  |
@@ -51,9 +51,9 @@ Type: <code>bindings</code>
 | <code>␣ z</code> | +Zoom/Fold                       | [bindings](#zoomfold)                   | N/A                                                                                                                  |
 | <code>␣ D</code> | +Diff/Compare                    | [bindings](#diffcompare)                | N/A                                                                                                                  |
 | <code>␣ F</code> | +Frame                           | [bindings](#frame)                      | N/A                                                                                                                  |
-| <code>␣ m</code> | +Major                           | [conditional](#major)                   | N/A                                                                                                                  |
 | <code>␣ S</code> | +Show                            | [bindings](#show)                       | N/A                                                                                                                  |
 | <code>␣ T</code> | +UI toggles                      | [bindings](#ui-toggles)                 | N/A                                                                                                                  |
+| <code>␣ m</code> | +Major                           | [conditional](#major)                   | N/A                                                                                                                  |
 
 # Smart select/expand region
 
@@ -78,6 +78,10 @@ Type: <code>bindings</code>
 | <code>␣ b 1</code> | First buffer in window            | command                 | `workbench.action.firstEditorInGroup`                               |
 | <code>␣ b b</code> | Show all buffers                  | command                 | `workbench.action.showAllEditorsByMostRecentlyUsed`                 |
 | <code>␣ b d</code> | Close active buffer               | command                 | `workbench.action.closeActiveEditor`                                |
+| <code>␣ b h</code> | Move buffer into left window      | command                 | `workbench.action.moveEditorToLeftGroup`                            |
+| <code>␣ b j</code> | Move buffer into below window     | command                 | `workbench.action.moveEditorToBelowGroup`                           |
+| <code>␣ b k</code> | Move buffer into above window     | command                 | `workbench.action.moveEditorToAboveGroup`                           |
+| <code>␣ b l</code> | Move buffer into right window     | command                 | `workbench.action.moveEditorToRightGroup`                           |
 | <code>␣ b n</code> | Next buffer                       | command                 | `workbench.action.nextEditor`                                       |
 | <code>␣ b p</code> | Previous buffer                   | command                 | `workbench.action.previousEditor`                                   |
 | <code>␣ b s</code> | Scratch buffer                    | command                 | `workbench.action.files.newUntitledFile`                            |
@@ -94,7 +98,7 @@ Type: <code>bindings</code>
 | <code>␣ b Y</code> | Copy buffer to clipboard          | command                 | `vspacecode.copyWholeBuffer`                                        |
 | <code>␣ b N</code> | +New Buffer                       | [bindings](#new-buffer) | N/A                                                                 |
 
-# +Comments
+# +Compile/Comments
 
 Key Binding: <code>␣ c</code>
 
@@ -102,6 +106,7 @@ Type: <code>bindings</code>
 
 | Key Binding        | Name                | Type    | Command(s)                         |
 | ------------------ | ------------------- | ------- | ---------------------------------- |
+| <code>␣ c c</code> | Compile project     | command | `workbench.action.tasks.build`     |
 | <code>␣ c l</code> | Toggle line comment | command | `editor.action.commentLine`        |
 | <code>␣ c n</code> | Next error          | command | `editor.action.marker.nextInFiles` |
 | <code>␣ c N</code> | Previous error      | command | `editor.action.marker.prevInFiles` |
@@ -151,7 +156,6 @@ Type: <code>bindings</code>
 
 | Key Binding        | Name                                   | Type                                     | Command(s)                                                          |
 | ------------------ | -------------------------------------- | ---------------------------------------- | ------------------------------------------------------------------- |
-| <code>␣ f =</code> | Format file                            | command                                  | `editor.action.formatDocument`                                      |
 | <code>␣ f f</code> | Open file/folder                       | command                                  | `file-browser.open`                                                 |
 | <code>␣ f l</code> | Change file language                   | command                                  | `workbench.action.editor.changeLanguageMode`                        |
 | <code>␣ f n</code> | New file                               | command                                  | `explorer.newFile`                                                  |
@@ -218,16 +222,19 @@ Key Binding: <code>␣ j</code>
 
 Type: <code>bindings</code>
 
-| Key Binding        | Name                        | Type    | Command(s)                        |
-| ------------------ | --------------------------- | ------- | --------------------------------- |
-| <code>␣ j =</code> | Format region or buffer     | command | `editor.action.format`            |
-| <code>␣ j i</code> | Jump to symbol in buffer    | command | `workbench.action.gotoSymbol`     |
-| <code>␣ j j</code> | Jump to character           | command | `vim.remap`                       |
-| <code>␣ j l</code> | Jump to line                | command | `vim.remap`                       |
-| <code>␣ j n</code> | Split new line              | command | `lineBreakInsert`                 |
-| <code>␣ j v</code> | Jump to outline/variables   | command | `breadcrumbs.focusAndSelect`      |
-| <code>␣ j w</code> | Jump to word                | command | `vim.remap`                       |
-| <code>␣ j I</code> | Jump to symbol in workspace | command | `workbench.action.showAllSymbols` |
+| Key Binding        | Name                        | Type    | Command(s)                               |
+| ------------------ | --------------------------- | ------- | ---------------------------------------- |
+| <code>␣ j =</code> | Format region or buffer     | command | `editor.action.format`                   |
+| <code>␣ j +</code> | Format buffer               | command | `editor.action.formatDocument`           |
+| <code>␣ j c</code> | Jump to previous change     | command | `workbench.action.editor.previousChange` |
+| <code>␣ j i</code> | Jump to symbol in buffer    | command | `workbench.action.gotoSymbol`            |
+| <code>␣ j j</code> | Jump to character           | command | `vim.remap`                              |
+| <code>␣ j l</code> | Jump to line                | command | `vim.remap`                              |
+| <code>␣ j n</code> | Split new line              | command | `lineBreakInsert`                        |
+| <code>␣ j v</code> | Jump to outline/variables   | command | `breadcrumbs.focusAndSelect`             |
+| <code>␣ j w</code> | Jump to word                | command | `vim.remap`                              |
+| <code>␣ j C</code> | Jump to next change         | command | `workbench.action.editor.nextChange`     |
+| <code>␣ j I</code> | Jump to symbol in workspace | command | `workbench.action.showAllSymbols`        |
 
 # +Layouts
 
@@ -407,17 +414,6 @@ Type: <code>bindings</code>
 | <code>␣ F o</code> | Switch frame                     | command | `workbench.action.quickSwitchWindow`             |
 | <code>␣ F N</code> | Open new empty frame             | command | `workbench.action.newWindow`                     |
 
-# +Major
-
-Key Binding: <code>␣ m</code>
-
-Type: <code>conditional</code>
-
-| Condition                        | Name     | Type                  | Command(s) |
-| -------------------------------- | -------- | --------------------- | ---------- |
-| <code>languageId:go</code>       | Go       | [bindings](#go)       | N/A        |
-| <code>languageId:markdown</code> | Markdown | [bindings](#markdown) | N/A        |
-
 # +Show
 
 Key Binding: <code>␣ S</code>
@@ -429,6 +425,7 @@ Type: <code>bindings</code>
 | <code>␣ S d</code> | Show debug console   | command | `workbench.debug.action.toggleRepl`    |
 | <code>␣ S e</code> | Show explorer        | command | `workbench.view.explorer`              |
 | <code>␣ S g</code> | Show source control  | command | `workbench.view.scm`                   |
+| <code>␣ S n</code> | Show notification    | command | `notifications.toggleList`             |
 | <code>␣ S o</code> | Show output          | command | `workbench.action.output.toggleOutput` |
 | <code>␣ S p</code> | Show problem         | command | `workbench.actions.view.problems`      |
 | <code>␣ S r</code> | Show remote explorer | command | `workbench.view.remote`                |
@@ -454,6 +451,20 @@ Type: <code>bindings</code>
 | <code>␣ T z</code> | Toggle zen mode                     | command | `workbench.action.toggleZenMode`               |
 | <code>␣ T F</code> | Toggle full screen                  | command | `workbench.action.toggleFullScreen`            |
 | <code>␣ T T</code> | Toggle tab visibility               | command | `workbench.action.toggleTabsVisibility`        |
+
+# +Major
+
+Key Binding: <code>␣ m</code>
+
+Type: <code>conditional</code>
+
+| Condition                        | Name     | Type                  | Command(s) |
+| -------------------------------- | -------- | --------------------- | ---------- |
+| <code>languageId:clojure</code>  | Clojure  | [bindings](#clojure)  | N/A        |
+| <code>languageId:go</code>       | Go       | [bindings](#go)       | N/A        |
+| <code>languageId:markdown</code> | Markdown | [bindings](#markdown) | N/A        |
+| <code>languageId:python</code>   | Python   | [bindings](#python)   | N/A        |
+| <code>languageId:ruby</code>     | Ruby     | [bindings](#ruby)     | N/A        |
 
 # +New Buffer
 
@@ -734,6 +745,27 @@ Type: <code>bindings</code>
 | <code>␣ z . G</code> | Open: all regions         | command | `editor.unfoldAllMarkerRegions` |
 | <code>␣ z . O</code> | Open: recursively         | command | `editor.unfoldRecursively`      |
 
+# Clojure
+
+Key Binding: <code>␣ m languageId:clojure</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                           | Name                 | Type                             | Command(s)              |
+| ------------------------------------- | -------------------- | -------------------------------- | ----------------------- |
+| <code>␣ m languageId:clojure .</code> | Connect or jack-in   | command                          | `calva.jackInOrConnect` |
+| <code>␣ m languageId:clojure '</code> | Connect to REPL      | command                          | `calva.connect`         |
+| <code>␣ m languageId:clojure "</code> | Jack-in to REPL      | command                          | `calva.jackIn`          |
+| <code>␣ m languageId:clojure !</code> | Disconnect from REPL | command                          | `calva.disconnect`      |
+| <code>␣ m languageId:clojure =</code> | +Format              | [bindings](#format)              | N/A                     |
+| <code>␣ m languageId:clojure d</code> | +Debug               | [bindings](#debug)               | N/A                     |
+| <code>␣ m languageId:clojure e</code> | +Evaluate            | [bindings](#evaluate)            | N/A                     |
+| <code>␣ m languageId:clojure k</code> | +Structural editing  | [bindings](#structural-editing)  | N/A                     |
+| <code>␣ m languageId:clojure m</code> | +Manage REPL session | [bindings](#manage-repl-session) | N/A                     |
+| <code>␣ m languageId:clojure r</code> | +Refactor            | [bindings](#refactor)            | N/A                     |
+| <code>␣ m languageId:clojure t</code> | +Tests               | [bindings](#tests)               | N/A                     |
+| <code>␣ m languageId:clojure T</code> | +Toggle              | [bindings](#toggle)              | N/A                     |
+
 # Go
 
 Key Binding: <code>␣ m languageId:go</code>
@@ -763,6 +795,33 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:markdown t</code> | +Table of Contents | [bindings](#table-of-contents) | N/A        |
 | <code>␣ m languageId:markdown x</code> | +Text              | [bindings](#text)              | N/A        |
 
+# Python
+
+Key Binding: <code>␣ m languageId:python</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                          | Name        | Type                  | Command(s)              |
+| ------------------------------------ | ----------- | --------------------- | ----------------------- |
+| <code>␣ m languageId:python =</code> | +Format     | [bindings](#format)   | N/A                     |
+| <code>␣ m languageId:python c</code> | +Execute    | [bindings](#execute)  | N/A                     |
+| <code>␣ m languageId:python r</code> | +Refactor   | [bindings](#refactor) | N/A                     |
+| <code>␣ m languageId:python s</code> | +REPL       | [bindings](#repl)     | N/A                     |
+| <code>␣ m languageId:python t</code> | +Test       | [bindings](#test)     | N/A                     |
+| <code>␣ m languageId:python v</code> | +Virtualenv | command               | `python.setInterpreter` |
+
+# Ruby
+
+Key Binding: <code>␣ m languageId:ruby</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                        | Name      | Type                  | Command(s) |
+| ---------------------------------- | --------- | --------------------- | ---------- |
+| <code>␣ m languageId:ruby g</code> | +Go to    | [bindings](#go-to)    | N/A        |
+| <code>␣ m languageId:ruby =</code> | +Format   | [bindings](#format)   | N/A        |
+| <code>␣ m languageId:ruby r</code> | +Refactor | [bindings](#refactor) | N/A        |
+
 # Next breakpoint
 
 Key Binding: <code>␣ d b n</code>
@@ -787,17 +846,143 @@ Type: <code>transient</code>
 
 # +Format
 
+Key Binding: <code>␣ m languageId:clojure =</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                             | Name                | Type    | Command(s)                    |
+| --------------------------------------- | ------------------- | ------- | ----------------------------- |
+| <code>␣ m languageId:clojure = =</code> | Format current form | command | `calva-fmt.formatCurrentForm` |
+| <code>␣ m languageId:clojure = a</code> | Align current form  | command | `calva-fmt.alignCurrentForm`  |
+| <code>␣ m languageId:clojure = d</code> | Dedent line         | command | `calva-fmt.tabDedent`         |
+| <code>␣ m languageId:clojure = i</code> | Indent line         | command | `calva-fmt.tabIndent`         |
+
+# +Debug
+
+Key Binding: <code>␣ m languageId:clojure d</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                             | Name                    | Type    | Command(s)                  |
+| --------------------------------------- | ----------------------- | ------- | --------------------------- |
+| <code>␣ m languageId:clojure d i</code> | Last evaluation results | command | `calva.debug.instrument`    |
+| <code>␣ m languageId:clojure d r</code> | Last evaluation results | command | `calva.copyLastResults`     |
+| <code>␣ m languageId:clojure d s</code> | Last stacktrace         | command | `calva.printLastStacktrace` |
+
+# +Evaluate
+
+Key Binding: <code>␣ m languageId:clojure e</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                             | Name                                | Type    | Command(s)                            |
+| --------------------------------------- | ----------------------------------- | ------- | ------------------------------------- |
+| <code>␣ m languageId:clojure e ;</code> | Evaluate top-level form as comment  | command | `calva.evaluateTopLevelFormAsComment` |
+| <code>␣ m languageId:clojure e :</code> | Evaluate current form as comment    | command | `calva.evaluateSelectionAsComment`    |
+| <code>␣ m languageId:clojure e e</code> | Evaluate current expression         | command | `calva.evaluateSelection`             |
+| <code>␣ m languageId:clojure e f</code> | Evaluate top-level expression       | command | `calva.evaluateCurrentTopLevelForm`   |
+| <code>␣ m languageId:clojure e i</code> | Interrupt evaluation                | command | `calva.interruptAllEvaluations`       |
+| <code>␣ m languageId:clojure e l</code> | Clear evaluation results            | command | `calva.clearInlineResults`            |
+| <code>␣ m languageId:clojure e n</code> | Evaluate all code in namespace      | command | `calva.loadFile`                      |
+| <code>␣ m languageId:clojure e s</code> | Select expression                   | command | `calva.selectCurrentForm`             |
+| <code>␣ m languageId:clojure e t</code> | Clear evaluation results            | command | `calva.requireREPLUtilities`          |
+| <code>␣ m languageId:clojure e w</code> | Replace form with evaluation result | command | `calva.evaluateSelectionReplace`      |
+
+# +Structural editing
+
+Key Binding: <code>␣ m languageId:clojure k</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                             | Name                      | Type              | Command(s)                  |
+| --------------------------------------- | ------------------------- | ----------------- | --------------------------- |
+| <code>␣ m languageId:clojure k .</code> | Toggle paredit mode       | command           | `paredit.togglemode`        |
+| <code>␣ m languageId:clojure k b</code> | Barf expression forward   | command           | `paredit.barfSexpForward`   |
+| <code>␣ m languageId:clojure k c</code> | Convolute expression      | command           | `paredit.convolute`         |
+| <code>␣ m languageId:clojure k h</code> | Backward expression       | command           | `paredit.backwardSexp`      |
+| <code>␣ m languageId:clojure k j</code> | Forward down expression   | command           | `paredit.forwardDownSexp`   |
+| <code>␣ m languageId:clojure k k</code> | Backward down expression  | command           | `paredit.backwardDownSexp`  |
+| <code>␣ m languageId:clojure k l</code> | Forward expression        | command           | `paredit.forwardSexp`       |
+| <code>␣ m languageId:clojure k r</code> | Raise expression          | command           | `paredit.raiseSexp`         |
+| <code>␣ m languageId:clojure k s</code> | Slurp expression forward  | command           | `paredit.slurpSexpForward`  |
+| <code>␣ m languageId:clojure k t</code> | Transpose expression      | command           | `paredit.transpose`         |
+| <code>␣ m languageId:clojure k B</code> | Barf expression backward  | command           | `paredit.barfSexpBackward`  |
+| <code>␣ m languageId:clojure k H</code> | Backward up expression    | command           | `paredit.backwardUpSexp`    |
+| <code>␣ m languageId:clojure k J</code> | Join expression           | command           | `paredit.joinSexp`          |
+| <code>␣ m languageId:clojure k L</code> | Forward up expression     | command           | `paredit.forwardUpSexp`     |
+| <code>␣ m languageId:clojure k S</code> | Slurp expression backward | command           | `paredit.slurpSexpBackward` |
+| <code>␣ m languageId:clojure k w</code> | +Wrap                     | [bindings](#wrap) | N/A                         |
+
+# +Manage REPL session
+
+Key Binding: <code>␣ m languageId:clojure m</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                             | Name                                    | Type    | Command(s)                   |
+| --------------------------------------- | --------------------------------------- | ------- | ---------------------------- |
+| <code>␣ m languageId:clojure m .</code> | Connect or jack-in                      | command | `calva.jackInOrConnect`      |
+| <code>␣ m languageId:clojure m c</code> | Connect to REPL server for project      | command | `calva.connect`              |
+| <code>␣ m languageId:clojure m j</code> | Start REPL server for project (jack-in) | command | `calva.jackIn`               |
+| <code>␣ m languageId:clojure m r</code> | Refresh changed namespaces              | command | `calva.refresh`              |
+| <code>␣ m languageId:clojure m s</code> | Select cljs build connection            | command | `calva.switchCljsBuild`      |
+| <code>␣ m languageId:clojure m t</code> | Toggle cljc session (clj, cljs)         | command | `calva.toggleCLJCSession`    |
+| <code>␣ m languageId:clojure m q</code> | Disconnect (quit) from REPL server      | command | `calva.disconnect`           |
+| <code>␣ m languageId:clojure m C</code> | Run custom REPL command                 | command | `calva.runCustomREPLCommand` |
+| <code>␣ m languageId:clojure m R</code> | Refresh all namespaces                  | command | `calva.refreshAll`           |
+
+# +Refactor
+
+Key Binding: <code>␣ m languageId:clojure r</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                             | Name                 | Type                             | Command(s) |
+| --------------------------------------- | -------------------- | -------------------------------- | ---------- |
+| <code>␣ m languageId:clojure r a</code> | +Add                 | [bindings](#add)                 | N/A        |
+| <code>␣ m languageId:clojure r c</code> | +Cycle clean convert | [bindings](#cycle-clean-convert) | N/A        |
+| <code>␣ m languageId:clojure r e</code> | +Extract expand      | [bindings](#extract-expand)      | N/A        |
+| <code>␣ m languageId:clojure r i</code> | +Introduce inline    | [bindings](#introduce-inline)    | N/A        |
+| <code>␣ m languageId:clojure r m</code> | +Move                | [bindings](#move)                | N/A        |
+| <code>␣ m languageId:clojure r t</code> | +Thread macros       | [bindings](#thread-macros)       | N/A        |
+
+# +Tests
+
+Key Binding: <code>␣ m languageId:clojure t</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                             | Name                           | Type    | Command(s)                 |
+| --------------------------------------- | ------------------------------ | ------- | -------------------------- |
+| <code>␣ m languageId:clojure t a</code> | Run all tests                  | command | `calva.runAllTests`        |
+| <code>␣ m languageId:clojure t f</code> | Run failing tests              | command | `calva.rerunTests`         |
+| <code>␣ m languageId:clojure t n</code> | Run tests in current namespace | command | `calva.runNamespaceTests`  |
+| <code>␣ m languageId:clojure t t</code> | Run current test               | command | `calva.runTestUnderCursor` |
+
+# +Toggle
+
+Key Binding: <code>␣ m languageId:clojure T</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                             | Name                        | Type    | Command(s)                |
+| --------------------------------------- | --------------------------- | ------- | ------------------------- |
+| <code>␣ m languageId:clojure T p</code> | Toggle pretty print results | command | `calva.togglePrettyPrint` |
+
+# +Format
+
 Key Binding: <code>␣ m languageId:go =</code>
 
 Type: <code>bindings</code>
 
-| Key Binding                        | Name                       | Type    | Command(s)                               |
-| ---------------------------------- | -------------------------- | ------- | ---------------------------------------- |
-| <code>␣ m languageId:go = =</code> | Format document            | command | `editor.action.formatDocument`           |
-| <code>␣ m languageId:go = d</code> | +Format document with      | command | `editor.action.formatDocument`           |
-| <code>␣ m languageId:go = m</code> | Format modified lines only | command | `editor.action.formatChanges`            |
-| <code>␣ m languageId:go = s</code> | Format selection           | command | `editor.action.formatSelection`          |
-| <code>␣ m languageId:go = S</code> | +Format selection with     | command | `editor.action.formatSelection.multiple` |
+| Key Binding                        | Name                             | Type    | Command(s)                               |
+| ---------------------------------- | -------------------------------- | ------- | ---------------------------------------- |
+| <code>␣ m languageId:go = =</code> | Format region or buffer          | command | `editor.action.format`                   |
+| <code>␣ m languageId:go = b</code> | Format buffer                    | command | `editor.action.formatDocument`           |
+| <code>␣ m languageId:go = c</code> | Format changes                   | command | `editor.action.formatChanges`            |
+| <code>␣ m languageId:go = s</code> | Format selection                 | command | `editor.action.formatSelection`          |
+| <code>␣ m languageId:go = B</code> | +Format buffer with formatter    | command | `editor.action.formatDocument.multiple`  |
+| <code>␣ m languageId:go = S</code> | +Format selection with formatter | command | `editor.action.formatSelection.multiple` |
 
 # +Actions
 
@@ -934,6 +1119,196 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:markdown x m</code>  | Toggle math            | command                              | `markdown.extension.editing.toggleMath`          |
 | <code>␣ m languageId:markdown x s</code>  | Toggle strikethrough   | command                              | `markdown.extension.editing.toggleStrikethrough` |
 | <code>␣ m languageId:markdown x ~</code>  | Toggle code block      | command                              | `markdown.extension.editing.toggleCodeBlock`     |
+
+# +Format
+
+Key Binding: <code>␣ m languageId:python =</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                            | Name                             | Type    | Command(s)                               |
+| -------------------------------------- | -------------------------------- | ------- | ---------------------------------------- |
+| <code>␣ m languageId:python = =</code> | Format region or buffer          | command | `editor.action.format`                   |
+| <code>␣ m languageId:python = b</code> | Format buffer                    | command | `editor.action.formatDocument`           |
+| <code>␣ m languageId:python = c</code> | Format changes                   | command | `editor.action.formatChanges`            |
+| <code>␣ m languageId:python = s</code> | Format selection                 | command | `editor.action.formatSelection`          |
+| <code>␣ m languageId:python = B</code> | +Format buffer with formatter    | command | `editor.action.formatDocument.multiple`  |
+| <code>␣ m languageId:python = S</code> | +Format selection with formatter | command | `editor.action.formatSelection.multiple` |
+
+# +Execute
+
+Key Binding: <code>␣ m languageId:python c</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                            | Name                     | Type    | Command(s)              |
+| -------------------------------------- | ------------------------ | ------- | ----------------------- |
+| <code>␣ m languageId:python c c</code> | Execute file in terminal | command | `python.execInTerminal` |
+| <code>␣ m languageId:python c C</code> | Execute file in terminal | command | `python.execInTerminal` |
+
+# +Refactor
+
+Key Binding: <code>␣ m languageId:python r</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                            | Name         | Type    | Command(s)           |
+| -------------------------------------- | ------------ | ------- | -------------------- |
+| <code>␣ m languageId:python r I</code> | Sort imports | command | `python.sortImports` |
+
+# +REPL
+
+Key Binding: <code>␣ m languageId:python s</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                            | Name                        | Type    | Command(s)                       |
+| -------------------------------------- | --------------------------- | ------- | -------------------------------- |
+| <code>␣ m languageId:python s i</code> | Start REPL                  | command | `python.startREPL`               |
+| <code>␣ m languageId:python s l</code> | Send line/selection to REPL | command | `python.execSelectionInTerminal` |
+| <code>␣ m languageId:python s r</code> | Send line/selection to REPL | command | `python.execSelectionInTerminal` |
+
+# +Test
+
+Key Binding: <code>␣ m languageId:python t</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                            | Name                  | Type    | Command(s)                        |
+| -------------------------------------- | --------------------- | ------- | --------------------------------- |
+| <code>␣ m languageId:python t a</code> | Run all tests         | command | `python.runtests`                 |
+| <code>␣ m languageId:python t b</code> | Run current test file | command | `python.runCurrentTestFile`       |
+| <code>␣ m languageId:python t r</code> | Re-run failed tests   | command | `python.runFailedTests`           |
+| <code>␣ m languageId:python t t</code> | Select and run test   | command | `python.selectAndRunTestMethod`   |
+| <code>␣ m languageId:python t A</code> | Debug all tests       | command | `python.debugtests`               |
+| <code>␣ m languageId:python t T</code> | Select and debug test | command | `python.selectAndDebugTestMethod` |
+
+# +Go to
+
+Key Binding: <code>␣ m languageId:ruby g</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                          | Name                   | Type    | Command(s)                              |
+| ------------------------------------ | ---------------------- | ------- | --------------------------------------- |
+| <code>␣ m languageId:ruby g d</code> | Go to definition       | command | `editor.action.revealDefinition`        |
+| <code>␣ m languageId:ruby g e</code> | Go to errors/problems  | command | `workbench.action.problems.focus`       |
+| <code>␣ m languageId:ruby g g</code> | Go to definition       | command | `editor.action.revealDefinition`        |
+| <code>␣ m languageId:ruby g i</code> | Find symbol in file    | command | `workbench.action.gotoSymbol`           |
+| <code>␣ m languageId:ruby g r</code> | Peek references        | command | `editor.action.referenceSearch.trigger` |
+| <code>␣ m languageId:ruby g D</code> | Peek definition        | command | `editor.action.peekDefinition`          |
+| <code>␣ m languageId:ruby g I</code> | Find symbol in project | command | `workbench.action.showAllSymbols`       |
+| <code>␣ m languageId:ruby g R</code> | Find all references    | command | `references-view.findReferences`        |
+
+# +Format
+
+Key Binding: <code>␣ m languageId:ruby =</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                          | Name                             | Type    | Command(s)                               |
+| ------------------------------------ | -------------------------------- | ------- | ---------------------------------------- |
+| <code>␣ m languageId:ruby = =</code> | Format region or buffer          | command | `editor.action.format`                   |
+| <code>␣ m languageId:ruby = b</code> | Format buffer                    | command | `editor.action.formatDocument`           |
+| <code>␣ m languageId:ruby = c</code> | Format changes                   | command | `editor.action.formatChanges`            |
+| <code>␣ m languageId:ruby = s</code> | Format selection                 | command | `editor.action.formatSelection`          |
+| <code>␣ m languageId:ruby = B</code> | +Format buffer with formatter    | command | `editor.action.formatDocument.multiple`  |
+| <code>␣ m languageId:ruby = S</code> | +Format selection with formatter | command | `editor.action.formatSelection.multiple` |
+
+# +Refactor
+
+Key Binding: <code>␣ m languageId:ruby r</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                          | Name          | Type    | Command(s)             |
+| ------------------------------------ | ------------- | ------- | ---------------------- |
+| <code>␣ m languageId:ruby r r</code> | Rename symbol | command | `editor.action.rename` |
+
+# +Wrap
+
+Key Binding: <code>␣ m languageId:clojure k w</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                               | Name           | Type    | Command(s)                 |
+| ----------------------------------------- | -------------- | ------- | -------------------------- |
+| <code>␣ m languageId:clojure k w (</code> | Wrap around () | command | `paredit.wrapAroundParens` |
+| <code>␣ m languageId:clojure k w [</code> | Wrap around [] | command | `paredit.wrapAroundSquare` |
+| <code>␣ m languageId:clojure k w {</code> | Wrap around {} | command | `paredit.wrapAroundCurly`  |
+| <code>␣ m languageId:clojure k w "</code> | Wrap around "" | command | `paredit.wrapAroundQuote`  |
+| <code>␣ m languageId:clojure k w p</code> | Rewrap ()      | command | `paredit.rewrapParens`     |
+| <code>␣ m languageId:clojure k w s</code> | Rewrap []      | command | `paredit.rewrapSquare`     |
+| <code>␣ m languageId:clojure k w c</code> | Rewrap {}      | command | `paredit.rewrapCurly`      |
+| <code>␣ m languageId:clojure k w q</code> | Rewrap ""      | command | `paredit.rewrapQuote`      |
+
+# +Add
+
+Key Binding: <code>␣ m languageId:clojure r a</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                               | Name                             | Type    | Command(s)                         |
+| ----------------------------------------- | -------------------------------- | ------- | ---------------------------------- |
+| <code>␣ m languageId:clojure r a l</code> | Add missing library specfication | command | `calva.refactor.addMissingLibspec` |
+
+# +Cycle clean convert
+
+Key Binding: <code>␣ m languageId:clojure r c</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                               | Name                       | Type    | Command(s)                    |
+| ----------------------------------------- | -------------------------- | ------- | ----------------------------- |
+| <code>␣ m languageId:clojure r c n</code> | Clean namespace definition | command | `calva.refactor.cleanNs`      |
+| <code>␣ m languageId:clojure r c p</code> | Cycle privacy              | command | `calva.refactor.cyclePrivacy` |
+
+# +Extract expand
+
+Key Binding: <code>␣ m languageId:clojure r e</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                               | Name             | Type    | Command(s)                       |
+| ----------------------------------------- | ---------------- | ------- | -------------------------------- |
+| <code>␣ m languageId:clojure r e f</code> | Extract function | command | `calva.refactor.extractFunction` |
+| <code>␣ m languageId:clojure r e l</code> | Expand let       | command | `calva.refactor.expandLet`       |
+
+# +Introduce inline
+
+Key Binding: <code>␣ m languageId:clojure r i</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                               | Name          | Type    | Command(s)                    |
+| ----------------------------------------- | ------------- | ------- | ----------------------------- |
+| <code>␣ m languageId:clojure r i l</code> | Introduce let | command | `calva.refactor.introduceLet` |
+| <code>␣ m languageId:clojure r i s</code> | Inline symbol | command | `calva.refactor.inlineSymbol` |
+
+# +Move
+
+Key Binding: <code>␣ m languageId:clojure r m</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                               | Name        | Type    | Command(s)                 |
+| ----------------------------------------- | ----------- | ------- | -------------------------- |
+| <code>␣ m languageId:clojure r m l</code> | Move to let | command | `calva.refactor.moveToLet` |
+
+# +Thread macros
+
+Key Binding: <code>␣ m languageId:clojure r t</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                               | Name              | Type    | Command(s)                      |
+| ----------------------------------------- | ----------------- | ------- | ------------------------------- |
+| <code>␣ m languageId:clojure r t f</code> | Thread first      | command | `calva.refactor.threadFirst`    |
+| <code>␣ m languageId:clojure r t l</code> | Thread last       | command | `calva.refactor.threadLast`     |
+| <code>␣ m languageId:clojure r t u</code> | Unwind thread     | command | `calva.refactor.unwindThread`   |
+| <code>␣ m languageId:clojure r t F</code> | Thread first all  | command | `calva.refactor.threadFirstAll` |
+| <code>␣ m languageId:clojure r t L</code> | Thread last all   | command | `calva.refactor.threadLastAll`  |
+| <code>␣ m languageId:clojure r t U</code> | Unwind thread all | command | `calva.refactor.unwindThread`   |
 
 # +Package actions
 
