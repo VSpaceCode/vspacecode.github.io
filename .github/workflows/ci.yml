@@ -13,5 +13,6 @@ jobs:
       - name: Lint all files recursively
         uses: avto-dev/markdown-lint@v1
         with:
-          config: '.markdownlint.yaml' 
-          args: "'**/*.md' --ignore node_modules --ignore docs/default-keybindings.md"
+          config: '.markdownlint.yaml'
+          ignore: 'node_modules docs/default-keybindings.md'
+          args: '**/*.md'
