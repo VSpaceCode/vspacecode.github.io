@@ -9,7 +9,7 @@
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "serve": "docusaurus serve",
-    "lint": "markdownlint **/*.md --config .markdownlint.yaml --ignore node_modules --ignore docs/default-keybindings.md"
+    "lint": "markdownlint '**/*.md' --config .markdownlint.yaml --ignore node_modules --ignore docs/default-keybindings.md"
   },
   "dependencies": {
     "@docusaurus/core": "2.0.0-alpha.70",
