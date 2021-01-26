@@ -30,4 +30,5 @@ This command generates static content into the `build` directory and can be serv
 npm run lint
 ```
 
-This command runs [markdown lint](https://github.com/igorshubovych/markdownlint-cli). Use it to check if the markdown you have written adheres to [our](.markdownlint.yaml) style.
+This command runs [markdown lint](https://github.com/igorshubovych/markdownlint-cli).
+Use it to check if the markdown you have written adheres to [our](.markdownlint.yaml) style.
