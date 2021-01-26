@@ -1,8 +1,10 @@
-name: Deploy
+name: Build
 
 on:
   push:
-    branches: [master]
+    branches: [vspacecode-next, which-key-next]
+  pull-request:
+    branches: [master, vspacecode-next, which-key-next]
 
 jobs:
   deploy:
@@ -21,9 +23,3 @@ jobs:
 
       - name: Build
         run: npm run build
-
-      - name: Release to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./build
