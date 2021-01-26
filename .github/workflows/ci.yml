@@ -1,18 +1,32 @@
 name: Continuous Integration
 
 on:
-  push:
-    branches: [master, vspacecode-next, which-key-next]
-  pull_request:
+   push:
+     branches: [master, vspacecode-next, which-key-next]
+   pull_request:
+     branches: [master, vspacecode-next, which-key-next]
 
 jobs:
-  markdown-lint:
+  ci:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Lint all files recursively
-        uses: avto-dev/markdown-lint@v1
+      - uses: actions/checkout@v1
+
+      - uses: actions/setup-node@v1
         with:
-          config: '.markdownlint.yaml'
-          ignore: 'node_modules docs/default-keybindings.md'
-          args: '**/*.md'
+          node-version: '12.x'
+
+      - uses: bahmutov/npm-install@v1
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Build
+        run: npm run build
+  
+      - name: Deploy to GitHub Pages
+        if: github.event == 'push' && github.ref == 'refs/heads/master'
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./build

@@ -23,3 +23,12 @@ npm run build
 ```
 
 This command generates static content into the `build` directory and can be served using any static contents hosting service.
+
+## Lint
+
+```sh
+npm run lint
+```
+
+This command runs [markdown lint](https://github.com/igorshubovych/markdownlint-cli).
+Use it to check if the markdown you have written adheres to [our](.markdownlint.yaml) style.
