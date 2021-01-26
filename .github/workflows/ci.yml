@@ -3,8 +3,7 @@ name: Continuous Integration
 on: [push, pull_request]
 
 jobs:
-  build:
-    name: Build
+  ci:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -21,11 +20,8 @@ jobs:
       - name: Build
         run: npm run build
   
-  deploy:
-    name: Deploy
-    if: github.event == 'push' && github.ref == 'refs/heads/master'
-    steps:
       - name: Release to GitHub Pages
+        if: github.event == 'push' && github.ref == 'refs/heads/master'
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
