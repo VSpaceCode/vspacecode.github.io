@@ -43,6 +43,12 @@ Required extensions:
 
 - [Go](https://marketplace.visualstudio.com/items?itemName=golang.Go)
 
+## F#
+
+Required extensions:
+
+- [Ionide F#](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp)
+
 ## Markdown
 
 Required extensions:
