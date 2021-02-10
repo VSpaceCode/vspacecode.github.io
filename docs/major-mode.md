@@ -43,7 +43,7 @@ Required extensions:
 
 - [Go](https://marketplace.visualstudio.com/items?itemName=golang.Go)
 
-## F#
+## F\#
 
 Required extensions:
 
