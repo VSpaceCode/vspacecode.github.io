@@ -6,10 +6,15 @@ title: Major Mode
 Major mode offers dynamic menu and functions based on the active buffer.
 You can access key bindings specific to the current major mode by pressing `<spc> m` or `,` if you want to save one keystroke.
 
-:::note
+:::tip
 If `,` isn't bound, you might need to update your settings.
 You can add the necessary keybindings to your `settings.json` by pressing `Ctrl+Shift+p` and running the command "VSpaceCode: Configure Default Settings".
-More information can be found in the [Installation](./) instructions.
+More information can be found in the [Installation](./) for instructions.
+:::
+
+:::note
+The default configuration uses `,` as the shortcut to major mode, that will override the find previous match after a `f{character}`.
+You can following the instruction in [Troubleshooting](./troubleshooting) to remove or modify the shortcut.
 :::
 
 For example, you can press `<spc> m x b` to make the text bold in a markdown buffer.
