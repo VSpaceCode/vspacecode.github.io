@@ -25,6 +25,28 @@ If you don't use this feature, disabling it should fix this issue. Otherwise, ad
 ],
 ```
 
+## `,` cannot find previous match
+
+The default VSpaceCode configuration overrides `,` as a shortcut for the [major mode](./major-mode.md);
+therefore, the key `,` cannot get back to the previous match after a find `f{character}` with Vim.
+
+In order to remove this major mode shortcut, remove the following section from your `settings.json`:
+
+```json
+{
+    "before": [","],
+    "commands": [
+        "vspacecode.space",
+        {
+            "command": "whichkey.triggerKey",
+            "args": "m"
+        }
+    ],
+}
+```
+
+Alternatively, you can change the shortcut key by changing `","` in `"before"` to other keys.
+
 ## Unresponsive menu activation
 
 If you press `<spc>` on a buffer and the which-key menu doesn't appear immediately, you might have one of the following problems.
