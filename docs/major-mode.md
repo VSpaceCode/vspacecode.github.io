@@ -13,8 +13,8 @@ More information can be found in the [Installation](./) for instructions.
 :::
 
 :::note
-The default configuration uses `,` as the shortcut to major mode, that will override the find previous match after a `f{character}`.
-You can following the instruction in [Troubleshooting](./troubleshooting) to remove or modify the shortcut.
+The default configuration uses `,` as the shortcut to major mode, that will override the vim "find previous match" after a `f{character}`.
+You can follow the instructions in [Troubleshooting](./troubleshooting#-cannot-find-previous-match) to remove or modify this shortcut.
 :::
 
 For example, you can press `<spc> m x b` to make the text bold in a markdown buffer.
