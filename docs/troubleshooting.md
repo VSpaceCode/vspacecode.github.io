@@ -27,8 +27,8 @@ If you don't use this feature, disabling it should fix this issue. Otherwise, ad
 
 ## `,` cannot find previous match
 
-The default VSpaceCode configuration overrides `,` as a shortcut for the [major mode](./major-mode.md),
-therefore the key `,` cannot get back to the previous match after a find `f{character}` with Vim.
+The default VSpaceCode configuration overrides `,` as a shortcut for the [major mode](./major-mode.md);
+therefore, the key `,` cannot get back to the previous match after a find `f{character}` with Vim.
 
 In order to remove this major mode shortcut, remove the following section from your `settings.json`:
 
