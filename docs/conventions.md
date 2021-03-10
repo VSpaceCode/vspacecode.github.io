@@ -12,7 +12,7 @@ corresponding terms in VSCode:
 | window | editor group |
 | frame  | window       |
 
-## Common major mode key bindings
+## Common Major Mode Key Bindings
 
 The following formatting bindings should be offered in all major modes, i.e. `<spc> m`:
 
