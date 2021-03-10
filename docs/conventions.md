@@ -14,7 +14,7 @@ corresponding terms in VSCode:
 
 ## Common Major Mode Key Bindings
 
-The following formatting bindings should be offered in all major modes, i.e. `<spc> m`:
+The following formatting bindings should be offered in all major modes that uses language server protocol.
 
 ### Formatting
 
