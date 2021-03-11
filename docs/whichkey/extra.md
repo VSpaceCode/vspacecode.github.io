@@ -17,7 +17,7 @@ Merge the following json to your `keybindings.json`.
   "key": "ctrl+x",
   "command": "whichkey.triggerKey",
   "args": "C-x",
-  "when": "whichkeyActive"
+  "when": "whichkeyVisible"
 }
 ```
 
