@@ -48,7 +48,6 @@ Required extensions:
 
 - [C/C++ Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
 
-
 ## C\#
 
 Required extensions:
