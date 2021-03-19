@@ -6,10 +6,15 @@ title: Major Mode
 Major mode offers dynamic menu and functions based on the active buffer.
 You can access key bindings specific to the current major mode by pressing `<spc> m` or `,` if you want to save one keystroke.
 
-:::note
+:::tip
 If `,` isn't bound, you might need to update your settings.
 You can add the necessary keybindings to your `settings.json` by pressing `Ctrl+Shift+p` and running the command "VSpaceCode: Configure Default Settings".
-More information can be found in the [Installation](./) instructions.
+More information can be found in the [Installation](./) for instructions.
+:::
+
+:::note
+The default configuration uses `,` as the shortcut to major mode, that will override the vim "find previous match" after a `f{character}`.
+You can follow the instructions in [Troubleshooting](./troubleshooting#-cannot-find-previous-match) to remove or modify this shortcut.
 :::
 
 For example, you can press `<spc> m x b` to make the text bold in a markdown buffer.
@@ -43,11 +48,24 @@ Required extensions:
 
 - [C/C++ Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
 
+
+## C\#
+
+Required extensions:
+
+- [C#](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
+
 ## Go
 
 Required extensions:
 
 - [Go](https://marketplace.visualstudio.com/items?itemName=golang.Go)
+
+## F\#
+
+Required extensions:
+
+- [Ionide F#](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp)
 
 ## Markdown
 
@@ -67,3 +85,9 @@ Required extensions:
 
 - [Ruby](https://marketplace.visualstudio.com/items?itemName=rebornix.Ruby)
 - [Ruby Solargraph](https://marketplace.visualstudio.com/items?itemName=castwide.solargraph)
+
+## Rust
+
+Required extensions:
+
+- [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=matklad.rust-analyzer)
