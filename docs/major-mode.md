@@ -90,3 +90,10 @@ Required extensions:
 Required extensions:
 
 - [rust-analyzer](https://marketplace.visualstudio.com/items?itemName=matklad.rust-analyzer)
+
+## LaTeX
+
+Required extensions:
+
+- [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
+- [LaTeX Utilities](https://marketplace.visualstudio.com/items?itemName=tecosaur.latex-utilities)
