@@ -97,3 +97,9 @@ Required extensions:
 
 - [LaTeX Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)
 - [LaTeX Utilities](https://marketplace.visualstudio.com/items?itemName=tecosaur.latex-utilities)
+
+## JavaScript/TypeScript
+
+Required extensions:
+
+- [JS Refactor](https://marketplace.visualstudio.com/items?itemName=cmstead.jsrefactor)
