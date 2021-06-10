@@ -2,14 +2,17 @@
 id: reference
 title: Reference
 ---
-Which-key extension aims to provides similar keybinding popup using the [QuickPick](https://code.visualstudio.com/api/references/vscode-api#QuickPick)
+
+Which-key extension aims to provide a keybinding popup similar to
+[emacs-which-key](https://github.com/justbur/emacs-which-key)
+by using the [QuickPick](https://code.visualstudio.com/api/references/vscode-api#QuickPick)
 API from vscode.
-This extension was broken out of `VSpaceCode`, which was created to emulate the keybinding of spacemacs in VSCode ([VSpaceCode](./../installation.md)),
-to decouple the core and the definition of bindings.
+This extension was broken out of [`VSpaceCode`](./../installation.md), which was created to emulate the keybinding of spacemacs in VSCode,
+to decouple the core and the definition of the bindings.
 
 ## Commands
 
-Commands are the main way to inference with which-key.
+Commands are the main way to interact with which-key.
 
 ### Show
 
@@ -20,7 +23,7 @@ Args: `string`, `Array<BindingItem>`, `undefined`
 Description:
 A command to show which-key menu.
 
-- `string` is the key of the [registered](#register) bindings that will be use to display a which-key menu.
+- `string` is the key of the [registered](#register) bindings that will be used to display a which-key menu.
 - `Array<BindingItem>` is an array of [`BindingItem`](#bindingitem) that will be used directly to display a which-key menu.
 - `undefined` means the default bindings defined at `whichkey.bindings` in the configuration will be used to display a which-key menu.
 
@@ -58,16 +61,16 @@ A command used primarily for accepting non-characters key in which-key menu and 
 
 #### Non-character key
 
-The which-key menu relies QuickPick's input. Because it is a text input, we can not capture non-character keys like arrow keys, tab key, and keys with
-modifier like C-x. We can capture those keys using vscode shortcut with `whichkeyVisible` as when clause of the shortcut.
-See [Extra](extra#use-non-character-keys) page for detail on usage.
+The which-key menu relies on QuickPick's input. Because it is a text input, we cannot capture non-character keys like arrow keys, tab key, and keys with
+modifier like `C-x`. We can capture those keys using vscode shortcut with `whichkeyVisible` as `when` clause of the shortcut.
+See [Extra](extra#use-non-character-keys) page for more details on usage.
 :::
 
 :::note
 
 #### Pass-in when clause
 
-Since vscode doesn't allows extension to read context key-value ([vscode#10471](https://github.com/microsoft/vscode/issues/10471)),
+Since vscode doesn't allow extension to read context key-value ([vscode#10471](https://github.com/microsoft/vscode/issues/10471)),
 we will have to relied on `when` clause evaluation in vscode shortcut to pass the context to which-key.
 See [conditional bindings](./extra.md#when) for more details on the usage.
 :::
@@ -88,7 +91,7 @@ Args: [`TransientMenuConfig`](#transientmenuconfig) | `string`
 
 Description: Show a transient with the definition in the argument. The definition can be either
 
-- object of [`TransientMenuConfig`](#transientmenuconfig)
+- an object of [`TransientMenuConfig`](#transientmenuconfig)
 - a `string` referencing the location of in the configuration to get `TransientMenuConfig`
 
 ### Repeat Recent
@@ -117,7 +120,7 @@ A command to toggle zen mode for transient menu, which will show/hide all the me
 Command: `whichkey.openFile`
 
 Description:
-This is a command to get around issue where vscode doesn't provide a single cross platform command to open file.
+This is a command to get around an issue where vscode doesn't provide a single cross platform command to open file.
 See [vscode-which-key#26](https://github.com/VSpaceCode/vscode-which-key/issues/26).
 
 ## Context
@@ -127,9 +130,10 @@ The extension will also set the following context when applicable so it can be u
 `whichkeyActive` is a boolean that will be set to `true` when whichkey is active including the time when it is excluding a command.
 This is rarely used and most of the use case can be replaced with `whichKeyVisible`
 
-`whichkeyVisible` is a boolean that will be set to `true` when whichkey menu is visible. Note that this will be `false` when transient menu is visible.
+- `whichkeyVisible` is a boolean that will be set to `true` when the whichkey menu is visible.
+  Note that this will be `false` when the transient menu is visible.
 
-`transientVisible` is a boolean that wil lbe set to `true` when the transient menu is visible.
+- `transientVisible` is a boolean that will be set to `true` when the transient menu is visible.
 
 ## Config
 
@@ -185,7 +189,7 @@ Type: `object`
 Description:
 A key-value pair to store default definitions of transient menu for command `whichkey.showTransient` to reference.
 
-## Shortcut
+## Shortcuts
 
 These are the shortcut the extension contributed, which means they will work without manually editing your user's `keybindings.json`.
 
@@ -211,8 +215,8 @@ These are the shortcut the extension contributed, which means they will work wit
 - Command type indicates a single command will be executed on selection.
 - Commands type indicates multiple commands will be executed on selection.
 - Bindings type indicates another the sub-menu base on the supplied bindings will be display on selection.
-- Transient type is similar to bindings type expect the menu will not disappear on selection.
-The transient type is being deprecated in favor of a separate command `which.showTransient`.
+- Transient type is similar to bindings type except the menu will not disappear on selection.
+The transient type is being deprecated in favor of the separate command `whichkey.showTransient`.
 All current definitions of transient type are converted internally at the moment.
 - Conditional type is an experimental feature which provides conditional binding behavior. See [Extra](extra/#conditional-bindings-experimental)
 
@@ -232,17 +236,17 @@ All current definitions of transient type are converted internally at the moment
 ```
 
 - `key` is the key such as `k` ot `\t` to trigger the binding.
-- `name` is the name of the this binding such as `+buffer`  or `start debug`.
+- `name` is the name of the binding such as `+buffer` or `start debug`.
 - `icon` is an optional property when supplied is used to display vscode [product icons](https://code.visualstudio.com/api/references/icons-in-labels)
 as a prefix in the menu item
 - `type` specifies the type of this binding. see [`bindingtype`](#bindingtype)
-- `bindings` is an optional property that is used with binding, transient, conditional type.
-- `command` is an optional property is used with command binding type.
-- `commands` is an optional property is used with commands binding type. an array of command string is expected.
+- `bindings` is an optional property that is used with binding, transient and conditional type.
+- `command` is an optional property used with command binding type.
+- `commands` is an optional property used with commands binding type. An array of command string is expected.
 - `args` is an optional property that is used to supply arguments to commands for `"command"` or `"commands"`.
-when `"command"` is used, the `args` will pass directly to the command being executed.
-when `"commands"` is used, an array of the augments is expected if augment passing is needed.
-`null` can be used to indicate no arguments for a specific position if any subsequent command require an args.
+When `"command"` is used, the `args` will be passed directly to the command being executed.
+When `"commands"` is used, an array of the arguments is expected if argument passing is needed.
+`null` can be used to indicate no arguments for a specific position if any subsequent command require an arg.
 
 ### TransientMenuConfig
 
@@ -253,7 +257,7 @@ when `"commands"` is used, an array of the augments is expected if augment passi
 }
 ```
 
-- `title` is optional property for the title of the transient menu.
+- `title` is an optional property for the title of the transient menu.
 - `bindings` is the array of [`TransientBindingItem`](#transientbindingitem).
 
 ### TransientBindingItem
@@ -270,12 +274,12 @@ when `"commands"` is used, an array of the augments is expected if augment passi
 ```
 
 - `key` is the key such as `k` ot `\t` to trigger the binding.
-- `name` is the name of the this binding such as `+buffer`  or `start debug`.
+- `name` is the name of the binding such as `+buffer` or `start debug`.
 as a prefix in the menu item
-- `exit` is an optional boolean property. When it is set to true, the transient will exit on selection of this item.
-- `command` is an optional property is used with command binding type.
-- `commands` is an optional property is used with commands binding type. an array of command string is expected.
+- `exit` is an optional boolean property. When it is set to `true`, the transient menu will exit on selection of this item.
+- `command` is an optional property used with command binding type.
+- `commands` is an optional property used with commands binding type. An array of command string is expected.
 - `args` is an optional property that is used to supply arguments to commands for `"command"` or `"commands"`.
-when `"command"` is used, the `args` will pass directly to the command being executed.
-when `"commands"` is used, an array of the augments is expected if augment passing is needed.
-`null` can be used to indicate no arguments for a specific position if any subsequent command require an args.
+When `"command"` is used, the `args` will be passed directly to the command being executed.
+When `"commands"` is used, an array of the arguments is expected if argument passing is needed.
+`null` can be used to indicate no arguments for a specific position if any subsequent command require an arg.
