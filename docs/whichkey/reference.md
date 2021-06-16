@@ -75,13 +75,13 @@ we will have to relied on `when` clause evaluation in vscode shortcut to pass th
 See [conditional bindings](./extra.md#when) for more details on the usage.
 :::
 
-### Describe Bindings
+### Search Bindings
 
-Command: `whichkey.describeBindings`
+Command: `whichkey.searchBindings`
 
 Description:
 This is similar to [helm-descbinds](https://github.com/emacs-helm/helm-descbinds) which can search and execute the binding ([vscode-which-key#12](https://github.com/VSpaceCode/vscode-which-key/issues/12)).
-Note that it will only shows described bindings menu for the currently displayed bindings (and its sub-bindings).
+Note that you can only search bindings menu for the currently displayed which-key bindings and their sub-bindings.
 
 ### Show Transient
 
