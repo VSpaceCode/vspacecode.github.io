@@ -145,6 +145,8 @@ Key: `whichkey.delay`
 
 Type: `number`
 
+Default: `0`
+
 Description:
 Delay (in milliseconds) for which-key menu to display. Setting this to positive value will delay the display of the which-key menu items while
 key input remains functional.
@@ -155,6 +157,8 @@ Key: `whichkey.showIcons`
 
 Type: `boolean`
 
+Default: `true`
+
 Description:
 Controls whether to show or hide icons in which-key menu.
 
@@ -163,6 +167,8 @@ Controls whether to show or hide icons in which-key menu.
 Key: `whichkey.sortOrder`
 
 Type: `"none"` | `"alphabetically"` | `"nonNumberFirst"`
+
+Default: `"none"`
 
 Description:
 Controls the sorting order of the which-key menu items.
