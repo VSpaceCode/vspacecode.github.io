@@ -223,7 +223,7 @@ These are the shortcut the extension contributed, which means they will work wit
 
 - Command type indicates a single command will be executed on selection.
 - Commands type indicates multiple commands will be executed on selection.
-- Bindings type indicates another the sub-menu base on the supplied bindings will be display on selection.
+- Bindings type indicates that another sub-menu with the supplied bindings will be displayed upon menu item selection.
 - Transient type is similar to bindings type except the menu will not disappear on selection.
 The transient type is being deprecated in favor of the separate command `whichkey.showTransient`.
 All current definitions of transient type are converted internally at the moment.
