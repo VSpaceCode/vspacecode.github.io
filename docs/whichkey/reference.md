@@ -200,7 +200,7 @@ A key-value pair to store default definitions of transient menu for command `whi
 
 ## Shortcuts
 
-These are the shortcut the extension contributed, which means they will work without manually editing your user's `keybindings.json`.
+The whichkey extension contributes the following shortcuts, which means they will work without manually editing your user's `keybindings.json`.
 
 `TAB` when `whichKeyVisible` will execute `whichkey.triggerKey` with `\t` as argument to which-key in order to capture of tab `TAB` key.
 
