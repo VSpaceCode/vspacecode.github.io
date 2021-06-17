@@ -89,7 +89,8 @@ Command: `whichkey.showTransient`
 
 Args: [`TransientMenuConfig`](#transientmenuconfig) | `string`
 
-Description: Show a transient with the definition in the argument. The definition can be either
+Description:
+Show a transient menu with the definition in the argument.
 
 - an object of [`TransientMenuConfig`](#transientmenuconfig)
 - a `string` referencing the location of in the configuration to get `TransientMenuConfig`
