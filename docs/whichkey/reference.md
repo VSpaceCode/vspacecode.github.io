@@ -149,7 +149,8 @@ Type: `number`
 Default: `0`
 
 Description:
-Delay (in milliseconds) for which-key menu to display. Setting this to positive value will delay the display of the which-key menu items while
+Delay (in milliseconds) for the which-key menu items to be displayed.
+Setting this to positive value will just delay the display of the which-key menu items, while
 key input remains functional.
 
 ### Show Icons
