@@ -246,7 +246,7 @@ All current definitions of transient type are converted internally at the moment
 
 - `key` is the key such as `k` ot `\t` to trigger the binding.
 - `name` is the name of the binding such as `+buffer` or `start debug`.
-- `icon` is an optional property when supplied is used to display vscode [product icons](https://code.visualstudio.com/api/references/icons-in-labels)
+- `icon` is an optional string property (e.g. `rocket`) used for the display of vscode [product icons](https://code.visualstudio.com/api/references/icons-in-labels)
 as a prefix in the menu item
 - `type` specifies the type of this binding. see [`bindingtype`](#bindingtype)
 - `bindings` is an optional property that is used with binding, transient and conditional type.
