@@ -128,7 +128,8 @@ See [vscode-which-key#26](https://github.com/VSpaceCode/vscode-which-key/issues/
 
 The extension will also set the following context when applicable so it can be used in `when` clause of vscode shortcuts.
 
-- `whichkeyActive` is a boolean that will be set to `true` when whichkey is active which includes the time during the command execution with the menu being hidden.
+- `whichkeyActive` is a boolean that will be set to `true` when whichkey is active which
+  includes the time during the command execution with the menu being hidden.
   This is rarely used and in most of the use cases it can be replaced with `whichKeyVisible`.
 
 - `whichkeyVisible` is a boolean that will be set to `true` when the whichkey menu is visible.
