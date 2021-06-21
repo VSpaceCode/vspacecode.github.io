@@ -182,3 +182,7 @@ See in [Which Key](./whichkey/extra#use-non-character-keys)
 ## Display menu with a delay
 
 See in [Which Key](./whichkey/extra#display-menu-with-a-delay)
+
+## Better styling with Customize UI
+
+See in [Which Key](./whichkey/extra#better-styling-with-customize-ui)
