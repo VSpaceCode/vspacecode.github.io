@@ -44,8 +44,11 @@ You can selectively override that color in your `settings.json` like the followi
 },
 ```
 
-## Better styling with Customize UI
-VS Code unfortunately only allows for very limited styling of the QuickPick used by `which-key` to display keys. However, using the [Customize UI](https://marketplace.visualstudio.com/items?itemName=iocave.customize-ui) extension, the style sheet of the VS Code installation can be modified to result in a nicer appearance and better usability.
+## Styling the menu with Customize UI
+
+VS Code unfortunately only allows for very limited styling of the QuickPick used by `which-key` to display keys.
+However, using the [Customize UI](https://marketplace.visualstudio.com/items?itemName=iocave.customize-ui) extension,
+the style sheet of the VS Code installation can be modified to result in a nicer appearance and better usability.
 
 Suggested settings:
 
@@ -59,7 +62,7 @@ Suggested settings:
         ".quick-input-widget > .quick-input-list .codicon":
             "color: #83a598 !important; padding-right: 5px;",
         // Colorize entries starting with a `+` differently
-        ".quick-input-widget > .quick-input-list .monaco-list-row[aria-label*=\"  +\"] .label-description":
+        ".quick-input-widget > .quick-input-list .monaco-list-row[aria-label*=\" +\"] .label-description":
             "color: #8ec07c;",
     }
 ```
@@ -68,7 +71,8 @@ Those will result in something similar to the following:
 
 ![Customize UI result](/img/docs/customize_ui.png)
 
-In theory, it'd also be possible to achieve a multi-column display using those rules. However, those result in other Quick Pick dialogs being broken. See [the relevant issue](https://github.com/VSpaceCode/vscode-which-key/issues/37#issuecomment-857640609) for details.
+In theory, it'd also be possible to achieve a multi-column display using those rules. However, those result in other Quick Pick dialogs being broken.
+See [the relevant issue](https://github.com/VSpaceCode/vscode-which-key/issues/37#issuecomment-857640609) for details.
 
 ## Conditional bindings (experimental)
 
