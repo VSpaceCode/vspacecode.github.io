@@ -44,7 +44,7 @@ You can selectively override that color in your `settings.json` like the followi
 },
 ```
 
-## Styling the menu with Customize UI
+## Style the menu with Customize UI
 
 VS Code unfortunately only allows for very limited styling of the QuickPick used by `which-key` to display keys.
 However, using the [Customize UI](https://marketplace.visualstudio.com/items?itemName=iocave.customize-ui) extension,
