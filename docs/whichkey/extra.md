@@ -53,18 +53,18 @@ the style sheet of the VS Code installation can be modified to result in a nicer
 Suggested settings:
 
 ```jsonc
-    "customizeUI.stylesheet": {
-        // Let the quick pick take the full window height, so that more bindings
-        // are visible.
-        ".quick-input-widget > .quick-input-list > .monaco-list":
-            "max-height: none !important;",
-        // Colorize icons uniformly and add some extra padding
-        ".quick-input-widget > .quick-input-list .codicon":
-            "color: #83a598 !important; padding-right: 5px;",
-        // Colorize entries starting with a `+` differently
-        ".quick-input-widget > .quick-input-list .monaco-list-row[aria-label*=\" +\"] .label-description":
-            "color: #8ec07c;",
-    }
+"customizeUI.stylesheet": {
+    // Let the quick pick take the full window height, so that more bindings
+    // are visible.
+    ".quick-input-widget > .quick-input-list > .monaco-list":
+        "max-height: none !important;",
+    // Colorize icons uniformly and add some extra padding
+    ".quick-input-widget > .quick-input-list .codicon":
+        "color: #83a598 !important; padding-right: 5px;",
+    // Colorize entries starting with a `+` differently
+    ".quick-input-widget > .quick-input-list .monaco-list-row[aria-label*=\" +\"] .label-description":
+        "color: #8ec07c;",
+}
 ```
 
 Those will result in something similar to the following:
