@@ -19,8 +19,9 @@ Type: <code>bindings</code>
 | <code>␣ "</code> | Open new external terminal       | command                                 | `workbench.action.terminal.openNativeConsole`                                                                        |
 | <code>␣ '</code> | Show terminal                    | command                                 | `workbench.action.terminal.focus`                                                                                    |
 | <code>␣ *</code> | Search in project with selection | commands                                | `editor.action.addSelectionToNextFindMatch`<br />`workbench.action.findInFiles`<br />`search.action.focusSearchList` |
+| <code>␣ .</code> | Repeat most recent action        | command                                 | `whichkey.repeatMostRecent`                                                                                          |
 | <code>␣ /</code> | Search in project                | command                                 | `workbench.action.findInFiles`                                                                                       |
-| <code>␣ 0</code> | Focus on files explorer          | command                                 | `workbench.files.action.showActiveFileInExplorer`                                                                    |
+| <code>␣ 0</code> | Focus on files explorer          | command                                 | `workbench.files.action.focusFilesExplorer`                                                                          |
 | <code>␣ 1</code> | Focus 1st window                 | command                                 | `workbench.action.focusFirstEditorGroup`                                                                             |
 | <code>␣ 2</code> | Focus 2nd window                 | command                                 | `workbench.action.focusSecondEditorGroup`                                                                            |
 | <code>␣ 3</code> | Focus 3rd window                 | command                                 | `workbench.action.focusThirdEditorGroup`                                                                             |
@@ -30,6 +31,7 @@ Type: <code>bindings</code>
 | <code>␣ 7</code> | Focus 7th window                 | command                                 | `workbench.action.focusSeventhEditorGroup`                                                                           |
 | <code>␣ 8</code> | Focus 8th window                 | command                                 | `workbench.action.focusEighthEditorGroup`                                                                            |
 | <code>␣ ;</code> | Toggle comment                   | command                                 | `editor.action.commentLine`                                                                                          |
+| <code>␣ ?</code> | Search keybindings               | command                                 | `whichkey.searchBindings`                                                                                            |
 | <code>␣ v</code> | Smart select/expand region       | [transient](#smart-selectexpand-region) | `editor.action.smartSelect.grow`                                                                                     |
 | <code>␣ b</code> | +Buffers                         | [bindings](#buffers)                    | N/A                                                                                                                  |
 | <code>␣ c</code> | +Compile/Comments                | [bindings](#compilecomments)            | N/A                                                                                                                  |
@@ -44,7 +46,7 @@ Type: <code>bindings</code>
 | <code>␣ m</code> | +Major                           | [conditional](#major)                   | N/A                                                                                                                  |
 | <code>␣ p</code> | +Project                         | [bindings](#project)                    | N/A                                                                                                                  |
 | <code>␣ q</code> | +Quit                            | [bindings](#quit)                       | N/A                                                                                                                  |
-| <code>␣ r</code> | +Resume                          | [bindings](#resume)                     | N/A                                                                                                                  |
+| <code>␣ r</code> | +Resume/Repeat                   | [bindings](#resumerepeat)               | N/A                                                                                                                  |
 | <code>␣ s</code> | +Search/Symbol                   | [bindings](#searchsymbol)               | N/A                                                                                                                  |
 | <code>␣ t</code> | +Toggles                         | [bindings](#toggles)                    | N/A                                                                                                                  |
 | <code>␣ w</code> | +Window                          | [bindings](#window)                     | N/A                                                                                                                  |
@@ -296,16 +298,17 @@ Type: <code>bindings</code>
 | <code>␣ q Q</code> | Quit application                      | command  | `workbench.action.quit`                                              |
 | <code>␣ q R</code> | Reload frame with extensions disabled | command  | `workbench.action.reloadWindowWithExtensionsDisabled`                |
 
-# +Resume
+# +Resume/Repeat
 
 Key Binding: <code>␣ r</code>
 
 Type: <code>bindings</code>
 
-| Key Binding        | Name              | Type    | Command(s)                                          |
-| ------------------ | ----------------- | ------- | --------------------------------------------------- |
-| <code>␣ r b</code> | Recent buffers    | command | `workbench.action.showAllEditorsByMostRecentlyUsed` |
-| <code>␣ r s</code> | Search in project | command | `workbench.action.findInFiles`                      |
+| Key Binding        | Name                  | Type    | Command(s)                                          |
+| ------------------ | --------------------- | ------- | --------------------------------------------------- |
+| <code>␣ r .</code> | Repeat recent actions | command | `whichkey.repeatRecent`                             |
+| <code>␣ r b</code> | Recent buffers        | command | `workbench.action.showAllEditorsByMostRecentlyUsed` |
+| <code>␣ r s</code> | Search in project     | command | `workbench.action.findInFiles`                      |
 
 # +Search/Symbol
 
@@ -711,8 +714,9 @@ Type: <code>bindings</code>
 | ------------------------------------ | ----------- | --------------------- | ----------------------- |
 | <code>␣ m languageId:python v</code> | +Virtualenv | command               | `python.setInterpreter` |
 | <code>␣ m languageId:python =</code> | +Format     | [bindings](#format)   | N/A                     |
+| <code>␣ m languageId:python b</code> | +Backend    | [bindings](#backend)  | N/A                     |
 | <code>␣ m languageId:python c</code> | +Execute    | [bindings](#execute)  | N/A                     |
-| <code>␣ m languageId:python g</code> | Go to       | [bindings](#go-to)    | N/A                     |
+| <code>␣ m languageId:python g</code> | +Go to      | [bindings](#go-to)    | N/A                     |
 | <code>␣ m languageId:python r</code> | +Refactor   | [bindings](#refactor) | N/A                     |
 | <code>␣ m languageId:python s</code> | +REPL       | [bindings](#repl)     | N/A                     |
 | <code>␣ m languageId:python t</code> | +Test       | [bindings](#test)     | N/A                     |
@@ -1361,7 +1365,7 @@ Type: <code>bindings</code>
 
 | Key Binding                        | Name                       | Type                    | Command(s)              |
 | ---------------------------------- | -------------------------- | ----------------------- | ----------------------- |
-| <code>␣ m languageId:go t c</code> | Cancel running tets        | command                 | `go.test.cancel`        |
+| <code>␣ m languageId:go t c</code> | Cancel running tests       | command                 | `go.test.cancel`        |
 | <code>␣ m languageId:go t d</code> | Debug test at cursor       | command                 | `go.debug.cursor`       |
 | <code>␣ m languageId:go t f</code> | Test function at cursor    | command                 | `go.test.cursor`        |
 | <code>␣ m languageId:go t l</code> | Test previous              | command                 | `go.test.previous`      |
@@ -1455,12 +1459,12 @@ Key Binding: <code>␣ m languageId:latex p</code>
 
 Type: <code>bindings</code>
 
-| Key Binding                           | Name                       | Type    | Command(s)                              |
-| ------------------------------------- | -------------------------- | ------- | --------------------------------------- |
-| <code>␣ m languageId:latex p d</code> | View Document              | command | `latex-workshop.view`                   |
-| <code>␣ m languageId:latex p m</code> | Toggle Match Preview Panel | command | `latex-workshop.toggleMathPreviewPanel` |
-| <code>␣ m languageId:latex p p</code> | SyncTeX from cursor        | command | `latex-workshop.synctex`                |
-| <code>␣ m languageId:latex p r</code> | Refresh all viewers        | command | `latex-workshop.refresh-viewer`         |
+| Key Binding                           | Name                      | Type    | Command(s)                              |
+| ------------------------------------- | ------------------------- | ------- | --------------------------------------- |
+| <code>␣ m languageId:latex p d</code> | View Document             | command | `latex-workshop.view`                   |
+| <code>␣ m languageId:latex p m</code> | Toggle Math Preview Panel | command | `latex-workshop.toggleMathPreviewPanel` |
+| <code>␣ m languageId:latex p p</code> | SyncTeX from cursor       | command | `latex-workshop.synctex`                |
+| <code>␣ m languageId:latex p r</code> | Refresh all viewers       | command | `latex-workshop.refresh-viewer`         |
 
 # +Text
 
@@ -1539,6 +1543,17 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:python = B</code> | +Format buffer with formatter    | command | `editor.action.formatDocument.multiple`  |
 | <code>␣ m languageId:python = S</code> | +Format selection with formatter | command | `editor.action.formatSelection.multiple` |
 
+# +Backend
+
+Key Binding: <code>␣ m languageId:python b</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                            | Name            | Type    | Command(s)                              |
+| -------------------------------------- | --------------- | ------- | --------------------------------------- |
+| <code>␣ m languageId:python b o</code> | Show LSP output | command | `python.viewLanguageServerOutput`       |
+| <code>␣ m languageId:python b r</code> | Restart LSP     | command | `python.analysis.restartLanguageServer` |
+
 # +Execute
 
 Key Binding: <code>␣ m languageId:python c</code>
@@ -1550,7 +1565,7 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:python c c</code> | Execute file in terminal | command | `python.execInTerminal` |
 | <code>␣ m languageId:python c C</code> | Execute file in terminal | command | `python.execInTerminal` |
 
-# Go to
+# +Go to
 
 Key Binding: <code>␣ m languageId:python g</code>
 
