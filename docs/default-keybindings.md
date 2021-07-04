@@ -1588,9 +1588,11 @@ Key Binding: <code>␣ m languageId:python r</code>
 
 Type: <code>bindings</code>
 
-| Key Binding                            | Name         | Type    | Command(s)           |
-| -------------------------------------- | ------------ | ------- | -------------------- |
-| <code>␣ m languageId:python r I</code> | Sort imports | command | `python.sortImports` |
+| Key Binding                            | Name             | Type    | Command(s)                       |
+| -------------------------------------- | ---------------- | ------- | -------------------------------- |
+| <code>␣ m languageId:python r m</code> | Extract method   | command | `python.refactorExtractMethod`   |
+| <code>␣ m languageId:python r v</code> | Extract variable | command | `python.refactorExtractVariable` |
+| <code>␣ m languageId:python r I</code> | Sort imports     | command | `python.sortImports`             |
 
 # +REPL
 
