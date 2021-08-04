@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkvspacecode_github_io=self.webpackChunkvspacecode_github_io||[]).push([[535],{5641:function(e){e.exports=JSON.parse('{"title":"Recent posts","items":[{"title":"We have a website!","permalink":"/blog/2020/09/18/hello"}]}')}}]);
