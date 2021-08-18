@@ -54,6 +54,13 @@ Required extensions:
 
 - [C#](https://marketplace.visualstudio.com/items?itemName=ms-dotnettools.csharp)
 
+## Dart/Flutter
+
+Required extensions:
+
+- [Dart](https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code)
+- [Flutter](https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter)
+
 ## Go
 
 Required extensions:
