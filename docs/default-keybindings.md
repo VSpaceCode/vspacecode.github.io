@@ -254,18 +254,19 @@ Key Binding: <code>␣ m</code>
 
 Type: <code>conditional</code>
 
-| Condition                        | Name     | Type                  | Command(s) |
-| -------------------------------- | -------- | --------------------- | ---------- |
-| <code>languageId:clojure</code>  | Clojure  | [bindings](#clojure)  | N/A        |
-| <code>languageId:cpp</code>      | C++      | [bindings](#c)        | N/A        |
-| <code>languageId:csharp</code>   | C#       | [bindings](#c)        | N/A        |
-| <code>languageId:fsharp</code>   | F#       | [bindings](#f)        | N/A        |
-| <code>languageId:go</code>       | Go       | [bindings](#go)       | N/A        |
-| <code>languageId:latex</code>    | LaTeX    | [bindings](#latex)    | N/A        |
-| <code>languageId:markdown</code> | Markdown | [bindings](#markdown) | N/A        |
-| <code>languageId:python</code>   | Python   | [bindings](#python)   | N/A        |
-| <code>languageId:ruby</code>     | Ruby     | [bindings](#ruby)     | N/A        |
-| <code>languageId:rust</code>     | Rust     | [bindings](#rust)     | N/A        |
+| Condition                        | Name         | Type                     | Command(s) |
+| -------------------------------- | ------------ | ------------------------ | ---------- |
+| <code>languageId:clojure</code>  | Clojure      | [bindings](#clojure)     | N/A        |
+| <code>languageId:cpp</code>      | C++          | [bindings](#c)           | N/A        |
+| <code>languageId:csharp</code>   | C#           | [bindings](#c)           | N/A        |
+| <code>languageId:dart</code>     | Dart/Flutter | [bindings](#dartflutter) | N/A        |
+| <code>languageId:fsharp</code>   | F#           | [bindings](#f)           | N/A        |
+| <code>languageId:go</code>       | Go           | [bindings](#go)          | N/A        |
+| <code>languageId:latex</code>    | LaTeX        | [bindings](#latex)       | N/A        |
+| <code>languageId:markdown</code> | Markdown     | [bindings](#markdown)    | N/A        |
+| <code>languageId:python</code>   | Python       | [bindings](#python)      | N/A        |
+| <code>languageId:ruby</code>     | Ruby         | [bindings](#ruby)        | N/A        |
+| <code>languageId:rust</code>     | Rust         | [bindings](#rust)        | N/A        |
 
 # +Project
 
@@ -643,6 +644,37 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:csharp p</code> | +Project           | [bindings](#project)          | N/A        |
 | <code>␣ m languageId:csharp r</code> | +Refactor          | [bindings](#refactor)         | N/A        |
 | <code>␣ m languageId:csharp t</code> | +Test              | [bindings](#test)             | N/A        |
+
+# Dart/Flutter
+
+Key Binding: <code>␣ m languageId:dart</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                        | Name                   | Type                         | Command(s)                  |
+| ---------------------------------- | ---------------------- | ---------------------------- | --------------------------- |
+| <code>␣ m languageId:dart ;</code> | Toggle Dartdoc comment | command                      | `dart.toggleDartdocComment` |
+| <code>␣ m languageId:dart a</code> | Attach                 | command                      | `flutter.attach`            |
+| <code>␣ m languageId:dart c</code> | Clean                  | command                      | `flutter.clean`             |
+| <code>␣ m languageId:dart i</code> | Inspect widget         | command                      | `flutter.inspectWidget`     |
+| <code>␣ m languageId:dart m</code> | Sort members           | command                      | `dart.sortMembers`          |
+| <code>␣ m languageId:dart r</code> | Hot reload             | command                      | `flutter.hotReload`         |
+| <code>␣ m languageId:dart s</code> | Select device          | command                      | `flutter.selectDevice`      |
+| <code>␣ m languageId:dart u</code> | Flutter upgrade        | command                      | `flutter.upgrade`           |
+| <code>␣ m languageId:dart A</code> | Attach to process      | command                      | `flutter.attachProcess`     |
+| <code>␣ m languageId:dart D</code> | Flutter doctor         | command                      | `flutter.doctor`            |
+| <code>␣ m languageId:dart E</code> | Launch emulator        | command                      | `flutter.launchEmulator`    |
+| <code>␣ m languageId:dart P</code> | Profile app            | command                      | `flutter.profileApp`        |
+| <code>␣ m languageId:dart R</code> | Hot restart            | command                      | `flutter.hotRestart`        |
+| <code>␣ m languageId:dart S</code> | Screenshot             | command                      | `flutter.screenshot`        |
+| <code>␣ m languageId:dart =</code> | +Format                | [bindings](#format)          | N/A                         |
+| <code>␣ m languageId:dart g</code> | +Go to                 | [bindings](#go-to)           | N/A                         |
+| <code>␣ m languageId:dart l</code> | +Logging               | [bindings](#logging)         | N/A                         |
+| <code>␣ m languageId:dart o</code> | +Open                  | [bindings](#open)            | N/A                         |
+| <code>␣ m languageId:dart p</code> | +Project/Packages      | [bindings](#projectpackages) | N/A                         |
+| <code>␣ m languageId:dart r</code> | +Refactor              | [bindings](#refactor)        | N/A                         |
+| <code>␣ m languageId:dart t</code> | +Test                  | [bindings](#test)            | N/A                         |
+| <code>␣ m languageId:dart T</code> | +Toggle                | [bindings](#toggle)          | N/A                         |
 
 # F#
 
@@ -1196,6 +1228,130 @@ Type: <code>bindings</code>
 
 # +Format
 
+Key Binding: <code>␣ m languageId:dart =</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                          | Name                             | Type    | Command(s)                               |
+| ------------------------------------ | -------------------------------- | ------- | ---------------------------------------- |
+| <code>␣ m languageId:dart = =</code> | Format region or buffer          | command | `editor.action.format`                   |
+| <code>␣ m languageId:dart = b</code> | Format buffer                    | command | `editor.action.formatDocument`           |
+| <code>␣ m languageId:dart = c</code> | Format changes                   | command | `editor.action.formatChanges`            |
+| <code>␣ m languageId:dart = s</code> | Format selection                 | command | `editor.action.formatSelection`          |
+| <code>␣ m languageId:dart = B</code> | +Format buffer with formatter    | command | `editor.action.formatDocument.multiple`  |
+| <code>␣ m languageId:dart = S</code> | +Format selection with formatter | command | `editor.action.formatSelection.multiple` |
+
+# +Go to
+
+Key Binding: <code>␣ m languageId:dart g</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                          | Name                           | Type    | Command(s)                              |
+| ------------------------------------ | ------------------------------ | ------- | --------------------------------------- |
+| <code>␣ m languageId:dart g d</code> | Go to definition               | command | `editor.action.revealDefinition`        |
+| <code>␣ m languageId:dart g e</code> | Go to errors/problems          | command | `workbench.action.problems.focus`       |
+| <code>␣ m languageId:dart g g</code> | Go to definition               | command | `editor.action.revealDefinition`        |
+| <code>␣ m languageId:dart g i</code> | Go to implementations          | command | `editor.action.goToImplementation`      |
+| <code>␣ m languageId:dart g r</code> | Peek references                | command | `editor.action.referenceSearch.trigger` |
+| <code>␣ m languageId:dart g s</code> | Go to super                    | command | `dart.goToSuper`                        |
+| <code>␣ m languageId:dart g t</code> | Go to test/implimentation file | command | `dart.goToTestOrImplimentationFile`     |
+| <code>␣ m languageId:dart g D</code> | Peek definition                | command | `editor.action.peekDefinition`          |
+| <code>␣ m languageId:dart g I</code> | Find all implementation        | command | `references-view.findImplementations`   |
+| <code>␣ m languageId:dart g R</code> | Find all references            | command | `references-view.findReferences`        |
+| <code>␣ m languageId:dart g T</code> | Go to tests                    | command | `dart.goToTests`                        |
+
+# +Logging
+
+Key Binding: <code>␣ m languageId:dart l</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                          | Name                          | Type    | Command(s)                        |
+| ------------------------------------ | ----------------------------- | ------- | --------------------------------- |
+| <code>␣ m languageId:dart l a</code> | Start logging analysis server | command | `dart.startLoggingAnalysisServer` |
+| <code>␣ m languageId:dart l d</code> | Start logging debugging       | command | `dart.startLoggingDebugging`      |
+| <code>␣ m languageId:dart l e</code> | Start logging extension only  | command | `dart.startLoggingExtensionOnly`  |
+| <code>␣ m languageId:dart l s</code> | Start logging                 | command | `dart.startLogging`               |
+| <code>␣ m languageId:dart l S</code> | Stop logging                  | command | `dart.stopLogging`                |
+
+# +Open
+
+Key Binding: <code>␣ m languageId:dart o</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                          | Name                  | Type    | Command(s)                     |
+| ------------------------------------ | --------------------- | ------- | ------------------------------ |
+| <code>␣ m languageId:dart o a</code> | Analyzer diagnostics  | command | `dart.openAnalyzerDiagnostics` |
+| <code>␣ m languageId:dart o c</code> | DevTools CPU profiler | command | `dart.startLoggingDebugging`   |
+| <code>␣ m languageId:dart o d</code> | Devtools              | command | `flutter.openDevTools`         |
+| <code>␣ m languageId:dart o l</code> | DevTools logging      | command | `dart.openDevToolsLogging`     |
+| <code>␣ m languageId:dart o m</code> | DevTools memory       | command | `dart.openDevToolsMemory`      |
+| <code>␣ m languageId:dart o n</code> | DevTools network      | command | `dart.openDevToolsNetwork`     |
+| <code>␣ m languageId:dart o t</code> | Timeline              | command | `flutter.openTimeline`         |
+
+# +Project/Packages
+
+Key Binding: <code>␣ m languageId:dart p</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                          | Name                        | Type                | Command(s)                               |
+| ------------------------------------ | --------------------------- | ------------------- | ---------------------------------------- |
+| <code>␣ m languageId:dart p d</code> | Add dependency              | command             | `dart.addDependency`                     |
+| <code>␣ m languageId:dart p g</code> | Pub get                     | command             | `flutter.packages.get`                   |
+| <code>␣ m languageId:dart p o</code> | Pub outdated                | command             | `flutter.packages.outdated`              |
+| <code>␣ m languageId:dart p u</code> | Pub upgrade                 | command             | `flutter.packages.upgrade`               |
+| <code>␣ m languageId:dart p D</code> | Add dev dependency          | command             | `dart.addDevDependency`                  |
+| <code>␣ m languageId:dart p U</code> | Pub upgrade -major versions | command             | `flutter.packages.upgrade.majorVersions` |
+| <code>␣ m languageId:dart p c</code> | +Create                     | [bindings](#create) | N/A                                      |
+
+# +Refactor
+
+Key Binding: <code>␣ m languageId:dart r</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                          | Name          | Type    | Command(s)               |
+| ------------------------------------ | ------------- | ------- | ------------------------ |
+| <code>␣ m languageId:dart r .</code> | Quick fix     | command | `editor.action.quickFix` |
+| <code>␣ m languageId:dart r r</code> | Rename symbol | command | `editor.action.rename`   |
+
+# +Test
+
+Key Binding: <code>␣ m languageId:dart t</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                          | Name                 | Type    | Command(s)                               |
+| ------------------------------------ | -------------------- | ------- | ---------------------------------------- |
+| <code>␣ m languageId:dart t c</code> | Clear test results   | command | `dart.clearTestResults`                  |
+| <code>␣ m languageId:dart t d</code> | Debug test at cursor | command | `dart.debugTestAtCursor`                 |
+| <code>␣ m languageId:dart t f</code> | Run failed tests     | command | `dart.runAllFailedTestsWithoutDebugging` |
+| <code>␣ m languageId:dart t r</code> | Run tests            | command | `dart.runAllTestsWithoutDebugging`       |
+| <code>␣ m languageId:dart t s</code> | Run skipped tests    | command | `dart.runAllTestsWithoutDebugging`       |
+| <code>␣ m languageId:dart t t</code> | Run test at cursor   | command | `dart.runTestAtCursor`                   |
+
+# +Toggle
+
+Key Binding: <code>␣ m languageId:dart T</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                          | Name                | Type    | Command(s)                         |
+| ------------------------------------ | ------------------- | ------- | ---------------------------------- |
+| <code>␣ m languageId:dart T b</code> | Brightness          | command | `flutter.toggleBrightness`         |
+| <code>␣ m languageId:dart T d</code> | Debug painting      | command | `flutter.toggleDebugPainting`      |
+| <code>␣ m languageId:dart T e</code> | Check elevations    | command | `flutter.toggleCheckElevations`    |
+| <code>␣ m languageId:dart T o</code> | Performance overlay | command | `flutter.togglePerformanceOverlay` |
+| <code>␣ m languageId:dart T p</code> | Paint baselines     | command | `flutter.togglePaintBaselines`     |
+| <code>␣ m languageId:dart T r</code> | Repaint rainbow     | command | `flutter.toggleRepaintRainbow`     |
+| <code>␣ m languageId:dart T s</code> | Slow animations     | command | `flutter.toggleSlowAnimations`     |
+| <code>␣ m languageId:dart T B</code> | Debug mode banner   | command | `flutter.toggleDebugModeBanner`    |
+
+# +Format
+
 Key Binding: <code>␣ m languageId:fsharp =</code>
 
 Type: <code>bindings</code>
@@ -1317,19 +1473,20 @@ Key Binding: <code>␣ m languageId:go g</code>
 
 Type: <code>bindings</code>
 
-| Key Binding                        | Name                   | Type    | Command(s)                              |
-| ---------------------------------- | ---------------------- | ------- | --------------------------------------- |
-| <code>␣ m languageId:go g d</code> | Go to definition       | command | `editor.action.revealDefinition`        |
-| <code>␣ m languageId:go g e</code> | Go to errors/problems  | command | `workbench.action.problems.focus`       |
-| <code>␣ m languageId:go g g</code> | Go to definition       | command | `editor.action.revealDefinition`        |
-| <code>␣ m languageId:go g i</code> | Find symbol in file    | command | `workbench.action.gotoSymbol`           |
-| <code>␣ m languageId:go g m</code> | Go to method in file   | command | `workbench.action.gotoMethod`           |
-| <code>␣ m languageId:go g r</code> | Peek references        | command | `editor.action.referenceSearch.trigger` |
-| <code>␣ m languageId:go g t</code> | Go to type definition  | command | `editor.action.goToTypeDefinition`      |
-| <code>␣ m languageId:go g D</code> | Peek definition        | command | `editor.action.peekDefinition`          |
-| <code>␣ m languageId:go g I</code> | Find symbol in project | command | `workbench.action.showAllSymbols`       |
-| <code>␣ m languageId:go g R</code> | Find all references    | command | `references-view.findReferences`        |
-| <code>␣ m languageId:go g T</code> | Peek type definition   | command | `editor.action.peekTypeDefinition`      |
+| Key Binding                        | Name                    | Type    | Command(s)                              |
+| ---------------------------------- | ----------------------- | ------- | --------------------------------------- |
+| <code>␣ m languageId:go g c</code> | Peak call hierarchy     | command | `editor.showCallHierarchy`              |
+| <code>␣ m languageId:go g d</code> | Go to definition        | command | `editor.action.revealDefinition`        |
+| <code>␣ m languageId:go g e</code> | Go to errors/problems   | command | `workbench.action.problems.focus`       |
+| <code>␣ m languageId:go g g</code> | Go to definition        | command | `editor.action.revealDefinition`        |
+| <code>␣ m languageId:go g i</code> | Go to implementations   | command | `editor.action.goToImplementation`      |
+| <code>␣ m languageId:go g r</code> | Peek references         | command | `editor.action.referenceSearch.trigger` |
+| <code>␣ m languageId:go g t</code> | Go to type definition   | command | `editor.action.goToTypeDefinition`      |
+| <code>␣ m languageId:go g C</code> | Show call hierarchy     | command | `references-view.showCallHierarchy`     |
+| <code>␣ m languageId:go g D</code> | Peek definition         | command | `editor.action.peekDefinition`          |
+| <code>␣ m languageId:go g I</code> | Find all implementation | command | `references-view.findImplementations`   |
+| <code>␣ m languageId:go g R</code> | Find all references     | command | `references-view.findReferences`        |
+| <code>␣ m languageId:go g T</code> | Peek type definition    | command | `editor.action.peekTypeDefinition`      |
 
 # +Insert/remove
 
@@ -1367,16 +1524,16 @@ Type: <code>bindings</code>
 | ---------------------------------- | -------------------------- | ----------------------- | ----------------------- |
 | <code>␣ m languageId:go t c</code> | Cancel running tests       | command                 | `go.test.cancel`        |
 | <code>␣ m languageId:go t d</code> | Debug test at cursor       | command                 | `go.debug.cursor`       |
-| <code>␣ m languageId:go t f</code> | Test function at cursor    | command                 | `go.test.cursor`        |
+| <code>␣ m languageId:go t f</code> | Test file                  | command                 | `go.test.file`          |
 | <code>␣ m languageId:go t l</code> | Test previous              | command                 | `go.test.previous`      |
 | <code>␣ m languageId:go t p</code> | Test package               | command                 | `go.test.package`       |
 | <code>␣ m languageId:go t s</code> | Subtest at cursor          | command                 | `go.subtest.cursor`     |
+| <code>␣ m languageId:go t t</code> | Test function at cursor    | command                 | `go.test.cursor`        |
 | <code>␣ m languageId:go t w</code> | Test packages in workspace | command                 | `go.test.workspace`     |
-| <code>␣ m languageId:go t F</code> | Test file                  | command                 | `go.test.file`          |
 | <code>␣ m languageId:go t P</code> | Apply cover profile        | command                 | `go.apply.coverprofile` |
 | <code>␣ m languageId:go t b</code> | +Benchmarks                | [bindings](#benchmarks) | N/A                     |
 | <code>␣ m languageId:go t g</code> | +Generate                  | [bindings](#generate)   | N/A                     |
-| <code>␣ m languageId:go t t</code> | +Toggle                    | [bindings](#toggle)     | N/A                     |
+| <code>␣ m languageId:go t T</code> | +Toggle                    | [bindings](#toggle)     | N/A                     |
 
 # +Format
 
@@ -1773,6 +1930,21 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:clojure r t L</code> | Thread last all   | command | `calva.refactor.threadLastAll`  |
 | <code>␣ m languageId:clojure r t U</code> | Unwind thread all | command | `calva.refactor.unwindThread`   |
 
+# +Create
+
+Key Binding: <code>␣ m languageId:dart p c</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                            | Name                    | Type    | Command(s) |
+| -------------------------------------- | ----------------------- | ------- | ---------- |
+| <code>␣ m languageId:dart p c d</code> | Dart project            | command | N/A        |
+| <code>␣ m languageId:dart p c l</code> | Flutter plugin project  | command | N/A        |
+| <code>␣ m languageId:dart p c m</code> | Flutter module project  | command | N/A        |
+| <code>␣ m languageId:dart p c p</code> | Flutter project         | command | N/A        |
+| <code>␣ m languageId:dart p c D</code> | Create DartDoc          | command | N/A        |
+| <code>␣ m languageId:dart p c P</code> | Flutter package project | command | N/A        |
+
 # +Package actions
 
 Key Binding: <code>␣ m languageId:go a p</code>
@@ -1827,14 +1999,14 @@ Type: <code>bindings</code>
 
 # +Toggle
 
-Key Binding: <code>␣ m languageId:go t t</code>
+Key Binding: <code>␣ m languageId:go t T</code>
 
 Type: <code>bindings</code>
 
 | Key Binding                          | Name                                    | Type    | Command(s)            |
 | ------------------------------------ | --------------------------------------- | ------- | --------------------- |
-| <code>␣ m languageId:go t t c</code> | Toggle test coverage in current package | command | `go.test.coverage`    |
-| <code>␣ m languageId:go t t f</code> | Toggle open test file                   | command | `go.toggle.test.file` |
+| <code>␣ m languageId:go t T c</code> | Toggle test coverage in current package | command | `go.test.coverage`    |
+| <code>␣ m languageId:go t T f</code> | Toggle open test file                   | command | `go.toggle.test.file` |
 
 # +Math Fonts
 
