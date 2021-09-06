@@ -175,6 +175,15 @@ vscode command `editor.action.codeAction` with `{ "kind": "refactor.extract" }` 
 ]
 ```
 
+## Colorize pair brackets
+
+VScode 1.60 added built-in support for colorizing pair brackets.
+See [High Performance Bracket Pair Colorization](https://code.visualstudio.com/updates/v1_60#_high-performance-bracket-pair-colorization).
+
+> ![Side by side comparison with bracket pair colorization on and off](https://code.visualstudio.com/assets/updates/1_60/bracket-pair-colorization-on-off.drawio.png)
+> Bracket pair colorization can be enabled by setting `"editor.bracketPairColorization.enabled": true`.
+> All colors are themeable and up to six colors can be configured.
+
 ## Use non-character keys
 
 See in [Which Key](./whichkey/extra#use-non-character-keys)
