@@ -14,9 +14,7 @@ you can merge the following config system's key bindings to your `keybindings.js
 This config might be in conflict with "Easy List Navigation" below.
 :::
 
-`keybindings.json`:
-
-```json
+```json title="keybindings.json"
 [
 	{
 		"key": "ctrl+h",
@@ -72,9 +70,7 @@ You can merge the following keybindings to `keybindings.json` to bind `ctrl+h/l/
 This config might be in conflict with "Quick Window Navigation" above.
 :::
 
-`keybindings.json`
-
-```json
+```json title="keybindings.json"
 [
     {
         "key": "ctrl+h",
@@ -106,9 +102,7 @@ however, `ctrl+a` can be used move the text cursor to the front.
 Your can merge the following example keybindings to `keybindings.json` to use `ctrl+o` instead of
 `ctrl+a` in the file browser to open an action menu.
 
-`keybindings.json`:
-
-```json
+```json title="keybindings.json"
 [
     {
         "key": "ctrl+a",
@@ -134,18 +128,20 @@ If the `"args"` field contains the `after` key, the vim key combination specifie
 
 The following example json overrides `<spc> y` to execute vim keys of `y y`.
 
-```json
-"vspacecode.bindingOverrides": [
-    {
-        "keys": ["y"],
-        "name": "yank",
-        "type": "command",
-        "command": "vim.remap",
-        "args": {
-            "after": ["y", "y"]
+```json title="settings.json"
+{
+    "vspacecode.bindingOverrides": [
+        {
+            "keys": ["y"],
+            "name": "yank",
+            "type": "command",
+            "command": "vim.remap",
+            "args": {
+                "after": ["y", "y"]
+            }
         }
-    }
-]
+    ]
+}
 ```
 
 ### Execute vim command
@@ -155,24 +151,26 @@ If the `"args"` field contains the `commands` key, the vim and vscode commands s
 The following example json overrides `<spc> c` to execute the vim command `:noh` and the
 vscode command `editor.action.codeAction` with `{ "kind": "refactor.extract" }` as argument.
 
-```json
-"vspacecode.bindingOverrides": [
-    {
-        "keys": ["c"],
-        "name": "Custom cmd",
-        "type": "command",
-        "command": "vim.remap",
-        "args": {
-            "commands":[
-                { "command": ":noh" },
-                {
-                    "command": "editor.action.codeAction",
-                    "args": { "kind": "refactor.extract" }
-                }
-            ]
+```json title="settings.json"
+{
+    "vspacecode.bindingOverrides": [
+        {
+            "keys": ["c"],
+            "name": "Custom cmd",
+            "type": "command",
+            "command": "vim.remap",
+            "args": {
+                "commands":[
+                    { "command": ":noh" },
+                    {
+                        "command": "editor.action.codeAction",
+                        "args": { "kind": "refactor.extract" }
+                    }
+                ]
+            }
         }
-    }
-]
+    ]
+}
 ```
 
 ## Colorize pair brackets

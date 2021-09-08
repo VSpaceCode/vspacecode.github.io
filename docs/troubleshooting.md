@@ -14,15 +14,17 @@ This problem is due to a keyboard settings on macOS that add a period with doubl
 
 If you don't use this feature, disabling it should fix this issue. Otherwise, add the following overrides to your `settings.json` as a workaround:
 
-```json
-"vspacecode.bindingOverrides": [
-    {
-        "keys": ["."],
-        "name": "Commands...",
-        "type": "command",
-        "command": "workbench.action.showCommands"
-    }
-],
+```json title="settings.json"
+{
+  "vspacecode.bindingOverrides": [
+      {
+          "keys": ["."],
+          "name": "Commands...",
+          "type": "command",
+          "command": "workbench.action.showCommands"
+      }
+  ]
+}
 ```
 
 ## `,` cannot find previous match
@@ -30,18 +32,18 @@ If you don't use this feature, disabling it should fix this issue. Otherwise, ad
 The default VSpaceCode configuration overrides `,` as a shortcut for the [major mode](./major-mode.md);
 therefore, the key `,` cannot get back to the previous match after a find `f{character}` with Vim.
 
-In order to remove this major mode shortcut, remove the following section from your `settings.json`:
+In order to remove this major mode shortcut, remove all vim key remappings in `settings.json`:
 
-```json
+```json title="settings.json"
 {
-    "before": [","],
-    "commands": [
-        "vspacecode.space",
-        {
-            "command": "whichkey.triggerKey",
-            "args": "m"
-        }
-    ],
+  "before": [","],
+  "commands": [
+      "vspacecode.space",
+      {
+          "command": "whichkey.triggerKey",
+          "args": "m"
+      }
+  ]
 }
 ```
 
@@ -54,10 +56,9 @@ If you press `<spc>` on a buffer and the which-key menu doesn't appear immediate
 ### Conflicting vim binding
 
 If in your `settings.json` file you have a vim binding that starts with `<spc>`, vim will wait for the second input when `<spc>` is pressed.
-
 Example:
 
-```json
+```json title="settings.json"
 "vim.normalModeKeyBindingsNonRecursive": [
   {
     "before": [" ", "d"],
