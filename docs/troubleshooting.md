@@ -32,7 +32,7 @@ If you don't use this feature, disabling it should fix this issue. Otherwise, ad
 The default VSpaceCode configuration overrides `,` as a shortcut for the [major mode](./major-mode.md);
 therefore, the key `,` cannot get back to the previous match after a find `f{character}` with Vim.
 
-In order to remove this major mode shortcut, remove the all of instances of vim key remapping in `settings.json`:
+In order to remove this major mode shortcut, remove all vim key remappings in `settings.json`:
 
 ```json title="settings.json"
 {
