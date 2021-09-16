@@ -3,7 +3,7 @@ id: extra
 title: Extra
 ---
 
-This section config extra settings that pertain to both Standalone or With extension.
+This section contains extra config settings that pertain to both Standalone or With extension.
 
 ## Use non-character keys
 
@@ -12,7 +12,7 @@ This section describes a way to use non-character keys in which-key menu like `<
 
 Merge the following json to your `keybindings.json`.
 
-```json
+```jsonc
 {
   "key": "ctrl+x",
   "command": "whichkey.triggerKey",
@@ -26,7 +26,7 @@ Effectively, the above keybinding will enter `C-x` in the QuickPick input box wh
 
 ## Display menu with a delay
 
-You can set `whichkey.delay` in `settings.json` to value in millisecond to delay the display of the menu.
+You can set `whichkey.delay` in `settings.json` to a value in milliseconds to delay the display of the menu.
 
 ## Display menu items alphabetically
 
@@ -34,11 +34,10 @@ You can set `whichkey.sortOrder` in `settings.json` to `alphabetically` to alway
 
 ## Unclear selection
 
-Selected text can be hard to see when which-key menu is active.
-This could be due to the `inactiveSelectionBackground` config of your current theme.
+Selected text can be hard to see when the which-key menu is active due to your current theme's `inactiveSelectionBackground` config.
 You can selectively override that color in your `settings.json` like the following example.
 
-```json
+```jsonc
 "workbench.colorCustomizations": {
     "editor.inactiveSelectionBackground": "color that works better",
 },
@@ -77,23 +76,23 @@ See [the relevant issue](https://github.com/VSpaceCode/vscode-which-key/issues/3
 ## Conditional bindings (experimental)
 
 :::caution
-This feature is marked as experimental and the config is subject to change.
+This feature is marked as experimental, and the config is subject to change.
 :::
 
-This allows conditional execution of bindings.
-Currently, it only supports conditions on the `when` passed from shortcut and `languageId` of the active editor.
+This allows the conditional execution of bindings.
+Currently, it only supports conditions on the `when` passed from a shortcut and `languageId` of the active editor.
 
-- It reuses the similar structure to the `bindings` type.
+- It reuses a structure similar to the `bindings` type.
 - The property `key` in a binding item is reused to represent the condition.
 - The condition can be thought of as a key-value pair serialized into a string.
 
 `languageId:javascript;when:sideBarVisible` is an example condition serialized into a string for the `key`
-that checks if the language id of the currently active editor is javascript and if the side bar is visible
+that checks if the language id of the currently active editor is javascript and if the sidebar is visible
 (see the [when](#when) section for more details).
 
-A concrete example of a binding with that condition is as follow:
+A concrete example of a binding with that condition is as follows:
 
-```json
+```jsonc
 {
   "whichkey.bindings": [
     {
@@ -128,18 +127,18 @@ A concrete example of a binding with that condition is as follow:
 
 In this example, when `m` is pressed, it will find the first binding that matches the current condition.
 If no configured key matches the current condition, a default item showing a buffer menu will be used.
-Any item that has an invalid key will be used as default item.
+Any item that has an invalid key will be used as the default item.
 
 Therefore, in this example, if the language is javascript and the sidebar is visible, `m` will open
 the file browser, otherwise it will show the "buffers" menu.
 
 ### Overrides
 
-This is again similar with the `bindings` type.
+This reuses a structure similar to the `bindings` type.
 
 For example, the following config will override the `m` binding completely:
 
-```json
+```jsonc
 {
   "whichkey.bindingOverrides": [
     {
@@ -175,7 +174,7 @@ For example, the following will add a key of `languageId:javascript` to the cond
 }
 ```
 
-Negative `position` property can also be used to remove conditional bindings.
+A negative `position` property can also be used to remove conditional bindings.
 
 ### when
 
@@ -186,10 +185,10 @@ For this reason, you will need to repeat every `when` condition used in conditio
 For example, the following shortcut in `keybindings.json` will pass both `key` and `when` in the `args` to `which-key`.
 The outer `when` is the [condition clause](https://code.visualstudio.com/docs/getstarted/keybindings#_when-clause-contexts)
 for vscode to execute this key, and must contain `whichKeyVisible` which limits this shortcut to be only applicable when the which-key menu is visible.
-In this case, if a user presses key `t` when which-key, sidebar and explorer viewlet are visible, it will execute `whichkey.triggerKey`
+In this case, if a user presses key `t` when which-key, sidebar, and explorer viewlet are visible, it will execute `whichkey.triggerKey`
 command and send the `args` (`key` and `when`) to  `which-key`
 
-```json
+```jsonc
 {
   "key": "t",
   "command": "whichkey.triggerKey",
@@ -201,10 +200,10 @@ command and send the `args` (`key` and `when`) to  `which-key`
 }
 ```
 
-The `args.key` and `args.when` that were sent to `which-key` are then used to find the a binding that matches the key `t`
+The `args.key` and `args.when` that were sent to `which-key` are then used to find a binding that matches the key `t`
 and any conditional binding that matches that condition. The following binding is an example that contains a conditional binding that matches the `args`.
 
-```json
+```jsonc
 {
   "key": "t",
   "name": "Show tree/explorer view",
@@ -227,8 +226,8 @@ and any conditional binding that matches that condition. The following binding i
 ```
 
 Unfortunately, if you have another condition binding with a different `key` that want to match the same
-`when` condition as the `t` in the above example, you will need to setup another shortcut with that different `key`.
+`when` condition as the `t` in the above example, you will need to set up another shortcut with that different `key`.
 
 ### languageId
 
-This is language id of the active editor. The language id can be found in language selection menu inside the parenthesis next to the language name.
+This is the language id of the active editor. The language id can be found in language selection menu inside the parenthesis next to the language name.
