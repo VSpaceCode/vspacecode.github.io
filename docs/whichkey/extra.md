@@ -37,7 +37,6 @@ You can set `whichkey.sortOrder` in `settings.json` to `alphabetically` to alway
 Selected text can be hard to see when the which-key menu is active due to your current theme's `inactiveSelectionBackground` config.
 You can selectively override that color in your `settings.json` like the following example.
 
-
 ```jsonc
 "workbench.colorCustomizations": {
     "editor.inactiveSelectionBackground": "color that works better",
