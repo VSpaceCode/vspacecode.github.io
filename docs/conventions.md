@@ -38,15 +38,17 @@ The following formatting bindings should be offered in all major modes that uses
 
 ### Go to
 
-| Key Binding | Name                      | Command                             |
-| ----------- | ------------------------- | ----------------------------------- |
-| `m g d`     | Go to definition          | `editor.action.revealDefinition`    |
-| `m g h`     | Show call hierarchy       | `references-view.showCallHierarchy` |
-| `m g i`     | Go to implementation      | `editor.action.goToImplementation`  |
-| `m g r`     | Find references           | `references-view.findReferences`    |
-| `m g s`     | Go to symbol in buffer    | `workbench.action.gotoSymbol`       |
-| `m g t`     | Go to type definition     | `editor.action.goToTypeDefinition`  |
-| `m g S`     | Go to symbol in workspace | `workbench.action.showAllSymbols`   |
+| Key Binding | Name                    | Command                               |
+| ----------- | ----------------------- | ------------------------------------- |
+| `m g d`     | Go to definition        | `editor.action.revealDefinition`      |
+| `m g h`     | Show call hierarchy     | `references-view.showCallHierarchy`   |
+| `m g i`     | Go to implementations   | `editor.action.goToImplementation`    |
+| `m g r`     | Go to references        | `editor.action.goToReferences`        |
+| `m g s`     | Go to symbol in buffer  | `workbench.action.gotoSymbol`         |
+| `m g t`     | Go to type definition   | `editor.action.goToTypeDefinition`    |
+| `m g I`     | Find implementations    | `references-view.findImplementations` |
+| `m g R`     | Find references         | `references-view.findReferences`      |
+| `m g S`     | Go to symbol in project | `workbench.action.showAllSymbols`     |
 
 ### Peek
 
@@ -54,6 +56,6 @@ The following formatting bindings should be offered in all major modes that uses
 | ----------- | -------------------- | --------------------------------------- |
 | `m G d`     | Peek definition      | `editor.action.peekDefinition`          |
 | `m G h`     | Peek call hierarchy  | `editor.showCallHierarchy`              |
-| `m G i`     | Peek implementation  | `editor.action.peekImplementation`      |
+| `m G i`     | Peek implementations | `editor.action.peekImplementation`      |
 | `m G r`     | Peek references      | `editor.action.referenceSearch.trigger` |
 | `m G t`     | Peek type definition | `editor.action.peekTypeDefinition`      |
