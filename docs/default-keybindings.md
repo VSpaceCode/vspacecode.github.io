@@ -33,6 +33,7 @@ Type: <code>bindings</code>
 | <code>␣ ;</code> | Toggle comment                   | command                                 | `editor.action.commentLine`                                                                                          |
 | <code>␣ ?</code> | Search keybindings               | command                                 | `whichkey.searchBindings`                                                                                            |
 | <code>␣ v</code> | Smart select/expand region       | [transient](#smart-selectexpand-region) | `editor.action.smartSelect.grow`                                                                                     |
+| <code>␣ :</code> | +Tasks                           | [bindings](#tasks)                      | N/A                                                                                                                  |
 | <code>␣ b</code> | +Buffers                         | [bindings](#buffers)                    | N/A                                                                                                                  |
 | <code>␣ c</code> | +Compile/Comments                | [bindings](#compilecomments)            | N/A                                                                                                                  |
 | <code>␣ d</code> | +Debug                           | [bindings](#debug)                      | N/A                                                                                                                  |
@@ -67,6 +68,24 @@ Type: <code>transient</code>
 | -------------- | ---------------- | ------- | ---------------------------------- |
 | <code>v</code> | Grow selection   | command | `editor.action.smartSelect.grow`   |
 | <code>V</code> | Shrink selection | command | `editor.action.smartSelect.shrink` |
+
+# +Tasks
+
+Key Binding: <code>␣ :</code>
+
+Type: <code>bindings</code>
+
+| Key Binding        | Name                  | Type    | Command(s)                                   |
+| ------------------ | --------------------- | ------- | -------------------------------------------- |
+| <code>␣ : .</code> | Rerun last task       | command | `workbench.action.tasks.reRunTask`           |
+| <code>␣ : :</code> | Run task              | command | `workbench.action.tasks.runTask`             |
+| <code>␣ : b</code> | Run build tasks       | command | `workbench.action.tasks.build`               |
+| <code>␣ : c</code> | Configure task runner | command | `workbench.action.tasks.configureTaskRunner` |
+| <code>␣ : g</code> | Show running tasks    | command | `workbench.action.tasks.showTasks`           |
+| <code>␣ : l</code> | Show task log         | command | `workbench.action.tasks.showLog`             |
+| <code>␣ : t</code> | Run test task         | command | `workbench.action.tasks.test`                |
+| <code>␣ : x</code> | Terminate task        | command | `workbench.action.tasks.terminate`           |
+| <code>␣ : R</code> | Restart running task  | command | `workbench.action.tasks.restartTask`         |
 
 # +Buffers
 
@@ -130,6 +149,7 @@ Type: <code>bindings</code>
 | <code>␣ d s</code> | Step over             | command                 | `workbench.action.debug.stepOver`       |
 | <code>␣ d v</code> | REPL                  | command                 | `workbench.debug.action.toggleRepl`     |
 | <code>␣ d w</code> | Focus on watch window | command                 | `workbench.debug.action.focusWatchView` |
+| <code>␣ d C</code> | Continue to cursor    | command                 | `editor.debug.action.runToCursor`       |
 | <code>␣ d D</code> | Run without debugging | command                 | `workbench.action.debug.run`            |
 | <code>␣ d R</code> | Restart debug         | command                 | `workbench.action.debug.restart`        |
 | <code>␣ d S</code> | Stop debug            | command                 | `workbench.action.debug.stop`           |
@@ -145,6 +165,8 @@ Type: <code>bindings</code>
 | Key Binding        | Name            | Type                          | Command(s)                         |
 | ------------------ | --------------- | ----------------------------- | ---------------------------------- |
 | <code>␣ e .</code> | Error transient | [transient](#error-transient) | N/A                                |
+| <code>␣ e e</code> | Show error      | command                       | `editor.action.showHover`          |
+| <code>␣ e f</code> | Fix error       | command                       | `editor.action.quickFix`           |
 | <code>␣ e l</code> | List errors     | command                       | `workbench.actions.view.problems`  |
 | <code>␣ e n</code> | Next error      | command                       | `editor.action.marker.nextInFiles` |
 | <code>␣ e p</code> | Previous error  | command                       | `editor.action.marker.prevInFiles` |
@@ -224,19 +246,19 @@ Key Binding: <code>␣ j</code>
 
 Type: <code>bindings</code>
 
-| Key Binding        | Name                        | Type    | Command(s)                               |
-| ------------------ | --------------------------- | ------- | ---------------------------------------- |
-| <code>␣ j +</code> | Format buffer               | command | `editor.action.formatDocument`           |
-| <code>␣ j =</code> | Format region or buffer     | command | `editor.action.format`                   |
-| <code>␣ j c</code> | Jump to previous change     | command | `workbench.action.editor.previousChange` |
-| <code>␣ j i</code> | Jump to symbol in buffer    | command | `workbench.action.gotoSymbol`            |
-| <code>␣ j j</code> | Jump to character           | command | `vim.remap`                              |
-| <code>␣ j l</code> | Jump to line                | command | `vim.remap`                              |
-| <code>␣ j n</code> | Split new line              | command | `lineBreakInsert`                        |
-| <code>␣ j v</code> | Jump to outline/variables   | command | `breadcrumbs.focusAndSelect`             |
-| <code>␣ j w</code> | Jump to word                | command | `vim.remap`                              |
-| <code>␣ j C</code> | Jump to next change         | command | `workbench.action.editor.nextChange`     |
-| <code>␣ j I</code> | Jump to symbol in workspace | command | `workbench.action.showAllSymbols`        |
+| Key Binding        | Name                      | Type    | Command(s)                               |
+| ------------------ | ------------------------- | ------- | ---------------------------------------- |
+| <code>␣ j +</code> | Format buffer             | command | `editor.action.formatDocument`           |
+| <code>␣ j =</code> | Format region or buffer   | command | `editor.action.format`                   |
+| <code>␣ j c</code> | Jump to previous change   | command | `workbench.action.editor.previousChange` |
+| <code>␣ j i</code> | Jump to symbol in buffer  | command | `workbench.action.gotoSymbol`            |
+| <code>␣ j j</code> | Jump to character         | command | `vim.remap`                              |
+| <code>␣ j l</code> | Jump to line              | command | `vim.remap`                              |
+| <code>␣ j n</code> | Split new line            | command | `lineBreakInsert`                        |
+| <code>␣ j v</code> | Jump to outline/variables | command | `breadcrumbs.focusAndSelect`             |
+| <code>␣ j w</code> | Jump to word              | command | `vim.remap`                              |
+| <code>␣ j C</code> | Jump to next change       | command | `workbench.action.editor.nextChange`     |
+| <code>␣ j I</code> | Jump to symbol in project | command | `workbench.action.showAllSymbols`        |
 
 # +Layouts
 
@@ -326,7 +348,7 @@ Type: <code>bindings</code>
 | <code>␣ s p</code> | Search in project                             | command                        | `workbench.action.findInFiles`                                                                      |
 | <code>␣ s r</code> | Search all references                         | command                        | `editor.action.referenceSearch.trigger`                                                             |
 | <code>␣ s s</code> | Fuzzy search in current buffer                | command                        | `fuzzySearch.activeTextEditorWithCurrentSelection`                                                  |
-| <code>␣ s J</code> | Jump to symbol in workspace                   | command                        | `workbench.action.showAllSymbols`                                                                   |
+| <code>␣ s J</code> | Jump to symbol in project                     | command                        | `workbench.action.showAllSymbols`                                                                   |
 | <code>␣ s P</code> | Search in project with selection              | commands                       | `editor.action.addSelectionToNextFindMatch`<br />`workbench.action.findInFiles`                     |
 | <code>␣ s R</code> | Search all references in side bar             | command                        | `references-view.find`                                                                              |
 | <code>␣ s S</code> | Fuzzy search with selection in current buffer | commands                       | `editor.action.addSelectionToNextFindMatch`<br />`fuzzySearch.activeTextEditorWithCurrentSelection` |
@@ -388,6 +410,7 @@ Type: <code>bindings</code>
 | <code>␣ x .</code> | Quick fix           | command                       | `editor.action.quickFix`                |
 | <code>␣ x a</code> | Find all references | command                       | `editor.action.referenceSearch.trigger` |
 | <code>␣ x i</code> | Organize Imports    | command                       | `editor.action.organizeImports`         |
+| <code>␣ x o</code> | Open link           | command                       | `editor.action.openLink`                |
 | <code>␣ x r</code> | Rename symbol       | command                       | `editor.action.rename`                  |
 | <code>␣ x u</code> | To lower case       | command                       | `editor.action.transformToLowercase`    |
 | <code>␣ x J</code> | Move lines down     | [transient](#move-lines-down) | `editor.action.moveLinesDownAction`     |
@@ -518,6 +541,7 @@ Type: <code>transient</code>
 
 | Key Binding    | Name           | Type    | Command(s)                         |
 | -------------- | -------------- | ------- | ---------------------------------- |
+| <code>f</code> | Fix error      | command | `editor.action.quickFix`           |
 | <code>n</code> | Next error     | command | `editor.action.marker.nextInFiles` |
 | <code>p</code> | Previous error | command | `editor.action.marker.prevInFiles` |
 | <code>N</code> | Previous error | command | `editor.action.marker.prevInFiles` |
@@ -628,6 +652,7 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:cpp b</code> | +Backend  | [bindings](#backend)  | N/A        |
 | <code>␣ m languageId:cpp g</code> | +Go to    | [bindings](#go-to)    | N/A        |
 | <code>␣ m languageId:cpp r</code> | +Refactor | [bindings](#refactor) | N/A        |
+| <code>␣ m languageId:cpp G</code> | +Peek     | [bindings](#peek)     | N/A        |
 
 # C#
 
@@ -644,6 +669,7 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:csharp p</code> | +Project           | [bindings](#project)          | N/A        |
 | <code>␣ m languageId:csharp r</code> | +Refactor          | [bindings](#refactor)         | N/A        |
 | <code>␣ m languageId:csharp t</code> | +Test              | [bindings](#test)             | N/A        |
+| <code>␣ m languageId:csharp G</code> | +Peek              | [bindings](#peek)             | N/A        |
 
 # Dart/Flutter
 
@@ -674,6 +700,7 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:dart p</code> | +Project/Packages      | [bindings](#projectpackages) | N/A                         |
 | <code>␣ m languageId:dart r</code> | +Refactor              | [bindings](#refactor)        | N/A                         |
 | <code>␣ m languageId:dart t</code> | +Test                  | [bindings](#test)            | N/A                         |
+| <code>␣ m languageId:dart G</code> | +Peek                  | [bindings](#peek)            | N/A                         |
 | <code>␣ m languageId:dart T</code> | +Toggle                | [bindings](#toggle)          | N/A                         |
 
 # F#
@@ -689,6 +716,7 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:fsharp g</code> | +Go to    | [bindings](#go-to)    | N/A        |
 | <code>␣ m languageId:fsharp r</code> | +Refactor | [bindings](#refactor) | N/A        |
 | <code>␣ m languageId:fsharp s</code> | +FSI REPL | [bindings](#fsi-repl) | N/A        |
+| <code>␣ m languageId:fsharp G</code> | +Peek     | [bindings](#peek)     | N/A        |
 
 # Go
 
@@ -706,6 +734,7 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:go i</code> | +Insert/remove       | [bindings](#insertremove)       | N/A                |
 | <code>␣ m languageId:go r</code> | +Refactor            | [bindings](#refactor)           | N/A                |
 | <code>␣ m languageId:go t</code> | +Test                | [bindings](#test)               | N/A                |
+| <code>␣ m languageId:go G</code> | +Peek                | [bindings](#peek)               | N/A                |
 
 # LaTeX
 
@@ -718,7 +747,7 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:latex =</code> | +Format  | [bindings](#format)  | N/A        |
 | <code>␣ m languageId:latex b</code> | +Backend | [bindings](#backend) | N/A        |
 | <code>␣ m languageId:latex c</code> | +Build   | [bindings](#build)   | N/A        |
-| <code>␣ m languageId:latex g</code> | +Goto    | [bindings](#goto)    | N/A        |
+| <code>␣ m languageId:latex g</code> | +Go to   | [bindings](#go-to)   | N/A        |
 | <code>␣ m languageId:latex i</code> | +Insert  | [bindings](#insert)  | N/A        |
 | <code>␣ m languageId:latex l</code> | +Bibtex  | [bindings](#bibtex)  | N/A        |
 | <code>␣ m languageId:latex p</code> | +Preview | [bindings](#preview) | N/A        |
@@ -752,6 +781,7 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:python r</code> | +Refactor   | [bindings](#refactor) | N/A                     |
 | <code>␣ m languageId:python s</code> | +REPL       | [bindings](#repl)     | N/A                     |
 | <code>␣ m languageId:python t</code> | +Test       | [bindings](#test)     | N/A                     |
+| <code>␣ m languageId:python G</code> | +Peek       | [bindings](#peek)     | N/A                     |
 
 # Ruby
 
@@ -764,6 +794,7 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:ruby =</code> | +Format   | [bindings](#format)   | N/A        |
 | <code>␣ m languageId:ruby g</code> | +Go to    | [bindings](#go-to)    | N/A        |
 | <code>␣ m languageId:ruby r</code> | +Refactor | [bindings](#refactor) | N/A        |
+| <code>␣ m languageId:ruby G</code> | +Peek     | [bindings](#peek)     | N/A        |
 
 # Rust
 
@@ -775,7 +806,10 @@ Type: <code>bindings</code>
 | ---------------------------------- | ------------------ | -------------------- | -------------------------------- |
 | <code>␣ m languageId:rust T</code> | Toggle inlay hints | command              | `rust-analyzer.toggleInlayHints` |
 | <code>␣ m languageId:rust =</code> | +Format            | [bindings](#format)  | N/A                              |
+| <code>␣ m languageId:rust a</code> | +Actions           | [bindings](#actions) | N/A                              |
 | <code>␣ m languageId:rust b</code> | +Backend           | [bindings](#backend) | N/A                              |
+| <code>␣ m languageId:rust g</code> | +Goto              | [bindings](#goto)    | N/A                              |
+| <code>␣ m languageId:rust G</code> | +Peek              | [bindings](#peek)    | N/A                              |
 
 # Highlight symbol
 
@@ -1115,18 +1149,17 @@ Key Binding: <code>␣ m languageId:cpp g</code>
 
 Type: <code>bindings</code>
 
-| Key Binding                         | Name                   | Type    | Command(s)                                        |
-| ----------------------------------- | ---------------------- | ------- | ------------------------------------------------- |
-| <code>␣ m languageId:cpp g a</code> | Switch Header/Source   | command | `C_Cpp.SwitchHeaderSource`                        |
-| <code>␣ m languageId:cpp g d</code> | Go to declaration      | command | `editor.action.revealDeclaration`                 |
-| <code>␣ m languageId:cpp g e</code> | Go to errors/problems  | command | `workbench.actions.view.problems`                 |
-| <code>␣ m languageId:cpp g f</code> | Go to file in explorer | command | `workbench.files.action.showActiveFileInExplorer` |
-| <code>␣ m languageId:cpp g g</code> | Go to definition       | command | `editor.action.revealDefinition`                  |
-| <code>␣ m languageId:cpp g r</code> | Peek references        | command | `editor.action.referencesSearch.trigger`          |
-| <code>␣ m languageId:cpp g s</code> | Go to symbol in editor | command | `workbench.action.gotoSymbol`                     |
-| <code>␣ m languageId:cpp g D</code> | Peek declaration       | command | `editor.action.peekDeclaration`                   |
-| <code>␣ m languageId:cpp g G</code> | Peek definition        | command | `editor.action.peekDefinition`                    |
-| <code>␣ m languageId:cpp g R</code> | Find all references    | command | `references-view.findReferences`                  |
+| Key Binding                         | Name                    | Type    | Command(s)                                        |
+| ----------------------------------- | ----------------------- | ------- | ------------------------------------------------- |
+| <code>␣ m languageId:cpp g a</code> | Switch Header/Source    | command | `C_Cpp.SwitchHeaderSource`                        |
+| <code>␣ m languageId:cpp g d</code> | Go to declaration       | command | `editor.action.revealDeclaration`                 |
+| <code>␣ m languageId:cpp g e</code> | Go to errors/problems   | command | `workbench.actions.view.problems`                 |
+| <code>␣ m languageId:cpp g f</code> | Go to file in explorer  | command | `workbench.files.action.showActiveFileInExplorer` |
+| <code>␣ m languageId:cpp g g</code> | Go to definition        | command | `editor.action.revealDefinition`                  |
+| <code>␣ m languageId:cpp g r</code> | Go to reference         | command | `editor.action.goToReferences`                    |
+| <code>␣ m languageId:cpp g s</code> | Go to symbol in buffer  | command | `workbench.action.gotoSymbol`                     |
+| <code>␣ m languageId:cpp g R</code> | Find references         | command | `references-view.findReferences`                  |
+| <code>␣ m languageId:cpp g S</code> | Go to symbol in project | command | `workbench.action.showAllSymbols`                 |
 
 # +Refactor
 
@@ -1137,6 +1170,18 @@ Type: <code>bindings</code>
 | Key Binding                         | Name          | Type    | Command(s)             |
 | ----------------------------------- | ------------- | ------- | ---------------------- |
 | <code>␣ m languageId:cpp r r</code> | Rename Symbol | command | `editor.action.rename` |
+
+# +Peek
+
+Key Binding: <code>␣ m languageId:cpp G</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                         | Name             | Type    | Command(s)                              |
+| ----------------------------------- | ---------------- | ------- | --------------------------------------- |
+| <code>␣ m languageId:cpp G d</code> | Peek declaration | command | `editor.action.peekDeclaration`         |
+| <code>␣ m languageId:cpp G g</code> | Peek definition  | command | `editor.action.peekDefinition`          |
+| <code>␣ m languageId:cpp G r</code> | Peek references  | command | `editor.action.referenceSearch.trigger` |
 
 # +Format
 
@@ -1182,16 +1227,15 @@ Key Binding: <code>␣ m languageId:csharp g</code>
 
 Type: <code>bindings</code>
 
-| Key Binding                            | Name                    | Type    | Command(s)                              |
-| -------------------------------------- | ----------------------- | ------- | --------------------------------------- |
-| <code>␣ m languageId:csharp g d</code> | Go to definition        | command | `editor.action.revealDefinition`        |
-| <code>␣ m languageId:csharp g e</code> | Go to errors/problems   | command | `workbench.action.problems.focus`       |
-| <code>␣ m languageId:csharp g g</code> | Go to definition        | command | `editor.action.revealDefinition`        |
-| <code>␣ m languageId:csharp g i</code> | Go to implementations   | command | `editor.action.goToImplementation`      |
-| <code>␣ m languageId:csharp g r</code> | Peek references         | command | `editor.action.referenceSearch.trigger` |
-| <code>␣ m languageId:csharp g D</code> | Peek definition         | command | `editor.action.peekDefinition`          |
-| <code>␣ m languageId:csharp g I</code> | Find all implementation | command | `references-view.findImplementations`   |
-| <code>␣ m languageId:csharp g R</code> | Find all references     | command | `references-view.findReferences`        |
+| Key Binding                            | Name                  | Type    | Command(s)                            |
+| -------------------------------------- | --------------------- | ------- | ------------------------------------- |
+| <code>␣ m languageId:csharp g d</code> | Go to definition      | command | `editor.action.revealDefinition`      |
+| <code>␣ m languageId:csharp g e</code> | Go to errors/problems | command | `workbench.action.problems.focus`     |
+| <code>␣ m languageId:csharp g g</code> | Go to definition      | command | `editor.action.revealDefinition`      |
+| <code>␣ m languageId:csharp g i</code> | Go to implementations | command | `editor.action.goToImplementation`    |
+| <code>␣ m languageId:csharp g r</code> | Go to references      | command | `editor.action.goToReferences`        |
+| <code>␣ m languageId:csharp g I</code> | Find implementations  | command | `references-view.findImplementations` |
+| <code>␣ m languageId:csharp g R</code> | Find references       | command | `references-view.findReferences`      |
 
 # +Project
 
@@ -1226,6 +1270,18 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:csharp t d</code> | Debug test under cursor | command | `dotnet.test.debugTestsInContext` |
 | <code>␣ m languageId:csharp t t</code> | Run test under cursor   | command | `dotnet.test.runTestsInContext`   |
 
+# +Peek
+
+Key Binding: <code>␣ m languageId:csharp G</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                            | Name                 | Type    | Command(s)                              |
+| -------------------------------------- | -------------------- | ------- | --------------------------------------- |
+| <code>␣ m languageId:csharp G d</code> | Peek definition      | command | `editor.action.peekDefinition`          |
+| <code>␣ m languageId:csharp G i</code> | Peek implementations | command | `editor.action.peekImplementation`      |
+| <code>␣ m languageId:csharp G r</code> | Peek references      | command | `editor.action.referenceSearch.trigger` |
+
 # +Format
 
 Key Binding: <code>␣ m languageId:dart =</code>
@@ -1247,19 +1303,18 @@ Key Binding: <code>␣ m languageId:dart g</code>
 
 Type: <code>bindings</code>
 
-| Key Binding                          | Name                           | Type    | Command(s)                              |
-| ------------------------------------ | ------------------------------ | ------- | --------------------------------------- |
-| <code>␣ m languageId:dart g d</code> | Go to definition               | command | `editor.action.revealDefinition`        |
-| <code>␣ m languageId:dart g e</code> | Go to errors/problems          | command | `workbench.action.problems.focus`       |
-| <code>␣ m languageId:dart g g</code> | Go to definition               | command | `editor.action.revealDefinition`        |
-| <code>␣ m languageId:dart g i</code> | Go to implementations          | command | `editor.action.goToImplementation`      |
-| <code>␣ m languageId:dart g r</code> | Peek references                | command | `editor.action.referenceSearch.trigger` |
-| <code>␣ m languageId:dart g s</code> | Go to super                    | command | `dart.goToSuper`                        |
-| <code>␣ m languageId:dart g t</code> | Go to test/implimentation file | command | `dart.goToTestOrImplimentationFile`     |
-| <code>␣ m languageId:dart g D</code> | Peek definition                | command | `editor.action.peekDefinition`          |
-| <code>␣ m languageId:dart g I</code> | Find all implementation        | command | `references-view.findImplementations`   |
-| <code>␣ m languageId:dart g R</code> | Find all references            | command | `references-view.findReferences`        |
-| <code>␣ m languageId:dart g T</code> | Go to tests                    | command | `dart.goToTests`                        |
+| Key Binding                          | Name                           | Type    | Command(s)                            |
+| ------------------------------------ | ------------------------------ | ------- | ------------------------------------- |
+| <code>␣ m languageId:dart g d</code> | Go to definition               | command | `editor.action.revealDefinition`      |
+| <code>␣ m languageId:dart g e</code> | Go to errors/problems          | command | `workbench.action.problems.focus`     |
+| <code>␣ m languageId:dart g g</code> | Go to definition               | command | `editor.action.revealDefinition`      |
+| <code>␣ m languageId:dart g i</code> | Go to implementations          | command | `editor.action.goToImplementation`    |
+| <code>␣ m languageId:dart g r</code> | Go to references               | command | `editor.action.goToReferences`        |
+| <code>␣ m languageId:dart g s</code> | Go to super                    | command | `dart.goToSuper`                      |
+| <code>␣ m languageId:dart g t</code> | Go to test/implementation file | command | `dart.goToTestOrImplementationFile`   |
+| <code>␣ m languageId:dart g I</code> | Find implementations           | command | `references-view.findImplementations` |
+| <code>␣ m languageId:dart g R</code> | Find references                | command | `references-view.findReferences`      |
+| <code>␣ m languageId:dart g T</code> | Go to tests                    | command | `dart.goToTests`                      |
 
 # +Logging
 
@@ -1333,6 +1388,18 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:dart t s</code> | Run skipped tests    | command | `dart.runAllTestsWithoutDebugging`       |
 | <code>␣ m languageId:dart t t</code> | Run test at cursor   | command | `dart.runTestAtCursor`                   |
 
+# +Peek
+
+Key Binding: <code>␣ m languageId:dart G</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                          | Name                 | Type    | Command(s)                              |
+| ------------------------------------ | -------------------- | ------- | --------------------------------------- |
+| <code>␣ m languageId:dart G d</code> | Peek definition      | command | `editor.action.peekDefinition`          |
+| <code>␣ m languageId:dart G i</code> | Peek implementations | command | `editor.action.peekImplementation`      |
+| <code>␣ m languageId:dart G r</code> | Peek references      | command | `editor.action.referenceSearch.trigger` |
+
 # +Toggle
 
 Key Binding: <code>␣ m languageId:dart T</code>
@@ -1387,18 +1454,16 @@ Key Binding: <code>␣ m languageId:fsharp g</code>
 
 Type: <code>bindings</code>
 
-| Key Binding                            | Name                   | Type    | Command(s)                              |
-| -------------------------------------- | ---------------------- | ------- | --------------------------------------- |
-| <code>␣ m languageId:fsharp g d</code> | Go to definition       | command | `editor.action.revealDefinition`        |
-| <code>␣ m languageId:fsharp g e</code> | Go to errors/problems  | command | `workbench.action.problems.focus`       |
-| <code>␣ m languageId:fsharp g g</code> | Go to definition       | command | `editor.action.revealDefinition`        |
-| <code>␣ m languageId:fsharp g i</code> | Find symbol in file    | command | `workbench.action.gotoSymbol`           |
-| <code>␣ m languageId:fsharp g r</code> | Peek references        | command | `editor.action.referenceSearch.trigger` |
-| <code>␣ m languageId:fsharp g t</code> | Go to type definition  | command | `editor.action.goToTypeDefinition`      |
-| <code>␣ m languageId:fsharp g D</code> | Peek definition        | command | `editor.action.peekDefinition`          |
-| <code>␣ m languageId:fsharp g I</code> | Find symbol in project | command | `workbench.action.showAllSymbols`       |
-| <code>␣ m languageId:fsharp g R</code> | Find all references    | command | `references-view.findReferences`        |
-| <code>␣ m languageId:fsharp g T</code> | Peek type definition   | command | `editor.action.peekTypeDefinition`      |
+| Key Binding                            | Name                  | Type    | Command(s)                            |
+| -------------------------------------- | --------------------- | ------- | ------------------------------------- |
+| <code>␣ m languageId:fsharp g d</code> | Go to definition      | command | `editor.action.revealDefinition`      |
+| <code>␣ m languageId:fsharp g e</code> | Go to errors/problems | command | `workbench.action.problems.focus`     |
+| <code>␣ m languageId:fsharp g g</code> | Go to definition      | command | `editor.action.revealDefinition`      |
+| <code>␣ m languageId:fsharp g r</code> | Go to reference       | command | `editor.action.goToReferences`        |
+| <code>␣ m languageId:fsharp g s</code> | Find symbol in buffer | command | `workbench.action.gotoSymbol`         |
+| <code>␣ m languageId:fsharp g t</code> | Go to type definition | command | `editor.action.goToTypeDefinition`    |
+| <code>␣ m languageId:fsharp g I</code> | Find implementations  | command | `references-view.findImplementations` |
+| <code>␣ m languageId:fsharp g R</code> | Find references       | command | `references-view.findReferences`      |
 
 # +Refactor
 
@@ -1425,6 +1490,18 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:fsharp s L</code> | FSI: Send last selection          | command | `fsi.SendLastSelection`         |
 | <code>␣ m languageId:fsharp s P</code> | FSI: Send references from project | command | `fsi.SendProjectReferences`     |
 | <code>␣ m languageId:fsharp s S</code> | FSI: Start                        | command | `fsi.Start`                     |
+
+# +Peek
+
+Key Binding: <code>␣ m languageId:fsharp G</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                            | Name                 | Type    | Command(s)                              |
+| -------------------------------------- | -------------------- | ------- | --------------------------------------- |
+| <code>␣ m languageId:fsharp G d</code> | Peek definition      | command | `editor.action.peekDefinition`          |
+| <code>␣ m languageId:fsharp G r</code> | Peek references      | command | `editor.action.referenceSearch.trigger` |
+| <code>␣ m languageId:fsharp G t</code> | Peek type definition | command | `editor.action.peekTypeDefinition`      |
 
 # +Format
 
@@ -1473,20 +1550,17 @@ Key Binding: <code>␣ m languageId:go g</code>
 
 Type: <code>bindings</code>
 
-| Key Binding                        | Name                    | Type    | Command(s)                              |
-| ---------------------------------- | ----------------------- | ------- | --------------------------------------- |
-| <code>␣ m languageId:go g c</code> | Peak call hierarchy     | command | `editor.showCallHierarchy`              |
-| <code>␣ m languageId:go g d</code> | Go to definition        | command | `editor.action.revealDefinition`        |
-| <code>␣ m languageId:go g e</code> | Go to errors/problems   | command | `workbench.action.problems.focus`       |
-| <code>␣ m languageId:go g g</code> | Go to definition        | command | `editor.action.revealDefinition`        |
-| <code>␣ m languageId:go g i</code> | Go to implementations   | command | `editor.action.goToImplementation`      |
-| <code>␣ m languageId:go g r</code> | Peek references         | command | `editor.action.referenceSearch.trigger` |
-| <code>␣ m languageId:go g t</code> | Go to type definition   | command | `editor.action.goToTypeDefinition`      |
-| <code>␣ m languageId:go g C</code> | Show call hierarchy     | command | `references-view.showCallHierarchy`     |
-| <code>␣ m languageId:go g D</code> | Peek definition         | command | `editor.action.peekDefinition`          |
-| <code>␣ m languageId:go g I</code> | Find all implementation | command | `references-view.findImplementations`   |
-| <code>␣ m languageId:go g R</code> | Find all references     | command | `references-view.findReferences`        |
-| <code>␣ m languageId:go g T</code> | Peek type definition    | command | `editor.action.peekTypeDefinition`      |
+| Key Binding                        | Name                  | Type    | Command(s)                            |
+| ---------------------------------- | --------------------- | ------- | ------------------------------------- |
+| <code>␣ m languageId:go g d</code> | Go to definition      | command | `editor.action.revealDefinition`      |
+| <code>␣ m languageId:go g e</code> | Go to errors/problems | command | `workbench.action.problems.focus`     |
+| <code>␣ m languageId:go g g</code> | Go to definition      | command | `editor.action.revealDefinition`      |
+| <code>␣ m languageId:go g h</code> | Show call hierarchy   | command | `references-view.showCallHierarchy`   |
+| <code>␣ m languageId:go g i</code> | Go to implementations | command | `editor.action.goToImplementation`    |
+| <code>␣ m languageId:go g r</code> | Go to references      | command | `editor.action.goToReferences`        |
+| <code>␣ m languageId:go g t</code> | Go to type definition | command | `editor.action.goToTypeDefinition`    |
+| <code>␣ m languageId:go g I</code> | Find implementations  | command | `references-view.findImplementations` |
+| <code>␣ m languageId:go g R</code> | Find references       | command | `references-view.findReferences`      |
 
 # +Insert/remove
 
@@ -1535,6 +1609,19 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:go t g</code> | +Generate                  | [bindings](#generate)   | N/A                     |
 | <code>␣ m languageId:go t T</code> | +Toggle                    | [bindings](#toggle)     | N/A                     |
 
+# +Peek
+
+Key Binding: <code>␣ m languageId:go G</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                        | Name                 | Type    | Command(s)                              |
+| ---------------------------------- | -------------------- | ------- | --------------------------------------- |
+| <code>␣ m languageId:go G d</code> | Peek definition      | command | `editor.action.peekDefinition`          |
+| <code>␣ m languageId:go G h</code> | Peek call hierarchy  | command | `editor.showCallHierarchy`              |
+| <code>␣ m languageId:go G i</code> | Peek implementations | command | `editor.action.peekImplementation`      |
+| <code>␣ m languageId:go G r</code> | Peek references      | command | `editor.action.referenceSearch.trigger` |
+
 # +Format
 
 Key Binding: <code>␣ m languageId:latex =</code>
@@ -1576,7 +1663,7 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:latex c l</code> | View compiler logs       | command | `latex-workshop.compilerlog`          |
 | <code>␣ m languageId:latex c r</code> | Build with recipe        | command | `latex-workshop.recipes`              |
 
-# +Goto
+# +Go to
 
 Key Binding: <code>␣ m languageId:latex g</code>
 
@@ -1728,16 +1815,15 @@ Key Binding: <code>␣ m languageId:python g</code>
 
 Type: <code>bindings</code>
 
-| Key Binding                            | Name                   | Type    | Command(s)                              |
-| -------------------------------------- | ---------------------- | ------- | --------------------------------------- |
-| <code>␣ m languageId:python g d</code> | Go to definition       | command | `editor.action.revealDefinition`        |
-| <code>␣ m languageId:python g e</code> | Go to errors/problems  | command | `workbench.action.problems.focus`       |
-| <code>␣ m languageId:python g g</code> | Go to definition       | command | `editor.action.revealDefinition`        |
-| <code>␣ m languageId:python g i</code> | Find symbol in file    | command | `workbench.action.gotoSymbol`           |
-| <code>␣ m languageId:python g r</code> | Peek references        | command | `editor.action.referenceSearch.trigger` |
-| <code>␣ m languageId:python g D</code> | Peek definition        | command | `editor.action.peekDefinition`          |
-| <code>␣ m languageId:python g I</code> | Find symbol in project | command | `workbench.action.showAllSymbols`       |
-| <code>␣ m languageId:python g R</code> | Find all references    | command | `references-view.findReferences`        |
+| Key Binding                            | Name                    | Type    | Command(s)                        |
+| -------------------------------------- | ----------------------- | ------- | --------------------------------- |
+| <code>␣ m languageId:python g d</code> | Go to definition        | command | `editor.action.revealDefinition`  |
+| <code>␣ m languageId:python g e</code> | Go to errors/problems   | command | `workbench.action.problems.focus` |
+| <code>␣ m languageId:python g g</code> | Go to definition        | command | `editor.action.revealDefinition`  |
+| <code>␣ m languageId:python g r</code> | Go to references        | command | `editor.action.goToReferences`    |
+| <code>␣ m languageId:python g s</code> | Go to symbol in file    | command | `workbench.action.gotoSymbol`     |
+| <code>␣ m languageId:python g R</code> | Find references         | command | `references-view.findReferences`  |
+| <code>␣ m languageId:python g S</code> | Go to symbol in project | command | `workbench.action.showAllSymbols` |
 
 # +Refactor
 
@@ -1778,6 +1864,17 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:python t A</code> | Debug all tests       | command | `python.debugtests`               |
 | <code>␣ m languageId:python t T</code> | Select and debug test | command | `python.selectAndDebugTestMethod` |
 
+# +Peek
+
+Key Binding: <code>␣ m languageId:python G</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                            | Name            | Type    | Command(s)                              |
+| -------------------------------------- | --------------- | ------- | --------------------------------------- |
+| <code>␣ m languageId:python G d</code> | Peek definition | command | `editor.action.peekDefinition`          |
+| <code>␣ m languageId:python G r</code> | Peek references | command | `editor.action.referenceSearch.trigger` |
+
 # +Format
 
 Key Binding: <code>␣ m languageId:ruby =</code>
@@ -1799,16 +1896,15 @@ Key Binding: <code>␣ m languageId:ruby g</code>
 
 Type: <code>bindings</code>
 
-| Key Binding                          | Name                   | Type    | Command(s)                              |
-| ------------------------------------ | ---------------------- | ------- | --------------------------------------- |
-| <code>␣ m languageId:ruby g d</code> | Go to definition       | command | `editor.action.revealDefinition`        |
-| <code>␣ m languageId:ruby g e</code> | Go to errors/problems  | command | `workbench.action.problems.focus`       |
-| <code>␣ m languageId:ruby g g</code> | Go to definition       | command | `editor.action.revealDefinition`        |
-| <code>␣ m languageId:ruby g i</code> | Find symbol in file    | command | `workbench.action.gotoSymbol`           |
-| <code>␣ m languageId:ruby g r</code> | Peek references        | command | `editor.action.referenceSearch.trigger` |
-| <code>␣ m languageId:ruby g D</code> | Peek definition        | command | `editor.action.peekDefinition`          |
-| <code>␣ m languageId:ruby g I</code> | Find symbol in project | command | `workbench.action.showAllSymbols`       |
-| <code>␣ m languageId:ruby g R</code> | Find all references    | command | `references-view.findReferences`        |
+| Key Binding                          | Name                   | Type    | Command(s)                        |
+| ------------------------------------ | ---------------------- | ------- | --------------------------------- |
+| <code>␣ m languageId:ruby g d</code> | Go to definition       | command | `editor.action.revealDefinition`  |
+| <code>␣ m languageId:ruby g e</code> | Go to errors/problems  | command | `workbench.action.problems.focus` |
+| <code>␣ m languageId:ruby g g</code> | Go to definition       | command | `editor.action.revealDefinition`  |
+| <code>␣ m languageId:ruby g r</code> | Go to references       | command | `editor.action.goToReferences`    |
+| <code>␣ m languageId:ruby g s</code> | Find symbol in buffer  | command | `workbench.action.gotoSymbol`     |
+| <code>␣ m languageId:ruby g R</code> | Find references        | command | `references-view.findReferences`  |
+| <code>␣ m languageId:ruby g S</code> | Find symbol in project | command | `workbench.action.showAllSymbols` |
 
 # +Refactor
 
@@ -1819,6 +1915,17 @@ Type: <code>bindings</code>
 | Key Binding                          | Name          | Type    | Command(s)             |
 | ------------------------------------ | ------------- | ------- | ---------------------- |
 | <code>␣ m languageId:ruby r r</code> | Rename symbol | command | `editor.action.rename` |
+
+# +Peek
+
+Key Binding: <code>␣ m languageId:ruby G</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                          | Name            | Type    | Command(s)                              |
+| ------------------------------------ | --------------- | ------- | --------------------------------------- |
+| <code>␣ m languageId:ruby G d</code> | Peek definition | command | `editor.action.peekDefinition`          |
+| <code>␣ m languageId:ruby G r</code> | Peek references | command | `editor.action.referenceSearch.trigger` |
 
 # +Format
 
@@ -1832,6 +1939,19 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:rust = b</code> | Format buffer           | command | `editor.action.formatDocument` |
 | <code>␣ m languageId:rust = s</code> | Format selection        | command | `editor.action.format`         |
 
+# +Actions
+
+Key Binding: <code>␣ m languageId:rust a</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                          | Name                  | Type                  | Command(s)                   |
+| ------------------------------------ | --------------------- | --------------------- | ---------------------------- |
+| <code>␣ m languageId:rust a a</code> | Execute code action   | command               | `editor.action.codeAction`   |
+| <code>␣ m languageId:rust a f</code> | Execute fix action    | command               | `editor.action.quickFix`     |
+| <code>␣ m languageId:rust a s</code> | Execute source action | command               | `editor.action.sourceAction` |
+| <code>␣ m languageId:rust a r</code> | +Refactor             | [bindings](#refactor) | N/A                          |
+
 # +Backend
 
 Key Binding: <code>␣ m languageId:rust b</code>
@@ -1844,6 +1964,37 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:rust b r</code> | Rust analyzer: restart server   | command | `rust-analyzer.reload`          |
 | <code>␣ m languageId:rust b v</code> | Rust analyzer: Show version     | command | `rust-analyzer.serverVersion`   |
 | <code>␣ m languageId:rust b R</code> | Rust analyzer: reload workspace | command | `rust-analyzer.reloadWorkspace` |
+
+# +Goto
+
+Key Binding: <code>␣ m languageId:rust g</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                          | Name                    | Type    | Command(s)                            |
+| ------------------------------------ | ----------------------- | ------- | ------------------------------------- |
+| <code>␣ m languageId:rust g d</code> | Go to definition        | command | `editor.action.revealDefinition`      |
+| <code>␣ m languageId:rust g h</code> | Show call hierarchy     | command | `references-view.showCallHierarchy`   |
+| <code>␣ m languageId:rust g i</code> | Go to implementations   | command | `editor.action.goToImplementation`    |
+| <code>␣ m languageId:rust g r</code> | Go to references        | command | `editor.action.goToReferences`        |
+| <code>␣ m languageId:rust g s</code> | Go to symbol in buffer  | command | `workbench.action.gotoSymbol`         |
+| <code>␣ m languageId:rust g t</code> | Go to type definition   | command | `editor.action.goToTypeDefinition`    |
+| <code>␣ m languageId:rust g I</code> | Find implementations    | command | `references-view.findImplementations` |
+| <code>␣ m languageId:rust g R</code> | Find references         | command | `references-view.findReferences`      |
+| <code>␣ m languageId:rust g S</code> | Go to symbol in project | command | `workbench.action.showAllSymbols`     |
+
+# +Peek
+
+Key Binding: <code>␣ m languageId:rust G</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                          | Name                 | Type    | Command(s)                              |
+| ------------------------------------ | -------------------- | ------- | --------------------------------------- |
+| <code>␣ m languageId:rust G d</code> | Peek definition      | command | `editor.action.peekDefinition`          |
+| <code>␣ m languageId:rust G h</code> | Peek call hierarchy  | command | `editor.showCallHierarchy`              |
+| <code>␣ m languageId:rust G i</code> | Peek implementations | command | `editor.action.peekImplementation`      |
+| <code>␣ m languageId:rust G r</code> | Peek references      | command | `editor.action.referenceSearch.trigger` |
 
 # +Wrap
 
@@ -2044,3 +2195,14 @@ Type: <code>transient</code>
 | -------------- | ---------------------- | ------- | ---------------------------------------------- |
 | <code>[</code> | Decrease Heading level | command | `markdown.extension.editing.toggleHeadingDown` |
 | <code>]</code> | Increase Heading level | command | `markdown.extension.editing.toggleHeadingUp`   |
+
+# +Refactor
+
+Key Binding: <code>␣ m languageId:rust a r</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                            | Name                    | Type    | Command(s)               |
+| -------------------------------------- | ----------------------- | ------- | ------------------------ |
+| <code>␣ m languageId:rust a r .</code> | Execute refactor action | command | `editor.action.refactor` |
+| <code>␣ m languageId:rust a r r</code> | Rename symbol           | command | `editor.action.rename`   |
