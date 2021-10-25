@@ -1855,14 +1855,14 @@ Key Binding: <code>␣ m languageId:python t</code>
 
 Type: <code>bindings</code>
 
-| Key Binding                            | Name                  | Type    | Command(s)                        |
-| -------------------------------------- | --------------------- | ------- | --------------------------------- |
-| <code>␣ m languageId:python t a</code> | Run all tests         | command | `python.runtests`                 |
-| <code>␣ m languageId:python t b</code> | Run current test file | command | `python.runCurrentTestFile`       |
-| <code>␣ m languageId:python t r</code> | Re-run failed tests   | command | `python.runFailedTests`           |
-| <code>␣ m languageId:python t t</code> | Select and run test   | command | `python.selectAndRunTestMethod`   |
-| <code>␣ m languageId:python t A</code> | Debug all tests       | command | `python.debugtests`               |
-| <code>␣ m languageId:python t T</code> | Select and debug test | command | `python.selectAndDebugTestMethod` |
+| Key Binding                            | Name                  | Type    | Command(s)               |
+| -------------------------------------- | --------------------- | ------- | ------------------------ |
+| <code>␣ m languageId:python t a</code> | Run all tests         | command | `testing.runAll`         |
+| <code>␣ m languageId:python t b</code> | Run current test file | command | `testing.runCurrentFile` |
+| <code>␣ m languageId:python t r</code> | Re-run failed tests   | command | `testing.reRunFailTests` |
+| <code>␣ m languageId:python t t</code> | Select and run test   | command | `testing.runSelected`    |
+| <code>␣ m languageId:python t A</code> | Debug all tests       | command | `testing.debugAll`       |
+| <code>␣ m languageId:python t T</code> | Select and debug test | command | `testing.debugSelected`  |
 
 # +Peek
 
