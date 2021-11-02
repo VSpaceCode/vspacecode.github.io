@@ -230,6 +230,18 @@ The transient type is being deprecated in favor of the separate command `whichke
 All current definitions of transient type are converted internally at the moment.
 - Conditional type is an experimental feature that provides conditional binding behavior. See [Extra](extra/#conditional-bindings-experimental)
 
+### DisplayOption
+
+```ts
+{
+    Hidden = "hidden"
+}
+```
+
+This type contains all the possible way to display a `BindingItem` or `TransientBindingItem`.
+
+- Hidden type indicates the binding is not shown in the menu UI.
+
 ### BindingItem
 
 ```ts
@@ -237,6 +249,7 @@ All current definitions of transient type are converted internally at the moment
     key: string;
     name: string;
     icon?: string;
+    display?: DisplayOption;
     type: BindingType;
     bindings?: BindingItem[];
     command?: string;
@@ -248,6 +261,7 @@ All current definitions of transient type are converted internally at the moment
 - `key` is the key such as `k` ot `\t` to trigger the binding.
 - `name` is the name of the binding such as `+buffer` or `start debug`.
 - `icon` is an optional string property (e.g. `rocket`) used for the display of vscode [product icons](https://code.visualstudio.com/api/references/icons-in-labels)
+- `display` is an optional `DisplayOption` that control how the binding item should be displayed.
 as a prefix in the menu item
 - `type` specifies the type of this binding. see [`bindingtype`](#bindingtype)
 - `bindings` is an optional property that is used with binding transient and conditional types.
@@ -276,6 +290,8 @@ When `"commands"` is used, an array of the arguments is expected if argument pas
 {
     key: string;
     name: string;
+    icon?: string;
+    display?: DisplayOption;
     exit?: boolean;
     command?: string;
     commands?: string[];
@@ -286,6 +302,8 @@ When `"commands"` is used, an array of the arguments is expected if argument pas
 - `key` is the key such as `k` ot `\t` to trigger the binding.
 - `name` is the name of the binding such as `+buffer` or `start debug`.
 as a prefix in the menu item
+- `icon` is an optional string property (e.g. `rocket`) used for the display of vscode [product icons](https://code.visualstudio.com/api/references/icons-in-labels)
+- `display` is an optional `DisplayOption` that control how the binding item should be displayed.
 - `exit` is an optional boolean property. When it is set to `true`, the transient menu will exit on selection of this item.
 - `command` is an optional property used with command binding type.
 - `commands` is an optional property used with commands binding type. An array of command strings is expected.
