@@ -73,6 +73,12 @@ Required extensions:
 
 - [Ionide F#](https://marketplace.visualstudio.com/items?itemName=Ionide.Ionide-fsharp)
 
+## Julia
+
+Required extensions:
+
+- [Julia](https://marketplace.visualstudio.com/items?itemName=julialang.language-julia)
+
 ## Markdown
 
 Required extensions:
