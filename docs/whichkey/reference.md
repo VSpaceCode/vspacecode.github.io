@@ -76,6 +76,13 @@ we have to rely on the `when` clause evaluation in a vscode shortcut to pass the
 See [conditional bindings](./extra.md#when) for more details on the usage.
 :::
 
+### Undo Key
+
+Command: `whichkey.undoKey`
+
+Description:
+A command to undo the entered key for which key menu.
+
 ### Search Bindings
 
 Command: `whichkey.searchBindings`
@@ -170,14 +177,15 @@ This option controls whether to show or hide icons in the which-key menu.
 
 Key: `whichkey.sortOrder`
 
-Type: `"none"` | `"alphabetically"` | `"nonNumberFirst"`
+Type: `"none"` | `"default"` | `"alphabetically"` | `"nonNumberFirst"`
 
-Default: `"none"`
+Default: `"default"`
 
 Description:
 This option controls the sorting order of the which-key menu items.
 
 - `"none"` will not sort the bindings.
+- `"default"` will sort the bindings with a custom ordering.
 - `"alphabetically"` will sort the bindings alphabetically using [`String.prototype.localeCompare()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare).
 - `"nonNumberFirst"` will sort the bindings alphabetically like `"alphabetically"` but have the bindings with number as key last.
 
@@ -228,7 +236,7 @@ The whichkey extension contributes the following shortcuts, which means they wil
 - Transient type is similar to the bindings type, except the menu will not disappear on selection.
 The transient type is being deprecated in favor of the separate command `whichkey.showTransient`.
 All current definitions of transient type are converted internally at the moment.
-- Conditional type is an experimental feature that provides conditional binding behavior. See [Extra](extra/#conditional-bindings-experimental)
+- Conditional type is an experimental feature that provides conditional binding behavior. See [Extra](extra/#conditional-bindings-experimental).
 
 ### DisplayOption
 
