@@ -170,7 +170,7 @@ This option controls whether to show or hide icons in the which-key menu.
 
 Key: `whichkey.sortOrder`
 
-Type: `"none"` | `"alphabetically"` | `"nonNumberFirst"`
+Type: `"none"` | `"custom"` | `"customNonNumberFirst"` | `"typeThenCustom"` | `"alphabetically"` | `"nonNumberFirst"`
 
 Default: `"none"`
 
@@ -178,8 +178,28 @@ Description:
 This option controls the sorting order of the which-key menu items.
 
 - `"none"` will not sort the bindings.
-- `"alphabetically"` will sort the bindings alphabetically using [`String.prototype.localeCompare()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare).
-- `"nonNumberFirst"` will sort the bindings alphabetically like `"alphabetically"` but have the bindings with number as key last.
+- `"custom"` will sort menu items by the key in the following 'categories' then by a custom order within each 'category'.
+  The category order:
+  1. Single key (a, z, SPC, TAB, etc)
+  2. Function key (f11, F11, etc)
+  3. Modifier key (C-z, etc)
+  4. Others
+
+  For the non-function key, the sort order of each character of the key:
+  1. SPC
+  2. Non-printable characters
+  3. DEL
+  4. ASCII symbols
+  5. Number
+  6. a-z
+  7. A-Z
+  8. Non-ASCII
+
+  For function key, bindings will be sorted by the numeric order (e.g. F1, F2, F11, 12).
+- `"customNonNumberFirst"` will sort the menu items by bindings with non-number key first then by custom order.
+- `"typeThenCustom"` will sort the menu items by the binding type first then by custom order.
+- `"alphabetically"` will sort the menu items by the key in alphabetical order using [`String.prototype.localeCompare()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare).
+- `"nonNumberFirst"` will sort menu items by bindings with non-number key first then by alphabetical order.
 
 ### Which-key Default Bindings
 
