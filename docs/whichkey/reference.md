@@ -195,7 +195,7 @@ This option controls the sorting order of the which-key menu items.
   7. A-Z
   8. Non-ASCII
 
-  For function key, bindings will be sorted by the numeric order (e.g. F1, F2, F11, 12).
+  For function key, bindings will be sorted by the numeric order (e.g. F1, F2, F11, F12).
 - `"customNonNumberFirst"` will sort the menu items by bindings with non-number key first then by custom order.
 - `"typeThenCustom"` will sort the menu items by the binding type first then by custom order.
 - `"alphabetically"` will sort the menu items by the key in alphabetical order using [`String.prototype.localeCompare()`](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/localeCompare).
