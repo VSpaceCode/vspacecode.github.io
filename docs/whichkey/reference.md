@@ -173,6 +173,17 @@ Default: `true`
 Description:
 This option controls whether to show or hide icons in the which-key menu.
 
+### Show Buttons
+
+Key: `whichkey.showButtons`
+
+Type: `boolean`
+
+Default: `true`
+
+Description:
+This option controls whether to show or hide buttons in the which-key menu.
+
 ### Sort Order
 
 Key: `whichkey.sortOrder`
