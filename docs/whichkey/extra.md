@@ -56,7 +56,7 @@ Suggested settings:
     // Let the quick pick take the full window height, so that more bindings
     // are visible.
     ".quick-input-widget > .quick-input-list > .monaco-list":
-        "max-height: none !important;",
+        "max-height: 100vh !important;",
     // Colorize icons uniformly and add some extra padding
     ".quick-input-widget > .quick-input-list .codicon":
         "color: #83a598 !important; padding-right: 5px;",
