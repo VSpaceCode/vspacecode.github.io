@@ -184,6 +184,17 @@ Default: `true`
 Description:
 This option controls whether to show or hide buttons in the which-key menu.
 
+### Use Full Width Characters
+
+Key: `whichkey.useFullWidthCharacters`
+
+Type: `boolean`
+
+Default: `false`
+
+Description:
+This option controls whether to use full width characters as key in the which-key menu.
+
 ### Sort Order
 
 Key: `whichkey.sortOrder`
