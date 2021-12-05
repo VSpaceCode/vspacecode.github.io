@@ -42,6 +42,12 @@ Documentation:
 - [VSpaceCode and Calva install guide](http://practicalli.github.io/clojure/clojure-editors/editor-install-guides/vspacecode-calva.html#install-vs-code-extension)
 - [VSpaceCode and Calva user guide](http://practicalli.github.io/clojure/clojure-editors/editor-user-guides/vspacecode-calva.html)
 
+## Coq
+
+Required extensions:
+
+- [VSCoq](https://marketplace.visualstudio.com/items?itemName=maximedenes.vscoq)
+
 ## C++
 
 Required extensions:
