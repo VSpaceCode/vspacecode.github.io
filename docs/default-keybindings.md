@@ -276,19 +276,24 @@ Key Binding: <code>␣ m</code>
 
 Type: <code>conditional</code>
 
-| Condition                        | Name         | Type                     | Command(s) |
-| -------------------------------- | ------------ | ------------------------ | ---------- |
-| <code>languageId:clojure</code>  | Clojure      | [bindings](#clojure)     | N/A        |
-| <code>languageId:cpp</code>      | C++          | [bindings](#c)           | N/A        |
-| <code>languageId:csharp</code>   | C#           | [bindings](#c)           | N/A        |
-| <code>languageId:dart</code>     | Dart/Flutter | [bindings](#dartflutter) | N/A        |
-| <code>languageId:fsharp</code>   | F#           | [bindings](#f)           | N/A        |
-| <code>languageId:go</code>       | Go           | [bindings](#go)          | N/A        |
-| <code>languageId:latex</code>    | LaTeX        | [bindings](#latex)       | N/A        |
-| <code>languageId:markdown</code> | Markdown     | [bindings](#markdown)    | N/A        |
-| <code>languageId:python</code>   | Python       | [bindings](#python)      | N/A        |
-| <code>languageId:ruby</code>     | Ruby         | [bindings](#ruby)        | N/A        |
-| <code>languageId:rust</code>     | Rust         | [bindings](#rust)        | N/A        |
+| Condition                          | Name         | Type                     | Command(s) |
+| ---------------------------------- | ------------ | ------------------------ | ---------- |
+| <code>languageId:agda</code>       | Agda         | [bindings](#agda)        | N/A        |
+| <code>languageId:clojure</code>    | Clojure      | [bindings](#clojure)     | N/A        |
+| <code>languageId:coq</code>        | coq          | [bindings](#coq)         | N/A        |
+| <code>languageId:cpp</code>        | C++          | [bindings](#c)           | N/A        |
+| <code>languageId:csharp</code>     | C#           | [bindings](#c)           | N/A        |
+| <code>languageId:dart</code>       | Dart/Flutter | [bindings](#dartflutter) | N/A        |
+| <code>languageId:fsharp</code>     | F#           | [bindings](#f)           | N/A        |
+| <code>languageId:go</code>         | Go           | [bindings](#go)          | N/A        |
+| <code>languageId:javascript</code> | JavaScript   | [bindings](#javascript)  | N/A        |
+| <code>languageId:julia</code>      | Julia        | [bindings](#julia)       | N/A        |
+| <code>languageId:latex</code>      | LaTeX        | [bindings](#latex)       | N/A        |
+| <code>languageId:markdown</code>   | Markdown     | [bindings](#markdown)    | N/A        |
+| <code>languageId:python</code>     | Python       | [bindings](#python)      | N/A        |
+| <code>languageId:ruby</code>       | Ruby         | [bindings](#ruby)        | N/A        |
+| <code>languageId:rust</code>       | Rust         | [bindings](#rust)        | N/A        |
+| <code>languageId:typescript</code> | TypeScript   | [bindings](#typescript)  | N/A        |
 
 # +Project
 
@@ -619,6 +624,33 @@ Type: <code>bindings</code>
 | <code>␣ g f d</code> | Diff              | command | `magit.diff-file` |
 | <code>␣ g f l</code> | Show log/timeline | command | `timeline.focus`  |
 
+# Agda
+
+Key Binding: <code>␣ m languageId:agda</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                        | Name                                                   | Type                 | Command(s)                                                  |
+| ---------------------------------- | ------------------------------------------------------ | -------------------- | ----------------------------------------------------------- |
+| <code>␣ m languageId:agda =</code> | Show constraints                                       | command              | `agda-mode.show-constraints`                                |
+| <code>␣ m languageId:agda ?</code> | Show all goals                                         | command              | `agda-mode.show-goals`                                      |
+| <code>␣ m languageId:agda ,</code> | Show goal type and context (simplified)                | command              | `agda-mode.goal-type-and-context[Simplified]`               |
+| <code>␣ m languageId:agda .</code> | Show goal type, context and inferred type (simplified) | command              | `agda-mode.goal-type-context-and-inferred-type[Simplified]` |
+| <code>␣ m languageId:agda a</code> | Automatic proof search                                 | command              | `agda-mode.auto`                                            |
+| <code>␣ m languageId:agda b</code> | Move to previous goal                                  | command              | `agda-mode.previous-goal`                                   |
+| <code>␣ m languageId:agda c</code> | Case split                                             | command              | `agda-mode.case`                                            |
+| <code>␣ m languageId:agda d</code> | Infer type (simplified)                                | command              | `agda-mode.infer-type[Simplified]`                          |
+| <code>␣ m languageId:agda e</code> | Show context (simplified)                              | command              | `agda-mode.context[Simplified]`                             |
+| <code>␣ m languageId:agda f</code> | Move to next goal                                      | command              | `agda-mode.next-goal`                                       |
+| <code>␣ m languageId:agda h</code> | Show helper function type (simplified)                 | command              | `agda-mode.helper-function-type[Simplified]`                |
+| <code>␣ m languageId:agda l</code> | Load file                                              | command              | `agda-mode.load`                                            |
+| <code>␣ m languageId:agda n</code> | Compute normal form (simplified)                       | command              | `agda-mode.compute-normal-form[DefaultCompute]`             |
+| <code>␣ m languageId:agda r</code> | Refine                                                 | command              | `agda-mode.refine`                                          |
+| <code>␣ m languageId:agda s</code> | Solve constraints (simplified)                         | command              | `agda-mode.solve-constraints[Simplified]`                   |
+| <code>␣ m languageId:agda t</code> | Show goal type (simplified)                            | command              | `agda-mode.goal-type[Simplified]`                           |
+| <code>␣ m languageId:agda w</code> | Why in scope                                           | bindings             | `agda-mode.why-in-scope`                                    |
+| <code>␣ m languageId:agda x</code> | +Backend                                               | [bindings](#backend) | N/A                                                         |
+
 # Clojure
 
 Key Binding: <code>␣ m languageId:clojure</code>
@@ -639,6 +671,26 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:clojure r</code> | +Refactor            | [bindings](#refactor)            | N/A                     |
 | <code>␣ m languageId:clojure t</code> | +Tests               | [bindings](#tests)               | N/A                     |
 | <code>␣ m languageId:clojure T</code> | +Toggle              | [bindings](#toggle)              | N/A                     |
+
+# coq
+
+Key Binding: <code>␣ m languageId:coq</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                       | Name                                        | Type                                           | Command(s)                            |
+| --------------------------------- | ------------------------------------------- | ---------------------------------------------- | ------------------------------------- |
+| <code>␣ m languageId:coq .</code> | Proof goto current point                    | command                                        | `extension.coq.interpretToPoint`      |
+| <code>␣ m languageId:coq b</code> | Proof step back                             | command                                        | `extension.coq.stepBackward`          |
+| <code>␣ m languageId:coq f</code> | Proof step forward                          | command                                        | `extension.coq.stepForward`           |
+| <code>␣ m languageId:coq g</code> | Go to the current focus location            | command                                        | `extension.coq.moveCursorToFocus`     |
+| <code>␣ m languageId:coq o</code> | Open proof view                             | command                                        | `extension.coq.proofView.open`        |
+| <code>␣ m languageId:coq v</code> | View the proof-state at the cursor position | command                                        | `extension.coq.proofView.viewStateAt` |
+| <code>␣ m languageId:coq G</code> | Proof goto end                              | command                                        | `extension.coq.interpretToEnd`        |
+| <code>␣ m languageId:coq a</code> | Ask prover                                  | [bindings](#ask-prover)                        | N/A                                   |
+| <code>␣ m languageId:coq p</code> | Send command to prover                      | [bindings](#send-command-to-prover)            | N/A                                   |
+| <code>␣ m languageId:coq q</code> | Query prover about foucsed symbol           | [bindings](#query-prover-about-foucsed-symbol) | N/A                                   |
+| <code>␣ m languageId:coq T</code> | UI toggle                                   | [bindings](#ui-toggle)                         | N/A                                   |
 
 # C++
 
@@ -736,6 +788,38 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:go t</code> | +Test                | [bindings](#test)               | N/A                |
 | <code>␣ m languageId:go G</code> | +Peek                | [bindings](#peek)               | N/A                |
 
+# JavaScript
+
+Key Binding: <code>␣ m languageId:javascript</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                              | Name    | Type                | Command(s) |
+| ---------------------------------------- | ------- | ------------------- | ---------- |
+| <code>␣ m languageId:javascript =</code> | +Format | [bindings](#format) | N/A        |
+| <code>␣ m languageId:javascript g</code> | +Go to  | [bindings](#go-to)  | N/A        |
+| <code>␣ m languageId:javascript G</code> | +Peek   | [bindings](#peek)   | N/A        |
+
+# Julia
+
+Key Binding: <code>␣ m languageId:julia</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                         | Name                    | Type                            | Command(s)                              |
+| ----------------------------------- | ----------------------- | ------------------------------- | --------------------------------------- |
+| <code>␣ m languageId:julia ,</code> | Execute code in REPL    | command                         | `language-julia.executeJuliaCodeInREPL` |
+| <code>␣ m languageId:julia d</code> | Show documentation      | command                         | `language-julia.show-documentation`     |
+| <code>␣ m languageId:julia p</code> | Show plots              | command                         | `language-julia.show-plotpane`          |
+| <code>␣ m languageId:julia w</code> | Focus on workspace view | command                         | `REPLVariables.focus`                   |
+| <code>␣ m languageId:julia =</code> | +Format                 | [bindings](#format)             | N/A                                     |
+| <code>␣ m languageId:julia b</code> | +Backend                | [bindings](#backend)            | N/A                                     |
+| <code>␣ m languageId:julia c</code> | +Compile/debug          | [bindings](#compiledebug)       | N/A                                     |
+| <code>␣ m languageId:julia e</code> | +Environment/package    | [bindings](#environmentpackage) | N/A                                     |
+| <code>␣ m languageId:julia g</code> | +Go to                  | [bindings](#go-to)              | N/A                                     |
+| <code>␣ m languageId:julia s</code> | +Send/REPL              | [bindings](#sendrepl)           | N/A                                     |
+| <code>␣ m languageId:julia c</code> | +Clear                  | [bindings](#clear)              | N/A                                     |
+
 # LaTeX
 
 Key Binding: <code>␣ m languageId:latex</code>
@@ -810,6 +894,18 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:rust b</code> | +Backend           | [bindings](#backend) | N/A                              |
 | <code>␣ m languageId:rust g</code> | +Goto              | [bindings](#goto)    | N/A                              |
 | <code>␣ m languageId:rust G</code> | +Peek              | [bindings](#peek)    | N/A                              |
+
+# TypeScript
+
+Key Binding: <code>␣ m languageId:typescript</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                              | Name    | Type                | Command(s) |
+| ---------------------------------------- | ------- | ------------------- | ---------- |
+| <code>␣ m languageId:typescript =</code> | +Format | [bindings](#format) | N/A        |
+| <code>␣ m languageId:typescript g</code> | +Go to  | [bindings](#go-to)  | N/A        |
+| <code>␣ m languageId:typescript G</code> | +Peek   | [bindings](#peek)   | N/A        |
 
 # Highlight symbol
 
@@ -992,6 +1088,19 @@ Type: <code>transient</code>
 | <code>n</code> | Next breakpoint     | command | `editor.debug.action.goToNextBreakpoint`     |
 | <code>p</code> | Previous breakpoint | command | `editor.debug.action.goToPreviousBreakpoint` |
 
+# +Backend
+
+Key Binding: <code>␣ m languageId:agda x</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                          | Name                                 | Type    | Command(s)                                       |
+| ------------------------------------ | ------------------------------------ | ------- | ------------------------------------------------ |
+| <code>␣ m languageId:agda x c</code> | Compile module                       | command | `agda-mode.compile`                              |
+| <code>␣ m languageId:agda x h</code> | Toggle display of implicit arguments | command | `agda-mode.toggle-display-of-implicit-arguments` |
+| <code>␣ m languageId:agda x q</code> | Quit                                 | command | `agda-mode.quit`                                 |
+| <code>␣ m languageId:agda x r</code> | Restart                              | command | `agda-mode.restart`                              |
+
 # +Format
 
 Key Binding: <code>␣ m languageId:clojure =</code>
@@ -1116,6 +1225,64 @@ Type: <code>bindings</code>
 | Key Binding                             | Name                        | Type    | Command(s)                |
 | --------------------------------------- | --------------------------- | ------- | ------------------------- |
 | <code>␣ m languageId:clojure T p</code> | Toggle pretty print results | command | `calva.togglePrettyPrint` |
+
+# Ask prover
+
+Key Binding: <code>␣ m languageId:coq a</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                         | Name   | Type    | Command(s)                          |
+| ----------------------------------- | ------ | ------- | ----------------------------------- |
+| <code>␣ m languageId:coq a a</code> | About  | command | `extension.coq.query.prompt.about`  |
+| <code>␣ m languageId:coq a c</code> | Check  | command | `extension.coq.query.prompt.check`  |
+| <code>␣ m languageId:coq a f</code> | Find   | command | `extension.coq.query.prompt.search` |
+| <code>␣ m languageId:coq a l</code> | Locate | command | `extension.coq.query.prompt.locate` |
+| <code>␣ m languageId:coq a p</code> | Print  | command | `extension.coq.query.prompt.print`  |
+
+# Send command to prover
+
+Key Binding: <code>␣ m languageId:coq p</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                         | Name                     | Type    | Command(s)                         |
+| ----------------------------------- | ------------------------ | ------- | ---------------------------------- |
+| <code>␣ m languageId:coq p f</code> | Finish coq computations  | command | `extension.coq.finishComputations` |
+| <code>␣ m languageId:coq p i</code> | Interrupt coqtop backend | command | `extension.coq.interrupt`          |
+| <code>␣ m languageId:coq p q</code> | Quit coqtop backend      | command | `extension.coq.quit`               |
+| <code>␣ m languageId:coq p r</code> | Reset coqtop backend     | command | `extension.coq.reset`              |
+
+# Query prover about foucsed symbol
+
+Key Binding: <code>␣ m languageId:coq q</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                         | Name   | Type    | Command(s)                   |
+| ----------------------------------- | ------ | ------- | ---------------------------- |
+| <code>␣ m languageId:coq q a</code> | About  | command | `extension.coq.query.about`  |
+| <code>␣ m languageId:coq q c</code> | Check  | command | `extension.coq.query.check`  |
+| <code>␣ m languageId:coq q f</code> | Find   | command | `extension.coq.query.search` |
+| <code>␣ m languageId:coq q l</code> | Locate | command | `extension.coq.query.locate` |
+| <code>␣ m languageId:coq q p</code> | Print  | command | `extension.coq.query.print`  |
+
+# UI toggle
+
+Key Binding: <code>␣ m languageId:coq T</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                         | Name                                             | Type    | Command(s)                                                  |
+| ----------------------------------- | ------------------------------------------------ | ------- | ----------------------------------------------------------- |
+| <code>␣ m languageId:coq T b</code> | Toggle display of all basic low level contents   | command | `extension.coq.display.toggle.allBasicLowLevelContents`     |
+| <code>␣ m languageId:coq T c</code> | Toggle display of coercions                      | command | `extension.coq.display.toggle.coercions`                    |
+| <code>␣ m languageId:coq T e</code> | Toggle display of existential variable instances | command | `extension.coq.display.toggle.existentialVariableInstances` |
+| <code>␣ m languageId:coq T i</code> | Toggle display of implicit arguments             | command | `extension.coq.display.toggle.implicitArguments`            |
+| <code>␣ m languageId:coq T l</code> | Toggle display of all lowLevel contents          | command | `extension.coq.display.toggle.allLowLevelContents`          |
+| <code>␣ m languageId:coq T n</code> | Toggle display of notations                      | command | `extension.coq.display.toggle.notations`                    |
+| <code>␣ m languageId:coq T r</code> | Toggle display of raw matching expressions       | command | `extension.coq.display.toggle.rawMatchingExpressions`       |
+| <code>␣ m languageId:coq T u</code> | Toggle display of universe levels                | command | `extension.coq.display.toggle.universeLevels`               |
 
 # +Format
 
@@ -1454,16 +1621,16 @@ Key Binding: <code>␣ m languageId:fsharp g</code>
 
 Type: <code>bindings</code>
 
-| Key Binding                            | Name                  | Type    | Command(s)                            |
-| -------------------------------------- | --------------------- | ------- | ------------------------------------- |
-| <code>␣ m languageId:fsharp g d</code> | Go to definition      | command | `editor.action.revealDefinition`      |
-| <code>␣ m languageId:fsharp g e</code> | Go to errors/problems | command | `workbench.action.problems.focus`     |
-| <code>␣ m languageId:fsharp g g</code> | Go to definition      | command | `editor.action.revealDefinition`      |
-| <code>␣ m languageId:fsharp g r</code> | Go to reference       | command | `editor.action.goToReferences`        |
-| <code>␣ m languageId:fsharp g s</code> | Find symbol in buffer | command | `workbench.action.gotoSymbol`         |
-| <code>␣ m languageId:fsharp g t</code> | Go to type definition | command | `editor.action.goToTypeDefinition`    |
-| <code>␣ m languageId:fsharp g I</code> | Find implementations  | command | `references-view.findImplementations` |
-| <code>␣ m languageId:fsharp g R</code> | Find references       | command | `references-view.findReferences`      |
+| Key Binding                            | Name                   | Type    | Command(s)                            |
+| -------------------------------------- | ---------------------- | ------- | ------------------------------------- |
+| <code>␣ m languageId:fsharp g d</code> | Go to definition       | command | `editor.action.revealDefinition`      |
+| <code>␣ m languageId:fsharp g e</code> | Go to errors/problems  | command | `workbench.action.problems.focus`     |
+| <code>␣ m languageId:fsharp g g</code> | Go to definition       | command | `editor.action.revealDefinition`      |
+| <code>␣ m languageId:fsharp g r</code> | Go to reference        | command | `editor.action.goToReferences`        |
+| <code>␣ m languageId:fsharp g s</code> | Go to symbol in buffer | command | `workbench.action.gotoSymbol`         |
+| <code>␣ m languageId:fsharp g t</code> | Go to type definition  | command | `editor.action.goToTypeDefinition`    |
+| <code>␣ m languageId:fsharp g I</code> | Find implementations   | command | `references-view.findImplementations` |
+| <code>␣ m languageId:fsharp g R</code> | Find references        | command | `references-view.findReferences`      |
 
 # +Refactor
 
@@ -1621,6 +1788,164 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:go G h</code> | Peek call hierarchy  | command | `editor.showCallHierarchy`              |
 | <code>␣ m languageId:go G i</code> | Peek implementations | command | `editor.action.peekImplementation`      |
 | <code>␣ m languageId:go G r</code> | Peek references      | command | `editor.action.referenceSearch.trigger` |
+
+# +Format
+
+Key Binding: <code>␣ m languageId:javascript =</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                                | Name                             | Type    | Command(s)                               |
+| ------------------------------------------ | -------------------------------- | ------- | ---------------------------------------- |
+| <code>␣ m languageId:javascript = =</code> | Format region or buffer          | command | `editor.action.format`                   |
+| <code>␣ m languageId:javascript = b</code> | Format buffer                    | command | `editor.action.formatDocument`           |
+| <code>␣ m languageId:javascript = c</code> | Format changes                   | command | `editor.action.formatChanges`            |
+| <code>␣ m languageId:javascript = s</code> | Format selection                 | command | `editor.action.formatSelection`          |
+| <code>␣ m languageId:javascript = B</code> | +Format buffer with formatter    | command | `editor.action.formatDocument.multiple`  |
+| <code>␣ m languageId:javascript = S</code> | +Format selection with formatter | command | `editor.action.formatSelection.multiple` |
+
+# +Go to
+
+Key Binding: <code>␣ m languageId:javascript g</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                                | Name                    | Type    | Command(s)                            |
+| ------------------------------------------ | ----------------------- | ------- | ------------------------------------- |
+| <code>␣ m languageId:javascript g d</code> | Go to definition        | command | `editor.action.revealDefinition`      |
+| <code>␣ m languageId:javascript g h</code> | Show call hierarchy     | command | `references-view.showCallHierarchy`   |
+| <code>␣ m languageId:javascript g r</code> | Go to reference         | command | `editor.action.goToReferences`        |
+| <code>␣ m languageId:javascript g s</code> | Go to symbol in buffer  | command | `workbench.action.gotoSymbol`         |
+| <code>␣ m languageId:javascript g t</code> | Go to type definition   | command | `editor.action.goToTypeDefinition`    |
+| <code>␣ m languageId:javascript g I</code> | Find implementations    | command | `references-view.findImplementations` |
+| <code>␣ m languageId:javascript g R</code> | Find references         | command | `references-view.findReferences`      |
+| <code>␣ m languageId:javascript g S</code> | Go to symbol in project | command | `workbench.action.showAllSymbols`     |
+
+# +Peek
+
+Key Binding: <code>␣ m languageId:javascript G</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                                | Name                 | Type    | Command(s)                              |
+| ------------------------------------------ | -------------------- | ------- | --------------------------------------- |
+| <code>␣ m languageId:javascript G d</code> | Peek definition      | command | `editor.action.peekDefinition`          |
+| <code>␣ m languageId:javascript G h</code> | Peek call hierarchy  | command | `editor.showCallHierarchy`              |
+| <code>␣ m languageId:javascript G i</code> | Peek implementations | command | `editor.action.peekImplementation`      |
+| <code>␣ m languageId:javascript G r</code> | Peek references      | command | `editor.action.referenceSearch.trigger` |
+| <code>␣ m languageId:javascript G t</code> | Peek type definition | command | `editor.action.peekTypeDefinition`      |
+
+# +Format
+
+Key Binding: <code>␣ m languageId:julia =</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                           | Name                             | Type    | Command(s)                               |
+| ------------------------------------- | -------------------------------- | ------- | ---------------------------------------- |
+| <code>␣ m languageId:julia = =</code> | Format region or buffer          | command | `editor.action.format`                   |
+| <code>␣ m languageId:julia = b</code> | Format buffer                    | command | `editor.action.formatDocument`           |
+| <code>␣ m languageId:julia = c</code> | Format changes                   | command | `editor.action.formatChanges`            |
+| <code>␣ m languageId:julia = s</code> | Format selection                 | command | `editor.action.formatSelection`          |
+| <code>␣ m languageId:julia = B</code> | +Format buffer with formatter    | command | `editor.action.formatDocument.multiple`  |
+| <code>␣ m languageId:julia = S</code> | +Format selection with formatter | command | `editor.action.formatSelection.multiple` |
+
+# +Backend
+
+Key Binding: <code>␣ m languageId:julia b</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                           | Name                           | Type    | Command(s)                             |
+| ------------------------------------- | ------------------------------ | ------- | -------------------------------------- |
+| <code>␣ m languageId:julia b i</code> | Re-index language server cache | command | `language-julia.refreshLanguageServer` |
+| <code>␣ m languageId:julia b l</code> | Toggle linter                  | command | `language-julia.toggleLinter`          |
+| <code>␣ m languageId:julia b r</code> | Restart language server        | command | `language-julia.restartLanguageServer` |
+
+# +Compile/debug
+
+Key Binding: <code>␣ m languageId:julia c</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                           | Name                                              | Type    | Command(s)                                       |
+| ------------------------------------- | ------------------------------------------------- | ------- | ------------------------------------------------ |
+| <code>␣ m languageId:julia c a</code> | Add to compiled modules/functions                 | command | `language-julia.switchToCompiled`                |
+| <code>␣ m languageId:julia c c</code> | Switch all to compiled                            | command | `language-julia.switchAllToCompiled`             |
+| <code>␣ m languageId:julia c d</code> | Debug file in new process                         | command | `language-julia.debugEditorContents`             |
+| <code>␣ m languageId:julia c i</code> | Switch all to interpreted                         | command | `language-julia.switchAllToInterpreted`          |
+| <code>␣ m languageId:julia c m</code> | Enable compiled mode for the debugger             | command | `language-julia.enable-compiled-mode`            |
+| <code>␣ m languageId:julia c r</code> | Refresh compiled/interpreted pane                 | command | `language-julia.refreshCompiled`                 |
+| <code>␣ m languageId:julia c x</code> | Remove from compiled modules/functions            | command | `language-julia.switchToInterpreted`             |
+| <code>␣ m languageId:julia c A</code> | Apply default compiled modules/functions          | command | `language-julia.apply-compiled-defaults`         |
+| <code>␣ m languageId:julia c D</code> | Clear compiled modules/functions                  | command | `language-julia.reset-compiled`                  |
+| <code>␣ m languageId:julia c F</code> | Set current compiled modules/functions as default | command | `language-julia.set-current-as-default-compiled` |
+| <code>␣ m languageId:julia c M</code> | Disable compiled mode for the debugger            | command | `language-julia.disable-compiled-mode`           |
+| <code>␣ m languageId:julia c R</code> | Restart kernel                                    | command | `language-julia.restartKernel`                   |
+| <code>␣ m languageId:julia c S</code> | Stop kernel                                       | command | `language-julia.stopKernel`                      |
+| <code>␣ m languageId:julia c Y</code> | Add symbol to compiled modules/functions          | command | `language-julia.set-compiled-for-name`           |
+
+# +Environment/package
+
+Key Binding: <code>␣ m languageId:julia e</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                           | Name                        | Type    | Command(s)                                |
+| ------------------------------------- | --------------------------- | ------- | ----------------------------------------- |
+| <code>␣ m languageId:julia e a</code> | Activate this environment   | command | `language-julia.changeCurrentEnvironment` |
+| <code>␣ m languageId:julia e c</code> | Change current environment  | command | `language-julia.changeCurrentEnvironment` |
+| <code>␣ m languageId:julia e m</code> | Choose module               | command | `language-julia.chooseModule`             |
+| <code>␣ m languageId:julia e p</code> | Activate parent environment | command | `language-julia.changeCurrentEnvironment` |
+| <code>␣ m languageId:julia e P</code> | Open package directory      | command | `language-julia.openPackageDirectory`     |
+| <code>␣ m languageId:julia e t</code> | Tag new package version     | command | `language-julia.tagNewPackageVersion`     |
+
+# +Go to
+
+Key Binding: <code>␣ m languageId:julia g</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                           | Name                    | Type    | Command(s)                        |
+| ------------------------------------- | ----------------------- | ------- | --------------------------------- |
+| <code>␣ m languageId:julia g d</code> | Go to definition        | command | `editor.action.revealDefinition`  |
+| <code>␣ m languageId:julia g e</code> | Go to errors/problems   | command | `workbench.action.problems.focus` |
+| <code>␣ m languageId:julia g g</code> | Go to definition        | command | `editor.action.revealDefinition`  |
+| <code>␣ m languageId:julia g r</code> | Go to references        | command | `editor.action.goToReferences`    |
+| <code>␣ m languageId:julia g s</code> | Go to symbol in buffer  | command | `workbench.action.gotoSymbol`     |
+| <code>␣ m languageId:julia g R</code> | Find references         | command | `references-view.findReferences`  |
+| <code>␣ m languageId:julia g S</code> | Go to symbol in project | command | `workbench.action.showAllSymbols` |
+
+# +Send/REPL
+
+Key Binding: <code>␣ m languageId:julia s</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                           | Name                               | Type    | Command(s)                                          |
+| ------------------------------------- | ---------------------------------- | ------- | --------------------------------------------------- |
+| <code>␣ m languageId:julia s b</code> | Execute block or selection in REPL | command | `language-julia.executeCodeBlockOrSelection`        |
+| <code>␣ m languageId:julia s c</code> | Execute code cell in REPL and move | command | `language-julia.executeCellAndMove`                 |
+| <code>␣ m languageId:julia s d</code> | Change directory here              | command | `language-julia.cdHere`                             |
+| <code>␣ m languageId:julia s f</code> | Execute file in REPL               | command | `language-julia.executeFile`                        |
+| <code>␣ m languageId:julia s i</code> | Start REPL                         | command | `language-julia.startREPL`                          |
+| <code>␣ m languageId:julia s m</code> | Execute code in REPL and move      | command | `language-julia.executeCodeBlockOrSelectionAndMove` |
+| <code>␣ m languageId:julia s s</code> | Execute code in REPL               | command | `language-julia.executeJuliaCodeInREPL`             |
+| <code>␣ m languageId:julia s C</code> | Connect external REPL              | command | `language-julia.connectREPL`                        |
+| <code>␣ m languageId:julia s D</code> | Stop REPL                          | command | `language-julia.stopREPL`                           |
+| <code>␣ m languageId:julia s F</code> | Execute active file in REPL        | command | `language-julia.executeActiveFile`                  |
+
+# +Clear
+
+Key Binding: <code>␣ m languageId:julia c</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                           | Name                               | Type    | Command(s)                                     |
+| ------------------------------------- | ---------------------------------- | ------- | ---------------------------------------------- |
+| <code>␣ m languageId:julia c c</code> | Clear current inline results       | command | `language-julia.clearCurrentInlineResult`      |
+| <code>␣ m languageId:julia c C</code> | Clear all inline results           | command | `language-julia.clearAllInlineResults`         |
+| <code>␣ m languageId:julia c K</code> | Clear all inline results in editor | command | `language-julia.clearAllInlineResultsInEditor` |
 
 # +Format
 
@@ -1896,15 +2221,15 @@ Key Binding: <code>␣ m languageId:ruby g</code>
 
 Type: <code>bindings</code>
 
-| Key Binding                          | Name                   | Type    | Command(s)                        |
-| ------------------------------------ | ---------------------- | ------- | --------------------------------- |
-| <code>␣ m languageId:ruby g d</code> | Go to definition       | command | `editor.action.revealDefinition`  |
-| <code>␣ m languageId:ruby g e</code> | Go to errors/problems  | command | `workbench.action.problems.focus` |
-| <code>␣ m languageId:ruby g g</code> | Go to definition       | command | `editor.action.revealDefinition`  |
-| <code>␣ m languageId:ruby g r</code> | Go to references       | command | `editor.action.goToReferences`    |
-| <code>␣ m languageId:ruby g s</code> | Find symbol in buffer  | command | `workbench.action.gotoSymbol`     |
-| <code>␣ m languageId:ruby g R</code> | Find references        | command | `references-view.findReferences`  |
-| <code>␣ m languageId:ruby g S</code> | Find symbol in project | command | `workbench.action.showAllSymbols` |
+| Key Binding                          | Name                    | Type    | Command(s)                        |
+| ------------------------------------ | ----------------------- | ------- | --------------------------------- |
+| <code>␣ m languageId:ruby g d</code> | Go to definition        | command | `editor.action.revealDefinition`  |
+| <code>␣ m languageId:ruby g e</code> | Go to errors/problems   | command | `workbench.action.problems.focus` |
+| <code>␣ m languageId:ruby g g</code> | Go to definition        | command | `editor.action.revealDefinition`  |
+| <code>␣ m languageId:ruby g r</code> | Go to references        | command | `editor.action.goToReferences`    |
+| <code>␣ m languageId:ruby g s</code> | Go to symbol in buffer  | command | `workbench.action.gotoSymbol`     |
+| <code>␣ m languageId:ruby g R</code> | Find references         | command | `references-view.findReferences`  |
+| <code>␣ m languageId:ruby g S</code> | Go to symbol in project | command | `workbench.action.showAllSymbols` |
 
 # +Refactor
 
@@ -1995,6 +2320,52 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:rust G h</code> | Peek call hierarchy  | command | `editor.showCallHierarchy`              |
 | <code>␣ m languageId:rust G i</code> | Peek implementations | command | `editor.action.peekImplementation`      |
 | <code>␣ m languageId:rust G r</code> | Peek references      | command | `editor.action.referenceSearch.trigger` |
+
+# +Format
+
+Key Binding: <code>␣ m languageId:typescript =</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                                | Name                             | Type    | Command(s)                               |
+| ------------------------------------------ | -------------------------------- | ------- | ---------------------------------------- |
+| <code>␣ m languageId:typescript = =</code> | Format region or buffer          | command | `editor.action.format`                   |
+| <code>␣ m languageId:typescript = b</code> | Format buffer                    | command | `editor.action.formatDocument`           |
+| <code>␣ m languageId:typescript = c</code> | Format changes                   | command | `editor.action.formatChanges`            |
+| <code>␣ m languageId:typescript = s</code> | Format selection                 | command | `editor.action.formatSelection`          |
+| <code>␣ m languageId:typescript = B</code> | +Format buffer with formatter    | command | `editor.action.formatDocument.multiple`  |
+| <code>␣ m languageId:typescript = S</code> | +Format selection with formatter | command | `editor.action.formatSelection.multiple` |
+
+# +Go to
+
+Key Binding: <code>␣ m languageId:typescript g</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                                | Name                    | Type    | Command(s)                            |
+| ------------------------------------------ | ----------------------- | ------- | ------------------------------------- |
+| <code>␣ m languageId:typescript g d</code> | Go to definition        | command | `editor.action.revealDefinition`      |
+| <code>␣ m languageId:typescript g h</code> | Show call hierarchy     | command | `references-view.showCallHierarchy`   |
+| <code>␣ m languageId:typescript g r</code> | Go to reference         | command | `editor.action.goToReferences`        |
+| <code>␣ m languageId:typescript g s</code> | Go to symbol in buffer  | command | `workbench.action.gotoSymbol`         |
+| <code>␣ m languageId:typescript g t</code> | Go to type definition   | command | `editor.action.goToTypeDefinition`    |
+| <code>␣ m languageId:typescript g I</code> | Find implementations    | command | `references-view.findImplementations` |
+| <code>␣ m languageId:typescript g R</code> | Find references         | command | `references-view.findReferences`      |
+| <code>␣ m languageId:typescript g S</code> | Go to symbol in project | command | `workbench.action.showAllSymbols`     |
+
+# +Peek
+
+Key Binding: <code>␣ m languageId:typescript G</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                                | Name                 | Type    | Command(s)                              |
+| ------------------------------------------ | -------------------- | ------- | --------------------------------------- |
+| <code>␣ m languageId:typescript G d</code> | Peek definition      | command | `editor.action.peekDefinition`          |
+| <code>␣ m languageId:typescript G h</code> | Peek call hierarchy  | command | `editor.showCallHierarchy`              |
+| <code>␣ m languageId:typescript G i</code> | Peek implementations | command | `editor.action.peekImplementation`      |
+| <code>␣ m languageId:typescript G r</code> | Peek references      | command | `editor.action.referenceSearch.trigger` |
+| <code>␣ m languageId:typescript G t</code> | Peek type definition | command | `editor.action.peekTypeDefinition`      |
 
 # +Wrap
 
