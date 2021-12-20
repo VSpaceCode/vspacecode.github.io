@@ -31,6 +31,12 @@ The section below lists all the extensions required by each major mode.
 In the following you can see all the currently available major modes.
 If your favorite one is missing, please [contribute](https://github.com/VSpaceCode/VSpaceCode/blob/master/CONTRIBUTING.md)!
 
+## Agda
+
+Required extensions:
+
+- [agda-mode](https://marketplace.visualstudio.com/items?itemName=banacorn.agda-mode)
+
 ## Clojure
 
 Required extensions:
