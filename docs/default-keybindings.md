@@ -290,6 +290,7 @@ Type: <code>conditional</code>
 | <code>languageId:julia</code>      | Julia        | [bindings](#julia)       | N/A        |
 | <code>languageId:latex</code>      | LaTeX        | [bindings](#latex)       | N/A        |
 | <code>languageId:markdown</code>   | Markdown     | [bindings](#markdown)    | N/A        |
+| <code>languageId:php</code>        | PHP          | [bindings](#php)         | N/A        |
 | <code>languageId:python</code>     | Python       | [bindings](#python)      | N/A        |
 | <code>languageId:ruby</code>       | Ruby         | [bindings](#ruby)        | N/A        |
 | <code>languageId:rust</code>       | Rust         | [bindings](#rust)        | N/A        |
@@ -848,6 +849,19 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:markdown c</code> | +Buffer commands   | [bindings](#buffer-commands)   | N/A        |
 | <code>␣ m languageId:markdown t</code> | +Table of Contents | [bindings](#table-of-contents) | N/A        |
 | <code>␣ m languageId:markdown x</code> | +Text              | [bindings](#text)              | N/A        |
+
+# PHP
+
+Key Binding: <code>␣ m languageId:php</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                       | Name      | Type                  | Command(s) |
+| --------------------------------- | --------- | --------------------- | ---------- |
+| <code>␣ m languageId:php =</code> | +Format   | [bindings](#format)   | N/A        |
+| <code>␣ m languageId:php g</code> | +Go to    | [bindings](#go-to)    | N/A        |
+| <code>␣ m languageId:php r</code> | +Refactor | [bindings](#refactor) | N/A        |
+| <code>␣ m languageId:php G</code> | +Peek     | [bindings](#peek)     | N/A        |
 
 # Python
 
@@ -2096,6 +2110,59 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:markdown x m</code>  | Toggle math            | command                              | `markdown.extension.editing.toggleMath`          |
 | <code>␣ m languageId:markdown x s</code>  | Toggle strikethrough   | command                              | `markdown.extension.editing.toggleStrikethrough` |
 | <code>␣ m languageId:markdown x ~</code>  | Toggle code block      | command                              | `markdown.extension.editing.toggleCodeBlock`     |
+
+# +Format
+
+Key Binding: <code>␣ m languageId:php =</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                         | Name                             | Type    | Command(s)                               |
+| ----------------------------------- | -------------------------------- | ------- | ---------------------------------------- |
+| <code>␣ m languageId:php = =</code> | Format region or buffer          | command | `editor.action.format`                   |
+| <code>␣ m languageId:php = b</code> | Format buffer                    | command | `editor.action.formatDocument`           |
+| <code>␣ m languageId:php = c</code> | Format changes                   | command | `editor.action.formatChanges`            |
+| <code>␣ m languageId:php = s</code> | Format selection                 | command | `editor.action.formatSelection`          |
+| <code>␣ m languageId:php = B</code> | +Format buffer with formatter    | command | `editor.action.formatDocument.multiple`  |
+| <code>␣ m languageId:php = S</code> | +Format selection with formatter | command | `editor.action.formatSelection.multiple` |
+
+# +Go to
+
+Key Binding: <code>␣ m languageId:php g</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                         | Name                    | Type    | Command(s)                        |
+| ----------------------------------- | ----------------------- | ------- | --------------------------------- |
+| <code>␣ m languageId:php g d</code> | Go to definition        | command | `editor.action.revealDefinition`  |
+| <code>␣ m languageId:php g e</code> | Go to errors/problems   | command | `workbench.action.problems.focus` |
+| <code>␣ m languageId:php g g</code> | Go to definition        | command | `editor.action.revealDefinition`  |
+| <code>␣ m languageId:php g r</code> | Go to references        | command | `editor.action.goToReferences`    |
+| <code>␣ m languageId:php g s</code> | Go to symbol in buffer  | command | `workbench.action.gotoSymbol`     |
+| <code>␣ m languageId:php g R</code> | Find references         | command | `references-view.findReferences`  |
+| <code>␣ m languageId:php g S</code> | Go to symbol in project | command | `workbench.action.showAllSymbols` |
+
+# +Refactor
+
+Key Binding: <code>␣ m languageId:php r</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                         | Name          | Type    | Command(s)               |
+| ----------------------------------- | ------------- | ------- | ------------------------ |
+| <code>␣ m languageId:php r .</code> | Quick fix     | command | `editor.action.quickFix` |
+| <code>␣ m languageId:php r r</code> | Rename symbol | command | `editor.action.rename`   |
+
+# +Peek
+
+Key Binding: <code>␣ m languageId:php G</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                         | Name            | Type    | Command(s)                              |
+| ----------------------------------- | --------------- | ------- | --------------------------------------- |
+| <code>␣ m languageId:php G d</code> | Peek definition | command | `editor.action.peekDefinition`          |
+| <code>␣ m languageId:php G r</code> | Peek references | command | `editor.action.referenceSearch.trigger` |
 
 # +Format
 
