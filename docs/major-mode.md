@@ -97,6 +97,12 @@ Required extensions:
 
 - [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
 
+## PHP
+
+Required extensions:
+
+- [PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client)
+
 ## Python
 
 Required extensions:
