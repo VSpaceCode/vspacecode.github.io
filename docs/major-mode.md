@@ -97,6 +97,12 @@ Required extensions:
 
 - [Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)
 
+## Pascal
+
+Required extensions:
+
+- [OmniPascal](https://marketplace.visualstudio.com/items?itemName=Wosi.omnipascal)
+
 ## Python
 
 Required extensions:
