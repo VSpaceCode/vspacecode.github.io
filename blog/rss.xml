@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0">
+<rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
         <title>VSpaceCode Blog</title>
         <link>https://vspacecode.github.io/blog</link>
@@ -7,12 +7,31 @@
         <lastBuildDate>Fri, 18 Sep 2020 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
+        <language>en</language>
         <item>
             <title><![CDATA[We have a website!]]></title>
             <link>https://vspacecode.github.io/blog/2020/09/18/hello</link>
-            <guid>We have a website!</guid>
+            <guid>/2020/09/18/hello</guid>
             <pubDate>Fri, 18 Sep 2020 00:00:00 GMT</pubDate>
             <description><![CDATA[Welcome 🥳]]></description>
+            <content:encoded><![CDATA[<h2 class="anchor anchorWithStickyNavbar_mojV" id="welcome-">Welcome 🥳<a class="hash-link" href="#welcome-" title="Direct link to heading">​</a></h2><p>Hi everyone! 👋</p><p>Since the docs were starting getting bigger and bigger we decided to create
+this website, in order to shrink the READMEs and get more organized documentation.</p><p>As you can see this website is really simple. As always, contribution is
+appreciated, so if you have ideas on how to improve it, please help us!</p><p>Also, it would be nice if this blog was not only reserved to maintainers, but also
+to users that would like to share something about the project with the rest of the
+community.</p><p>So if you want to write an article, please open an issue or a pull request, we
+would really appreciate it. 😀</p><p>If the argument is controversial and you are uncertain that we are willing to
+share your story, open an issue first where you describe the content of the article
+you want to write, so that you don't waste your time writing something we will
+not publish.</p><h2 class="anchor anchorWithStickyNavbar_mojV" id="typical-oss-stuff-">Typical OSS stuff 😴<a class="hash-link" href="#typical-oss-stuff-" title="Direct link to heading">​</a></h2><p>I would like to highlight one more time that VSpaceCode, VSCodeWhichKey and all the
+world around them is developed in the free time of the maintainers, which is not
+infinite and is not only allocated to these projects.</p><p>Therefore, it is your responsibility as a VSpaceCode/WhichKey user
+to contribute to the project by opening issues, pull requests and so on if you
+want that this project continues to grow.</p><p>If you have any doubts about this, just open an issue on GitHub, you can check by
+yourself that at the moment, me and Steven are really active and we do our best
+to answer.</p><p>You will see some issues labeled as
+<a href="https://github.com/VSpaceCode/VSpaceCode/issues?q=is%3Aissue+is%3Aopen+label%3A%22good+first+issue%22" target="_blank" rel="noopener noreferrer">good first issues</a>
+on all the projects of the <a href="https://github.com/VSpaceCode" target="_blank" rel="noopener noreferrer">VSpaceCode</a>
+GitHub organization. Look at those first, if you are just starting 😉</p><p>Goodbye, and enjoy using VSpaceCode! ‍🧑‍🚀</p>]]></content:encoded>
         </item>
     </channel>
 </rss>
