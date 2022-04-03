@@ -276,25 +276,26 @@ Key Binding: <code>␣ m</code>
 
 Type: <code>conditional</code>
 
-| Condition                          | Name         | Type                     | Command(s) |
-| ---------------------------------- | ------------ | ------------------------ | ---------- |
-| <code>languageId:agda</code>       | Agda         | [bindings](#agda)        | N/A        |
-| <code>languageId:clojure</code>    | Clojure      | [bindings](#clojure)     | N/A        |
-| <code>languageId:coq</code>        | coq          | [bindings](#coq)         | N/A        |
-| <code>languageId:cpp</code>        | C++          | [bindings](#c)           | N/A        |
-| <code>languageId:csharp</code>     | C#           | [bindings](#c)           | N/A        |
-| <code>languageId:dart</code>       | Dart/Flutter | [bindings](#dartflutter) | N/A        |
-| <code>languageId:fsharp</code>     | F#           | [bindings](#f)           | N/A        |
-| <code>languageId:go</code>         | Go           | [bindings](#go)          | N/A        |
-| <code>languageId:javascript</code> | JavaScript   | [bindings](#javascript)  | N/A        |
-| <code>languageId:julia</code>      | Julia        | [bindings](#julia)       | N/A        |
-| <code>languageId:latex</code>      | LaTeX        | [bindings](#latex)       | N/A        |
-| <code>languageId:markdown</code>   | Markdown     | [bindings](#markdown)    | N/A        |
-| <code>languageId:php</code>        | PHP          | [bindings](#php)         | N/A        |
-| <code>languageId:python</code>     | Python       | [bindings](#python)      | N/A        |
-| <code>languageId:ruby</code>       | Ruby         | [bindings](#ruby)        | N/A        |
-| <code>languageId:rust</code>       | Rust         | [bindings](#rust)        | N/A        |
-| <code>languageId:typescript</code> | TypeScript   | [bindings](#typescript)  | N/A        |
+| Condition                            | Name         | Type                      | Command(s) |
+| ------------------------------------ | ------------ | ------------------------- | ---------- |
+| <code>languageId:agda</code>         | Agda         | [bindings](#agda)         | N/A        |
+| <code>languageId:clojure</code>      | Clojure      | [bindings](#clojure)      | N/A        |
+| <code>languageId:coq</code>          | coq          | [bindings](#coq)          | N/A        |
+| <code>languageId:cpp</code>          | C++          | [bindings](#c)            | N/A        |
+| <code>languageId:csharp</code>       | C#           | [bindings](#c)            | N/A        |
+| <code>languageId:dart</code>         | Dart/Flutter | [bindings](#dartflutter)  | N/A        |
+| <code>languageId:fsharp</code>       | F#           | [bindings](#f)            | N/A        |
+| <code>languageId:go</code>           | Go           | [bindings](#go)           | N/A        |
+| <code>languageId:javascript</code>   | JavaScript   | [bindings](#javascript)   | N/A        |
+| <code>languageId:julia</code>        | Julia        | [bindings](#julia)        | N/A        |
+| <code>languageId:latex</code>        | LaTeX        | [bindings](#latex)        | N/A        |
+| <code>languageId:markdown</code>     | Markdown     | [bindings](#markdown)     | N/A        |
+| <code>languageId:php</code>          | PHP          | [bindings](#php)          | N/A        |
+| <code>languageId:objectpascal</code> | ObjectPascal | [bindings](#objectpascal) | N/A        |
+| <code>languageId:python</code>       | Python       | [bindings](#python)       | N/A        |
+| <code>languageId:ruby</code>         | Ruby         | [bindings](#ruby)         | N/A        |
+| <code>languageId:rust</code>         | Rust         | [bindings](#rust)         | N/A        |
+| <code>languageId:typescript</code>   | TypeScript   | [bindings](#typescript)   | N/A        |
 
 # +Project
 
@@ -862,6 +863,19 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:php g</code> | +Go to    | [bindings](#go-to)    | N/A        |
 | <code>␣ m languageId:php r</code> | +Refactor | [bindings](#refactor) | N/A        |
 | <code>␣ m languageId:php G</code> | +Peek     | [bindings](#peek)     | N/A        |
+
+# ObjectPascal
+
+Key Binding: <code>␣ m languageId:objectpascal</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                                | Name      | Type                  | Command(s) |
+| ------------------------------------------ | --------- | --------------------- | ---------- |
+| <code>␣ m languageId:objectpascal =</code> | +Format   | [bindings](#format)   | N/A        |
+| <code>␣ m languageId:objectpascal g</code> | +Go to    | [bindings](#go-to)    | N/A        |
+| <code>␣ m languageId:objectpascal r</code> | +Refactor | [bindings](#refactor) | N/A        |
+| <code>␣ m languageId:objectpascal G</code> | +Peek     | [bindings](#peek)     | N/A        |
 
 # Python
 
@@ -2163,6 +2177,59 @@ Type: <code>bindings</code>
 | ----------------------------------- | --------------- | ------- | --------------------------------------- |
 | <code>␣ m languageId:php G d</code> | Peek definition | command | `editor.action.peekDefinition`          |
 | <code>␣ m languageId:php G r</code> | Peek references | command | `editor.action.referenceSearch.trigger` |
+
+# +Format
+
+Key Binding: <code>␣ m languageId:objectpascal =</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                                  | Name                             | Type    | Command(s)                               |
+| -------------------------------------------- | -------------------------------- | ------- | ---------------------------------------- |
+| <code>␣ m languageId:objectpascal = =</code> | Format region or buffer          | command | `editor.action.format`                   |
+| <code>␣ m languageId:objectpascal = b</code> | Format buffer                    | command | `editor.action.formatDocument`           |
+| <code>␣ m languageId:objectpascal = c</code> | Format changes                   | command | `editor.action.formatChanges`            |
+| <code>␣ m languageId:objectpascal = s</code> | Format selection                 | command | `editor.action.formatSelection`          |
+| <code>␣ m languageId:objectpascal = B</code> | +Format buffer with formatter    | command | `editor.action.formatDocument.multiple`  |
+| <code>␣ m languageId:objectpascal = S</code> | +Format selection with formatter | command | `editor.action.formatSelection.multiple` |
+
+# +Go to
+
+Key Binding: <code>␣ m languageId:objectpascal g</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                                  | Name                    | Type    | Command(s)                        |
+| -------------------------------------------- | ----------------------- | ------- | --------------------------------- |
+| <code>␣ m languageId:objectpascal g d</code> | Go to definition        | command | `editor.action.revealDefinition`  |
+| <code>␣ m languageId:objectpascal g e</code> | Go to errors/problems   | command | `workbench.action.problems.focus` |
+| <code>␣ m languageId:objectpascal g g</code> | Go to definition        | command | `editor.action.revealDefinition`  |
+| <code>␣ m languageId:objectpascal g r</code> | Go to references        | command | `editor.action.goToReferences`    |
+| <code>␣ m languageId:objectpascal g s</code> | Go to symbol in buffer  | command | `workbench.action.gotoSymbol`     |
+| <code>␣ m languageId:objectpascal g R</code> | Find references         | command | `references-view.findReferences`  |
+| <code>␣ m languageId:objectpascal g S</code> | Go to symbol in project | command | `workbench.action.showAllSymbols` |
+
+# +Refactor
+
+Key Binding: <code>␣ m languageId:objectpascal r</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                                  | Name          | Type    | Command(s)               |
+| -------------------------------------------- | ------------- | ------- | ------------------------ |
+| <code>␣ m languageId:objectpascal r .</code> | Quick fix     | command | `editor.action.quickFix` |
+| <code>␣ m languageId:objectpascal r r</code> | Rename symbol | command | `editor.action.rename`   |
+
+# +Peek
+
+Key Binding: <code>␣ m languageId:objectpascal G</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                                  | Name            | Type    | Command(s)                              |
+| -------------------------------------------- | --------------- | ------- | --------------------------------------- |
+| <code>␣ m languageId:objectpascal G d</code> | Peek definition | command | `editor.action.peekDefinition`          |
+| <code>␣ m languageId:objectpascal G r</code> | Peek references | command | `editor.action.referenceSearch.trigger` |
 
 # +Format
 
