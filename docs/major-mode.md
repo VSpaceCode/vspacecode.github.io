@@ -103,6 +103,12 @@ Required extensions:
 
 - [OmniPascal](https://marketplace.visualstudio.com/items?itemName=Wosi.omnipascal)
 
+## PHP
+
+Required extensions:
+
+- [PHP Intelephense](https://marketplace.visualstudio.com/items?itemName=bmewburn.vscode-intelephense-client)
+
 ## Python
 
 Required extensions:
