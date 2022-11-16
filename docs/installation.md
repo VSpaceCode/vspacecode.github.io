@@ -27,7 +27,7 @@ You can access your user's `settings.json` and `keybindings.json` by searching `
 and `Preference: Open Keyboard Shortcuts (JSON)` in the command palette (Ctl+Shift+P)
 :::
 
-The following commands can be access through command palette to rerun the automatic configuration step.
+The following commands can be accessed through command palette to rerun the automatic configuration step.
 
 - VSpaceCode: Configure Default Settings and Keybindings
 
