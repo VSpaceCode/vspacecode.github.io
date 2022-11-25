@@ -115,6 +115,7 @@ Type: <code>bindings</code>
 | <code>␣ b L</code> | Move buffer into right window     | command                 | `workbench.action.moveEditorToRightGroup`                           |
 | <code>␣ b M</code> | Close other buffers               | command                 | `workbench.action.closeOtherEditors`                                |
 | <code>␣ b P</code> | Paste clipboard to buffer         | commands                | `editor.action.selectAll`<br />`editor.action.clipboardPasteAction` |
+| <code>␣ b R</code> | Revert the current buffer         | command                 | `workbench.action.files.revert`                                     |
 | <code>␣ b T</code> | Unpin buffer                      | command                 | `workbench.action.unpinEditor`                                      |
 | <code>␣ b Y</code> | Copy buffer to clipboard          | command                 | `vspacecode.copyWholeBuffer`                                        |
 | <code>␣ b N</code> | +New Buffer                       | [bindings](#new-buffer) | N/A                                                                 |
@@ -190,7 +191,7 @@ Type: <code>bindings</code>
 | <code>␣ f w</code> | Open active in new window              | command                                  | `workbench.action.files.showOpenedFileInNewWindow`                  |
 | <code>␣ f D</code> | Delete current file                    | commands                                 | `workbench.files.action.showActiveFileInExplorer`<br />`deleteFile` |
 | <code>␣ f L</code> | Locate file                            | command                                  | `revealFileInOS`                                                    |
-| <code>␣ f R</code> | Rename file                            | commands                                 | `workbench.files.action.showActiveFileInExplorer`<br />`renameFile` |
+| <code>␣ f R</code> | Rename file                            | commands                                 | `revealInExplorer`<br />`renameFile`                                |
 | <code>␣ f S</code> | Save all files                         | command                                  | `workbench.action.files.saveAll`                                    |
 | <code>␣ f T</code> | Show active file in tree/explorer view | command                                  | `workbench.files.action.showActiveFileInExplorer`                   |
 | <code>␣ f e</code> | +Emacs/VSpaceCode                      | [bindings](#emacsvspacecode)             | N/A                                                                 |
@@ -1167,7 +1168,7 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:clojure e e</code> | Evaluate current expression         | command | `calva.evaluateSelection`             |
 | <code>␣ m languageId:clojure e f</code> | Evaluate top-level expression       | command | `calva.evaluateCurrentTopLevelForm`   |
 | <code>␣ m languageId:clojure e i</code> | Interrupt evaluation                | command | `calva.interruptAllEvaluations`       |
-| <code>␣ m languageId:clojure e l</code> | Clear evaluation results            | command | `calva.clearInlineResults`            |
+| <code>␣ m languageId:clojure e l</code> | Clear inline evaluation results     | command | `calva.clearInlineResults`            |
 | <code>␣ m languageId:clojure e n</code> | Evaluate all code in namespace      | command | `calva.loadFile`                      |
 | <code>␣ m languageId:clojure e s</code> | Select expression                   | command | `calva.selectCurrentForm`             |
 | <code>␣ m languageId:clojure e t</code> | Clear evaluation results            | command | `calva.requireREPLUtilities`          |
