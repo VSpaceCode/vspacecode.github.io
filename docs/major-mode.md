@@ -95,7 +95,7 @@ Required extensions:
 
 These extensions are all included in the [Extension Pack for Java](https://marketplace.visualstudio.com/items?itemName=vscjava.vscode-java-pack).
 
-Documentation: [Java in Visual Studio Code ](https://code.visualstudio.com/docs/languages/java)
+Documentation: [Java in Visual Studio Code](https://code.visualstudio.com/docs/languages/java)
 
 ## Julia
 
