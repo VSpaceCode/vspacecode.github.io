@@ -24,17 +24,17 @@ This config might be in conflict with "Easy List Navigation" below.
 	{
 		"key": "ctrl+j",
 		"command": "workbench.action.navigateDown",
-		"when": "!inQuickOpen && !suggestWidgetVisible && !parameterHintsVisible"
+		"when": "!codeActionMenuVisible && !inQuickOpen && !suggestWidgetVisible && !parameterHintsVisible"
 	},
 	{
 		"key": "ctrl+k",
 		"command": "workbench.action.navigateUp",
-		"when": "!inQuickOpen && !suggestWidgetVisible && !parameterHintsVisible"
+		"when": "!codeActionMenuVisible && !inQuickOpen && !suggestWidgetVisible && !parameterHintsVisible"
 	},
 	{
 		"key": "ctrl+l",
 		"command": "workbench.action.navigateRight",
-		"when": "!inQuickOpen && !suggestWidgetVisible && !parameterHintsVisible && !isInDiffEditor"
+		"when": "!codeActionMenuVisible && !inQuickOpen && !suggestWidgetVisible && !parameterHintsVisible && !isInDiffEditor"
     },
     // Quick Navigation for diff view
     {
