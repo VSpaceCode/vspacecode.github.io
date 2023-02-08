@@ -45,8 +45,7 @@ Required extensions:
 
 Documentation:
 
-- [VSpaceCode and Calva install guide](http://practicalli.github.io/clojure/clojure-editors/editor-install-guides/vspacecode-calva.html#install-vs-code-extension)
-- [VSpaceCode and Calva user guide](http://practicalli.github.io/clojure/clojure-editors/editor-user-guides/vspacecode-calva.html)
+- [Practicalli VSpaceCode](https://practical.li/vspacecode/) - an install and user guide for VSpaceCode and Calva for Clojure development (updated Febrary 2023)
 
 ## Coq
 
