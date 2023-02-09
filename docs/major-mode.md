@@ -45,7 +45,7 @@ Required extensions:
 
 Documentation:
 
-- [Practicalli VSpaceCode](https://practical.li/vspacecode/) install & guide for VSpaceCode and Calva for Clojure development (updated Febrary 2023)
+- [Practicalli VSpaceCode](https://practical.li/vspacecode/) install & guide for VSpaceCode and Calva for Clojure development
 
 ## Coq
 
