@@ -287,17 +287,18 @@ Type: <code>conditional</code>
 | <code>languageId:dart</code>         | Dart/Flutter | [bindings](#dartflutter)  | N/A        |
 | <code>languageId:fsharp</code>       | F#           | [bindings](#f)            | N/A        |
 | <code>languageId:go</code>           | Go           | [bindings](#go)           | N/A        |
+| <code>languageId:java</code>         | Java         | [bindings](#java)         | N/A        |
 | <code>languageId:javascript</code>   | JavaScript   | [bindings](#javascript)   | N/A        |
 | <code>languageId:julia</code>        | Julia        | [bindings](#julia)        | N/A        |
 | <code>languageId:latex</code>        | LaTeX        | [bindings](#latex)        | N/A        |
 | <code>languageId:markdown</code>     | Markdown     | [bindings](#markdown)     | N/A        |
-| <code>languageId:php</code>          | PHP          | [bindings](#php)          | N/A        |
 | <code>languageId:objectpascal</code> | ObjectPascal | [bindings](#objectpascal) | N/A        |
+| <code>languageId:php</code>          | PHP          | [bindings](#php)          | N/A        |
 | <code>languageId:python</code>       | Python       | [bindings](#python)       | N/A        |
 | <code>languageId:ruby</code>         | Ruby         | [bindings](#ruby)         | N/A        |
 | <code>languageId:rust</code>         | Rust         | [bindings](#rust)         | N/A        |
 | <code>languageId:typescript</code>   | TypeScript   | [bindings](#typescript)   | N/A        |
-| <code>languageId:java</code>         | Java         | [bindings](#java)         | N/A        |
+| <code>languageId:cuda-cpp</code>     | CUDA-C++     | [bindings](#cudac)        | N/A        |
 
 # +Project
 
@@ -636,10 +637,10 @@ Type: <code>bindings</code>
 
 | Key Binding                        | Name                                                   | Type                 | Command(s)                                                  |
 | ---------------------------------- | ------------------------------------------------------ | -------------------- | ----------------------------------------------------------- |
-| <code>␣ m languageId:agda =</code> | Show constraints                                       | command              | `agda-mode.show-constraints`                                |
-| <code>␣ m languageId:agda ?</code> | Show all goals                                         | command              | `agda-mode.show-goals`                                      |
 | <code>␣ m languageId:agda ,</code> | Show goal type and context (simplified)                | command              | `agda-mode.goal-type-and-context[Simplified]`               |
 | <code>␣ m languageId:agda .</code> | Show goal type, context and inferred type (simplified) | command              | `agda-mode.goal-type-context-and-inferred-type[Simplified]` |
+| <code>␣ m languageId:agda =</code> | Show constraints                                       | command              | `agda-mode.show-constraints`                                |
+| <code>␣ m languageId:agda ?</code> | Show all goals                                         | command              | `agda-mode.show-goals`                                      |
 | <code>␣ m languageId:agda a</code> | Automatic proof search                                 | command              | `agda-mode.auto`                                            |
 | <code>␣ m languageId:agda b</code> | Move to previous goal                                  | command              | `agda-mode.previous-goal`                                   |
 | <code>␣ m languageId:agda c</code> | Case split                                             | command              | `agda-mode.case`                                            |
@@ -792,6 +793,24 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:go t</code> | +Test                | [bindings](#test)               | N/A                |
 | <code>␣ m languageId:go G</code> | +Peek                | [bindings](#peek)               | N/A                |
 
+# Java
+
+Key Binding: <code>␣ m languageId:java</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                        | Name                    | Type                      | Command(s)                 |
+| ---------------------------------- | ----------------------- | ------------------------- | -------------------------- |
+| <code>␣ m languageId:java h</code> | Describe thing at point | command                   | `editor.action.showHover`  |
+| <code>␣ m languageId:java D</code> | Debug Java file         | command                   | `java.debug.debugJavaFile` |
+| <code>␣ m languageId:java R</code> | Run Java file           | command                   | `java.debug.runJavaFile`   |
+| <code>␣ m languageId:java =</code> | +Format                 | [bindings](#format)       | N/A                        |
+| <code>␣ m languageId:java a</code> | +Code actions           | [bindings](#code-actions) | N/A                        |
+| <code>␣ m languageId:java g</code> | +Go to                  | [bindings](#go-to)        | N/A                        |
+| <code>␣ m languageId:java r</code> | +Refactor               | [bindings](#refactor)     | N/A                        |
+| <code>␣ m languageId:java t</code> | +Test                   | [bindings](#test)         | N/A                        |
+| <code>␣ m languageId:java G</code> | +Peek                   | [bindings](#peek)         | N/A                        |
+
 # JavaScript
 
 Key Binding: <code>␣ m languageId:javascript</code>
@@ -819,10 +838,10 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:julia =</code> | +Format                 | [bindings](#format)             | N/A                                     |
 | <code>␣ m languageId:julia b</code> | +Backend                | [bindings](#backend)            | N/A                                     |
 | <code>␣ m languageId:julia c</code> | +Compile/debug          | [bindings](#compiledebug)       | N/A                                     |
+| <code>␣ m languageId:julia c</code> | +Clear                  | [bindings](#clear)              | N/A                                     |
 | <code>␣ m languageId:julia e</code> | +Environment/package    | [bindings](#environmentpackage) | N/A                                     |
 | <code>␣ m languageId:julia g</code> | +Go to                  | [bindings](#go-to)              | N/A                                     |
 | <code>␣ m languageId:julia s</code> | +Send/REPL              | [bindings](#sendrepl)           | N/A                                     |
-| <code>␣ m languageId:julia c</code> | +Clear                  | [bindings](#clear)              | N/A                                     |
 
 # LaTeX
 
@@ -853,19 +872,6 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:markdown t</code> | +Table of Contents | [bindings](#table-of-contents) | N/A        |
 | <code>␣ m languageId:markdown x</code> | +Text              | [bindings](#text)              | N/A        |
 
-# PHP
-
-Key Binding: <code>␣ m languageId:php</code>
-
-Type: <code>bindings</code>
-
-| Key Binding                       | Name      | Type                  | Command(s) |
-| --------------------------------- | --------- | --------------------- | ---------- |
-| <code>␣ m languageId:php =</code> | +Format   | [bindings](#format)   | N/A        |
-| <code>␣ m languageId:php g</code> | +Go to    | [bindings](#go-to)    | N/A        |
-| <code>␣ m languageId:php r</code> | +Refactor | [bindings](#refactor) | N/A        |
-| <code>␣ m languageId:php G</code> | +Peek     | [bindings](#peek)     | N/A        |
-
 # ObjectPascal
 
 Key Binding: <code>␣ m languageId:objectpascal</code>
@@ -878,6 +884,19 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:objectpascal g</code> | +Go to    | [bindings](#go-to)    | N/A        |
 | <code>␣ m languageId:objectpascal r</code> | +Refactor | [bindings](#refactor) | N/A        |
 | <code>␣ m languageId:objectpascal G</code> | +Peek     | [bindings](#peek)     | N/A        |
+
+# PHP
+
+Key Binding: <code>␣ m languageId:php</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                       | Name      | Type                  | Command(s) |
+| --------------------------------- | --------- | --------------------- | ---------- |
+| <code>␣ m languageId:php =</code> | +Format   | [bindings](#format)   | N/A        |
+| <code>␣ m languageId:php g</code> | +Go to    | [bindings](#go-to)    | N/A        |
+| <code>␣ m languageId:php r</code> | +Refactor | [bindings](#refactor) | N/A        |
+| <code>␣ m languageId:php G</code> | +Peek     | [bindings](#peek)     | N/A        |
 
 # Python
 
@@ -937,23 +956,20 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:typescript g</code> | +Go to  | [bindings](#go-to)  | N/A        |
 | <code>␣ m languageId:typescript G</code> | +Peek   | [bindings](#peek)   | N/A        |
 
-# Java
+# CUDA-C++
 
-Key Binding: <code>␣ m languageId:java</code>
+Key Binding: <code>␣ m languageId:cuda-cpp</code>
 
 Type: <code>bindings</code>
 
-| Key Binding                        | Name                    | Type                      | Command(s)                 |
-| ---------------------------------- | ----------------------- | ------------------------- | -------------------------- |
-| <code>␣ m languageId:java h</code> | Describe thing at point | command                   | `editor.action.showHover`  |
-| <code>␣ m languageId:java D</code> | Debug Java file         | command                   | `java.debug.debugJavaFile` |
-| <code>␣ m languageId:java R</code> | Run Java file           | command                   | `java.debug.runJavaFile`   |
-| <code>␣ m languageId:java =</code> | +Format                 | [bindings](#format)       | N/A                        |
-| <code>␣ m languageId:java a</code> | +Code actions           | [bindings](#code-actions) | N/A                        |
-| <code>␣ m languageId:java g</code> | +Go to                  | [bindings](#go-to)        | N/A                        |
-| <code>␣ m languageId:java r</code> | +Refactor               | [bindings](#refactor)     | N/A                        |
-| <code>␣ m languageId:java t</code> | +Test                   | [bindings](#test)         | N/A                        |
-| <code>␣ m languageId:java G</code> | +Peek                   | [bindings](#peek)         | N/A                        |
+| Key Binding                            | Name      | Type                  | Command(s) |
+| -------------------------------------- | --------- | --------------------- | ---------- |
+| <code>␣ m languageId:cuda-cpp =</code> | +Format   | [bindings](#format)   | N/A        |
+| <code>␣ m languageId:cuda-cpp b</code> | +Backend  | [bindings](#backend)  | N/A        |
+| <code>␣ m languageId:cuda-cpp d</code> | +Debug    | [bindings](#debug)    | N/A        |
+| <code>␣ m languageId:cuda-cpp g</code> | +Go to    | [bindings](#go-to)    | N/A        |
+| <code>␣ m languageId:cuda-cpp r</code> | +Refactor | [bindings](#refactor) | N/A        |
+| <code>␣ m languageId:cuda-cpp G</code> | +Peek     | [bindings](#peek)     | N/A        |
 
 # Highlight symbol
 
@@ -1839,6 +1855,101 @@ Type: <code>bindings</code>
 
 # +Format
 
+Key Binding: <code>␣ m languageId:java =</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                          | Name                            | Type    | Command(s)                               |
+| ------------------------------------ | ------------------------------- | ------- | ---------------------------------------- |
+| <code>␣ m languageId:java = =</code> | Format region or buffer         | command | `editor.action.format`                   |
+| <code>␣ m languageId:java = b</code> | Format buffer                   | command | `editor.action.formatDocument`           |
+| <code>␣ m languageId:java = c</code> | Format changes                  | command | `editor.action.formatChanges`            |
+| <code>␣ m languageId:java = s</code> | Format selection                | command | `editor.action.formatSelection`          |
+| <code>␣ m languageId:java = B</code> | Format buffer with formatter    | command | `editor.action.formatDocument.multiple`  |
+| <code>␣ m languageId:java = S</code> | Format selection with formatter | command | `editor.action.formatSelection.multiple` |
+
+# +Code actions
+
+Key Binding: <code>␣ m languageId:java a</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                          | Name                | Type    | Command(s)                   |
+| ------------------------------------ | ------------------- | ------- | ---------------------------- |
+| <code>␣ m languageId:java a a</code> | Execute code action | command | `editor.action.codeAction`   |
+| <code>␣ m languageId:java a f</code> | Execute fix action  | command | `editor.action.quickFix`     |
+| <code>␣ m languageId:java a r</code> | Refactor action     | command | `editor.action.refactor`     |
+| <code>␣ m languageId:java a s</code> | Source action       | command | `editor.action.sourceAction` |
+
+# +Go to
+
+Key Binding: <code>␣ m languageId:java g</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                          | Name                       | Type    | Command(s)                                  |
+| ------------------------------------ | -------------------------- | ------- | ------------------------------------------- |
+| <code>␣ m languageId:java g d</code> | Go to definition           | command | `editor.action.revealDefinition`            |
+| <code>␣ m languageId:java g e</code> | Go to error list           | command | `workbench.action.showErrorsWarnings`       |
+| <code>␣ m languageId:java g h</code> | Show call hierarchy        | command | `references-view.showCallHierarchy`         |
+| <code>␣ m languageId:java g i</code> | Go to implementations      | command | `editor.action.goToImplementation`          |
+| <code>␣ m languageId:java g o</code> | Go to super implementation | command | `java.action.navigateToSuperImplementation` |
+| <code>␣ m languageId:java g r</code> | Go to references           | command | `editor.action.goToReferences`              |
+| <code>␣ m languageId:java g s</code> | Go to symbol in buffer     | command | `workbench.action.gotoSymbol`               |
+| <code>␣ m languageId:java g t</code> | Go to type definition      | command | `editor.action.goToTypeDefinition`          |
+| <code>␣ m languageId:java g u</code> | Go to subtype hierarchy    | command | `java.action.showSubtypeHierarchy`          |
+| <code>␣ m languageId:java g H</code> | Go to type hierarchy       | command | `java.action.showTypeHierarchy`             |
+| <code>␣ m languageId:java g I</code> | Find implementations       | command | `references-view.findImplementations`       |
+| <code>␣ m languageId:java g R</code> | Find references            | command | `references-view.findReferences`            |
+| <code>␣ m languageId:java g S</code> | Go to symbol in project    | command | `workbench.action.showAllSymbols`           |
+| <code>␣ m languageId:java g T</code> | Go to test                 | command | `java.test.goToTest`                        |
+| <code>␣ m languageId:java g U</code> | Go to supertype hierarchy  | command | `java.action.showSupertypeHierarchy`        |
+
+# +Refactor
+
+Key Binding: <code>␣ m languageId:java r</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                          | Name                            | Type    | Command(s)                      |
+| ------------------------------------ | ------------------------------- | ------- | ------------------------------- |
+| <code>␣ m languageId:java r a</code> | Execute code actions            | command | `editor.action.codeAction`      |
+| <code>␣ m languageId:java r e</code> | Extract to function or variable | command | `editor.action.codeAction`      |
+| <code>␣ m languageId:java r o</code> | Organize imports                | command | `editor.action.organizeImports` |
+| <code>␣ m languageId:java r r</code> | Rename symbol                   | command | `editor.action.rename`          |
+| <code>␣ m languageId:java r R</code> | Refactor actions                | command | `editor.action.refactor`        |
+
+# +Test
+
+Key Binding: <code>␣ m languageId:java t</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                          | Name                  | Type    | Command(s)               |
+| ------------------------------------ | --------------------- | ------- | ------------------------ |
+| <code>␣ m languageId:java t a</code> | Run all tests         | command | `testing.runAll`         |
+| <code>␣ m languageId:java t b</code> | Run current test file | command | `testing.runCurrentFile` |
+| <code>␣ m languageId:java t r</code> | Re-run failed tests   | command | `testing.reRunFailTests` |
+| <code>␣ m languageId:java t t</code> | Select and run test   | command | `testing.runSelected`    |
+| <code>␣ m languageId:java t A</code> | Debug all tests       | command | `testing.debugAll`       |
+| <code>␣ m languageId:java t T</code> | Select and debug test | command | `testing.debugSelected`  |
+
+# +Peek
+
+Key Binding: <code>␣ m languageId:java G</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                          | Name                 | Type    | Command(s)                              |
+| ------------------------------------ | -------------------- | ------- | --------------------------------------- |
+| <code>␣ m languageId:java G d</code> | Peek definition      | command | `editor.action.peekDefinition`          |
+| <code>␣ m languageId:java G h</code> | Peek call hierarchy  | command | `editor.showCallHierarchy`              |
+| <code>␣ m languageId:java G i</code> | Peek implementations | command | `editor.action.peekImplementation`      |
+| <code>␣ m languageId:java G r</code> | Peek references      | command | `editor.action.referenceSearch.trigger` |
+| <code>␣ m languageId:java G t</code> | Peek type definition | command | `editor.action.peekTypeDefinition`      |
+
+# +Format
+
 Key Binding: <code>␣ m languageId:javascript =</code>
 
 Type: <code>bindings</code>
@@ -1933,6 +2044,18 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:julia c S</code> | Stop kernel                                       | command | `language-julia.stopKernel`                      |
 | <code>␣ m languageId:julia c Y</code> | Add symbol to compiled modules/functions          | command | `language-julia.set-compiled-for-name`           |
 
+# +Clear
+
+Key Binding: <code>␣ m languageId:julia c</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                           | Name                               | Type    | Command(s)                                     |
+| ------------------------------------- | ---------------------------------- | ------- | ---------------------------------------------- |
+| <code>␣ m languageId:julia c c</code> | Clear current inline results       | command | `language-julia.clearCurrentInlineResult`      |
+| <code>␣ m languageId:julia c C</code> | Clear all inline results           | command | `language-julia.clearAllInlineResults`         |
+| <code>␣ m languageId:julia c K</code> | Clear all inline results in editor | command | `language-julia.clearAllInlineResultsInEditor` |
+
 # +Environment/package
 
 Key Binding: <code>␣ m languageId:julia e</code>
@@ -1945,8 +2068,8 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:julia e c</code> | Change current environment  | command | `language-julia.changeCurrentEnvironment` |
 | <code>␣ m languageId:julia e m</code> | Choose module               | command | `language-julia.chooseModule`             |
 | <code>␣ m languageId:julia e p</code> | Activate parent environment | command | `language-julia.changeCurrentEnvironment` |
-| <code>␣ m languageId:julia e P</code> | Open package directory      | command | `language-julia.openPackageDirectory`     |
 | <code>␣ m languageId:julia e t</code> | Tag new package version     | command | `language-julia.tagNewPackageVersion`     |
+| <code>␣ m languageId:julia e P</code> | Open package directory      | command | `language-julia.openPackageDirectory`     |
 
 # +Go to
 
@@ -1982,18 +2105,6 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:julia s C</code> | Connect external REPL              | command | `language-julia.connectREPL`                        |
 | <code>␣ m languageId:julia s D</code> | Stop REPL                          | command | `language-julia.stopREPL`                           |
 | <code>␣ m languageId:julia s F</code> | Execute active file in REPL        | command | `language-julia.executeActiveFile`                  |
-
-# +Clear
-
-Key Binding: <code>␣ m languageId:julia c</code>
-
-Type: <code>bindings</code>
-
-| Key Binding                           | Name                               | Type    | Command(s)                                     |
-| ------------------------------------- | ---------------------------------- | ------- | ---------------------------------------------- |
-| <code>␣ m languageId:julia c c</code> | Clear current inline results       | command | `language-julia.clearCurrentInlineResult`      |
-| <code>␣ m languageId:julia c C</code> | Clear all inline results           | command | `language-julia.clearAllInlineResults`         |
-| <code>␣ m languageId:julia c K</code> | Clear all inline results in editor | command | `language-julia.clearAllInlineResultsInEditor` |
 
 # +Format
 
@@ -2147,59 +2258,6 @@ Type: <code>bindings</code>
 
 # +Format
 
-Key Binding: <code>␣ m languageId:php =</code>
-
-Type: <code>bindings</code>
-
-| Key Binding                         | Name                             | Type    | Command(s)                               |
-| ----------------------------------- | -------------------------------- | ------- | ---------------------------------------- |
-| <code>␣ m languageId:php = =</code> | Format region or buffer          | command | `editor.action.format`                   |
-| <code>␣ m languageId:php = b</code> | Format buffer                    | command | `editor.action.formatDocument`           |
-| <code>␣ m languageId:php = c</code> | Format changes                   | command | `editor.action.formatChanges`            |
-| <code>␣ m languageId:php = s</code> | Format selection                 | command | `editor.action.formatSelection`          |
-| <code>␣ m languageId:php = B</code> | +Format buffer with formatter    | command | `editor.action.formatDocument.multiple`  |
-| <code>␣ m languageId:php = S</code> | +Format selection with formatter | command | `editor.action.formatSelection.multiple` |
-
-# +Go to
-
-Key Binding: <code>␣ m languageId:php g</code>
-
-Type: <code>bindings</code>
-
-| Key Binding                         | Name                    | Type    | Command(s)                        |
-| ----------------------------------- | ----------------------- | ------- | --------------------------------- |
-| <code>␣ m languageId:php g d</code> | Go to definition        | command | `editor.action.revealDefinition`  |
-| <code>␣ m languageId:php g e</code> | Go to errors/problems   | command | `workbench.action.problems.focus` |
-| <code>␣ m languageId:php g g</code> | Go to definition        | command | `editor.action.revealDefinition`  |
-| <code>␣ m languageId:php g r</code> | Go to references        | command | `editor.action.goToReferences`    |
-| <code>␣ m languageId:php g s</code> | Go to symbol in buffer  | command | `workbench.action.gotoSymbol`     |
-| <code>␣ m languageId:php g R</code> | Find references         | command | `references-view.findReferences`  |
-| <code>␣ m languageId:php g S</code> | Go to symbol in project | command | `workbench.action.showAllSymbols` |
-
-# +Refactor
-
-Key Binding: <code>␣ m languageId:php r</code>
-
-Type: <code>bindings</code>
-
-| Key Binding                         | Name          | Type    | Command(s)               |
-| ----------------------------------- | ------------- | ------- | ------------------------ |
-| <code>␣ m languageId:php r .</code> | Quick fix     | command | `editor.action.quickFix` |
-| <code>␣ m languageId:php r r</code> | Rename symbol | command | `editor.action.rename`   |
-
-# +Peek
-
-Key Binding: <code>␣ m languageId:php G</code>
-
-Type: <code>bindings</code>
-
-| Key Binding                         | Name            | Type    | Command(s)                              |
-| ----------------------------------- | --------------- | ------- | --------------------------------------- |
-| <code>␣ m languageId:php G d</code> | Peek definition | command | `editor.action.peekDefinition`          |
-| <code>␣ m languageId:php G r</code> | Peek references | command | `editor.action.referenceSearch.trigger` |
-
-# +Format
-
 Key Binding: <code>␣ m languageId:objectpascal =</code>
 
 Type: <code>bindings</code>
@@ -2250,6 +2308,59 @@ Type: <code>bindings</code>
 | -------------------------------------------- | --------------- | ------- | --------------------------------------- |
 | <code>␣ m languageId:objectpascal G d</code> | Peek definition | command | `editor.action.peekDefinition`          |
 | <code>␣ m languageId:objectpascal G r</code> | Peek references | command | `editor.action.referenceSearch.trigger` |
+
+# +Format
+
+Key Binding: <code>␣ m languageId:php =</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                         | Name                             | Type    | Command(s)                               |
+| ----------------------------------- | -------------------------------- | ------- | ---------------------------------------- |
+| <code>␣ m languageId:php = =</code> | Format region or buffer          | command | `editor.action.format`                   |
+| <code>␣ m languageId:php = b</code> | Format buffer                    | command | `editor.action.formatDocument`           |
+| <code>␣ m languageId:php = c</code> | Format changes                   | command | `editor.action.formatChanges`            |
+| <code>␣ m languageId:php = s</code> | Format selection                 | command | `editor.action.formatSelection`          |
+| <code>␣ m languageId:php = B</code> | +Format buffer with formatter    | command | `editor.action.formatDocument.multiple`  |
+| <code>␣ m languageId:php = S</code> | +Format selection with formatter | command | `editor.action.formatSelection.multiple` |
+
+# +Go to
+
+Key Binding: <code>␣ m languageId:php g</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                         | Name                    | Type    | Command(s)                        |
+| ----------------------------------- | ----------------------- | ------- | --------------------------------- |
+| <code>␣ m languageId:php g d</code> | Go to definition        | command | `editor.action.revealDefinition`  |
+| <code>␣ m languageId:php g e</code> | Go to errors/problems   | command | `workbench.action.problems.focus` |
+| <code>␣ m languageId:php g g</code> | Go to definition        | command | `editor.action.revealDefinition`  |
+| <code>␣ m languageId:php g r</code> | Go to references        | command | `editor.action.goToReferences`    |
+| <code>␣ m languageId:php g s</code> | Go to symbol in buffer  | command | `workbench.action.gotoSymbol`     |
+| <code>␣ m languageId:php g R</code> | Find references         | command | `references-view.findReferences`  |
+| <code>␣ m languageId:php g S</code> | Go to symbol in project | command | `workbench.action.showAllSymbols` |
+
+# +Refactor
+
+Key Binding: <code>␣ m languageId:php r</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                         | Name          | Type    | Command(s)               |
+| ----------------------------------- | ------------- | ------- | ------------------------ |
+| <code>␣ m languageId:php r .</code> | Quick fix     | command | `editor.action.quickFix` |
+| <code>␣ m languageId:php r r</code> | Rename symbol | command | `editor.action.rename`   |
+
+# +Peek
+
+Key Binding: <code>␣ m languageId:php G</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                         | Name            | Type    | Command(s)                              |
+| ----------------------------------- | --------------- | ------- | --------------------------------------- |
+| <code>␣ m languageId:php G d</code> | Peek definition | command | `editor.action.peekDefinition`          |
+| <code>␣ m languageId:php G r</code> | Peek references | command | `editor.action.referenceSearch.trigger` |
 
 # +Format
 
@@ -2522,98 +2633,79 @@ Type: <code>bindings</code>
 
 # +Format
 
-Key Binding: <code>␣ m languageId:java =</code>
+Key Binding: <code>␣ m languageId:cuda-cpp =</code>
 
 Type: <code>bindings</code>
 
-| Key Binding                          | Name                            | Type    | Command(s)                               |
-| ------------------------------------ | ------------------------------- | ------- | ---------------------------------------- |
-| <code>␣ m languageId:java = =</code> | Format region or buffer         | command | `editor.action.format`                   |
-| <code>␣ m languageId:java = b</code> | Format buffer                   | command | `editor.action.formatDocument`           |
-| <code>␣ m languageId:java = c</code> | Format changes                  | command | `editor.action.formatChanges`            |
-| <code>␣ m languageId:java = s</code> | Format selection                | command | `editor.action.formatSelection`          |
-| <code>␣ m languageId:java = B</code> | Format buffer with formatter    | command | `editor.action.formatDocument.multiple`  |
-| <code>␣ m languageId:java = S</code> | Format selection with formatter | command | `editor.action.formatSelection.multiple` |
+| Key Binding                              | Name                            | Type    | Command(s)                               |
+| ---------------------------------------- | ------------------------------- | ------- | ---------------------------------------- |
+| <code>␣ m languageId:cuda-cpp = =</code> | Format region or buffer         | command | `editor.action.format`                   |
+| <code>␣ m languageId:cuda-cpp = b</code> | Format buffer                   | command | `editor.action.formatDocument`           |
+| <code>␣ m languageId:cuda-cpp = c</code> | Format changes                  | command | `editor.action.formatChanges`            |
+| <code>␣ m languageId:cuda-cpp = s</code> | Format selection                | command | `editor.action.formatSelection`          |
+| <code>␣ m languageId:cuda-cpp = B</code> | Format buffer with formatter    | command | `editor.action.formatDocument.multiple`  |
+| <code>␣ m languageId:cuda-cpp = S</code> | Format selection with formatter | command | `editor.action.formatSelection.multiple` |
 
-# +Code actions
+# +Backend
 
-Key Binding: <code>␣ m languageId:java a</code>
+Key Binding: <code>␣ m languageId:cuda-cpp b</code>
 
 Type: <code>bindings</code>
 
-| Key Binding                          | Name                | Type    | Command(s)                   |
-| ------------------------------------ | ------------------- | ------- | ---------------------------- |
-| <code>␣ m languageId:java a a</code> | Execute code action | command | `editor.action.codeAction`   |
-| <code>␣ m languageId:java a f</code> | Execute fix action  | command | `editor.action.quickFix`     |
-| <code>␣ m languageId:java a r</code> | Refactor action     | command | `editor.action.refactor`     |
-| <code>␣ m languageId:java a s</code> | Source action       | command | `editor.action.sourceAction` |
+| Key Binding                              | Name             | Type    | Command(s)              |
+| ---------------------------------------- | ---------------- | ------- | ----------------------- |
+| <code>␣ m languageId:cuda-cpp b d</code> | Reset Database   | command | `C_Cpp.ResetDatabase`   |
+| <code>␣ m languageId:cuda-cpp b w</code> | Rescan Workspace | command | `C_Cpp.RescanWorkspace` |
+
+# +Debug
+
+Key Binding: <code>␣ m languageId:cuda-cpp d</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                              | Name               | Type    | Command(s)              |
+| ---------------------------------------- | ------------------ | ------- | ----------------------- |
+| <code>␣ m languageId:cuda-cpp d f</code> | Change debug focus | command | `cuda.changeDebugFocus` |
 
 # +Go to
 
-Key Binding: <code>␣ m languageId:java g</code>
+Key Binding: <code>␣ m languageId:cuda-cpp g</code>
 
 Type: <code>bindings</code>
 
-| Key Binding                          | Name                       | Type    | Command(s)                                  |
-| ------------------------------------ | -------------------------- | ------- | ------------------------------------------- |
-| <code>␣ m languageId:java g d</code> | Go to definition           | command | `editor.action.revealDefinition`            |
-| <code>␣ m languageId:java g h</code> | Show call hierarchy        | command | `references-view.showCallHierarchy`         |
-| <code>␣ m languageId:java g e</code> | Go to error list           | command | `workbench.action.showErrorsWarnings`       |
-| <code>␣ m languageId:java g i</code> | Go to implementations      | command | `editor.action.goToImplementation`          |
-| <code>␣ m languageId:java g o</code> | Go to super implementation | command | `java.action.navigateToSuperImplementation` |
-| <code>␣ m languageId:java g r</code> | Go to references           | command | `editor.action.goToReferences`              |
-| <code>␣ m languageId:java g s</code> | Go to symbol in buffer     | command | `workbench.action.gotoSymbol`               |
-| <code>␣ m languageId:java g t</code> | Go to type definition      | command | `editor.action.goToTypeDefinition`          |
-| <code>␣ m languageId:java g u</code> | Go to subtype hierarchy    | command | `java.action.showSubtypeHierarchy`          |
-| <code>␣ m languageId:java g H</code> | Go to type hierarchy       | command | `java.action.showTypeHierarchy`             |
-| <code>␣ m languageId:java g I</code> | Find implementations       | command | `references-view.findImplementations`       |
-| <code>␣ m languageId:java g R</code> | Find references            | command | `references-view.findReferences`            |
-| <code>␣ m languageId:java g S</code> | Go to symbol in project    | command | `workbench.action.showAllSymbols`           |
-| <code>␣ m languageId:java g T</code> | Go to test                 | command | `java.test.goToTest`                        |
-| <code>␣ m languageId:java g U</code> | Go to supertype hierarchy  | command | `java.action.showSupertypeHierarchy`        |
+| Key Binding                              | Name                    | Type    | Command(s)                                        |
+| ---------------------------------------- | ----------------------- | ------- | ------------------------------------------------- |
+| <code>␣ m languageId:cuda-cpp g a</code> | Switch Header/Source    | command | `C_Cpp.SwitchHeaderSource`                        |
+| <code>␣ m languageId:cuda-cpp g d</code> | Go to declaration       | command | `editor.action.revealDeclaration`                 |
+| <code>␣ m languageId:cuda-cpp g e</code> | Go to errors/problems   | command | `workbench.actions.view.problems`                 |
+| <code>␣ m languageId:cuda-cpp g f</code> | Go to file in explorer  | command | `workbench.files.action.showActiveFileInExplorer` |
+| <code>␣ m languageId:cuda-cpp g g</code> | Go to definition        | command | `editor.action.revealDefinition`                  |
+| <code>␣ m languageId:cuda-cpp g r</code> | Go to reference         | command | `editor.action.goToReferences`                    |
+| <code>␣ m languageId:cuda-cpp g s</code> | Go to symbol in buffer  | command | `workbench.action.gotoSymbol`                     |
+| <code>␣ m languageId:cuda-cpp g R</code> | Find references         | command | `references-view.findReferences`                  |
+| <code>␣ m languageId:cuda-cpp g S</code> | Go to symbol in project | command | `workbench.action.showAllSymbols`                 |
 
 # +Refactor
 
-Key Binding: <code>␣ m languageId:java r</code>
+Key Binding: <code>␣ m languageId:cuda-cpp r</code>
 
 Type: <code>bindings</code>
 
-| Key Binding                          | Name                            | Type    | Command(s)                      |
-| ------------------------------------ | ------------------------------- | ------- | ------------------------------- |
-| <code>␣ m languageId:java r a</code> | Execute code actions            | command | `editor.action.codeAction`      |
-| <code>␣ m languageId:java r e</code> | Extract to function or variable | command | `editor.action.codeAction`      |
-| <code>␣ m languageId:java r o</code> | Organize imports                | command | `editor.action.organizeImports` |
-| <code>␣ m languageId:java r r</code> | Rename symbol                   | command | `editor.action.rename`          |
-| <code>␣ m languageId:java r R</code> | Refactor actions                | command | `editor.action.refactor`        |
-
-# +Test
-
-Key Binding: <code>␣ m languageId:java t</code>
-
-Type: <code>bindings</code>
-
-| Key Binding                          | Name                  | Type    | Command(s)               |
-| ------------------------------------ | --------------------- | ------- | ------------------------ |
-| <code>␣ m languageId:java t a</code> | Run all tests         | command | `testing.runAll`         |
-| <code>␣ m languageId:java t b</code> | Run current test file | command | `testing.runCurrentFile` |
-| <code>␣ m languageId:java t r</code> | Re-run failed tests   | command | `testing.reRunFailTests` |
-| <code>␣ m languageId:java t t</code> | Select and run test   | command | `testing.runSelected`    |
-| <code>␣ m languageId:java t A</code> | Debug all tests       | command | `testing.debugAll`       |
-| <code>␣ m languageId:java t T</code> | Select and debug test | command | `testing.debugSelected`  |
+| Key Binding                              | Name          | Type    | Command(s)             |
+| ---------------------------------------- | ------------- | ------- | ---------------------- |
+| <code>␣ m languageId:cuda-cpp r r</code> | Rename Symbol | command | `editor.action.rename` |
 
 # +Peek
 
-Key Binding: <code>␣ m languageId:java G</code>
+Key Binding: <code>␣ m languageId:cuda-cpp G</code>
 
 Type: <code>bindings</code>
 
-| Key Binding                          | Name                 | Type    | Command(s)                              |
-| ------------------------------------ | -------------------- | ------- | --------------------------------------- |
-| <code>␣ m languageId:java G d</code> | Peek definition      | command | `editor.action.peekDefinition`          |
-| <code>␣ m languageId:java G h</code> | Peek call hierarchy  | command | `editor.showCallHierarchy`              |
-| <code>␣ m languageId:java G i</code> | Peek implementations | command | `editor.action.peekImplementation`      |
-| <code>␣ m languageId:java G r</code> | Peek references      | command | `editor.action.referenceSearch.trigger` |
-| <code>␣ m languageId:java G t</code> | Peek type definition | command | `editor.action.peekTypeDefinition`      |
+| Key Binding                              | Name             | Type    | Command(s)                              |
+| ---------------------------------------- | ---------------- | ------- | --------------------------------------- |
+| <code>␣ m languageId:cuda-cpp G d</code> | Peek declaration | command | `editor.action.peekDeclaration`         |
+| <code>␣ m languageId:cuda-cpp G g</code> | Peek definition  | command | `editor.action.peekDefinition`          |
+| <code>␣ m languageId:cuda-cpp G r</code> | Peek references  | command | `editor.action.referenceSearch.trigger` |
 
 # +Wrap
 
