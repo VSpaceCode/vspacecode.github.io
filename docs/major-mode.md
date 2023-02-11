@@ -59,6 +59,13 @@ Required extensions:
 
 - [C/C++ Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
 
+## CUDA-C++
+
+Required extensions:
+
+- [C/C++ Extension](https://marketplace.visualstudio.com/items?itemName=ms-vscode.cpptools)
+- [Nsight Visual Studio Code Edition](https://marketplace.visualstudio.com/items?itemName=NVIDIA.nsight-vscode-edition)
+
 ## C\#
 
 Required extensions:
