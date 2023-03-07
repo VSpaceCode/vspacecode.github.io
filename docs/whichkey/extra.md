@@ -32,6 +32,24 @@ You can set `whichkey.delay` in `settings.json` to a value in milliseconds to de
 
 You can set `whichkey.sortOrder` in `settings.json` to `alphabetically` to always display the menu items alphabetically.
 
+## Bind shortcuts to submenu
+
+To open a submenu with a shortcut, one can execute a [`whichkey.triggerKey`](./reference.md#trigger-key) command right after [`whichkey.show`](./reference.md#show).
+Here's an example `keybindings.json` using [ryuta46.multi-command](https://marketplace.visualstudio.com/items?itemName=ryuta46.multi-command):
+
+```json
+{
+    "key": "alt+s",
+    "command": "extension.multiCommand.execute",
+    "args": {
+        "sequence": [
+            "whichkey.show",
+            { "command": "whichkey.triggerKey", "args": "s" },
+        ]
+    }
+}
+```
+
 ## Unclear selection
 
 Selected text can be hard to see when the which-key menu is active due to your current theme's `inactiveSelectionBackground` config.

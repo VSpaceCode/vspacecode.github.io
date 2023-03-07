@@ -193,25 +193,6 @@ An example of a `settings.json` file that overrides the space menu is as follows
 The default value can be found in the `contributes.configuration.whichkey.bindings.default` section of the `package.json` in this repo.
 You can use the default value as an example to craft your own custom menu.
 
-### Bind shortcuts to submenu
-
-Only a single global menu is supported natively. 
-To open a submenu with a shortcut, one can execute a `whichkey.triggerKey` command right after `whichkey.show` to select a submenu. 
-Here's an example `keybindings.json` using [ryuta46.multi-command](https://marketplace.visualstudio.com/items?itemName=ryuta46.multi-command):
-
-```json
-{
-    "key": "alt+s",
-    "command": "extension.multiCommand.execute",
-    "args": { 
-        "sequence": [
-            "whichkey.show",
-            { "command": "whichkey.triggerKey", "args": "s" },
-        ]
-    }
-}
-```
-
 ## With extension
 
 If you are writing an extension and want to have which key functionality, you can bundle it with the extension pack feature of vscode.
