@@ -193,11 +193,11 @@ An example of a `settings.json` file that overrides the space menu is as follows
 The default value can be found in the `contributes.configuration.whichkey.bindings.default` section of the `package.json` in this repo.
 You can use the default value as an example to craft your own custom menu.
 
-### Multiple Menus
+### Bind shortcuts to submenu
 
 Only a single global menu is supported natively. 
-However, it is possible to simulate several menus by executing a `whichkey.triggerKey` command right after `whichkey.show` to select a submenu. 
-Here's an example submenu keybinding using [ryuta46.multi-command](https://marketplace.visualstudio.com/items?itemName=ryuta46.multi-command) extension:
+To open a submenu with a shortcut, one can execute a `whichkey.triggerKey` command right after `whichkey.show` to select a submenu. 
+Here's an example `keybindings.json` using [ryuta46.multi-command](https://marketplace.visualstudio.com/items?itemName=ryuta46.multi-command):
 
 ```json
 {
