@@ -35,14 +35,14 @@ You can set `whichkey.sortOrder` in `settings.json` to `alphabetically` to alway
 ## Bind shortcuts to submenu
 
 To open a submenu with a shortcut, one can execute a [`whichkey.triggerKey`](./reference.md#trigger-key) command right after [`whichkey.show`](./reference.md#show).
-Here's an example `keybindings.json` using [ryuta46.multi-command](https://marketplace.visualstudio.com/items?itemName=ryuta46.multi-command):
+Here's an example `keybindings.json` using [`runCommands`](https://code.visualstudio.com/docs/getstarted/keybindings#_running-multiple-commands):
 
 ```json
 {
     "key": "alt+s",
-    "command": "extension.multiCommand.execute",
+    "command": "runCommands",
     "args": {
-        "sequence": [
+        "commands": [
             "whichkey.show",
             { "command": "whichkey.triggerKey", "args": "s" },
         ]
