@@ -133,6 +133,12 @@ Required extensions:
 
 - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 
+## R
+
+Required extensions:
+
+ - [R]: https://marketplace.visualstudio.com/items?itemName=REditorSupport.r
+
 ## Ruby
 
 Required extensions:
