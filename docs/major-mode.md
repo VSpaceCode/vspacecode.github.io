@@ -133,6 +133,12 @@ Required extensions:
 
 - [Python](https://marketplace.visualstudio.com/items?itemName=ms-python.python)
 
+## Quarto
+
+Required extensions:
+
+- [Quarto](https://marketplace.visualstudio.com/items?itemName=quarto.quarto)
+
 ## R
 
 Required extensions:
