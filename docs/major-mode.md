@@ -137,7 +137,7 @@ Required extensions:
 
 Required extensions:
 
- - [R]: https://marketplace.visualstudio.com/items?itemName=REditorSupport.r
+ - [R](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r)
 
 ## Ruby
 
