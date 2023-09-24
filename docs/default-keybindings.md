@@ -96,7 +96,15 @@ Type: <code>bindings</code>
 | Key Binding        | Name                              | Type                    | Command(s)                                                          |
 | ------------------ | --------------------------------- | ----------------------- | ------------------------------------------------------------------- |
 | <code>␣ b 0</code> | Last buffer in window             | command                 | `workbench.action.lastEditorInGroup`                                |
-| <code>␣ b 1</code> | First buffer in window            | command                 | `workbench.action.firstEditorInGroup`                               |
+| <code>␣ b 1</code> | First buffer in window            | command                 | `workbench.action.openEditorAtIndex1`                               |
+| <code>␣ b 2</code> | 2nd buffer in window              | command                 | `workbench.action.openEditorAtIndex2`                               |
+| <code>␣ b 3</code> | 3rd buffer in window              | command                 | `workbench.action.openEditorAtIndex3`                               |
+| <code>␣ b 4</code> | 4th buffer in window              | command                 | `workbench.action.openEditorAtIndex4`                               |
+| <code>␣ b 5</code> | 5th buffer in window              | command                 | `workbench.action.openEditorAtIndex5`                               |
+| <code>␣ b 6</code> | 6th buffer in window              | command                 | `workbench.action.openEditorAtIndex6`                               |
+| <code>␣ b 7</code> | 7th buffer in window              | command                 | `workbench.action.openEditorAtIndex7`                               |
+| <code>␣ b 8</code> | 8th buffer in window              | command                 | `workbench.action.openEditorAtIndex8`                               |
+| <code>␣ b 9</code> | 9th buffer in window              | command                 | `workbench.action.openEditorAtIndex9`                               |
 | <code>␣ b b</code> | Show all buffers                  | command                 | `workbench.action.showAllEditorsByMostRecentlyUsed`                 |
 | <code>␣ b d</code> | Close active buffer               | command                 | `workbench.action.closeActiveEditor`                                |
 | <code>␣ b h</code> | Move buffer into left window      | command                 | `workbench.action.moveEditorToLeftGroup`                            |
@@ -295,6 +303,8 @@ Type: <code>conditional</code>
 | <code>languageId:objectpascal</code> | ObjectPascal | [bindings](#objectpascal) | N/A        |
 | <code>languageId:php</code>          | PHP          | [bindings](#php)          | N/A        |
 | <code>languageId:python</code>       | Python       | [bindings](#python)       | N/A        |
+| <code>languageId:quarto</code>       | quarto       | [bindings](#quarto)       | N/A        |
+| <code>languageId:r</code>            | R            | [bindings](#r)            | N/A        |
 | <code>languageId:ruby</code>         | Ruby         | [bindings](#ruby)         | N/A        |
 | <code>languageId:rust</code>         | Rust         | [bindings](#rust)         | N/A        |
 | <code>languageId:typescript</code>   | TypeScript   | [bindings](#typescript)   | N/A        |
@@ -506,6 +516,7 @@ Type: <code>bindings</code>
 | <code>␣ T t</code> | Toggle tool/activity bar visibility | command | `workbench.action.toggleActivityBarVisibility` |
 | <code>␣ T z</code> | Toggle zen mode                     | command | `workbench.action.toggleZenMode`               |
 | <code>␣ T F</code> | Toggle full screen                  | command | `workbench.action.toggleFullScreen`            |
+| <code>␣ T M</code> | Toggle minimap                      | command | `editor.action.toggleMinimap`                  |
 | <code>␣ T T</code> | Toggle tab visibility               | command | `workbench.action.toggleTabsVisibility`        |
 
 # +New Buffer
@@ -915,6 +926,50 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:python s</code> | +REPL       | [bindings](#repl)     | N/A                     |
 | <code>␣ m languageId:python t</code> | +Test       | [bindings](#test)     | N/A                     |
 | <code>␣ m languageId:python G</code> | +Peek       | [bindings](#peek)     | N/A                     |
+
+# quarto
+
+Key Binding: <code>␣ m languageId:quarto</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                          | Name                   | Type                      | Command(s)                        |
+| ------------------------------------ | ---------------------- | ------------------------- | --------------------------------- |
+| <code>␣ m languageId:quarto d</code> | Debugonce R            | command                   | `r.runCommandWithSelectionOrWord` |
+| <code>␣ m languageId:quarto h</code> | Help R                 | command                   | `r.helpPanel.openForSelection`    |
+| <code>␣ m languageId:quarto i</code> | Insert cell            | command                   | `quarto.insertCodeCell`           |
+| <code>␣ m languageId:quarto m</code> | Run current cell       | command                   | `quarto.runCurrentCell`           |
+| <code>␣ m languageId:quarto o</code> | Objects in workspace R | command                   | `r.runCommand`                    |
+| <code>␣ m languageId:quarto p</code> | Render                 | command                   | `quarto.render`                   |
+| <code>␣ m languageId:quarto s</code> | Run selection          | command                   | `quarto.runSelection`             |
+| <code>␣ m languageId:quarto R</code> | Restart R              | command                   | `r.runCommand`                    |
+| <code>␣ m languageId:quarto =</code> | +Format                | [bindings](#format)       | N/A                               |
+| <code>␣ m languageId:quarto a</code> | +Code actions          | [bindings](#code-actions) | N/A                               |
+| <code>␣ m languageId:quarto f</code> | +Fold                  | [bindings](#fold)         | N/A                               |
+| <code>␣ m languageId:quarto g</code> | +Go to                 | [bindings](#go-to)        | N/A                               |
+| <code>␣ m languageId:quarto r</code> | +Refactor              | [bindings](#refactor)     | N/A                               |
+| <code>␣ m languageId:quarto v</code> | +View R                | [bindings](#view-r)       | N/A                               |
+| <code>␣ m languageId:quarto G</code> | +Peek                  | [bindings](#peek)         | N/A                               |
+
+# R
+
+Key Binding: <code>␣ m languageId:r</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                     | Name                   | Type                      | Command(s)                        |
+| ------------------------------- | ---------------------- | ------------------------- | --------------------------------- |
+| <code>␣ m languageId:r d</code> | Debugonce              | command                   | `r.runCommandWithSelectionOrWord` |
+| <code>␣ m languageId:r h</code> | Help                   | command                   | `r.helpPanel.openForSelection`    |
+| <code>␣ m languageId:r o</code> | Objects in workspace R | command                   | `r.runCommand`                    |
+| <code>␣ m languageId:r s</code> | Run selection          | command                   | `r.runSelection`                  |
+| <code>␣ m languageId:r R</code> | Restart R              | command                   | `r.runCommand`                    |
+| <code>␣ m languageId:r =</code> | +Format                | [bindings](#format)       | N/A                               |
+| <code>␣ m languageId:r a</code> | +Code actions          | [bindings](#code-actions) | N/A                               |
+| <code>␣ m languageId:r g</code> | +Go to                 | [bindings](#go-to)        | N/A                               |
+| <code>␣ m languageId:r r</code> | +Refactor              | [bindings](#refactor)     | N/A                               |
+| <code>␣ m languageId:r v</code> | +View                  | [bindings](#view)         | N/A                               |
+| <code>␣ m languageId:r G</code> | +Peek                  | [bindings](#peek)         | N/A                               |
 
 # Ruby
 
@@ -2463,6 +2518,191 @@ Type: <code>bindings</code>
 | -------------------------------------- | --------------- | ------- | --------------------------------------- |
 | <code>␣ m languageId:python G d</code> | Peek definition | command | `editor.action.peekDefinition`          |
 | <code>␣ m languageId:python G r</code> | Peek references | command | `editor.action.referenceSearch.trigger` |
+
+# +Format
+
+Key Binding: <code>␣ m languageId:quarto =</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                            | Name                            | Type    | Command(s)                               |
+| -------------------------------------- | ------------------------------- | ------- | ---------------------------------------- |
+| <code>␣ m languageId:quarto = =</code> | Format region or buffer         | command | `editor.action.format`                   |
+| <code>␣ m languageId:quarto = b</code> | Format buffer                   | command | `editor.action.formatDocument`           |
+| <code>␣ m languageId:quarto = c</code> | Format changes                  | command | `editor.action.formatChanges`            |
+| <code>␣ m languageId:quarto = s</code> | Format selection                | command | `editor.action.formatSelection`          |
+| <code>␣ m languageId:quarto = B</code> | Format buffer with formatter    | command | `editor.action.formatDocument.multiple`  |
+| <code>␣ m languageId:quarto = S</code> | Format selection with formatter | command | `editor.action.formatSelection.multiple` |
+
+# +Code actions
+
+Key Binding: <code>␣ m languageId:quarto a</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                            | Name                | Type    | Command(s)                   |
+| -------------------------------------- | ------------------- | ------- | ---------------------------- |
+| <code>␣ m languageId:quarto a a</code> | Execute code action | command | `editor.action.codeAction`   |
+| <code>␣ m languageId:quarto a f</code> | Execute fix action  | command | `editor.action.quickFix`     |
+| <code>␣ m languageId:quarto a r</code> | Refactor action     | command | `editor.action.refactor`     |
+| <code>␣ m languageId:quarto a s</code> | Source action       | command | `editor.action.sourceAction` |
+
+# +Fold
+
+Key Binding: <code>␣ m languageId:quarto f</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                            | Name             | Type    | Command(s)         |
+| -------------------------------------- | ---------------- | ------- | ------------------ |
+| <code>␣ m languageId:quarto f f</code> | Fold cell        | command | `editor.fold`      |
+| <code>␣ m languageId:quarto f u</code> | Unfold cell      | command | `editor.unfold`    |
+| <code>␣ m languageId:quarto f F</code> | Fold all cells   | command | `editor.foldAll`   |
+| <code>␣ m languageId:quarto f U</code> | Unfold all cells | command | `editor.unfoldAll` |
+
+# +Go to
+
+Key Binding: <code>␣ m languageId:quarto g</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                            | Name                    | Type    | Command(s)                                        |
+| -------------------------------------- | ----------------------- | ------- | ------------------------------------------------- |
+| <code>␣ m languageId:quarto g d</code> | Go to declaration       | command | `editor.action.revealDeclaration`                 |
+| <code>␣ m languageId:quarto g e</code> | Go to errors/problems   | command | `workbench.actions.view.problems`                 |
+| <code>␣ m languageId:quarto g f</code> | Go to file in explorer  | command | `workbench.files.action.showActiveFileInExplorer` |
+| <code>␣ m languageId:quarto g g</code> | Go to definition        | command | `editor.action.revealDefinition`                  |
+| <code>␣ m languageId:quarto g r</code> | Go to reference         | command | `editor.action.goToReferences`                    |
+| <code>␣ m languageId:quarto g s</code> | Go to symbol in buffer  | command | `workbench.action.gotoSymbol`                     |
+| <code>␣ m languageId:quarto g R</code> | Find references         | command | `references-view.findReferences`                  |
+| <code>␣ m languageId:quarto g S</code> | Go to symbol in project | command | `workbench.action.showAllSymbols`                 |
+
+# +Refactor
+
+Key Binding: <code>␣ m languageId:quarto r</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                            | Name          | Type    | Command(s)             |
+| -------------------------------------- | ------------- | ------- | ---------------------- |
+| <code>␣ m languageId:quarto r r</code> | Rename Symbol | command | `editor.action.rename` |
+
+# +View R
+
+Key Binding: <code>␣ m languageId:quarto v</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                            | Name           | Type    | Command(s)                        |
+| -------------------------------------- | -------------- | ------- | --------------------------------- |
+| <code>␣ m languageId:quarto v c</code> | Column numbers | command | `r.runCommandWithSelectionOrWord` |
+| <code>␣ m languageId:quarto v h</code> | head           | command | `r.head`                          |
+| <code>␣ m languageId:quarto v l</code> | length         | command | `r.length`                        |
+| <code>␣ m languageId:quarto v n</code> | Names          | command | `r.names`                         |
+| <code>␣ m languageId:quarto v p</code> | print          | command | `r.runCommandWithSelectionOrWord` |
+| <code>␣ m languageId:quarto v r</code> | Row numbers    | command | `r.nrow`                          |
+| <code>␣ m languageId:quarto v s</code> | str            | command | `r.runCommandWithSelectionOrWord` |
+| <code>␣ m languageId:quarto v v</code> | View           | command | `r.view`                          |
+| <code>␣ m languageId:quarto v C</code> | Column names   | command | `r.runCommandWithSelectionOrWord` |
+| <code>␣ m languageId:quarto v R</code> | Row names      | command | `r.runCommandWithSelectionOrWord` |
+
+# +Peek
+
+Key Binding: <code>␣ m languageId:quarto G</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                            | Name             | Type    | Command(s)                              |
+| -------------------------------------- | ---------------- | ------- | --------------------------------------- |
+| <code>␣ m languageId:quarto G d</code> | Peek declaration | command | `editor.action.peekDeclaration`         |
+| <code>␣ m languageId:quarto G g</code> | Peek definition  | command | `editor.action.peekDefinition`          |
+| <code>␣ m languageId:quarto G r</code> | Peek references  | command | `editor.action.referenceSearch.trigger` |
+
+# +Format
+
+Key Binding: <code>␣ m languageId:r =</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                       | Name                            | Type    | Command(s)                               |
+| --------------------------------- | ------------------------------- | ------- | ---------------------------------------- |
+| <code>␣ m languageId:r = =</code> | Format region or buffer         | command | `editor.action.format`                   |
+| <code>␣ m languageId:r = b</code> | Format buffer                   | command | `editor.action.formatDocument`           |
+| <code>␣ m languageId:r = c</code> | Format changes                  | command | `editor.action.formatChanges`            |
+| <code>␣ m languageId:r = s</code> | Format selection                | command | `editor.action.formatSelection`          |
+| <code>␣ m languageId:r = B</code> | Format buffer with formatter    | command | `editor.action.formatDocument.multiple`  |
+| <code>␣ m languageId:r = S</code> | Format selection with formatter | command | `editor.action.formatSelection.multiple` |
+
+# +Code actions
+
+Key Binding: <code>␣ m languageId:r a</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                       | Name                | Type    | Command(s)                   |
+| --------------------------------- | ------------------- | ------- | ---------------------------- |
+| <code>␣ m languageId:r a a</code> | Execute code action | command | `editor.action.codeAction`   |
+| <code>␣ m languageId:r a f</code> | Execute fix action  | command | `editor.action.quickFix`     |
+| <code>␣ m languageId:r a r</code> | Refactor action     | command | `editor.action.refactor`     |
+| <code>␣ m languageId:r a s</code> | Source action       | command | `editor.action.sourceAction` |
+
+# +Go to
+
+Key Binding: <code>␣ m languageId:r g</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                       | Name                    | Type    | Command(s)                                        |
+| --------------------------------- | ----------------------- | ------- | ------------------------------------------------- |
+| <code>␣ m languageId:r g d</code> | Go to declaration       | command | `editor.action.revealDeclaration`                 |
+| <code>␣ m languageId:r g e</code> | Go to errors/problems   | command | `workbench.actions.view.problems`                 |
+| <code>␣ m languageId:r g f</code> | Go to file in explorer  | command | `workbench.files.action.showActiveFileInExplorer` |
+| <code>␣ m languageId:r g g</code> | Go to definition        | command | `editor.action.revealDefinition`                  |
+| <code>␣ m languageId:r g r</code> | Go to reference         | command | `editor.action.goToReferences`                    |
+| <code>␣ m languageId:r g s</code> | Go to symbol in buffer  | command | `workbench.action.gotoSymbol`                     |
+| <code>␣ m languageId:r g R</code> | Find references         | command | `references-view.findReferences`                  |
+| <code>␣ m languageId:r g S</code> | Go to symbol in project | command | `workbench.action.showAllSymbols`                 |
+
+# +Refactor
+
+Key Binding: <code>␣ m languageId:r r</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                       | Name          | Type    | Command(s)             |
+| --------------------------------- | ------------- | ------- | ---------------------- |
+| <code>␣ m languageId:r r r</code> | Rename Symbol | command | `editor.action.rename` |
+
+# +View
+
+Key Binding: <code>␣ m languageId:r v</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                       | Name           | Type    | Command(s)                        |
+| --------------------------------- | -------------- | ------- | --------------------------------- |
+| <code>␣ m languageId:r v c</code> | Column numbers | command | `r.runCommandWithSelectionOrWord` |
+| <code>␣ m languageId:r v h</code> | head           | command | `r.head`                          |
+| <code>␣ m languageId:r v l</code> | length         | command | `r.length`                        |
+| <code>␣ m languageId:r v n</code> | Names          | command | `r.names`                         |
+| <code>␣ m languageId:r v p</code> | print          | command | `r.runCommandWithSelectionOrWord` |
+| <code>␣ m languageId:r v r</code> | Row numbers    | command | `r.nrow`                          |
+| <code>␣ m languageId:r v s</code> | str            | command | `r.runCommandWithSelectionOrWord` |
+| <code>␣ m languageId:r v v</code> | View           | command | `r.view`                          |
+| <code>␣ m languageId:r v C</code> | Column names   | command | `r.runCommandWithSelectionOrWord` |
+| <code>␣ m languageId:r v R</code> | Row names      | command | `r.runCommandWithSelectionOrWord` |
+
+# +Peek
+
+Key Binding: <code>␣ m languageId:r G</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                       | Name             | Type    | Command(s)                              |
+| --------------------------------- | ---------------- | ------- | --------------------------------------- |
+| <code>␣ m languageId:r G d</code> | Peek declaration | command | `editor.action.peekDeclaration`         |
+| <code>␣ m languageId:r G g</code> | Peek definition  | command | `editor.action.peekDefinition`          |
+| <code>␣ m languageId:r G r</code> | Peek references  | command | `editor.action.referenceSearch.trigger` |
 
 # +Format
 
