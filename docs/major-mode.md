@@ -79,6 +79,12 @@ Required extensions:
 - [Dart](https://marketplace.visualstudio.com/items?itemName=Dart-Code.dart-code)
 - [Flutter](https://marketplace.visualstudio.com/items?itemName=Dart-Code.flutter)
 
+## Elixir
+
+Required extensions:
+
+- [ElixirLS](https://marketplace.visualstudio.com/items?itemName=JakeBecker.elixir-ls)
+
 ## Go
 
 Required extensions:
