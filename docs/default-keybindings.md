@@ -17,6 +17,7 @@ Type: <code>bindings</code>
 | <code>␣ ↹</code> | Last buffer                      | commands                                | `workbench.action.quickOpenPreviousRecentlyUsedEditorInGroup`<br />`list.select`                                     |
 | <code>␣ !</code> | Show terminal                    | command                                 | `workbench.action.terminal.focus`                                                                                    |
 | <code>␣ "</code> | Open new external terminal       | command                                 | `workbench.action.terminal.openNativeConsole`                                                                        |
+| <code>␣ $</code> | Run Recent Command in Terminal   | command                                 | `workbench.action.terminal.runRecentCommand`                                                                         |
 | <code>␣ '</code> | Show terminal                    | command                                 | `workbench.action.terminal.focus`                                                                                    |
 | <code>␣ *</code> | Search in project with selection | commands                                | `editor.action.addSelectionToNextFindMatch`<br />`workbench.action.findInFiles`<br />`search.action.focusSearchList` |
 | <code>␣ .</code> | Repeat most recent action        | command                                 | `whichkey.repeatMostRecent`                                                                                          |
@@ -293,6 +294,7 @@ Type: <code>conditional</code>
 | <code>languageId:cpp</code>          | C++          | [bindings](#c)            | N/A        |
 | <code>languageId:csharp</code>       | C#           | [bindings](#c)            | N/A        |
 | <code>languageId:dart</code>         | Dart/Flutter | [bindings](#dartflutter)  | N/A        |
+| <code>languageId:elixir</code>       | Elixir       | [bindings](#elixir)       | N/A        |
 | <code>languageId:fsharp</code>       | F#           | [bindings](#f)            | N/A        |
 | <code>languageId:go</code>           | Go           | [bindings](#go)           | N/A        |
 | <code>languageId:java</code>         | Java         | [bindings](#java)         | N/A        |
@@ -391,33 +393,33 @@ Key Binding: <code>␣ w</code>
 
 Type: <code>bindings</code>
 
-| Key Binding        | Name                              | Type                         | Command(s)                                    |
-| ------------------ | --------------------------------- | ---------------------------- | --------------------------------------------- |
-| <code>␣ w -</code> | Split window below                | command                      | `workbench.action.splitEditorDown`            |
-| <code>␣ w /</code> | Split window right                | command                      | `workbench.action.splitEditor`                |
-| <code>␣ w =</code> | Reset window sizes                | command                      | `workbench.action.evenEditorWidths`           |
-| <code>␣ w [</code> | Shrink window                     | [transient](#shrink-window)  | `workbench.action.decreaseViewSize`           |
-| <code>␣ w ]</code> | Enlarge window                    | [transient](#enlarge-window) | `workbench.action.increaseViewSize`           |
-| <code>␣ w d</code> | Close window                      | command                      | `workbench.action.closeEditorsInGroup`        |
-| <code>␣ w h</code> | Focus window left                 | command                      | `workbench.action.focusPreviousGroup`         |
-| <code>␣ w j</code> | Focus window down                 | command                      | `workbench.action.focusBelowGroup`            |
-| <code>␣ w k</code> | Focus window up                   | command                      | `workbench.action.focusAboveGroup`            |
-| <code>␣ w l</code> | Focus window right                | command                      | `workbench.action.focusNextGroup`             |
-| <code>␣ w m</code> | Maximize window                   | command                      | `workbench.action.toggleEditorWidths`         |
-| <code>␣ w o</code> | Switch frame                      | command                      | `workbench.action.quickSwitchWindow`          |
-| <code>␣ w s</code> | Split window below                | command                      | `workbench.action.splitEditorDown`            |
-| <code>␣ w v</code> | Split window right                | command                      | `workbench.action.splitEditor`                |
-| <code>␣ w w</code> | Focus next window                 | command                      | `workbench.action.focusNextGroup`             |
-| <code>␣ w x</code> | Close all windows                 | command                      | `workbench.action.closeAllGroups`             |
-| <code>␣ w z</code> | Combine all buffers               | command                      | `workbench.action.joinAllGroups`              |
-| <code>␣ w D</code> | Close all other windows           | command                      | `workbench.action.closeEditorsInOtherGroups`  |
-| <code>␣ w F</code> | Open new empty frame              | command                      | `workbench.action.newWindow`                  |
-| <code>␣ w H</code> | Move window left                  | command                      | `workbench.action.moveActiveEditorGroupLeft`  |
-| <code>␣ w J</code> | Move window down                  | command                      | `workbench.action.moveActiveEditorGroupDown`  |
-| <code>␣ w K</code> | Move window up                    | command                      | `workbench.action.moveActiveEditorGroupUp`    |
-| <code>␣ w L</code> | Move window right                 | command                      | `workbench.action.moveActiveEditorGroupRight` |
-| <code>␣ w M</code> | Maximize window and hide side bar | command                      | `workbench.action.maximizeEditor`             |
-| <code>␣ w W</code> | Focus previous window             | command                      | `workbench.action.focusPreviousGroup`         |
+| Key Binding        | Name                                  | Type                         | Command(s)                                    |
+| ------------------ | ------------------------------------- | ---------------------------- | --------------------------------------------- |
+| <code>␣ w -</code> | Split window below                    | command                      | `workbench.action.splitEditorDown`            |
+| <code>␣ w /</code> | Split window right                    | command                      | `workbench.action.splitEditor`                |
+| <code>␣ w =</code> | Reset window sizes                    | command                      | `workbench.action.evenEditorWidths`           |
+| <code>␣ w [</code> | Shrink window                         | [transient](#shrink-window)  | `workbench.action.decreaseViewSize`           |
+| <code>␣ w ]</code> | Enlarge window                        | [transient](#enlarge-window) | `workbench.action.increaseViewSize`           |
+| <code>␣ w d</code> | Close window                          | command                      | `workbench.action.closeEditorsInGroup`        |
+| <code>␣ w h</code> | Focus window left                     | command                      | `workbench.action.navigateLeft`               |
+| <code>␣ w j</code> | Focus window down                     | command                      | `workbench.action.navigateDown`               |
+| <code>␣ w k</code> | Focus window up                       | command                      | `workbench.action.navigateUp`                 |
+| <code>␣ w l</code> | Focus window right                    | command                      | `workbench.action.navigateRight`              |
+| <code>␣ w m</code> | Maximize window                       | command                      | `workbench.action.toggleMaximizeEditorGroup`  |
+| <code>␣ w o</code> | Switch frame                          | command                      | `workbench.action.quickSwitchWindow`          |
+| <code>␣ w s</code> | Split window below                    | command                      | `workbench.action.splitEditorDown`            |
+| <code>␣ w v</code> | Split window right                    | command                      | `workbench.action.splitEditor`                |
+| <code>␣ w w</code> | Focus next window                     | command                      | `workbench.action.focusNextGroup`             |
+| <code>␣ w x</code> | Close all windows                     | command                      | `workbench.action.closeAllGroups`             |
+| <code>␣ w z</code> | Combine all buffers                   | command                      | `workbench.action.joinAllGroups`              |
+| <code>␣ w D</code> | Close all other windows               | command                      | `workbench.action.closeEditorsInOtherGroups`  |
+| <code>␣ w F</code> | Open new empty frame                  | command                      | `workbench.action.newWindow`                  |
+| <code>␣ w H</code> | Move window left                      | command                      | `workbench.action.moveActiveEditorGroupLeft`  |
+| <code>␣ w J</code> | Move window down                      | command                      | `workbench.action.moveActiveEditorGroupDown`  |
+| <code>␣ w K</code> | Move window up                        | command                      | `workbench.action.moveActiveEditorGroupUp`    |
+| <code>␣ w L</code> | Move window right                     | command                      | `workbench.action.moveActiveEditorGroupRight` |
+| <code>␣ w M</code> | Maximize window without hiding others | command                      | `workbench.action.toggleEditorWidths`         |
+| <code>␣ w W</code> | Focus previous window                 | command                      | `workbench.action.focusPreviousGroup`         |
 
 # +Text
 
@@ -770,6 +772,20 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:dart t</code> | +Test                  | [bindings](#test)            | N/A                         |
 | <code>␣ m languageId:dart G</code> | +Peek                  | [bindings](#peek)            | N/A                         |
 | <code>␣ m languageId:dart T</code> | +Toggle                | [bindings](#toggle)          | N/A                         |
+
+# Elixir
+
+Key Binding: <code>␣ m languageId:elixir</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                          | Name                  | Type                  | Command(s)              |
+| ------------------------------------ | --------------------- | --------------------- | ----------------------- |
+| <code>␣ m languageId:elixir o</code> | Expand selected macro | command               | `extension.expandMacro` |
+| <code>␣ m languageId:elixir =</code> | +Format               | [bindings](#format)   | N/A                     |
+| <code>␣ m languageId:elixir g</code> | +Go to                | [bindings](#go-to)    | N/A                     |
+| <code>␣ m languageId:elixir r</code> | +Refactor             | [bindings](#refactor) | N/A                     |
+| <code>␣ m languageId:elixir G</code> | +Peek                 | [bindings](#peek)     | N/A                     |
 
 # F#
 
@@ -1702,6 +1718,62 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:dart T r</code> | Repaint rainbow     | command | `flutter.toggleRepaintRainbow`     |
 | <code>␣ m languageId:dart T s</code> | Slow animations     | command | `flutter.toggleSlowAnimations`     |
 | <code>␣ m languageId:dart T B</code> | Debug mode banner   | command | `flutter.toggleDebugModeBanner`    |
+
+# +Format
+
+Key Binding: <code>␣ m languageId:elixir =</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                            | Name                             | Type    | Command(s)                               |
+| -------------------------------------- | -------------------------------- | ------- | ---------------------------------------- |
+| <code>␣ m languageId:elixir = =</code> | Format region or buffer          | command | `editor.action.format`                   |
+| <code>␣ m languageId:elixir = b</code> | Format buffer                    | command | `editor.action.formatDocument`           |
+| <code>␣ m languageId:elixir = c</code> | Format changes                   | command | `editor.action.formatChanges`            |
+| <code>␣ m languageId:elixir = s</code> | Format selection                 | command | `editor.action.formatSelection`          |
+| <code>␣ m languageId:elixir = B</code> | +Format buffer with formatter    | command | `editor.action.formatDocument.multiple`  |
+| <code>␣ m languageId:elixir = S</code> | +Format selection with formatter | command | `editor.action.formatSelection.multiple` |
+
+# +Go to
+
+Key Binding: <code>␣ m languageId:elixir g</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                            | Name                  | Type    | Command(s)                            |
+| -------------------------------------- | --------------------- | ------- | ------------------------------------- |
+| <code>␣ m languageId:elixir g d</code> | Go to definition      | command | `editor.action.revealDefinition`      |
+| <code>␣ m languageId:elixir g e</code> | Go to errors/problems | command | `workbench.action.problems.focus`     |
+| <code>␣ m languageId:elixir g g</code> | Go to definition      | command | `editor.action.revealDefinition`      |
+| <code>␣ m languageId:elixir g i</code> | Go to implementations | command | `editor.action.goToImplementation`    |
+| <code>␣ m languageId:elixir g r</code> | Go to references      | command | `editor.action.goToReferences`        |
+| <code>␣ m languageId:elixir g I</code> | Find implementations  | command | `references-view.findImplementations` |
+| <code>␣ m languageId:elixir g R</code> | Find references       | command | `references-view.findReferences`      |
+
+# +Refactor
+
+Key Binding: <code>␣ m languageId:elixir r</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                            | Name                                     | Type    | Command(s)               |
+| -------------------------------------- | ---------------------------------------- | ------- | ------------------------ |
+| <code>␣ m languageId:elixir r .</code> | Quick fix                                | command | `editor.action.quickFix` |
+| <code>␣ m languageId:elixir r p</code> | Transform function call to pipe operator | command | `extension.toPipe`       |
+| <code>␣ m languageId:elixir r r</code> | Rename symbol                            | command | `editor.action.rename`   |
+| <code>␣ m languageId:elixir r P</code> | Transform pipe operator to function call | command | `extension.fromPipe`     |
+
+# +Peek
+
+Key Binding: <code>␣ m languageId:elixir G</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                            | Name                 | Type    | Command(s)                              |
+| -------------------------------------- | -------------------- | ------- | --------------------------------------- |
+| <code>␣ m languageId:elixir G d</code> | Peek definition      | command | `editor.action.peekDefinition`          |
+| <code>␣ m languageId:elixir G i</code> | Peek implementations | command | `editor.action.peekImplementation`      |
+| <code>␣ m languageId:elixir G r</code> | Peek references      | command | `editor.action.referenceSearch.trigger` |
 
 # +Format
 
