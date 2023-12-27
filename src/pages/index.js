@@ -75,14 +75,6 @@ function Home() {
                 >
                   Get Started
                 </Link>
-                <iframe
-                  src="https://ghbtns.com/github-btn.html?user=VSpaceCode&repo=VSpaceCode&type=star&count=true&size=large"
-                  frameBorder="0"
-                  scrolling="0"
-                  width="135"
-                  height="30"
-                  title="GitHub Starts"
-                />
               </div>
             </div>
             <div className="col col--8">
