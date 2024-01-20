@@ -1006,14 +1006,15 @@ Key Binding: <code>␣ m languageId:rust</code>
 
 Type: <code>bindings</code>
 
-| Key Binding                        | Name               | Type                 | Command(s)                       |
-| ---------------------------------- | ------------------ | -------------------- | -------------------------------- |
-| <code>␣ m languageId:rust T</code> | Toggle inlay hints | command              | `rust-analyzer.toggleInlayHints` |
-| <code>␣ m languageId:rust =</code> | +Format            | [bindings](#format)  | N/A                              |
-| <code>␣ m languageId:rust a</code> | +Actions           | [bindings](#actions) | N/A                              |
-| <code>␣ m languageId:rust b</code> | +Backend           | [bindings](#backend) | N/A                              |
-| <code>␣ m languageId:rust g</code> | +Goto              | [bindings](#goto)    | N/A                              |
-| <code>␣ m languageId:rust G</code> | +Peek              | [bindings](#peek)    | N/A                              |
+| Key Binding                        | Name               | Type                  | Command(s)                       |
+| ---------------------------------- | ------------------ | --------------------- | -------------------------------- |
+| <code>␣ m languageId:rust T</code> | Toggle inlay hints | command               | `rust-analyzer.toggleInlayHints` |
+| <code>␣ m languageId:rust =</code> | +Format            | [bindings](#format)   | N/A                              |
+| <code>␣ m languageId:rust a</code> | +Actions           | [bindings](#actions)  | N/A                              |
+| <code>␣ m languageId:rust b</code> | +Backend           | [bindings](#backend)  | N/A                              |
+| <code>␣ m languageId:rust g</code> | +Goto              | [bindings](#goto)     | N/A                              |
+| <code>␣ m languageId:rust r</code> | +Refactor          | [bindings](#refactor) | N/A                              |
+| <code>␣ m languageId:rust G</code> | +Peek              | [bindings](#peek)     | N/A                              |
 
 # TypeScript
 
@@ -2551,6 +2552,7 @@ Type: <code>bindings</code>
 | Key Binding                            | Name          | Type    | Command(s)               |
 | -------------------------------------- | ------------- | ------- | ------------------------ |
 | <code>␣ m languageId:python r .</code> | Refactor menu | command | `editor.action.refactor` |
+| <code>␣ m languageId:python r r</code> | Rename symbol | command | `editor.action.rename`   |
 | <code>␣ m languageId:python r I</code> | Sort imports  | command | `python.sortImports`     |
 
 # +REPL
@@ -2884,6 +2886,17 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:rust g R</code> | Find references         | command | `references-view.findReferences`      |
 | <code>␣ m languageId:rust g S</code> | Go to symbol in project | command | `workbench.action.showAllSymbols`     |
 
+# +Refactor
+
+Key Binding: <code>␣ m languageId:rust r</code>
+
+Type: <code>bindings</code>
+
+| Key Binding                          | Name          | Type    | Command(s)               |
+| ------------------------------------ | ------------- | ------- | ------------------------ |
+| <code>␣ m languageId:rust r .</code> | Refactor menu | command | `editor.action.refactor` |
+| <code>␣ m languageId:rust r r</code> | Rename symbol | command | `editor.action.rename`   |
+
 # +Peek
 
 Key Binding: <code>␣ m languageId:rust G</code>
@@ -3042,9 +3055,9 @@ Key Binding: <code>␣ m languageId:clojure r a</code>
 
 Type: <code>bindings</code>
 
-| Key Binding                               | Name                              | Type    | Command(s)                         |
-| ----------------------------------------- | --------------------------------- | ------- | ---------------------------------- |
-| <code>␣ m languageId:clojure r a l</code> | Add missing library specification | command | `calva.refactor.addMissingLibspec` |
+| Key Binding                               | Name                              | Type    | Command(s)                              |
+| ----------------------------------------- | --------------------------------- | ------- | --------------------------------------- |
+| <code>␣ m languageId:clojure r a l</code> | Add missing library specification | command | `clojureLsp.refactor.addMissingLibspec` |
 
 # +Cycle clean convert
 
@@ -3052,10 +3065,10 @@ Key Binding: <code>␣ m languageId:clojure r c</code>
 
 Type: <code>bindings</code>
 
-| Key Binding                               | Name                       | Type    | Command(s)                    |
-| ----------------------------------------- | -------------------------- | ------- | ----------------------------- |
-| <code>␣ m languageId:clojure r c n</code> | Clean namespace definition | command | `calva.refactor.cleanNs`      |
-| <code>␣ m languageId:clojure r c p</code> | Cycle privacy              | command | `calva.refactor.cyclePrivacy` |
+| Key Binding                               | Name                       | Type    | Command(s)                         |
+| ----------------------------------------- | -------------------------- | ------- | ---------------------------------- |
+| <code>␣ m languageId:clojure r c n</code> | Clean namespace definition | command | `clojureLsp.refactor.cleanNs`      |
+| <code>␣ m languageId:clojure r c p</code> | Cycle privacy              | command | `clojureLsp.refactor.cyclePrivacy` |
 
 # +Extract expand
 
@@ -3063,10 +3076,10 @@ Key Binding: <code>␣ m languageId:clojure r e</code>
 
 Type: <code>bindings</code>
 
-| Key Binding                               | Name             | Type    | Command(s)                       |
-| ----------------------------------------- | ---------------- | ------- | -------------------------------- |
-| <code>␣ m languageId:clojure r e f</code> | Extract function | command | `calva.refactor.extractFunction` |
-| <code>␣ m languageId:clojure r e l</code> | Expand let       | command | `calva.refactor.expandLet`       |
+| Key Binding                               | Name             | Type    | Command(s)                            |
+| ----------------------------------------- | ---------------- | ------- | ------------------------------------- |
+| <code>␣ m languageId:clojure r e f</code> | Extract function | command | `clojureLsp.refactor.extractFunction` |
+| <code>␣ m languageId:clojure r e l</code> | Expand let       | command | `clojureLsp.refactor.expandLet`       |
 
 # +Introduce inline
 
@@ -3074,10 +3087,10 @@ Key Binding: <code>␣ m languageId:clojure r i</code>
 
 Type: <code>bindings</code>
 
-| Key Binding                               | Name          | Type    | Command(s)                    |
-| ----------------------------------------- | ------------- | ------- | ----------------------------- |
-| <code>␣ m languageId:clojure r i l</code> | Introduce let | command | `calva.refactor.introduceLet` |
-| <code>␣ m languageId:clojure r i s</code> | Inline symbol | command | `calva.refactor.inlineSymbol` |
+| Key Binding                               | Name          | Type    | Command(s)                         |
+| ----------------------------------------- | ------------- | ------- | ---------------------------------- |
+| <code>␣ m languageId:clojure r i l</code> | Introduce let | command | `clojureLsp.refactor.introduceLet` |
+| <code>␣ m languageId:clojure r i s</code> | Inline symbol | command | `clojureLsp.refactor.inlineSymbol` |
 
 # +Move
 
@@ -3085,9 +3098,9 @@ Key Binding: <code>␣ m languageId:clojure r m</code>
 
 Type: <code>bindings</code>
 
-| Key Binding                               | Name        | Type    | Command(s)                 |
-| ----------------------------------------- | ----------- | ------- | -------------------------- |
-| <code>␣ m languageId:clojure r m l</code> | Move to let | command | `calva.refactor.moveToLet` |
+| Key Binding                               | Name        | Type    | Command(s)                      |
+| ----------------------------------------- | ----------- | ------- | ------------------------------- |
+| <code>␣ m languageId:clojure r m l</code> | Move to let | command | `clojureLsp.refactor.moveToLet` |
 
 # +Thread macros
 
@@ -3095,14 +3108,14 @@ Key Binding: <code>␣ m languageId:clojure r t</code>
 
 Type: <code>bindings</code>
 
-| Key Binding                               | Name              | Type    | Command(s)                      |
-| ----------------------------------------- | ----------------- | ------- | ------------------------------- |
-| <code>␣ m languageId:clojure r t f</code> | Thread first      | command | `calva.refactor.threadFirst`    |
-| <code>␣ m languageId:clojure r t l</code> | Thread last       | command | `calva.refactor.threadLast`     |
-| <code>␣ m languageId:clojure r t u</code> | Unwind thread     | command | `calva.refactor.unwindThread`   |
-| <code>␣ m languageId:clojure r t F</code> | Thread first all  | command | `calva.refactor.threadFirstAll` |
-| <code>␣ m languageId:clojure r t L</code> | Thread last all   | command | `calva.refactor.threadLastAll`  |
-| <code>␣ m languageId:clojure r t U</code> | Unwind thread all | command | `calva.refactor.unwindThread`   |
+| Key Binding                               | Name              | Type    | Command(s)                           |
+| ----------------------------------------- | ----------------- | ------- | ------------------------------------ |
+| <code>␣ m languageId:clojure r t f</code> | Thread first      | command | `clojureLsp.refactor.threadFirst`    |
+| <code>␣ m languageId:clojure r t l</code> | Thread last       | command | `clojureLsp.refactor.threadLast`     |
+| <code>␣ m languageId:clojure r t u</code> | Unwind thread     | command | `clojureLsp.refactor.unwindThread`   |
+| <code>␣ m languageId:clojure r t F</code> | Thread first all  | command | `clojureLsp.refactor.threadFirstAll` |
+| <code>␣ m languageId:clojure r t L</code> | Thread last all   | command | `clojureLsp.refactor.threadLastAll`  |
+| <code>␣ m languageId:clojure r t U</code> | Unwind thread all | command | `clojureLsp.refactor.unwindThread`   |
 
 # +Create
 
