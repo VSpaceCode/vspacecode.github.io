@@ -216,7 +216,7 @@ This is suitable for a large menu that might take a bit of time to load.
     ```javascript
     commands.executeCommand("whichkey.register", {
       bindings: ["myExtension", "bindings"],
-      overrides: ["myExtension", "bindingOveArrides"],
+      overrides: ["myExtension", "bindingOverrides"],
       title: "My menu"
     });
     ```
