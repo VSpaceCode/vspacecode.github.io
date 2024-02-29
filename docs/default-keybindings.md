@@ -400,6 +400,10 @@ Type: <code>bindings</code>
 | <code>␣ w =</code> | Reset window sizes                    | command                      | `workbench.action.evenEditorWidths`           |
 | <code>␣ w [</code> | Shrink window                         | [transient](#shrink-window)  | `workbench.action.decreaseViewSize`           |
 | <code>␣ w ]</code> | Enlarge window                        | [transient](#enlarge-window) | `workbench.action.increaseViewSize`           |
+| <code>␣ w 1</code> | Single column window layout           | command                      | `workbench.action.editorLayoutSingle`         |
+| <code>␣ w 2</code> | Double column window layout           | command                      | `workbench.action.editorLayoutTwoColumns`     |
+| <code>␣ w 3</code> | Triple column window layout           | command                      | `workbench.action.editorLayoutThreeColumns`   |
+| <code>␣ w 4</code> | Grid window layout                    | command                      | `workbench.action.editorLayoutTwoByTwoGrid`   |
 | <code>␣ w d</code> | Close window                          | command                      | `workbench.action.closeEditorsInGroup`        |
 | <code>␣ w h</code> | Focus window left                     | command                      | `workbench.action.navigateLeft`               |
 | <code>␣ w j</code> | Focus window down                     | command                      | `workbench.action.navigateDown`               |
@@ -760,7 +764,7 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:dart A</code> | Attach to process      | command                      | `flutter.attachProcess`     |
 | <code>␣ m languageId:dart D</code> | Flutter doctor         | command                      | `flutter.doctor`            |
 | <code>␣ m languageId:dart E</code> | Launch emulator        | command                      | `flutter.launchEmulator`    |
-| <code>␣ m languageId:dart P</code> | Profile app            | command                      | `flutter.profileApp`        |
+| <code>␣ m languageId:dart P</code> | Profile app            | command                      | `flutter.runProfileMode`    |
 | <code>␣ m languageId:dart R</code> | Hot restart            | command                      | `flutter.hotRestart`        |
 | <code>␣ m languageId:dart S</code> | Screenshot             | command                      | `flutter.screenshot`        |
 | <code>␣ m languageId:dart =</code> | +Format                | [bindings](#format)          | N/A                         |
@@ -1647,7 +1651,6 @@ Type: <code>bindings</code>
 | <code>␣ m languageId:dart o l</code> | DevTools logging      | command | `dart.openDevToolsLogging`     |
 | <code>␣ m languageId:dart o m</code> | DevTools memory       | command | `dart.openDevToolsMemory`      |
 | <code>␣ m languageId:dart o n</code> | DevTools network      | command | `dart.openDevToolsNetwork`     |
-| <code>␣ m languageId:dart o t</code> | Timeline              | command | `flutter.openTimeline`         |
 
 # +Project/Packages
 
@@ -1682,14 +1685,13 @@ Key Binding: <code>␣ m languageId:dart t</code>
 
 Type: <code>bindings</code>
 
-| Key Binding                          | Name                 | Type    | Command(s)                               |
-| ------------------------------------ | -------------------- | ------- | ---------------------------------------- |
-| <code>␣ m languageId:dart t c</code> | Clear test results   | command | `dart.clearTestResults`                  |
-| <code>␣ m languageId:dart t d</code> | Debug test at cursor | command | `dart.debugTestAtCursor`                 |
-| <code>␣ m languageId:dart t f</code> | Run failed tests     | command | `dart.runAllFailedTestsWithoutDebugging` |
-| <code>␣ m languageId:dart t r</code> | Run tests            | command | `dart.runAllTestsWithoutDebugging`       |
-| <code>␣ m languageId:dart t s</code> | Run skipped tests    | command | `dart.runAllTestsWithoutDebugging`       |
-| <code>␣ m languageId:dart t t</code> | Run test at cursor   | command | `dart.runTestAtCursor`                   |
+| Key Binding                          | Name                 | Type    | Command(s)                  |
+| ------------------------------------ | -------------------- | ------- | --------------------------- |
+| <code>␣ m languageId:dart t c</code> | Clear test results   | command | `testing.clearTestResults`  |
+| <code>␣ m languageId:dart t d</code> | Debug test at cursor | command | `testing.debugTestAtCursor` |
+| <code>␣ m languageId:dart t f</code> | Run failed tests     | command | `testing.reRunFailTests`    |
+| <code>␣ m languageId:dart t r</code> | Run tests            | command | `testing.runAll`            |
+| <code>␣ m languageId:dart t t</code> | Run test at cursor   | command | `testing.runTestAtCursor`   |
 
 # +Peek
 
