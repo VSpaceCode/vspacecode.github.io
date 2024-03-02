@@ -173,6 +173,131 @@ vscode command `editor.action.codeAction` with `{ "kind": "refactor.extract" }` 
 }
 ```
 
+## Move buffers to numbered windows
+
+By default, `<spc> b` followed by a number changes the tab selected in a window. If you have a
+tabless setup, as described in
+[Working without Tabs](https://code.visualstudio.com/docs/getstarted/userinterface#_working-without-tabs),
+you may want to override these binding with ones that move buffers into different windows, like
+in Spacemacs.
+
+The following example json overrides `<spc> b {n}` to move the active buffer to window `n`.
+
+```json title="settings.json"
+{
+    "vspacecode.bindingOverrides": [
+        {
+            "keys": "b.1",
+            "name": "Move buffer to 1st window",
+            "type": "command",
+            "command": "moveActiveEditor",
+            "args": {
+                "to": "position",
+                "by": "group",
+                "value": 1
+            },
+            "icon": "move"
+        },
+        {
+            "keys": "b.2",
+            "name": "Move buffer to 2nd window",
+            "type": "command",
+            "command": "moveActiveEditor",
+            "args": {
+                "to": "position",
+                "by": "group",
+                "value": 2
+            },
+            "icon": "move"
+        },
+        {
+            "keys": "b.3",
+            "name": "Move buffer to 3rd window",
+            "type": "command",
+            "command": "moveActiveEditor",
+            "args": {
+                "to": "position",
+                "by": "group",
+                "value": 3
+            },
+            "icon": "move"
+        },
+        {
+            "keys": "b.4",
+            "name": "Move buffer to 4th window",
+            "type": "command",
+            "command": "moveActiveEditor",
+            "args": {
+                "to": "position",
+                "by": "group",
+                "value": 4
+            },
+            "icon": "move"
+        },
+        {
+            "keys": "b.5",
+            "name": "Move buffer to 5th window",
+            "type": "command",
+            "command": "moveActiveEditor",
+            "args": {
+                "to": "position",
+                "by": "group",
+                "value": 5
+            },
+            "icon": "move"
+        },
+        {
+            "keys": "b.6",
+            "name": "Move buffer to 6th window",
+            "type": "command",
+            "command": "moveActiveEditor",
+            "args": {
+                "to": "position",
+                "by": "group",
+                "value": 6
+            },
+            "icon": "move"
+        },
+        {
+            "keys": "b.7",
+            "name": "Move buffer to 7th window",
+            "type": "command",
+            "command": "moveActiveEditor",
+            "args": {
+                "to": "position",
+                "by": "group",
+                "value": 7
+            },
+            "icon": "move"
+        },
+        {
+            "keys": "b.8",
+            "name": "Move buffer to 8th window",
+            "type": "command",
+            "command": "moveActiveEditor",
+            "args": {
+                "to": "position",
+                "by": "group",
+                "value": 8
+            },
+            "icon": "move"
+        },
+        {
+            "keys": "b.9",
+            "name": "Move buffer to 9th window",
+            "type": "command",
+            "command": "moveActiveEditor",
+            "args": {
+                "to": "position",
+                "by": "group",
+                "value": 9
+            },
+            "icon": "move"
+        }
+    ]
+}
+```
+
 ## Colorize pair brackets
 
 VScode 1.60 added built-in support for colorizing pair brackets.
