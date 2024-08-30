@@ -86,3 +86,17 @@ and `keybindings.json` files in order to spot some weird conflicts.
 ## Known Issues
 
 - File browser (bound to `<spc> f f`) doesn't have a button to open local file with VSCode Remote
+
+## For vscode-neovim users
+
+After installing the extension, you only need to update `keybindings.json`, `settings.json` doesn't need to be updated.
+After using the command `VSpaceCode: Configure Default Keybindings`,
+refer to the [issues](https://github.com/VSpaceCode/VSpaceCode/issues/34#issuecomment-1155115164) and update `keybindings.json`  "to complete the initial configuration:
+
+```json
+ {
+     "key": "space",
+     "command": "vspacecode.space",
+     "when": "editorTextFocus && neovim.mode == normal"
+ },
+```
