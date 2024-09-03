@@ -43,3 +43,16 @@ The following commands can be accessed through command palette to rerun the auto
 
 [settings]: https://github.com/VSpaceCode/VSpaceCode/blob/master/src/configuration/settings.jsonc
 [keybindings]: https://github.com/VSpaceCode/VSpaceCode/blob/master/src/configuration/keybindings.jsonc
+
+## For vscode-neovim users
+
+After installing the extension, you only need to update `keybindings.json`, `settings.json` doesn't need to be updated.
+After using the command `VSpaceCode: Configure Default Keybindings`, update `keybindings.json` to complete the initial configuration:
+
+```json
+ {
+     "key": "space",
+     "command": "vspacecode.space",
+     "when": "editorTextFocus && neovim.mode == normal"
+ },
+```
