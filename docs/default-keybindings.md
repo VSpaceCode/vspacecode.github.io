@@ -512,19 +512,19 @@ Key Binding: <code>␣ T</code>
 
 Type: <code>bindings</code>
 
-| Key Binding        | Name                                | Type    | Command(s)                                     |
-| ------------------ | ----------------------------------- | ------- | ---------------------------------------------- |
-| <code>␣ T b</code> | Toggle side bar visibility          | command | `workbench.action.toggleSidebarVisibility`     |
-| <code>␣ T c</code> | Toggle centered layout              | command | `workbench.action.toggleCenteredLayout`        |
-| <code>␣ T i</code> | Select icon theme                   | command | `workbench.action.selectIconTheme`             |
-| <code>␣ T j</code> | Toggle panel visibility             | command | `workbench.action.togglePanel`                 |
-| <code>␣ T m</code> | Toggle maximized panel              | command | `workbench.action.toggleMaximizedPanel`        |
-| <code>␣ T s</code> | Select theme                        | command | `workbench.action.selectTheme`                 |
-| <code>␣ T t</code> | Toggle tool/activity bar visibility | command | `workbench.action.toggleActivityBarVisibility` |
-| <code>␣ T z</code> | Toggle zen mode                     | command | `workbench.action.toggleZenMode`               |
-| <code>␣ T F</code> | Toggle full screen                  | command | `workbench.action.toggleFullScreen`            |
-| <code>␣ T M</code> | Toggle minimap                      | command | `editor.action.toggleMinimap`                  |
-| <code>␣ T T</code> | Toggle tab visibility               | command | `workbench.action.toggleTabsVisibility`        |
+| Key Binding        | Name                                | Type                                  | Command(s)                                     |
+| ------------------ | ----------------------------------- | ------------------------------------- | ---------------------------------------------- |
+| <code>␣ T b</code> | Toggle side bar visibility          | command                               | `workbench.action.toggleSidebarVisibility`     |
+| <code>␣ T c</code> | Toggle centered layout              | command                               | `workbench.action.toggleCenteredLayout`        |
+| <code>␣ T i</code> | Select icon theme                   | command                               | `workbench.action.selectIconTheme`             |
+| <code>␣ T j</code> | Toggle panel visibility             | command                               | `workbench.action.togglePanel`                 |
+| <code>␣ T m</code> | Toggle maximized panel              | command                               | `workbench.action.toggleMaximizedPanel`        |
+| <code>␣ T s</code> | Select theme                        | command                               | `workbench.action.selectTheme`                 |
+| <code>␣ T t</code> | Toggle tool/activity bar visibility | command                               | `workbench.action.toggleActivityBarVisibility` |
+| <code>␣ T z</code> | Toggle zen mode                     | command                               | `workbench.action.toggleZenMode`               |
+| <code>␣ T F</code> | Toggle full screen                  | command                               | `workbench.action.toggleFullScreen`            |
+| <code>␣ T M</code> | Toggle minimap                      | command                               | `editor.action.toggleMinimap`                  |
+| <code>␣ T T</code> | Toggle tab visibility               | [conditional](#toggle-tab-visibility) | N/A                                            |
 
 # +New Buffer
 
@@ -1225,6 +1225,17 @@ Type: <code>bindings</code>
 | <code>␣ z . r</code> | Open: all                 | command | `editor.unfoldAll`              |
 | <code>␣ z . G</code> | Open: all regions         | command | `editor.unfoldAllMarkerRegions` |
 | <code>␣ z . O</code> | Open: recursively         | command | `editor.unfoldRecursively`      |
+
+# Toggle tab visibility
+
+Key Binding: <code>␣ T T</code>
+
+Type: <code>conditional</code>
+
+| Condition                           | Name             | Type    | Command(s)                                |
+| ----------------------------------- | ---------------- | ------- | ----------------------------------------- |
+|                                     | Show editor tabs | command | `workbench.action.showMultipleEditorTabs` |
+| <code>when:editorTabsVisible</code> | Hide editor tabs | command | `workbench.action.hideEditorTabs`         |
 
 # Next breakpoint
 
